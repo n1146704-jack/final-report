@@ -1,0 +1,131 @@
+/* --- 基礎配置 --- */
+:root {
+  --color-primary: #003366;
+  --color-primary-secondary: #226600;
+  --color-primary-secondary-40: rgba(34, 102, 0, 0.4);
+  --color-primary-third: #664600;
+  --color-text-primary: #333;
+  --color-text-secondary: #555;
+  --color-text-third: #b2f86c;
+  --color-active-red: #990235;
+  --color-active-yellow: #b9b300;
+  --color-active-green: #006239;
+  --color-background: #f8f9fa;
+  --color-background-dark: rgb(13, 19, 37);
+  --color-hover-green: #00802d;
+  --color-white: #ffffff;
+  --color-black: black;
+  --color-grey: grey;
+  --color-aquamarine: aquamarine;
+  --color-chartreuse: chartreuse;
+  --color-darkblue: darkblue;
+  --color-darkgreen: darkgreen;
+  --color-darkred: darkred;
+  --color-lightgreen: lightgreen;
+  --color-lightgrey: lightgrey;
+  --color-lightblue: lightblue;
+  --color-lightpink: lightpink;
+  --color-surface: #10182c;
+  --color-accent: #00f5c3;
+  --color-border: #333;
+  --header-height: 70px;
+
+  /* 科技頁面專用變數 - 優化後的配色 */
+  --color-tech-bg-start: #0a0e1a;
+  --color-tech-bg-end: #151d2e;
+  --color-tech-accent-primary: #00f5c3;
+  --color-tech-accent-secondary: #a855f7;
+  --color-tech-accent-tertiary: #3b82f6;
+  --color-tech-accent-orange: #fb923c;
+  --color-tech-text-primary: #f0f4f8;
+  --color-tech-text-muted: #9ca3af;
+  --color-tech-border-subtle: rgba(0, 245, 195, 0.15);
+  --color-tech-card-bg: rgba(20, 28, 46, 0.9);
+  --color-tech-hover: rgba(0, 245, 195, 0.15);
+
+  /* History 頁面專用變數 */
+  --color-history-cream-50: rgba(252, 252, 249, 1);
+  --color-history-cream-100: rgba(255, 255, 253, 1);
+  --color-history-gray-200: rgba(245, 245, 245, 1);
+  --color-history-gray-300: rgba(167, 169, 169, 1);
+  --color-history-gray-400: rgba(119, 124, 124, 1);
+  --color-history-slate-500: rgba(98, 108, 113, 1);
+  --color-history-brown-600: rgba(94, 82, 64, 1);
+  --color-history-charcoal-700: rgba(31, 33, 33, 1);
+  --color-history-charcoal-800: rgba(38, 40, 40, 1);
+  --color-history-slate-900: rgba(19, 52, 59, 1);
+  --color-history-teal-300: rgba(50, 184, 198, 1);
+  --color-history-teal-400: rgba(45, 166, 178, 1);
+  --color-history-teal-500: rgba(33, 128, 141, 1);
+  --color-history-teal-600: rgba(29, 116, 128, 1);
+  --color-history-teal-700: rgba(26, 104, 115, 1);
+  --color-history-teal-800: rgba(41, 150, 161, 1);
+  --color-history-red-400: rgba(255, 84, 89, 1);
+  --color-history-red-500: rgba(192, 21, 47, 1);
+  --color-history-orange-400: rgba(230, 129, 97, 1);
+  --color-history-orange-500: rgba(168, 75, 47, 1);
+
+  /* History RGB 版本 */
+  --color-history-brown-600-rgb: 94, 82, 64;
+  --color-history-teal-500-rgb: 33, 128, 141;
+  --color-history-slate-900-rgb: 19, 52, 59;
+  --color-history-slate-500-rgb: 98, 108, 113;
+  --color-history-red-500-rgb: 192, 21, 47;
+  --color-history-red-400-rgb: 255, 84, 89;
+  --color-history-orange-500-rgb: 168, 75, 47;
+  --color-history-orange-400-rgb: 230, 129, 97;
+  --color-history-gray-400-rgb: 119, 124, 124;
+  --color-history-teal-300-rgb: 50, 184, 198;
+  --color-history-gray-300-rgb: 167, 169, 169;
+  --color-history-gray-200-rgb: 245, 245, 245;
+
+  /* History 背景色彩 */
+  --color-history-bg-1: rgba(59, 130, 246, 0.08);
+  --color-history-bg-2: rgba(245, 158, 11, 0.08);
+  --color-history-bg-3: rgba(34, 197, 94, 0.08);
+  --color-history-bg-4: rgba(239, 68, 68, 0.08);
+  --color-history-bg-5: rgba(147, 51, 234, 0.08);
+  --color-history-bg-6: rgba(249, 115, 22, 0.08);
+  --color-history-bg-7: rgba(236, 72, 153, 0.08);
+  --color-history-bg-8: rgba(6, 182, 212, 0.08);
+
+  /* History 漸層動畫專用變數 - 更鮮豔的配色 */
+  --color-history-gradient-1: #0f172a;
+  --color-history-gradient-2: #1e1b4b;
+  --color-history-gradient-3: #312e81;
+  --color-history-gradient-4: #1e293b;
+  --color-history-gradient-5: #0c4a6e;
+  --color-history-gradient-accent-1: #06b6d4;
+  --color-history-gradient-accent-2: #a855f7;
+  --color-history-gradient-accent-3: #3b82f6;
+
+  /* History 金屬球專用變數 - 更鮮明的配色 */
+  --color-history-sphere-base: #1e293b;
+  --color-history-sphere-highlight: #475569;
+  --color-history-sphere-shine: rgba(255, 255, 255, 0.9);
+  --color-history-sphere-shadow: rgba(0, 0, 0, 0.6);
+  --color-history-sphere-accent: #00f5c3;
+  --color-history-sphere-glow: rgba(0, 245, 195, 0.6);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans TC", "LiHei Pro", "Microsoft JhengHei",
+    sans-serif;
+  line-height: 1.6;
+  padding-top: 0;
+  min-height: 100vh;
+}

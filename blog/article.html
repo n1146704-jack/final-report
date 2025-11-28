@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vue 3 Composition API 完整指南 - Tech Blog</title>
+        <link rel="stylesheet" href="css/global.css">
+        <link rel="stylesheet" href="css/article.css">
+    </head>
+
+    <body>
+
+        <!-- 主視覺圖區塊 -->
+        <div class="hero-visual">
+            <div class="hero-visual__overlay"></div>
+            <div class="hero-visual__content">
+                <div class="hero-visual__emoji">💻</div>
+                <h1 class="hero-visual__title">Vue 3 Composition API 完整指南</h1>
+                <p class="hero-visual__subtitle">深入探索 Vue 3 最強大的功能</p>
+            </div>
+            <div class="hero-visual__wave"></div>
+        </div>
+
+        <!-- 懸浮橢圓形導航欄 -->
+        <nav class="floating-nav" id="floating-nav">
+            <div class="floating-nav__container">
+                <ul class="floating-nav__list">
+                    <li><a href="../index.html" class="floating-nav__link" data-text="Home">其他主題</a></li>
+                    <li><a href="index.html" class="floating-nav__link" data-text="首頁">首頁</a></li>
+                    <li><a href="articles.html" class="floating-nav__link" data-text="文章分類">文章分類</a></li>
+                    <li><a href="#" class="floating-nav__link" data-text="關於">關於</a></li>
+                    <li><a href="#" class="floating-nav__link" data-text="聯絡">聯絡</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- 進度條 -->
+        <div class="reading-progress" id="reading-progress"></div>
+
+        <!-- 文章頁面容器 -->
+        <div class="article-page-container">
+
+            <!-- 左側分類選單 -->
+            <aside class="category-sidebar" id="category-sidebar">
+                <div class="category-sidebar__sticky">
+                    <h3 class="category-sidebar__title">文章分類</h3>
+                    <nav class="category-sidebar__nav">
+                        <a href="#" class="category-sidebar__item category-sidebar__item--active" data-category="all">
+                            <span class="category-sidebar__icon">📚</span>
+                            <span class="category-sidebar__text">全部文章</span>
+                            <span class="category-sidebar__count">128</span>
+                        </a>
+                        <a href="#" class="category-sidebar__item" data-category="vue">
+                            <span class="category-sidebar__icon">💚</span>
+                            <span class="category-sidebar__text">Vue.js</span>
+                            <span class="category-sidebar__count">45</span>
+                        </a>
+                        <a href="#" class="category-sidebar__item" data-category="javascript">
+                            <span class="category-sidebar__icon">💛</span>
+                            <span class="category-sidebar__text">JavaScript</span>
+                            <span class="category-sidebar__count">38</span>
+                        </a>
+                        <a href="#" class="category-sidebar__item" data-category="frontend">
+                            <span class="category-sidebar__icon">🎨</span>
+                            <span class="category-sidebar__text">前端開發</span>
+                            <span class="category-sidebar__count">25</span>
+                        </a>
+                        <a href="#" class="category-sidebar__item" data-category="backend">
+                            <span class="category-sidebar__icon">⚙️</span>
+                            <span class="category-sidebar__text">後端開發</span>
+                            <span class="category-sidebar__count">20</span>
+                        </a>
+                    </nav>
+
+                    <!-- 快速連結 -->
+                    <div class="quick-links">
+                        <h4 class="quick-links__title">快速導航</h4>
+                        <nav class="quick-links__nav" id="article-toc">
+                            <!-- 由 JS 動態生成 -->
+                        </nav>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- 主要內容區 -->
+            <main class="article-main-content">
+
+                <!-- 文章標頭 -->
+                <article class="article-header-section">
+                    <div class="breadcrumbs">
+                        <a href="index.html" class="breadcrumbs__link">首頁</a>
+                        <span class="breadcrumbs__separator">›</span>
+                        <a href="articles.html" class="breadcrumbs__link">文章</a>
+                        <span class="breadcrumbs__separator">›</span>
+                        <span>Vue 3 Composition API 完整指南</span>
+                    </div>
+
+                    <div class="article-header-section__meta">
+                        <div class="article-header-section__meta-item">
+                            <span class="article-header-section__meta-icon">👨‍💻</span>
+                            <span>張三豐</span>
+                        </div>
+                        <span>•</span>
+                        <span>2025-11-01</span>
+                        <span>•</span>
+                        <span>閱讀時間 8 分鐘</span>
+                        <span>•</span>
+                        <span>👁️ 1,234 次觀看</span>
+                    </div>
+
+                    <div class="article-tags">
+                        <span class="tag tag--blue">Vue.js</span>
+                        <span class="tag tag--purple">JavaScript</span>
+                        <span class="tag tag--green">前端開發</span>
+                    </div>
+                </article>
+
+                <!-- 文章主體 -->
+                <article class="article-body-section">
+
+                    <!-- 重點摘要 -->
+                    <div class="article-summary-box">
+                        <h3 class="article-summary-box__title">📌 重點摘要</h3>
+                        <ul class="article-summary-box__list">
+                            <li>了解 Composition API 的核心概念與優勢</li>
+                            <li>掌握 setup()、ref、reactive 等關鍵 API</li>
+                            <li>學習實際應用範例與最佳實踐</li>
+                            <li>比較 Options API 與 Composition API 的差異</li>
+                        </ul>
+                    </div>
+
+                    <div class="article-content">
+
+                        <h2 id="intro">前言</h2>
+                        <p>
+                            Vue 3 引入了 Composition API,這是一個全新的編寫元件邏輯的方式。相較於 Options API,Composition API
+                            提供了更好的邏輯重用性和程式碼組織方式。本文將深入探討 Composition API 的核心概念與實際應用。
+                        </p>
+
+                        <div class="info-box info-box--tip">
+                            <div class="info-box__icon">💡</div>
+                            <div class="info-box__content">
+                                <h4 class="info-box__title">提示</h4>
+                                <p>如果你還不熟悉 Vue 3 的基礎知識,建議先閱讀官方文檔中的入門教程。</p>
+                            </div>
+                        </div>
+
+                        <h2 id="what-is-composition-api">什麼是 Composition API?</h2>
+                        <p>
+                            Composition API 是 Vue 3 的核心特性之一,它允許我們使用函式的方式來組織元件的邏輯。透過 <code>setup()</code>
+                            函式,我們可以更靈活地組合和重用邏輯。
+                        </p>
+
+                        <div class="comparison-box">
+                            <div class="comparison-box__item">
+                                <h4 class="comparison-box__title">Options API</h4>
+                                <ul class="comparison-box__list">
+                                    <li>✓ 容易學習和理解</li>
+                                    <li>✓ 適合小型專案</li>
+                                    <li>✗ 邏輯分散在不同選項中</li>
+                                    <li>✗ 重用邏輯較困難</li>
+                                </ul>
+                            </div>
+                            <div class="comparison-box__item">
+                                <h4 class="comparison-box__title">Composition API</h4>
+                                <ul class="comparison-box__list">
+                                    <li>✓ 邏輯集中,易於維護</li>
+                                    <li>✓ 更好的 TypeScript 支援</li>
+                                    <li>✓ 容易重用邏輯</li>
+                                    <li>✓ 適合大型專案</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <h2 id="core-concepts">核心概念</h2>
+
+                        <h3>1. setup() 函式</h3>
+                        <p>
+                            <code>setup()</code> 是 Composition API 的入口點,在元件建立之前執行。
+                        </p>
+
+                        <div class="code-block">
+                            <div class="code-block__header">
+                                <span class="code-block__language">JavaScript</span>
+                                <button class="code-block__copy" onclick="copyCode(this)">複製</button>
+                            </div>
+                            <pre>
+                                <code>
+                                    import { ref } from 'vue';
+
+                                    export default {
+                                      setup() {
+                                        const count = ref(0);
+                                        const increment = () => count.value++;
+                                    
+                                        return { count, increment };
+                                      }
+                                    }
+                                </code>
+                            </pre>
+                        </div>
+
+                        <h3>2. ref 和 reactive</h3>
+                        <p>
+                            <code>ref</code> 用於建立響應式的基本型別資料,而 <code>reactive</code> 則用於物件。
+                        </p>
+
+                        <div class="code-block">
+                            <div class="code-block__header">
+                                <span class="code-block__language">JavaScript</span>
+                                <button class="code-block__copy" onclick="copyCode(this)">複製</button>
+                            </div>
+                            <pre>
+                                <code>
+                                    import { ref, reactive } from 'vue';
+
+                                    const count = ref(0);
+                                    const state = reactive({
+                                      name: 'Vue 3',
+                                      version: '3.0'
+                                    });
+                                </code>
+                            </pre>
+                        </div>
+
+                        <div class="info-box info-box--warning">
+                            <div class="info-box__icon">⚠️</div>
+                            <div class="info-box__content">
+                                <h4 class="info-box__title">注意</h4>
+                                <p>使用 ref 時,需要透過 .value 來存取和修改值,但在模板中會自動解包。</p>
+                            </div>
+                        </div>
+
+                        <h3>3. computed 和 watch</h3>
+                        <p>
+                            計算屬性和監聽器在 Composition API 中也變得更加靈活。
+                        </p>
+
+                        <div class="code-block">
+                            <div class="code-block__header">
+                                <span class="code-block__language">JavaScript</span>
+                                <button class="code-block__copy" onclick="copyCode(this)">複製</button>
+                            </div>
+                            <pre>
+                                <code>
+                                    import { ref, computed, watch } from 'vue';
+
+                                    const count = ref(0);
+                                    const doubleCount = computed(() => count.value * 2);
+
+                                    watch(count, (newVal, oldVal) => {
+                                      console.log(`count 從 ${oldVal} 變更為 ${newVal}`);
+                                    });
+                                </code>
+                            </pre>
+                        </div>
+
+                        <h2 id="practical-example">實際應用範例</h2>
+                        <p>
+                            讓我們來看一個實際的待辦事項應用範例:
+                        </p>
+
+                        <div class="code-block">
+                            <div class="code-block__header">
+                                <span class="code-block__language">JavaScript</span>
+                                <button class="code-block__copy" onclick="copyCode(this)">複製</button>
+                            </div>
+                            <pre>
+                                <code>
+                                    import { ref, computed } from 'vue';
+
+                                    export default {
+                                      setup() {
+                                        const todos = ref([
+                                          { id: 1, text: '學習 Vue 3', done: false },
+                                          { id: 2, text: '使用 Composition API', done: false }
+                                        ]);
+                                    
+                                        const newTodo = ref('');
+                                    
+                                        const addTodo = () => {
+                                          if (newTodo.value.trim()) {
+                                            todos.value.push({
+                                              id: Date.now(),
+                                              text: newTodo.value,
+                                              done: false
+                                            });
+                                            newTodo.value = '';
+                                          }
+                                        };
+                                    
+                                        const remainingCount = computed(() => {
+                                          return todos.value.filter(t => !t.done).length;
+                                        });
+                                    
+                                        return {
+                                          todos,
+                                          newTodo,
+                                          addTodo,
+                                          remainingCount
+                                        };
+                                      }
+                                    }
+                                </code>
+                            </pre>
+                        </div>
+
+                        <div class="demo-box">
+                            <h4 class="demo-box__title">🎮 互動示範</h4>
+                            <div class="demo-box__content">
+                                <div class="todo-demo">
+                                    <input type="text" id="todo-input" class="todo-demo__input" placeholder="輸入待辦事項...">
+                                    <button class="todo-demo__button" onclick="addTodoDemo()">新增</button>
+                                    <ul class="todo-demo__list" id="todo-list">
+                                        <li class="todo-demo__item">
+                                            <input type="checkbox" class="todo-demo__checkbox">
+                                            <span>學習 Vue 3</span>
+                                        </li>
+                                        <li class="todo-demo__item">
+                                            <input type="checkbox" class="todo-demo__checkbox">
+                                            <span>使用 Composition API</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h2 id="advantages">優勢與最佳實踐</h2>
+
+                        <div class="advantages-grid">
+                            <div class="advantage-card">
+                                <div class="advantage-card__icon">📝</div>
+                                <h4 class="advantage-card__title">更好的組織</h4>
+                                <p class="advantage-card__text">相關邏輯可以放在一起,而不是分散在不同的選項中</p>
+                            </div>
+                            <div class="advantage-card">
+                                <div class="advantage-card__icon">🔄</div>
+                                <h4 class="advantage-card__title">邏輯重用</h4>
+                                <p class="advantage-card__text">透過 composable functions 輕鬆重用邏輯</p>
+                            </div>
+                            <div class="advantage-card">
+                                <div class="advantage-card__icon">📘</div>
+                                <h4 class="advantage-card__title">TypeScript 支援</h4>
+                                <p class="advantage-card__text">更好的型別推斷和 IDE 支援</p>
+                            </div>
+                            <div class="advantage-card">
+                                <div class="advantage-card__icon">⚡</div>
+                                <h4 class="advantage-card__title">更好的效能</h4>
+                                <p class="advantage-card__text">沒有 Options API 的額外開銷</p>
+                            </div>
+                        </div>
+
+                        <h3>最佳實踐建議</h3>
+                        <ul class="best-practices-list">
+                            <li class="best-practices-list__item">
+                                <span class="best-practices-list__icon">✅</span>
+                                <div>
+                                    <strong>使用 composables 抽取可重用邏輯</strong>
+                                    <p>將相關的狀態和方法組合成可重用的函式</p>
+                                </div>
+                            </li>
+                            <li class="best-practices-list__item">
+                                <span class="best-practices-list__icon">✅</span>
+                                <div>
+                                    <strong>保持 setup() 簡潔</strong>
+                                    <p>將複雜邏輯拆分到獨立的 composables 中</p>
+                                </div>
+                            </li>
+                            <li class="best-practices-list__item">
+                                <span class="best-practices-list__icon">✅</span>
+                                <div>
+                                    <strong>善用 TypeScript</strong>
+                                    <p>利用 TypeScript 提供更好的型別安全</p>
+                                </div>
+                            </li>
+                            <li class="best-practices-list__item">
+                                <span class="best-practices-list__icon">✅</span>
+                                <div>
+                                    <strong>遵循命名慣例</strong>
+                                    <p>使用 use 開頭命名 composables,如 useCounter、useUser</p>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <h2 id="conclusion">結論</h2>
+                        <p>
+                            Composition API 為 Vue 3 帶來了更強大的邏輯組織能力。雖然初學時可能需要一些時間適應,但一旦掌握後,你會發現它在處理複雜邏輯時的優勢。建議在新專案中優先考慮使用
+                            Composition API,享受它帶來的開發體驗提升。
+                        </p>
+
+                        <div class="info-box info-box--success">
+                            <div class="info-box__icon">🎉</div>
+                            <div class="info-box__content">
+                                <h4 class="info-box__title">恭喜!</h4>
+                                <p>你已經完成了 Composition API 的學習,現在可以開始在實際專案中應用這些知識了!</p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- 文章互動區 -->
+                    <div class="article-actions">
+                        <button class="article-action-btn article-action-btn--like" id="like-btn">
+                            <span class="article-action-btn__icon">👍</span>
+                            <span class="article-action-btn__text">喜歡</span>
+                            <span class="article-action-btn__count">256</span>
+                        </button>
+                        <button class="article-action-btn article-action-btn--bookmark" id="bookmark-btn">
+                            <span class="article-action-btn__icon">🔖</span>
+                            <span class="article-action-btn__text">收藏</span>
+                        </button>
+                        <button class="article-action-btn article-action-btn--share" id="share-btn">
+                            <span class="article-action-btn__icon">🔗</span>
+                            <span class="article-action-btn__text">分享</span>
+                        </button>
+                    </div>
+
+                    <!-- 作者資訊 -->
+                    <div class="article-author-info">
+                        <h3 class="article-box-title">關於作者</h3>
+                        <div class="article-author-info__layout">
+                            <div class="article-author-info__avatar-wrapper">
+                                <div class="article-author-info__avatar">👨‍💻</div>
+                            </div>
+                            <div class="article-author-info__content">
+                                <h4 class="article-author-info__name">素還真</h4>
+                                <p class="article-author-info__bio">全端工程師,熱愛分享技術知識。專注於 Vue.js、React 和 Node.js 開發,有 8
+                                    年以上的前端開發經驗。</p>
+                                <div class="article-author-info__stats">
+                                    <div class="author-stat">
+                                        <span class="author-stat__value">128</span>
+                                        <span class="author-stat__label">文章</span>
+                                    </div>
+                                    <div class="author-stat">
+                                        <span class="author-stat__value">2.5k</span>
+                                        <span class="author-stat__label">追蹤者</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 相關文章 -->
+                    <div class="related-articles-box">
+                        <h3 class="related-articles-box__title">相關文章</h3>
+                        <div class="related-articles-box__list">
+                            <a href="#" class="related-articles-box__item">
+                                <div class="related-articles-box__item-emoji">🔄</div>
+                                <div>
+                                    <h4 class="related-articles-box__item-title">Vue 3 響應式原理解析</h4>
+                                    <p class="related-articles-box__item-text">深入了解 Vue 3 的響應式系統如何運作</p>
+                                    <div class="related-articles-box__item-meta">5 分鐘閱讀 • 2025-10-28</div>
+                                </div>
+                            </a>
+                            <a href="#" class="related-articles-box__item">
+                                <div class="related-articles-box__item-emoji">🚀</div>
+                                <div>
+                                    <h4 class="related-articles-box__item-title">從 Vue 2 遷移到 Vue 3</h4>
+                                    <p class="related-articles-box__item-text">升級指南與注意事項</p>
+                                    <div class="related-articles-box__item-meta">7 分鐘閱讀 • 2025-10-25</div>
+                                </div>
+                            </a>
+                            <a href="#" class="related-articles-box__item">
+                                <div class="related-articles-box__item-emoji">⚡</div>
+                                <div>
+                                    <h4 class="related-articles-box__item-title">Vue 3 效能優化技巧</h4>
+                                    <p class="related-articles-box__item-text">提升 Vue 應用效能的實用方法</p>
+                                    <div class="related-articles-box__item-meta">6 分鐘閱讀 • 2025-10-20</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 評論區 -->
+                    <div class="comments-section">
+                        <h3 class="comments-section__title">💬 留言討論 <span class="comments-section__count">(12)</span>
+                        </h3>
+
+                        <div class="comment-form">
+                            <textarea class="comment-form__input" placeholder="分享你的想法..." rows="4"></textarea>
+                            <button class="comment-form__submit">發表留言</button>
+                        </div>
+
+                        <div class="comments-list">
+                            <div class="comment-item">
+                                <div class="comment-item__avatar">👤</div>
+                                <div class="comment-item__content">
+                                    <div class="comment-item__header">
+                                        <span class="comment-item__author">李小明</span>
+                                        <span class="comment-item__date">2 天前</span>
+                                    </div>
+                                    <p class="comment-item__text">非常詳細的教學!Composition API 真的讓程式碼組織變得更清晰了。</p>
+                                    <button class="comment-item__reply">回覆</button>
+                                </div>
+                            </div>
+
+                            <div class="comment-item">
+                                <div class="comment-item__avatar">👩</div>
+                                <div class="comment-item__content">
+                                    <div class="comment-item__header">
+                                        <span class="comment-item__author">王美麗</span>
+                                        <span class="comment-item__date">3 天前</span>
+                                    </div>
+                                    <p class="comment-item__text">請問 ref 和 reactive 在效能上有差異嗎?</p>
+                                    <button class="comment-item__reply">回覆</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </article>
+
+            </main>
+
+            <!-- 右側標籤選單 -->
+            <aside class="tags-sidebar" id="tags-sidebar">
+                <div class="tags-sidebar__sticky">
+                    <h3 class="tags-sidebar__title">熱門標籤</h3>
+                    <div class="tags-cloud">
+                        <a href="#" class="tag-cloud-item tag-cloud-item--lg" data-count="45">Vue.js</a>
+                        <a href="#" class="tag-cloud-item tag-cloud-item--md" data-count="38">JavaScript</a>
+                        <a href="#" class="tag-cloud-item tag-cloud-item--sm" data-count="25">前端開發</a>
+                        <a href="#" class="tag-cloud-item tag-cloud-item--lg" data-count="42">React</a>
+                        <a href="#" class="tag-cloud-item tag-cloud-item--sm" data-count="20">TypeScript</a>
+                        <a href="#" class="tag-cloud-item tag-cloud-item--md" data-count="35">CSS</a>
+                        <a href="#" class="tag-cloud-item tag-cloud-item--sm" data-count="18">Node.js</a>
+                        <a href="#" class="tag-cloud-item tag-cloud-item--md" data-count="30">Webpack</a>
+                        <a href="#" class="tag-cloud-item tag-cloud-item--sm" data-count="22">Vite</a>
+                        <a href="#" class="tag-cloud-item tag-cloud-item--lg" data-count="40">API</a>
+                    </div>
+
+                    <!-- 廣告區塊 -->
+                    <div class="sidebar-ad">
+                        <div class="sidebar-ad__content">
+                            <div class="sidebar-ad__emoji">📚</div>
+                            <h4 class="sidebar-ad__title">Vue 3 完整課程</h4>
+                            <p class="sidebar-ad__text">從零開始學習 Vue 3,成為前端高手!</p>
+                            <button class="sidebar-ad__button">立即查看</button>
+                        </div>
+                    </div>
+
+                    <!-- 最新文章 -->
+                    <div class="sidebar-recent">
+                        <h4 class="sidebar-recent__title">最新文章</h4>
+                        <div class="sidebar-recent__list">
+                            <a href="#" class="sidebar-recent__item">
+                                <span class="sidebar-recent__emoji">🆕</span>
+                                <div>
+                                    <div class="sidebar-recent__item-title">Vite 5.0 新功能介紹</div>
+                                    <div class="sidebar-recent__item-date">2025-11-10</div>
+                                </div>
+                            </a>
+                            <a href="#" class="sidebar-recent__item">
+                                <span class="sidebar-recent__emoji">🔥</span>
+                                <div>
+                                    <div class="sidebar-recent__item-title">React Server Components 深度解析</div>
+                                    <div class="sidebar-recent__item-date">2025-11-08</div>
+                                </div>
+                            </a>
+                            <a href="#" class="sidebar-recent__item">
+                                <span class="sidebar-recent__emoji">💡</span>
+                                <div>
+                                    <div class="sidebar-recent__item-title">CSS Grid 完整指南</div>
+                                    <div class="sidebar-recent__item-date">2025-11-05</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+        </div>
+
+        <!-- Footer -->
+        <footer class="article-footer">
+            <div class="container">
+                <div class="article-footer__content">
+                    <p class="article-footer__text">© 2025 部落格. All rights reserved.</p>
+                    <div class="article-footer__links">
+                        <a href="#" class="article-footer__link">關於我們</a>
+                        <a href="#" class="article-footer__link">隱私政策</a>
+                        <a href="#" class="article-footer__link">使用條款</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- 回到頂部按鈕 -->
+        <button class="scroll-to-top" id="scroll-to-top" title="回到頂部">
+            <span>↑</span>
+        </button>
+
+        <!-- JavaScript -->
+        <script src="js/article.js"></script>
+    </body>
+
+</html>

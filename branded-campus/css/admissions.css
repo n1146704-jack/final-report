@@ -1,0 +1,1369 @@
+/* ===================================================================
+ * admissions.css
+ * =================================================================== */
+
+/* --- Navbar 導航列 --- */
+.admissions-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--color-white);
+  box-shadow: var(--shadow-md);
+  z-index: 1000;
+}
+
+/* Navbar 上層 - 校園名稱 */
+.navbar-top {
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-primary-light) 100%
+  );
+  color: var(--color-white);
+  height: var(--navbar-top-height);
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+.navbar-top__content {
+  max-width: var(--admissions-content-max-width);
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-top__brand {
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.navbar-top__info {
+  display: flex;
+  gap: 2rem;
+  font-size: 0.9rem;
+}
+
+.navbar-top__info-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navbar-top__info-item::before {
+  content: "📞";
+}
+
+.navbar-top__info-item:nth-child(2)::before {
+  content: "✉️";
+}
+
+/* Navbar 下層 - Logo 與選單 */
+.navbar-bottom {
+  height: var(--navbar-bottom-height);
+  display: flex;
+  align-items: center;
+  padding: 0 2rem;
+  position: relative;
+}
+
+.navbar-bottom__content {
+  max-width: var(--admissions-content-max-width);
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-bottom__content > .navbar-logo {
+  display: none;
+}
+
+.navbar-menu {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-menu__left,
+.navbar-menu__right {
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 3rem;
+}
+
+.navbar-logo__image {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.navbar-menu__link {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-base);
+  position: relative;
+  white-space: nowrap;
+}
+
+.navbar-menu__link:hover {
+  color: var(--color-primary);
+  background-color: var(--color-admissions-hover);
+}
+
+.navbar-menu__link--active {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.navbar-menu__link--active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 30px;
+  height: 3px;
+  background-color: var(--color-primary);
+  border-radius: 2px;
+}
+
+/* 手機選單按鈕 */
+.navbar-mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--color-primary);
+  padding: 0.5rem;
+}
+
+/* 手機版選單容器 */
+.navbar-mobile-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: var(--color-white);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.navbar-mobile-menu--open {
+  max-height: 500px;
+}
+
+.navbar-mobile-menu__links {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.navbar-mobile-menu__links .navbar-menu__link {
+  padding: 1rem;
+  border-bottom: 1px solid var(--color-gray-200);
+}
+
+.navbar-mobile-menu__links .navbar-menu__link:last-child {
+  border-bottom: none;
+}
+
+/* --- Header Banner --- */
+.admissions-header {
+  margin-top: var(--navbar-total-height);
+  background: linear-gradient(
+    135deg,
+    var(--color-primary) 0%,
+    var(--color-primary-light) 100%
+  );
+  color: var(--color-white);
+  padding: 4rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.admissions-header::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.1) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+}
+
+.admissions-header__content {
+  position: relative;
+  z-index: 1;
+}
+
+.admissions-header__title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.admissions-header__subtitle {
+  font-size: 1.25rem;
+  opacity: 0.95;
+  margin-bottom: 2rem;
+}
+
+.admissions-header__buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.admissions-header__buttons .btn {
+  padding: 0.75rem 2rem;
+  font-size: 1.1rem;
+}
+
+.btn--white {
+  background-color: var(--color-white);
+  color: var(--color-primary);
+  border: 2px solid var(--color-white);
+}
+
+.btn--white:hover {
+  background-color: transparent;
+  color: var(--color-white);
+}
+
+/* --- 主要內容區域 --- */
+.admissions-main {
+  display: flex;
+  max-width: var(--admissions-content-max-width);
+  margin: 3rem auto;
+  gap: 2rem;
+  padding: 0 2rem;
+}
+
+/* --- 左側邊欄 --- */
+.admissions-sidebar-left {
+  width: var(--admissions-sidebar-width);
+  flex-shrink: 0;
+}
+
+.sidebar-widget {
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  transition: all var(--transition-base);
+}
+
+.sidebar-widget:hover {
+  box-shadow: var(--shadow-card-hover);
+}
+
+.sidebar-widget__header {
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-primary-light)
+  );
+  color: var(--color-white);
+  padding: 1rem 1.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.sidebar-widget__body {
+  padding: 1.5rem;
+}
+
+/* 快速連結 */
+.quick-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.quick-links__item {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-base);
+  color: var(--color-text-primary);
+  background-color: var(--color-gray-100);
+}
+
+.quick-links__item:hover {
+  background-color: var(--color-admissions-hover);
+  color: var(--color-primary);
+  transform: translateX(5px);
+}
+
+.quick-links__item::before {
+  content: "▶";
+  margin-right: 0.75rem;
+  color: var(--color-primary);
+  font-size: 0.8rem;
+}
+
+/* 重要日期 */
+.important-dates {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.date-item {
+  padding: 1rem;
+  background-color: var(--color-gray-100);
+  border-radius: var(--radius-md);
+  border-left: 4px solid var(--color-primary);
+}
+
+.date-item__date {
+  font-size: 0.9rem;
+  color: var(--color-primary);
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.date-item__event {
+  font-size: 0.95rem;
+  color: var(--color-text-primary);
+}
+
+/* 統計資訊 */
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 1rem;
+  background: linear-gradient(
+    135deg,
+    var(--color-admissions-hover),
+    var(--color-white)
+  );
+  border-radius: var(--radius-md);
+}
+
+.stat-item__number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  display: block;
+}
+
+.stat-item__label {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  margin-top: 0.25rem;
+}
+
+/* --- 中間內容區域 --- */
+.admissions-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.admissions-section {
+  padding: 0;
+}
+
+/* 內容卡片 */
+.admissions-block {
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  margin-bottom: 2rem;
+  overflow: hidden;
+  transition: all var(--transition-base);
+}
+
+.admissions-block:hover {
+  box-shadow: var(--shadow-card-hover);
+}
+
+.admissions-block__header {
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-primary-light)
+  );
+  color: var(--color-white);
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.admissions-block__icon {
+  font-size: 1.5rem;
+}
+
+.admissions-block__title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+.admissions-block__body {
+  padding: 2rem;
+}
+
+/* --- 招生類別分頁 --- */
+.tabs-nav {
+  display: flex;
+  border-bottom: 2px solid var(--color-gray-200);
+  padding: 0 2rem;
+  gap: 1rem;
+}
+
+.tab-button {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  background: none;
+  border: none;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transform: translateY(2px);
+  transition: all var(--transition-base);
+  position: relative;
+}
+
+.tab-button:hover {
+  color: var(--color-primary);
+  background-color: var(--color-admissions-hover);
+}
+
+.tab-button--active {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
+  background-color: var(--color-admissions-hover);
+}
+
+.tabs-content-wrapper {
+  padding: 2rem;
+}
+
+.tab-content {
+  display: none;
+  animation: fadeIn 0.5s ease;
+}
+
+.tab-content--active {
+  display: block;
+}
+
+.tab-content h3 {
+  font-size: 1.5rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--color-gray-200);
+}
+
+.tab-content p {
+  line-height: 1.8;
+  color: var(--color-text-secondary);
+  margin-bottom: 1rem;
+}
+
+/* 特色列表 */
+.feature-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: var(--color-gray-100);
+  border-radius: var(--radius-md);
+  transition: all var(--transition-base);
+}
+
+.feature-item:hover {
+  background-color: var(--color-admissions-hover);
+  transform: translateY(-2px);
+}
+
+.feature-item__icon {
+  font-size: 1.5rem;
+  color: var(--color-primary);
+}
+
+.feature-item__content h4 {
+  font-size: 1rem;
+  color: var(--color-primary);
+  margin-bottom: 0.25rem;
+}
+
+.feature-item__content p {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/* --- 學系與課程表格 --- */
+.table-responsive-wrapper {
+  overflow-x: auto;
+  margin-top: 1rem;
+}
+
+.admissions-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
+
+.admissions-table th,
+.admissions-table td {
+  border: 1px solid var(--color-gray-300);
+  padding: 1rem;
+  text-align: left;
+  vertical-align: top;
+}
+
+.admissions-table th {
+  background: linear-gradient(
+    135deg,
+    var(--color-primary),
+    var(--color-primary-light)
+  );
+  color: var(--color-white);
+  font-weight: 600;
+  text-align: center;
+}
+
+.admissions-table tbody tr {
+  transition: all var(--transition-base);
+}
+
+.admissions-table tbody tr:nth-child(even) {
+  background-color: var(--color-gray-100);
+}
+
+.admissions-table tbody tr:hover {
+  background-color: var(--color-admissions-hover);
+  transform: scale(1.01);
+}
+
+.admissions-table td:first-child {
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+/* --- 招生流程時間軸 --- */
+.timeline {
+  position: relative;
+  padding: 2rem 0;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(
+    180deg,
+    var(--color-primary),
+    var(--color-secondary)
+  );
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  display: flex;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.timeline-item:nth-child(odd) {
+  justify-content: flex-end;
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+  margin-right: calc(50% + 2rem);
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  margin-left: calc(50% + 2rem);
+}
+
+.timeline-marker {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  background-color: var(--color-primary);
+  border: 4px solid var(--color-white);
+  border-radius: 50%;
+  box-shadow: 0 0 0 4px var(--color-gray-200);
+  z-index: 1;
+}
+
+.timeline-content {
+  width: 45%;
+  padding: 1.5rem;
+  background-color: var(--color-white);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  transition: all var(--transition-base);
+}
+
+.timeline-content:hover {
+  box-shadow: var(--shadow-card-hover);
+  transform: translateY(-5px);
+}
+
+.timeline-date {
+  font-size: 0.9rem;
+  color: var(--color-primary);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.timeline-description {
+  font-size: 0.95rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+}
+
+/* --- Q&A 區塊 --- */
+.qa-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.qa-item {
+  border: 1px solid var(--color-gray-300);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: all var(--transition-base);
+}
+
+.qa-item:hover {
+  box-shadow: var(--shadow-sm);
+}
+
+.qa-item[open] {
+  border-color: var(--color-primary);
+}
+
+.qa-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1.25rem 1.5rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  cursor: pointer;
+  background-color: var(--color-gray-100);
+  transition: all var(--transition-base);
+}
+
+.qa-question:hover {
+  background-color: var(--color-admissions-hover);
+  color: var(--color-primary);
+}
+
+.qa-question::-webkit-details-marker,
+.qa-question::marker {
+  display: none;
+}
+
+.qa-question::after {
+  content: "+";
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  transition: transform var(--transition-base);
+}
+
+.qa-item[open] > .qa-question::after {
+  content: "−";
+  transform: rotate(180deg);
+}
+
+.qa-item[open] > .qa-question {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.qa-item[open] > .qa-question::after {
+  color: var(--color-white);
+}
+
+.qa-answer {
+  padding: 1.5rem;
+  background-color: var(--color-white);
+  color: var(--color-text-secondary);
+  line-height: 1.8;
+  animation: fadeIn 0.3s ease;
+}
+
+.qa-answer p {
+  margin: 0;
+}
+
+/* --- 文件下載 --- */
+.download-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.download-card {
+  background-color: var(--color-gray-100);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  text-align: center;
+  transition: all var(--transition-base);
+  border: 2px solid transparent;
+}
+
+.download-card:hover {
+  background-color: var(--color-admissions-hover);
+  border-color: var(--color-primary);
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.download-card__icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.download-card__title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.download-card__size {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  margin-bottom: 1rem;
+}
+
+.btn--download {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 0.75rem 1.5rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  transition: all var(--transition-base);
+}
+
+.btn--download:hover {
+  background-color: var(--color-primary-light);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+/* --- 聯絡表單 --- */
+.contact-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group--full {
+  grid-column: 1 / -1;
+}
+
+.form-group label {
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 0.875rem;
+  font-size: 1rem;
+  border: 2px solid var(--color-gray-300);
+  border-radius: var(--radius-md);
+  font-family: inherit;
+  transition: all var(--transition-base);
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(0, 51, 102, 0.1);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.btn--submit {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-base);
+  width: 100%;
+}
+
+.btn--submit:hover {
+  background-color: var(--color-primary-light);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+}
+
+/* --- 右側邊欄 --- */
+.admissions-sidebar-right {
+  width: var(--admissions-sidebar-width);
+  flex-shrink: 0;
+}
+
+/* 最新消息 */
+.news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.news-item {
+  padding: 1rem;
+  background-color: var(--color-gray-100);
+  border-radius: var(--radius-md);
+  border-left: 4px solid var(--color-secondary);
+  transition: all var(--transition-base);
+}
+
+.news-item:hover {
+  background-color: var(--color-admissions-hover);
+  transform: translateX(-5px);
+}
+
+.news-item__date {
+  font-size: 0.85rem;
+  color: var(--color-secondary);
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.news-item__title {
+  font-size: 0.95rem;
+  color: var(--color-text-primary);
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* 相關連結 */
+.related-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.related-link {
+  display: flex;
+  align-items: center;
+  padding: 0.875rem 1rem;
+  background-color: var(--color-gray-100);
+  border-radius: var(--radius-md);
+  color: var(--color-text-primary);
+  transition: all var(--transition-base);
+}
+
+.related-link:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-white);
+  transform: translateX(5px);
+}
+
+.related-link::before {
+  content: "🔗";
+  margin-right: 0.75rem;
+}
+
+/* 聯絡資訊 */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.contact-info-item__icon {
+  font-size: 1.5rem;
+  color: var(--color-primary);
+}
+
+.contact-info-item__content h4 {
+  font-size: 0.95rem;
+  color: var(--color-primary);
+  margin-bottom: 0.25rem;
+}
+
+.contact-info-item__content p {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+/* --- Footer --- */
+.admissions-footer {
+  background-color: var(--color-gray-900);
+  color: var(--color-white);
+  padding: 3rem 0 1.5rem;
+  margin-top: 4rem;
+}
+
+.footer-content {
+  max-width: var(--admissions-content-max-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.footer-section h3 {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  color: var(--color-white);
+}
+
+.footer-section ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-section a {
+  color: var(--color-gray-400);
+  transition: color var(--transition-base);
+}
+
+.footer-section a:hover {
+  color: var(--color-white);
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--color-gray-700);
+  padding-top: 1.5rem;
+  text-align: center;
+  color: var(--color-gray-500);
+  max-width: var(--admissions-content-max-width);
+  margin: 0 auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* =================================================================== */
+/* 響應式設計 - 平板 */
+/* =================================================================== */
+@media (max-width: 1200px) {
+  .admissions-main {
+    flex-direction: column;
+  }
+
+  .admissions-sidebar-left,
+  .admissions-sidebar-right {
+    width: 100%;
+  }
+
+  .timeline::before {
+    left: 20px;
+  }
+
+  .timeline-item {
+    justify-content: flex-start !important;
+  }
+
+  .timeline-item .timeline-content {
+    width: calc(100% - 60px);
+    margin-left: 60px !important;
+    margin-right: 0 !important;
+  }
+
+  .timeline-marker {
+    left: 20px;
+  }
+}
+
+/* =================================================================== */
+/* 響應式設計 - 手機 */
+/* =================================================================== */
+@media (max-width: 768px) {
+  /* === Navbar 手機版 === */
+  .navbar-top {
+    padding: 0 1rem;
+  }
+
+  .navbar-top__brand {
+    font-size: 1rem;
+  }
+
+  .navbar-top__info {
+    display: none;
+  }
+
+  .navbar-bottom {
+    padding: 0 1rem;
+  }
+
+  .navbar-bottom__content {
+    justify-content: space-between;
+  }
+
+  /* 手機版:顯示獨立的 Logo */
+  .navbar-bottom__content > .navbar-logo {
+    display: flex;
+  }
+
+  /* 隱藏桌面版選單 */
+  .navbar-menu {
+    display: none;
+  }
+
+  /* 顯示手機版按鈕 */
+  .navbar-mobile-toggle {
+    display: block;
+    order: 2;
+  }
+
+  /* Logo 樣式調整 */
+  .navbar-logo {
+    padding: 0;
+    order: 1;
+  }
+
+  .navbar-logo__image {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+
+  /* 顯示手機版選單 */
+  .navbar-mobile-menu {
+    display: block;
+  }
+
+  /* Header */
+  .admissions-header {
+    padding: 2.5rem 1rem;
+  }
+
+  .admissions-header__title {
+    font-size: 1.75rem;
+  }
+
+  .admissions-header__subtitle {
+    font-size: 1rem;
+  }
+
+  .admissions-header__buttons {
+    flex-direction: column;
+    padding: 0 1rem;
+  }
+
+  .admissions-header__buttons .btn {
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.875rem 1.5rem;
+  }
+
+  /* 主要內容 */
+  .admissions-main {
+    padding: 0 1rem;
+    margin: 2rem auto;
+    gap: 1.5rem;
+  }
+
+  .admissions-block__header {
+    padding: 1rem 1.25rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .admissions-block__title {
+    font-size: 1.25rem;
+  }
+
+  .admissions-block__body {
+    padding: 1.25rem;
+  }
+
+  /* 分頁 */
+  .tabs-nav {
+    padding: 0 1rem;
+    overflow-x: auto;
+    gap: 0.5rem;
+  }
+
+  .tab-button {
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
+    white-space: nowrap;
+  }
+
+  .tabs-content-wrapper {
+    padding: 1.25rem;
+  }
+
+  .tab-content h3 {
+    font-size: 1.25rem;
+  }
+
+  /* 特色列表 */
+  .feature-list {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .feature-item {
+    padding: 1rem;
+  }
+
+  /* 時間軸 */
+  .timeline {
+    padding: 1rem 0;
+  }
+
+  .timeline::before {
+    left: 10px;
+  }
+
+  .timeline-item .timeline-content {
+    width: calc(100% - 40px);
+    margin-left: 40px !important;
+    padding: 1.25rem;
+  }
+
+  .timeline-marker {
+    left: 10px;
+    width: 16px;
+    height: 16px;
+  }
+
+  /* Q&A */
+  .qa-question {
+    font-size: 0.95rem;
+    padding: 1rem;
+  }
+
+  .qa-answer {
+    padding: 1rem;
+  }
+
+  /* 下載卡片 */
+  .download-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .download-card {
+    padding: 1.25rem;
+  }
+
+  /* 表單 */
+  .contact-form {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    padding: 0.75rem;
+    font-size: 0.95rem;
+  }
+
+  .btn--submit {
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  /* 統計 */
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .stat-item {
+    padding: 1.25rem;
+  }
+
+  .stat-item__number {
+    font-size: 1.75rem;
+  }
+
+  /* 側邊欄 Widget */
+  .sidebar-widget {
+    margin-bottom: 1.25rem;
+  }
+
+  .sidebar-widget__header {
+    padding: 0.875rem 1.25rem;
+    font-size: 1rem;
+  }
+
+  .sidebar-widget__body {
+    padding: 1.25rem;
+  }
+
+  /* Footer */
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 0 1rem;
+  }
+
+  .footer-bottom {
+    padding: 1.25rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* =================================================================== */
+/* 小尺寸手機優化 */
+/* =================================================================== */
+@media (max-width: 480px) {
+  .navbar-top__brand {
+    font-size: 0.9rem;
+  }
+
+  .navbar-logo__image {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+
+  .admissions-header__title {
+    font-size: 1.5rem;
+  }
+
+  .admissions-header__subtitle {
+    font-size: 0.9rem;
+  }
+
+  .admissions-block__title {
+    font-size: 1.1rem;
+  }
+
+  .tab-button {
+    font-size: 0.9rem;
+    padding: 0.625rem 0.875rem;
+  }
+
+  .stat-item__number {
+    font-size: 1.5rem;
+  }
+
+  .stat-item__label {
+    font-size: 0.85rem;
+  }
+}
+
+/* --- 動畫效果 --- */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Scroll reveal animation */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.6s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}

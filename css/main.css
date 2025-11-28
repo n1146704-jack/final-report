@@ -1,0 +1,110 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+/* --- Body 樣式 --- */
+.body-styles {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f3f4f6;
+}
+
+/* --- 主要內容區域 --- */
+.main-content {
+  flex-grow: 1;
+}
+
+/* --- 內容容器 --- */
+.content-container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box; 
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+/* --- 卡片網格 --- */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.5rem;
+  max-width: 72rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%; 
+}
+
+/* --- 卡片連結 --- */
+.card-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* --- 卡片本身 --- */
+.card {
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition-property: box-shadow;
+  transition-duration: 300ms;
+}
+
+.card:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* --- 卡片圖片 --- */
+.card-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+/* --- 卡片內容區域 --- */
+.card-body {
+  padding: 1.5rem;
+}
+
+/* --- 卡片標題 --- */
+.card-title {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #111827;
+}
+
+/* --- 卡片描述 --- */
+.card-description {
+  color: #374151;
+  margin: 0;
+}
+
+/* --- 響應式設計 (md: 768px) --- */
+@media (min-width: 768px) {
+  .content-container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 2rem;
+  }
+}

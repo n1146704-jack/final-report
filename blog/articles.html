@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>所有文章 - Tech Blog</title>
+        <link rel="stylesheet" href="css/global.css">
+        <link rel="stylesheet" href="css/articles.css">
+    </head>
+
+    <body>
+
+        <!-- Header -->
+        <header id="page-header-container">
+            <nav class="page-nav">
+                <div class="page-nav__container">
+                    <div class="page-nav__wrapper">
+                        <div class="page-nav__brand">
+                            <span class="page-nav__brand-icon">💻</span>
+                            <span class="page-nav__brand-text">Tech Blog</span>
+                        </div>
+
+                        <div class="page-nav__links">
+                            <a href="../index.html" class="page-nav__link">
+                                其他主題
+                            </a>
+                            <a href="index.html" class="page-nav__link">
+                                首頁
+                            </a>
+                            <a href="article.html" class="page-nav__link">
+                                文章範例
+                            </a>
+                            <a href="#" class="page-nav__link page-nav__link--active">
+                                分類
+                            </a>
+                            <a href="#" class="page-nav__link">
+                                關於
+                            </a>
+                            <a href="#" class="page-nav__link page-nav__link--highlight">
+                                聯絡我們
+                            </a>
+                        </div>
+
+                        <!-- Mobile Menu Toggle -->
+                        <button class="page-nav__mobile-toggle" id="mobileMenuToggle">
+                            <span class="page-nav__hamburger"></span>
+                        </button>
+                    </div>
+
+                    <!-- Mobile Menu -->
+                    <div class="page-nav__mobile-menu" id="mobileMenu">
+                        <a href="../index.html" class="page-nav__mobile-link">其他主題</a>
+                        <a href="index.html" class="page-nav__mobile-link">首頁</a>
+                        <a href="article.html" class="page-nav__mobile-link page-nav__mobile-link--active">文章範例</a>
+                        <a href="#" class="page-nav__mobile-link">分類</a>
+                        <a href="#" class="page-nav__mobile-link">關於</a>
+                        <a href="#" class="page-nav__mobile-link">聯絡我們</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="container">
+                <div class="hero-section__wrapper">
+                    <div class="hero-section__content">
+                        <h1 class="hero-section__title">
+                            探索技術世界
+                            <span class="hero-section__title-highlight">無限可能</span>
+                        </h1>
+                        <p class="hero-section__subtitle">
+                            深入淺出的技術文章，助你掌握前沿開發技能
+                        </p>
+                        <div class="hero-section__stats">
+                            <div class="hero-stat">
+                                <div class="hero-stat__number">120+</div>
+                                <div class="hero-stat__label">技術文章</div>
+                            </div>
+                            <div class="hero-stat">
+                                <div class="hero-stat__number">15+</div>
+                                <div class="hero-stat__label">技術分類</div>
+                            </div>
+                            <div class="hero-stat">
+                                <div class="hero-stat__number">5K+</div>
+                                <div class="hero-stat__label">每月讀者</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Filter & Search -->
+        <section class="filter-bar-section">
+            <div class="container">
+                <div class="filter-bar-section__wrapper">
+                    <div class="filter-bar-section__buttons">
+                        <button class="filter-btn filter-btn--active" data-category="all">全部</button>
+                        <button class="filter-btn filter-btn--inactive" data-category="frontend">前端開發</button>
+                        <button class="filter-btn filter-btn--inactive" data-category="backend">後端開發</button>
+                        <button class="filter-btn filter-btn--inactive" data-category="database">資料庫</button>
+                        <button class="filter-btn filter-btn--inactive" data-category="devops">開發工具</button>
+                    </div>
+                    <div class="filter-bar-section__search-wrapper">
+                        <input type="text" placeholder="搜尋文章..." class="filter-bar-section__search-input"
+                            id="searchInput">
+                        <span class="filter-bar-section__search-icon">🔍</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Articles List -->
+        <section class="article-list-section">
+            <div class="container">
+                <div class="section-wrapper">
+
+                    <!-- Featured Article -->
+                    <div class="featured-article">
+                        <div class="featured-article__badge">精選文章</div>
+                        <div class="featured-article__layout">
+                            <div class="featured-article__image-wrapper">
+                                <span class="featured-article__image-emoji">⭐</span>
+                            </div>
+                            <div class="featured-article__content">
+                                <div class="article-list-item__meta">
+                                    <span>2025-11-15</span>
+                                    <span class="article-card__meta-separator">•</span>
+                                    <span
+                                        class="article-list-item__meta-tag article-list-item__meta-tag--blue">前端開發</span>
+                                </div>
+                                <h2 class="featured-article__title">
+                                    2025 前端開發完整路線圖：從零到精通
+                                </h2>
+                                <p class="featured-article__excerpt">
+                                    這篇文章將帶你了解 2025 年前端開發的完整學習路線，包含 HTML、CSS、JavaScript 基礎，以及 Vue、React
+                                    等現代框架的學習建議。無論你是初學者還是想要提升技能的開發者，都能找到適合自己的學習方向。
+                                </p>
+                                <div class="article-list-item__footer">
+                                    <div class="article-list-item__mini-tags">
+                                        <span class="article-list-item__mini-tag">JavaScript</span>
+                                        <span class="article-list-item__mini-tag">Vue.js</span>
+                                        <span class="article-list-item__mini-tag">React</span>
+                                    </div>
+                                    <a href="article.html" class="read-more-link read-more-link--large">
+                                        閱讀全文 →
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Regular Articles -->
+                    <article class="article-list-item" data-category="frontend">
+                        <div class="article-list-item__layout">
+                            <div class="article-list-item__image-wrapper article-card__image-wrapper--style-1">
+                                <span class="article-card__image-emoji">💻</span>
+                            </div>
+                            <div class="article-list-item__content">
+                                <div class="article-list-item__meta">
+                                    <span>2025-11-01</span>
+                                    <span class="article-card__meta-separator">•</span>
+                                    <span
+                                        class="article-list-item__meta-tag article-list-item__meta-tag--blue">前端開發</span>
+                                </div>
+                                <h2 class="article-list-item__title">
+                                    Vue 3 Composition API 完整指南
+                                </h2>
+                                <p class="article-list-item__excerpt">
+                                    深入探討 Vue 3 的 Composition API,包含 setup、ref、reactive 等核心概念。從基礎到進階應用,幫助你完全掌握 Vue 3
+                                    的新特性。
+                                </p>
+                                <div class="article-list-item__footer">
+                                    <div class="article-list-item__mini-tags">
+                                        <span class="article-list-item__mini-tag">Vue.js</span>
+                                        <span class="article-list-item__mini-tag">JavaScript</span>
+                                    </div>
+                                    <a href="article.html" class="read-more-link">
+                                        閱讀更多 →
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article-list-item" data-category="backend">
+                        <div class="article-list-item__layout">
+                            <div class="article-list-item__image-wrapper article-card__image-wrapper--style-2">
+                                <span class="article-card__image-emoji">🚀</span>
+                            </div>
+                            <div class="article-list-item__content">
+                                <div class="article-list-item__meta">
+                                    <span>2025-10-28</span>
+                                    <span class="article-card__meta-separator">•</span>
+                                    <span
+                                        class="article-list-item__meta-tag article-list-item__meta-tag--purple">後端開發</span>
+                                </div>
+                                <h2 class="article-list-item__title">
+                                    Laravel 效能優化的 10 個技巧
+                                </h2>
+                                <p class="article-list-item__excerpt">
+                                    分享在實際專案中使用的 Laravel 效能優化方法,包含快取策略、資料庫查詢優化、佇列處理等實戰技巧。
+                                </p>
+                                <div class="article-list-item__footer">
+                                    <div class="article-list-item__mini-tags">
+                                        <span class="article-list-item__mini-tag">Laravel</span>
+                                        <span class="article-list-item__mini-tag">PHP</span>
+                                    </div>
+                                    <a href="article.html" class="read-more-link">
+                                        閱讀更多 →
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article-list-item" data-category="devops">
+                        <div class="article-list-item__layout">
+                            <div class="article-list-item__image-wrapper article-card__image-wrapper--style-3">
+                                <span class="article-card__image-emoji">🔧</span>
+                            </div>
+                            <div class="article-list-item__content">
+                                <div class="article-list-item__meta">
+                                    <span>2025-10-25</span>
+                                    <span class="article-card__meta-separator">•</span>
+                                    <span
+                                        class="article-list-item__meta-tag article-list-item__meta-tag--green">開發工具</span>
+                                </div>
+                                <h2 class="article-list-item__title">
+                                    使用 Docker 建立開發環境
+                                </h2>
+                                <p class="article-list-item__excerpt">
+                                    如何使用 Docker 快速建立一致的開發環境,提升團隊協作效率。包含 Docker Compose 的實際應用範例。
+                                </p>
+                                <div class="article-list-item__footer">
+                                    <div class="article-list-item__mini-tags">
+                                        <span class="article-list-item__mini-tag">Docker</span>
+                                        <span class="article-list-item__mini-tag">DevOps</span>
+                                    </div>
+                                    <a href="article.html" class="read-more-link">
+                                        閱讀更多 →
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article-list-item" data-category="database">
+                        <div class="article-list-item__layout">
+                            <div class="article-list-item__image-wrapper article-card__image-wrapper--style-4">
+                                <span class="article-card__image-emoji">🗄️</span>
+                            </div>
+                            <div class="article-list-item__content">
+                                <div class="article-list-item__meta">
+                                    <span>2025-10-20</span>
+                                    <span class="article-card__meta-separator">•</span>
+                                    <span
+                                        class="article-list-item__meta-tag article-list-item__meta-tag--orange">資料庫</span>
+                                </div>
+                                <h2 class="article-list-item__title">
+                                    MySQL 索引優化實戰指南
+                                </h2>
+                                <p class="article-list-item__excerpt">
+                                    深入了解 MySQL 索引的運作原理,學習如何透過正確的索引設計大幅提升查詢效能。包含實際案例分析。
+                                </p>
+                                <div class="article-list-item__footer">
+                                    <div class="article-list-item__mini-tags">
+                                        <span class="article-list-item__mini-tag">MySQL</span>
+                                        <span class="article-list-item__mini-tag">Database</span>
+                                    </div>
+                                    <a href="article.html" class="read-more-link">
+                                        閱讀更多 →
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article-list-item" data-category="frontend">
+                        <div class="article-list-item__layout">
+                            <div class="article-list-item__image-wrapper article-card__image-wrapper--style-5">
+                                <span class="article-card__image-emoji">🎨</span>
+                            </div>
+                            <div class="article-list-item__content">
+                                <div class="article-list-item__meta">
+                                    <span>2025-10-15</span>
+                                    <span class="article-card__meta-separator">•</span>
+                                    <span
+                                        class="article-list-item__meta-tag article-list-item__meta-tag--blue">前端開發</span>
+                                </div>
+                                <h2 class="article-list-item__title">
+                                    CSS Grid 與 Flexbox 完整對比
+                                </h2>
+                                <p class="article-list-item__excerpt">
+                                    詳細比較 CSS Grid 和 Flexbox 的使用場景,幫助你在專案中選擇最適合的布局方式。
+                                </p>
+                                <div class="article-list-item__footer">
+                                    <div class="article-list-item__mini-tags">
+                                        <span class="article-list-item__mini-tag">CSS</span>
+                                        <span class="article-list-item__mini-tag">Layout</span>
+                                    </div>
+                                    <a href="article.html" class="read-more-link">
+                                        閱讀更多 →
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article-list-item" data-category="backend">
+                        <div class="article-list-item__layout">
+                            <div class="article-list-item__image-wrapper article-card__image-wrapper--style-6">
+                                <span class="article-card__image-emoji">☕</span>
+                            </div>
+                            <div class="article-list-item__content">
+                                <div class="article-list-item__meta">
+                                    <span>2025-10-10</span>
+                                    <span class="article-card__meta-separator">•</span>
+                                    <span
+                                        class="article-list-item__meta-tag article-list-item__meta-tag--purple">後端開發</span>
+                                </div>
+                                <h2 class="article-list-item__title">
+                                    Spring Boot 微服務架構實踐
+                                </h2>
+                                <p class="article-list-item__excerpt">
+                                    從零開始建立 Spring Boot 微服務架構,包含服務註冊、配置管理、API Gateway 等核心組件的實作。
+                                </p>
+                                <div class="article-list-item__footer">
+                                    <div class="article-list-item__mini-tags">
+                                        <span class="article-list-item__mini-tag">Spring Boot</span>
+                                        <span class="article-list-item__mini-tag">Java</span>
+                                    </div>
+                                    <a href="article.html" class="read-more-link">
+                                        閱讀更多 →
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Pagination -->
+                    <div class="pagination">
+                        <button class="pagination__btn pagination__btn--disabled" disabled>
+                            上一頁
+                        </button>
+                        <button class="pagination__btn pagination__btn--active">1</button>
+                        <button class="pagination__btn">2</button>
+                        <button class="pagination__btn">3</button>
+                        <button class="pagination__btn">
+                            下一頁
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="newsletter-section">
+            <div class="container">
+                <div class="newsletter-section__wrapper">
+                    <div class="newsletter-section__content">
+                        <h2 class="newsletter-section__title">訂閱最新文章</h2>
+                        <p class="newsletter-section__subtitle">每週收到精選技術文章，不錯過任何重要更新</p>
+                    </div>
+                    <div class="newsletter-section__form">
+                        <input type="email" placeholder="輸入你的 Email" class="newsletter-section__input"
+                            id="newsletterEmail">
+                        <button class="newsletter-section__btn" id="newsletterBtn">訂閱</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="page-footer-container">
+            <div class="page-footer">
+                <div class="container">
+                    <div class="page-footer__wrapper">
+                        <!-- Footer Info -->
+                        <div class="page-footer__info">
+                            <div class="page-footer__brand">
+                                <span class="page-footer__brand-icon">💻</span>
+                                <span class="page-footer__brand-text">Tech Blog</span>
+                            </div>
+                            <p class="page-footer__description">
+                                分享前端、後端、資料庫等技術知識，幫助開發者提升技能，探索程式設計的無限可能。
+                            </p>
+                            <div class="page-footer__social">
+                                <a href="#" class="page-footer__social-link" title="GitHub">
+                                    <span>🐙</span>
+                                </a>
+                                <a href="#" class="page-footer__social-link" title="Twitter">
+                                    <span>🐦</span>
+                                </a>
+                                <a href="#" class="page-footer__social-link" title="LinkedIn">
+                                    <span>💼</span>
+                                </a>
+                                <a href="#" class="page-footer__social-link" title="Email">
+                                    <span>📧</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Footer Links -->
+                        <div class="page-footer__links-wrapper">
+                            <div class="page-footer__links-group">
+                                <h3 class="page-footer__links-title">分類</h3>
+                                <ul class="page-footer__links">
+                                    <li><a href="#" class="page-footer__link">前端開發</a></li>
+                                    <li><a href="#" class="page-footer__link">後端開發</a></li>
+                                    <li><a href="#" class="page-footer__link">資料庫</a></li>
+                                    <li><a href="#" class="page-footer__link">開發工具</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="page-footer__links-group">
+                                <h3 class="page-footer__links-title">資源</h3>
+                                <ul class="page-footer__links">
+                                    <li><a href="#" class="page-footer__link">關於我們</a></li>
+                                    <li><a href="#" class="page-footer__link">聯絡我們</a></li>
+                                    <li><a href="#" class="page-footer__link">隱私政策</a></li>
+                                    <li><a href="#" class="page-footer__link">使用條款</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="page-footer__links-group">
+                                <h3 class="page-footer__links-title">追蹤我們</h3>
+                                <ul class="page-footer__links">
+                                    <li><a href="#" class="page-footer__link">GitHub</a></li>
+                                    <li><a href="#" class="page-footer__link">Twitter</a></li>
+                                    <li><a href="#" class="page-footer__link">LinkedIn</a></li>
+                                    <li><a href="#" class="page-footer__link">RSS Feed</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Footer Bottom -->
+                    <div class="page-footer__bottom">
+                        <p class="page-footer__copyright">
+                            © 2025 Tech Blog. All rights reserved.
+                        </p>
+                        <button class="scroll-to-top" id="scrollToTop" title="回到頂部">
+                            ↑
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- JavaScript -->
+        <script src="js/articles.js"></script>
+    </body>
+
+</html>

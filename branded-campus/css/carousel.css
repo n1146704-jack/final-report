@@ -1,0 +1,90 @@
+/*
+ * 輪播圖 (Carousel) 樣式
+ */
+
+/* 主要容器 */
+.carouse-section {
+  position: relative;
+  overflow: hidden;
+}
+
+/* 幻燈片軌道 */
+.carousel-slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  height: 100%;
+}
+
+/* 單張幻燈片 */
+.carousel-slide {
+  flex: 0 0 100%;
+  width: 100%;
+}
+
+.carousel-slide img {
+  width: 100%;
+  display: block;
+  height: 500px;
+  object-fit: cover;
+}
+
+/* 上/下頁按鈕 */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.5rem;
+  color: var(--color-text-primary);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.carousel-btn:hover {
+  background-color: var(--color-white);
+}
+
+.carousel-btn--prev {
+  left: 1rem;
+}
+
+.carousel-btn--next {
+  right: 1rem;
+}
+
+/* 導覽點 (Dots) */
+.carousel-dots {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  gap: 0.75rem;
+}
+
+.carousel-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.carousel-dot:hover {
+  background-color: var(--color-white);
+}
+
+/* 當前啟用的導覽點 */
+.carousel-dot--active {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}

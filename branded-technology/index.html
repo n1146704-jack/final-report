@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>未來科技有限公司 - 創新科技領航者</title>
+        <link rel="stylesheet" href="css/global.css">
+        <link rel="stylesheet" href="css/technology.css">
+    </head>
+
+    <body>
+
+        <!-- 動態背景粒子效果 -->
+        <canvas id="particle-canvas"></canvas>
+
+        <!-- Header -->
+        <header id="page-header-container" class="tech-header">
+            <nav class="tech-nav">
+                <div class="tech-nav__container">
+                    <!-- Logo -->
+                    <div class="tech-nav__brand">
+                        <a href="#home" class="tech-logo">
+                            <svg class="tech-logo__icon" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                                <path d="M16 2L2 9L16 16L30 9L16 2Z" fill="currentColor" opacity="0.3" />
+                                <path d="M2 23L16 30L30 23L16 16L2 23Z" fill="currentColor" />
+                                <path d="M16 16L30 9V23L16 30V16Z" fill="currentColor" opacity="0.6" />
+                            </svg>
+                            <span class="tech-logo__text">FutureTech</span>
+                        </a>
+                    </div>
+
+                    <!-- Desktop Navigation -->
+                    <div class="tech-nav__links" id="navLinks">
+                        <a href="#home" class="tech-nav__link tech-nav__link--active" data-section="home">
+                            首頁
+                        </a>
+                        <a href="#services" class="tech-nav__link" data-section="services">
+                            服務項目
+                        </a>
+                        <a href="#products" class="tech-nav__link" data-section="products">
+                            產品展示
+                        </a>
+                        <a href="#technology" class="tech-nav__link" data-section="technology">
+                            技術實力
+                        </a>
+                        <a href="#about" class="tech-nav__link" data-section="about">
+                            關於我們
+                        </a>
+
+                        <!-- Dropdown Menu -->
+                        <div class="tech-nav__dropdown">
+                            <button class="tech-nav__link tech-nav__dropdown-toggle" id="dropdownToggle">
+                                前往
+                                <svg class="tech-nav__dropdown-arrow" width="12" height="12" viewBox="0 0 12 12"
+                                    fill="none">
+                                    <path d="M3 4.5L6 7.5L9 4.5" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                            <div class="tech-nav__dropdown-menu" id="dropdownMenu">
+                                <a href="../index.html" class="tech-nav__dropdown-item">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <path d="M2 4H14M2 8H14M2 12H14" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" />
+                                    </svg>
+                                    <span>其他主題</span>
+                                </a>
+                                <a href="structure.html" class="tech-nav__dropdown-item">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <path
+                                            d="M8 2C4.686 2 2 4.686 2 8C2 11.314 4.686 14 8 14C11.314 14 14 11.314 14 8C14 4.686 11.314 2 8 2Z"
+                                            stroke="currentColor" stroke-width="2" />
+                                        <path d="M8 5V8L10 10" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" />
+                                    </svg>
+                                    <span>公司組織</span>
+                                </a>
+                                <a href="history.html" class="tech-nav__dropdown-item">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <path d="M2 2H14V14H2V2Z" stroke="currentColor" stroke-width="2"
+                                            stroke-linejoin="round" />
+                                        <path d="M5 2V5M11 2V5M2 6H14" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" />
+                                    </svg>
+                                    <span>公司歷史</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CTA Button -->
+                    <div class="tech-nav__actions">
+                        <button class="tech-nav__cta" id="contactNavBtn">
+                            <span>聯絡我們</span>
+                            <svg class="tech-nav__cta-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M1 8H15M15 8L8 1M15 8L8 15" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Mobile Menu Toggle -->
+                    <button class="tech-nav__toggle" id="menuToggle" aria-label="開啟選單">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Mobile Menu Overlay -->
+        <div class="tech-mobile-menu" id="mobileMenu">
+            <div class="tech-mobile-menu__content">
+                <button class="tech-mobile-menu__close" id="closeMobileMenu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </button>
+                <div class="tech-mobile-menu__links">
+                    <a href="#home" class="tech-mobile-menu__link" data-section="home">首頁</a>
+                    <a href="#services" class="tech-mobile-menu__link" data-section="services">服務項目</a>
+                    <a href="#products" class="tech-mobile-menu__link" data-section="products">產品展示</a>
+                    <a href="#technology" class="tech-mobile-menu__link" data-section="technology">技術實力</a>
+                    <a href="#about" class="tech-mobile-menu__link" data-section="about">關於我們</a>
+
+                    <!-- Mobile Dropdown Section -->
+                    <div class="tech-mobile-menu__divider"></div>
+                    <div class="tech-mobile-menu__section-title">前往</div>
+                    <a href="../index.html" class="tech-mobile-menu__link tech-mobile-menu__link--sub">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M2 4H14M2 8H14M2 12H14" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg>
+                        其他主題
+                    </a>
+                    <a href="structure.html" class="tech-mobile-menu__link tech-mobile-menu__link--sub">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path
+                                d="M8 2C4.686 2 2 4.686 2 8C2 11.314 4.686 14 8 14C11.314 14 14 11.314 14 8C14 4.686 11.314 2 8 2Z"
+                                stroke="currentColor" stroke-width="2" />
+                            <path d="M8 5V8L10 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                        公司組織
+                    </a>
+                    <a href="history.html" class="tech-mobile-menu__link tech-mobile-menu__link--sub">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                            <path d="M2 2H14V14H2V2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                            <path d="M5 2V5M11 2V5M2 6H14" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg>
+                        公司歷史
+                    </a>
+                </div>
+                <div class="tech-mobile-menu__footer">
+                    <button class="tech-btn tech-btn--primary tech-btn--block" id="contactMobileBtn">
+                        聯絡我們
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Floating Sidebar -->
+        <aside class="tech-sidebar" id="techSidebar">
+            <div class="tech-sidebar__content">
+                <button class="tech-sidebar__item" data-tooltip="返回頂部" id="scrollToTop">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M10 15V5M10 5L5 10M10 5L15 10" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+                <button class="tech-sidebar__item" data-tooltip="切換主題" id="themeToggle">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path
+                            d="M10 2V4M10 16V18M4 10H2M18 10H16M15.657 15.657L14.243 14.243M15.657 4.343L14.243 5.757M4.343 15.657L5.757 14.243M4.343 4.343L5.757 5.757"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </button>
+                <button class="tech-sidebar__item" data-tooltip="分享" id="shareBtn">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path
+                            d="M15 6.667C16.38 6.667 17.5 5.547 17.5 4.167C17.5 2.787 16.38 1.667 15 1.667C13.62 1.667 12.5 2.787 12.5 4.167C12.5 5.547 13.62 6.667 15 6.667ZM5 12.5C6.38 12.5 7.5 11.38 7.5 10C7.5 8.62 6.38 7.5 5 7.5C3.62 7.5 2.5 8.62 2.5 10C2.5 11.38 3.62 12.5 5 12.5ZM15 13.333C13.62 13.333 12.5 14.453 12.5 15.833C12.5 17.213 13.62 18.333 15 18.333C16.38 18.333 17.5 17.213 17.5 15.833C17.5 14.453 16.38 13.333 15 13.333ZM7.083 11.25L12.925 14.583M12.917 5.417L7.083 8.75"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+                </button>
+            </div>
+            <div class="tech-sidebar__progress">
+                <div class="tech-sidebar__progress-bar" id="progressBar"></div>
+            </div>
+        </aside>
+
+        <!-- Main Content Area -->
+        <main class="tech-main">
+
+            <!-- Hero Section -->
+            <section id="home" class="tech-hero" data-section>
+                <div class="tech-hero__container">
+                    <div class="tech-hero__content">
+                        <div class="tech-hero__badge">
+                            <span class="tech-badge tech-badge--pulse">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="2" />
+                                </svg>
+                                2025 最新技術
+                            </span>
+                        </div>
+                        <h1 class="tech-hero__title">
+                            <span class="tech-hero__title-main">創新科技</span>
+                            <span class="tech-hero__title-highlight">引領未來</span>
+                        </h1>
+                        <p class="tech-hero__subtitle">
+                            我們致力於開發前沿技術解決方案，為企業數位轉型提供強大動力
+                        </p>
+                        <div class="tech-hero__actions">
+                            <button class="tech-btn tech-btn--primary" id="exploreCta">
+                                <span>探索更多</span>
+                                <svg class="tech-btn__icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                    <path d="M4 10H16M16 10L11 5M16 10L11 15" stroke="currentColor" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                            <button class="tech-btn tech-btn--outline" id="demoCta">
+                                <span>立即體驗</span>
+                            </button>
+                        </div>
+                        <div class="tech-hero__stats">
+                            <div class="tech-stat">
+                                <div class="tech-stat__number" data-count="1000">0</div>
+                                <div class="tech-stat__label">專案經驗</div>
+                            </div>
+                            <div class="tech-stat">
+                                <div class="tech-stat__number" data-count="500">0</div>
+                                <div class="tech-stat__label">企業客戶</div>
+                            </div>
+                            <div class="tech-stat">
+                                <div class="tech-stat__number" data-count="99">0</div>
+                                <div class="tech-stat__label">客戶滿意度</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tech-hero__visual">
+                        <div class="tech-cube-container">
+                            <div class="tech-cube">
+                                <div class="tech-cube__face tech-cube__face--front">AI</div>
+                                <div class="tech-cube__face tech-cube__face--back">ML</div>
+                                <div class="tech-cube__face tech-cube__face--right">IoT</div>
+                                <div class="tech-cube__face tech-cube__face--left">5G</div>
+                                <div class="tech-cube__face tech-cube__face--top">AR</div>
+                                <div class="tech-cube__face tech-cube__face--bottom">VR</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Services Section -->
+            <section id="services" class="tech-services" data-section>
+                <div class="tech-section-container">
+                    <div class="tech-section-header">
+                        <span class="tech-section-subtitle">我們的優勢</span>
+                        <h2 class="tech-section-title">核心服務項目</h2>
+                    </div>
+                    <div class="tech-services__grid">
+                        <div class="tech-service-card" data-tilt>
+                            <div class="tech-service-card__icon">
+                                <div class="tech-icon-wrapper tech-icon-wrapper--ai">
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                        <path d="M20 5L35 12.5V27.5L20 35L5 27.5V12.5L20 5Z" stroke="currentColor"
+                                            stroke-width="2" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <h3 class="tech-service-card__title">AI 人工智慧</h3>
+                            <p class="tech-service-card__desc">
+                                運用深度學習與機器學習技術，打造智能化解決方案
+                            </p>
+                        </div>
+                        <div class="tech-service-card" data-tilt>
+                            <div class="tech-service-card__icon">
+                                <div class="tech-icon-wrapper tech-icon-wrapper--cloud">
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                        <path
+                                            d="M30 25H10C6.686 25 4 22.314 4 19C4 15.686 6.686 13 10 13C10 8.582 13.582 5 18 5C21.395 5 24.268 7.176 25.465 10.231C29.532 10.588 32.667 13.961 32.667 18.111C32.667 22.529 29.085 26.111 24.667 26.111H30C33.314 26.111 36 23.425 36 20.111C36 16.797 33.314 14.111 30 14.111"
+                                            stroke="currentColor" stroke-width="2" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <h3 class="tech-service-card__title">雲端運算</h3>
+                            <p class="tech-service-card__desc">
+                                提供彈性、安全的雲端基礎架構與服務
+                            </p>
+                        </div>
+                        <div class="tech-service-card" data-tilt>
+                            <div class="tech-service-card__icon">
+                                <div class="tech-icon-wrapper tech-icon-wrapper--iot">
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                        <circle cx="20" cy="20" r="3" fill="currentColor" />
+                                        <circle cx="8" cy="8" r="3" stroke="currentColor" stroke-width="2" />
+                                        <circle cx="32" cy="8" r="3" stroke="currentColor" stroke-width="2" />
+                                        <circle cx="8" cy="32" r="3" stroke="currentColor" stroke-width="2" />
+                                        <circle cx="32" cy="32" r="3" stroke="currentColor" stroke-width="2" />
+                                        <path
+                                            d="M10.5 10.5L17 17M22.5 22.5L29.5 29.5M10.5 29.5L17 23M22.5 17.5L29.5 10.5"
+                                            stroke="currentColor" stroke-width="2" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <h3 class="tech-service-card__title">物聯網整合</h3>
+                            <p class="tech-service-card__desc">
+                                連接設備與數據,實現智慧化物聯網系統
+                            </p>
+                        </div>
+                        <div class="tech-service-card" data-tilt>
+                            <div class="tech-service-card__icon">
+                                <div class="tech-icon-wrapper tech-icon-wrapper--security">
+                                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                                        <path d="M20 5L5 11V19C5 27.5 11 34 20 35C29 34 35 27.5 35 19V11L20 5Z"
+                                            stroke="currentColor" stroke-width="2" />
+                                        <path d="M15 20L18 23L25 16" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <h3 class="tech-service-card__title">資訊安全</h3>
+                            <p class="tech-service-card__desc">
+                                全方位的網路安全防護與風險管理解決方案
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Products Section -->
+            <section id="products" class="tech-products" data-section>
+                <div class="tech-section-container">
+                    <div class="tech-section-header">
+                        <span class="tech-section-subtitle">創新產品</span>
+                        <h2 class="tech-section-title">產品展示</h2>
+                    </div>
+                    <div class="tech-products__grid">
+                        <div class="tech-product-card">
+                            <div class="tech-product-card__image">
+                                <div class="tech-product-card__placeholder">
+                                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+                                        <rect x="10" y="10" width="60" height="60" rx="8" stroke="currentColor"
+                                            stroke-width="2" />
+                                        <path d="M25 40L35 50L55 30" stroke="currentColor" stroke-width="3"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="tech-product-card__content">
+                                <span class="tech-product-card__category">AI 平台</span>
+                                <h3 class="tech-product-card__title">智能分析系統</h3>
+                                <p class="tech-product-card__desc">
+                                    企業級 AI 分析平台，提供深度數據洞察與預測能力
+                                </p>
+                                <a href="#" class="tech-product-card__link">
+                                    了解更多
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <path d="M1 8H15M15 8L8 1M15 8L8 15" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="tech-product-card">
+                            <div class="tech-product-card__image">
+                                <div class="tech-product-card__placeholder">
+                                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+                                        <circle cx="40" cy="40" r="30" stroke="currentColor" stroke-width="2" />
+                                        <path d="M40 20V40L50 50" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="tech-product-card__content">
+                                <span class="tech-product-card__category">雲端服務</span>
+                                <h3 class="tech-product-card__title">企業雲平台</h3>
+                                <p class="tech-product-card__desc">
+                                    安全可靠的企業級雲端基礎設施與管理平台
+                                </p>
+                                <a href="#" class="tech-product-card__link">
+                                    了解更多
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <path d="M1 8H15M15 8L8 1M15 8L8 15" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="tech-product-card">
+                            <div class="tech-product-card__image">
+                                <div class="tech-product-card__placeholder">
+                                    <svg width="80" height="80" viewBox="0 0 80 80" fill="none">
+                                        <rect x="15" y="25" width="50" height="35" rx="4" stroke="currentColor"
+                                            stroke-width="2" />
+                                        <path d="M30 35H50M30 45H50M30 55H45" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="tech-product-card__content">
+                                <span class="tech-product-card__category">IoT 方案</span>
+                                <h3 class="tech-product-card__title">智慧物聯系統</h3>
+                                <p class="tech-product-card__desc">
+                                    整合物聯網設備，實現智慧化監控與管理
+                                </p>
+                                <a href="#" class="tech-product-card__link">
+                                    了解更多
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <path d="M1 8H15M15 8L8 1M15 8L8 15" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Technology Section -->
+            <section id="technology" class="tech-technology" data-section>
+                <div class="tech-section-container">
+                    <div class="tech-section-header">
+                        <span class="tech-section-subtitle">技術堆疊</span>
+                        <h2 class="tech-section-title">核心技術能力</h2>
+                    </div>
+                    <div class="tech-stack">
+                        <div class="tech-stack__category">
+                            <h3 class="tech-stack__title">前端技術</h3>
+                            <div class="tech-stack__items">
+                                <div class="tech-stack__item">React</div>
+                                <div class="tech-stack__item">Vue.js</div>
+                                <div class="tech-stack__item">TypeScript</div>
+                                <div class="tech-stack__item">Next.js</div>
+                            </div>
+                        </div>
+                        <div class="tech-stack__category">
+                            <h3 class="tech-stack__title">後端技術</h3>
+                            <div class="tech-stack__items">
+                                <div class="tech-stack__item">Node.js</div>
+                                <div class="tech-stack__item">Python</div>
+                                <div class="tech-stack__item">Java</div>
+                                <div class="tech-stack__item">Go</div>
+                            </div>
+                        </div>
+                        <div class="tech-stack__category">
+                            <h3 class="tech-stack__title">雲端平台</h3>
+                            <div class="tech-stack__items">
+                                <div class="tech-stack__item">AWS</div>
+                                <div class="tech-stack__item">Azure</div>
+                                <div class="tech-stack__item">GCP</div>
+                                <div class="tech-stack__item">Docker</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- About Section -->
+            <section id="about" class="tech-about" data-section>
+                <div class="tech-section-container">
+                    <div class="tech-about__grid">
+                        <div class="tech-about__content">
+                            <span class="tech-section-subtitle">關於我們</span>
+                            <h2 class="tech-section-title">專業團隊 創新思維</h2>
+                            <p class="tech-about__text">
+                                未來科技有限公司成立於2020年，專注於為企業提供創新的科技解決方案。
+                                我們的團隊由經驗豐富的工程師、設計師和顧問組成，
+                                致力於將最新的技術應用於實際業務場景中。
+                            </p>
+                            <p class="tech-about__text">
+                                我們相信科技的力量能夠改變世界，因此始終保持對新技術的探索與研究，
+                                確保每個專案都能達成預期目標並創造實質價值。
+                            </p>
+                            <div class="tech-about__values">
+                                <div class="tech-value-item">
+                                    <span class="tech-value-item__icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                            <path d="M12 2L15 8L22 9L17 14L19 22L12 18L5 22L7 14L2 9L9 8L12 2Z"
+                                                stroke="currentColor" stroke-width="2" stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                    <div class="tech-value-item__content">
+                                        <h4>創新思維</h4>
+                                        <p>持續探索新技術，突破傳統框架</p>
+                                    </div>
+                                </div>
+                                <div class="tech-value-item">
+                                    <span class="tech-value-item__icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+                                            <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="2"
+                                                stroke-linecap="round" />
+                                        </svg>
+                                    </span>
+                                    <div class="tech-value-item__content">
+                                        <h4>客戶至上</h4>
+                                        <p>以客戶需求為核心，提供最佳方案</p>
+                                    </div>
+                                </div>
+                                <div class="tech-value-item">
+                                    <span class="tech-value-item__icon">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                            <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor"
+                                                stroke-width="2" stroke-linejoin="round" />
+                                        </svg>
+                                    </span>
+                                    <div class="tech-value-item__content">
+                                        <h4>卓越執行</h4>
+                                        <p>高效團隊協作，確保專案成功</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tech-about__visual">
+                            <div class="tech-timeline">
+                                <div class="tech-timeline-item">
+                                    <div class="tech-timeline-item__dot"></div>
+                                    <div class="tech-timeline-item__content">
+                                        <span class="tech-timeline-item__year">2020</span>
+                                        <h4>公司成立</h4>
+                                        <p>開始科技創新之旅</p>
+                                    </div>
+                                </div>
+                                <div class="tech-timeline-item">
+                                    <div class="tech-timeline-item__dot"></div>
+                                    <div class="tech-timeline-item__content">
+                                        <span class="tech-timeline-item__year">2022</span>
+                                        <h4>業務拓展</h4>
+                                        <p>服務客戶突破 200 家</p>
+                                    </div>
+                                </div>
+                                <div class="tech-timeline-item">
+                                    <div class="tech-timeline-item__dot"></div>
+                                    <div class="tech-timeline-item__content">
+                                        <span class="tech-timeline-item__year">2024</span>
+                                        <h4>技術突破</h4>
+                                        <p>推出 AI 驅動平台</p>
+                                    </div>
+                                </div>
+                                <div class="tech-timeline-item">
+                                    <div class="tech-timeline-item__dot"></div>
+                                    <div class="tech-timeline-item__content">
+                                        <span class="tech-timeline-item__year">2025</span>
+                                        <h4>持續成長</h4>
+                                        <p>邁向國際市場</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer id="page-footer-container" class="tech-footer">
+            <div class="tech-footer__container">
+                <div class="tech-footer__grid">
+                    <div class="tech-footer__col">
+                        <h3 class="tech-footer__title">未來科技</h3>
+                        <p class="tech-footer__desc">
+                            創新科技解決方案提供商，致力於協助企業實現數位轉型與業務成長。
+                        </p>
+                        <div class="tech-footer__social">
+                            <a href="#" class="tech-social-link" aria-label="Facebook">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                    <path
+                                        d="M20 10C20 4.477 15.523 0 10 0S0 4.477 0 10c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V10h2.54V7.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V10h2.773l-.443 2.89h-2.33v6.988C16.343 19.128 20 14.991 20 10z" />
+                                </svg>
+                            </a>
+                            <a href="#" class="tech-social-link" aria-label="Twitter">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                    <path
+                                        d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84" />
+                                </svg>
+                            </a>
+                            <a href="#" class="tech-social-link" aria-label="LinkedIn">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                    <path
+                                        d="M18.335 18.339H15.67v-4.177c0-.996-.02-2.278-1.39-2.278-1.389 0-1.601 1.084-1.601 2.205v4.25h-2.666V9.75h2.56v1.17h.035c.358-.674 1.228-1.387 2.528-1.387 2.7 0 3.2 1.778 3.2 4.091v4.715zM4.943 8.57a1.548 1.548 0 01-1.548-1.549 1.549 1.549 0 111.547 1.549zm1.336 9.769H3.605V9.75h2.674v8.589zM19.67 0H.329C.146 0 0 .145 0 .324v19.352C0 19.855.145 20 .328 20h19.34c.182 0 .332-.145.332-.324V.324C20 .145 19.855 0 19.671 0h-.001z" />
+                                </svg>
+                            </a>
+                            <a href="#" class="tech-social-link" aria-label="GitHub">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                    <path
+                                        d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="tech-footer__col">
+                        <h4 class="tech-footer__heading">服務項目</h4>
+                        <ul class="tech-footer__links">
+                            <li><a href="#services">AI 解決方案</a></li>
+                            <li><a href="#services">雲端運算</a></li>
+                            <li><a href="#services">物聯網整合</a></li>
+                            <li><a href="#services">資訊安全</a></li>
+                        </ul>
+                    </div>
+                    <div class="tech-footer__col">
+                        <h4 class="tech-footer__heading">關於我們</h4>
+                        <ul class="tech-footer__links">
+                            <li><a href="#">公司組織</a></li>
+                            <li><a href="#">公司歷史</a></li>
+                            <li><a href="#about">企業願景</a></li>
+                            <li><a href="#">職涯機會</a></li>
+                        </ul>
+                    </div>
+                    <div class="tech-footer__col">
+                        <h4 class="tech-footer__heading">聯絡資訊</h4>
+                        <ul class="tech-footer__contact">
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path
+                                        d="M2.667 2.667h10.666c.734 0 1.334.6 1.334 1.333v8c0 .733-.6 1.333-1.334 1.333H2.667c-.734 0-1.334-.6-1.334-1.333V4c0-.733.6-1.333 1.334-1.333z"
+                                        stroke="currentColor" stroke-width="1.5" />
+                                    <path d="M14.667 4L8 8.667 1.333 4" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                <a href="/cdn-cgi/l/email-protection#4b2824253f2a283f0b2d3e3f3e392e3f2e282365282426"><span
+                                        class="__cf_email__"
+                                        data-cfemail="2744484953464453674152535255425342444f0944484a">[email&#160;protected]</span></a>
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path
+                                        d="M14.667 11.28v2a1.333 1.333 0 01-1.454 1.333 13.2 13.2 0 01-5.753-2.046 13 13 0 01-4-4 13.2 13.2 0 01-2.047-5.78A1.333 1.333 0 012.747 1.333h2a1.333 1.333 0 011.333 1.147c.084.64.24 1.267.466 1.873a1.333 1.333 0 01-.3 1.407L5.4 6.607a10.666 10.666 0 004 4l.846-.847a1.333 1.333 0 011.407-.3c.606.227 1.233.383 1.873.467a1.333 1.333 0 011.14 1.353z"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                                +886-2-1234-5678
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M14 6.667c0 4.666-6 8.666-6 8.666s-6-4-6-8.666a6 6 0 1112 0z"
+                                        stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <circle cx="8" cy="6.667" r="2" stroke="currentColor" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                                台北市信義區信義路五段7號
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="tech-footer__bottom">
+                    <p>&copy; 2025 未來科技有限公司. All rights reserved.</p>
+                    <div class="tech-footer__links-bottom">
+                        <a href="#">隱私政策</a>
+                        <a href="#">使用條款</a>
+                        <a href="#">Cookie 政策</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Contact Modal -->
+        <div class="modal-overlay" id="contactModal">
+            <div class="modal-content">
+                <button class="modal-close" id="closeContactModal">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </button>
+                <h2 class="modal-title">聯絡我們</h2>
+                <div class="modal-body">
+                    <form class="tech-contact-form" id="contactForm">
+                        <div class="tech-form-group">
+                            <label for="name">姓名</label>
+                            <input type="text" id="name" placeholder="請輸入您的姓名" required>
+                        </div>
+                        <div class="tech-form-group">
+                            <label for="email">電子郵件</label>
+                            <input type="email" id="email" placeholder="請輸入您的電子郵件" required>
+                        </div>
+                        <div class="tech-form-group">
+                            <label for="message">訊息</label>
+                            <textarea id="message" rows="4" placeholder="請輸入您的訊息" required></textarea>
+                        </div>
+                        <button type="submit" class="tech-btn tech-btn--primary tech-btn--block">
+                            <span>送出訊息</span>
+                            <svg class="tech-btn__icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M18 2L9 11M18 2L12 18L9 11M18 2L2 8L9 11" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </button>
+                    </form>
+                    </div>
+            </div>
+        </div>
+
+        <!-- JavaScript -->
+        <script src="js/technology.js"></script>
+    </body>
+
+</html>

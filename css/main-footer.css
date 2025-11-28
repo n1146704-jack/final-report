@@ -1,0 +1,57 @@
+/* --- Footer 樣式 --- */
+.site-footer {
+    background-color: #1f2937;
+    color: #ffffff;
+    box-shadow: 0 -10px 15px -3px rgba(0, 0, 0, 0.1), 0 -4px 6px -2px rgba(0, 0, 0, 0.05);
+    padding-left: 2rem;
+    padding-right: 2rem;
+    box-sizing: border-box;
+}
+
+.site-footer__container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 72rem;
+}
+
+.site-footer__content-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.site-footer__copyright {
+    text-align: center;
+}
+
+.site-footer__copyright p {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+    margin: 0;
+}
+
+.site-footer__social-links {
+    display: flex;
+    gap: 1.25rem;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.site-footer__social-link {
+    color: #d1d5db;
+    transition-property: color;
+    transition-duration: 150ms;
+}
+
+.site-footer__social-link:hover {
+    color: #ffffff;
+}
+
+.site-footer__social-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+}

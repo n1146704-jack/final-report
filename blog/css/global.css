@@ -1,0 +1,207 @@
+/* --- 基本配置 --- */
+:root {
+  --color-primary: #003366;
+  --color-primary-secondary: #226600;
+  --color-primary-secondary-40: rgba(34, 102, 0, 0.4);
+  --color-primary-third: #664600;
+  --color-text-primary: #333;
+  --color-text-secondary: #555;
+  --color-text-third: #b2f86c;
+  --color-active-red: #990235;
+  --color-active-yellow: #b9b300;
+  --color-active-green: #006239;
+  --color-hover-green: #00802d;
+  --color-background: #f8f9fa;
+  --color-white: #ffffff;
+  --color-black: black;
+  --color-grey: grey;
+  --color-aquamarine: aquamarine;
+  --color-chartreuse: chartreuse;
+  --color-darkblue: darkblue;
+  --color-darkgreen: darkgreen;
+  --color-darkred: darkred;
+  --color-lightgreen: lightgreen;
+  --color-lightgrey: lightgrey;
+  --color-lightblue: lightblue;
+  --color-lightpink: lightpink;
+  --header-height: 70px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans TC", "LiHei Pro", "Microsoft JhengHei",
+    sans-serif;
+  line-height: 1.6;
+  color: var(--color-text-primary);
+  background-color: var(--color-background);
+  padding-top: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-primary);
+  transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+  color: #0056b3;
+}
+
+ul {
+  list-style: none;
+}
+
+/* --- 容器 (Container) --- */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* === 通用組件 (Global Components) === */
+.container {
+  max-width: 1152px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.section-wrapper {
+  max-width: 72rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-title {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.section-footer-action {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+/* === 按鈕 (Buttons) === */
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  transition: all 150ms ease-in-out;
+  cursor: pointer;
+  border: none;
+}
+
+.btn--primary {
+  background-color: #ffffff;
+  color: #2563eb;
+}
+.btn--primary:hover {
+  background-color: #f0f9ff;
+}
+
+.btn--outline-white {
+  border: 2px solid #ffffff;
+  color: #ffffff;
+  background-color: transparent;
+}
+.btn--outline-white:hover {
+  background-color: #ffffff;
+  color: #2563eb;
+}
+
+.btn--blue {
+  background-color: #2563eb;
+  color: #ffffff;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+.btn--blue:hover {
+  background-color: #1d4ed8;
+}
+
+.read-more-link {
+  color: #2563eb;
+  font-weight: 600;
+}
+.read-more-link:hover {
+  text-decoration: underline;
+}
+
+/* === 文章卡片 === */
+.article-card {
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  transition: box-shadow 150ms ease-in-out;
+}
+.article-card:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+.article-card__image-wrapper {
+  height: 12rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.article-card__image-wrapper--style-1 {
+  background-image: linear-gradient(to right, #3b82f6, #06b6d4);
+}
+.article-card__image-wrapper--style-2 {
+  background-image: linear-gradient(to right, #a855f7, #ec4899);
+}
+.article-card__image-wrapper--style-3 {
+  background-image: linear-gradient(to right, #22c55e, #14b8a6);
+}
+.article-card__image-emoji {
+  font-size: 3.75rem;
+}
+.article-card__content {
+  padding: 1.5rem;
+}
+.article-card__meta {
+  display: flex;
+  align-items: center;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  color: #6b7280;
+  margin-bottom: 0.5rem;
+}
+.article-card__meta-separator {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+.article-card__title {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+.article-card__excerpt {
+  color: #4b5563;
+  margin-bottom: 1rem;
+}

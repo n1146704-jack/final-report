@@ -1,0 +1,26 @@
+/* 暗黑模式樣式 - 套用在 body.dark-mode */
+
+/* Body 背景 */
+body.dark-mode.body-styles {
+    background-color: #111827;
+}
+
+/* 卡片樣式 */
+body.dark-mode .card {
+    background-color: #1f2937;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3),
+        0 4px 6px -2px rgba(0, 0, 0, 0.15);
+}
+
+body.dark-mode .card:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.4),
+        0 10px 10px -5px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .card-title {
+    color: #f3f4f6;
+}
+
+body.dark-mode .card-description {
+    color: #d1d5db;
+}

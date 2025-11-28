@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>自我介紹 - 個人履歷</title>
+        <link rel="stylesheet" href="css/global.css">
+        <link rel="stylesheet" href="css/about-me.css">
+    </head>
+
+    <body class="body">
+
+        <!-- Header -->
+        <header id="page-header-container">
+            <nav class="page-nav">
+                <div class="page-nav__container">
+                    <div class="page-nav__wrapper">
+                        <div class="page-nav__links">
+                            <a href="../index.html" class="page-nav__link">
+                                其他主題
+                            </a>
+                            <a href="index.html" class="page-nav__link page-nav__link--highlight">
+                                首頁
+                            </a>
+                            <a href="experience.html" class="page-nav__link">
+                                經歷
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <button class="page-nav__toggle" aria-label="下拉選單" aria-expanded="false">
+                    <span class="page-nav__toggle-icon"></span>
+                </button>
+            </nav>
+
+            <!-- 深色模式切換按鈕 -->
+            <button class="theme-toggle" aria-label="切換深色模式" title="切換深色模式">
+                <span class="theme-toggle__icon">🌙</span>
+            </button>
+        </header>
+
+        <main class="main-content">
+            <div class="container container--wide">
+
+                <!-- 頁面標題 -->
+                <div class="page-header">
+                    <h1 class="page-header__title animate-on-scroll">關於我</h1>
+                    <div class="page-header__divider"></div>
+                    <p class="page-header__subtitle animate-on-scroll">Full-Stack Developer | Problem Solver | Tech
+                        Enthusiast</p>
+                </div>
+
+                <!-- 個人資訊卡片 -->
+                <div class="profile-card animate-on-scroll">
+                    <div class="profile-card__background"></div>
+                    <div class="profile-card__wrapper">
+                        <div class="profile-card__avatar">
+                            <div class="profile-card__avatar-image">
+                                👤
+                            </div>
+                            <div class="profile-card__avatar-status">✓ 可受僱</div>
+                        </div>
+                        <div class="profile-card__info">
+                            <h2 class="profile-card__name">張三豐</h2>
+                            <p class="profile-card__job-title">全端工程師</p>
+                            <div class="profile-card__meta">
+                                <span class="profile-card__meta-item">📍 台灣</span>
+                                <span class="profile-card__meta-item">💼 5+ 年經驗</span>
+                                <span class="profile-card__meta-item">🎓 資訊工程碩士</span>
+                            </div>
+                            <p class="profile-card__bio">
+                                擁有 5 年以上的網頁開發經驗,專精於前端與後端技術整合。
+                                熱衷於學習新技術,並且喜歡透過程式碼解決實際問題,
+                                追求簡潔優雅的程式設計與良好的使用者體驗。
+                            </p>
+                            <div class="profile-card__stats">
+                                <div class="stat-item">
+                                    <div class="stat-item__value">50+</div>
+                                    <div class="stat-item__label">完成專案</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-item__value">15+</div>
+                                    <div class="stat-item__label">合作客戶</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-item__value">98%</div>
+                                    <div class="stat-item__label">滿意度</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 技術棧區塊 -->
+                <div class="tech-stack-section animate-on-scroll">
+                    <h3 class="section-title">
+                        <span class="section-title__icon">🛠️</span>
+                        技術棧
+                    </h3>
+                    <div class="tech-stack-grid">
+                        <div class="tech-category">
+                            <h4 class="tech-category__title">前端開發</h4>
+                            <div class="tech-tags">
+                                <span class="tech-tag tech-tag--react">React</span>
+                                <span class="tech-tag tech-tag--vue">Vue.js</span>
+                                <span class="tech-tag tech-tag--javascript">JavaScript</span>
+                                <span class="tech-tag tech-tag--typescript">TypeScript</span>
+                                <span class="tech-tag tech-tag--html">HTML5</span>
+                                <span class="tech-tag tech-tag--css">CSS3</span>
+                                <span class="tech-tag tech-tag--tailwind">Tailwind CSS</span>
+                            </div>
+                        </div>
+                        <div class="tech-category">
+                            <h4 class="tech-category__title">後端開發</h4>
+                            <div class="tech-tags">
+                                <span class="tech-tag tech-tag--php">PHP</span>
+                                <span class="tech-tag tech-tag--laravel">Laravel</span>
+                                <span class="tech-tag tech-tag--java">Java</span>
+                                <span class="tech-tag tech-tag--spring">Spring Boot</span>
+                                <span class="tech-tag tech-tag--nodejs">Node.js</span>
+                                <span class="tech-tag tech-tag--python">Python</span>
+                            </div>
+                        </div>
+                        <div class="tech-category">
+                            <h4 class="tech-category__title">資料庫</h4>
+                            <div class="tech-tags">
+                                <span class="tech-tag tech-tag--mysql">MySQL</span>
+                                <span class="tech-tag tech-tag--postgresql">PostgreSQL</span>
+                                <span class="tech-tag tech-tag--mongodb">MongoDB</span>
+                                <span class="tech-tag tech-tag--redis">Redis</span>
+                            </div>
+                        </div>
+                        <div class="tech-category">
+                            <h4 class="tech-category__title">工具 & 其他</h4>
+                            <div class="tech-tags">
+                                <span class="tech-tag tech-tag--git">Git</span>
+                                <span class="tech-tag tech-tag--docker">Docker</span>
+                                <span class="tech-tag tech-tag--linux">Linux</span>
+                                <span class="tech-tag tech-tag--aws">AWS</span>
+                                <span class="tech-tag tech-tag--nginx">Nginx</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 技能卡片區塊 -->
+                <div class="skills-section animate-on-scroll">
+                    <h3 class="section-title">
+                        <span class="section-title__icon">📊</span>
+                        專業技能
+                    </h3>
+
+                    <!-- 技能篩選器 -->
+                    <div class="skill-filter">
+                        <button class="skill-filter__btn skill-filter__btn--active" data-filter="all">全部</button>
+                        <button class="skill-filter__btn" data-filter="frontend">前端</button>
+                        <button class="skill-filter__btn" data-filter="backend">後端</button>
+                    </div>
+
+                    <div class="skills-grid">
+                        <!-- 前端技能卡片 -->
+                        <div class="skill-card" data-category="frontend">
+                            <div class="skill-card__header">
+                                <div class="skill-card__icon">💻</div>
+                                <h3 class="skill-card__title">前端技能</h3>
+                            </div>
+                            <div class="skill-card__list">
+                                <div class="skill-item">
+                                    <div class="skill-item__label">
+                                        <span class="skill-item__name">HTML / CSS</span>
+                                        <span class="skill-item__percentage skill-item__percentage--blue">95%</span>
+                                    </div>
+                                    <div class="skill-progress">
+                                        <div class="skill-progress__bar skill-progress__bar--blue" data-width="95">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="skill-item">
+                                    <div class="skill-item__label">
+                                        <span class="skill-item__name">JavaScript / Vue.js</span>
+                                        <span class="skill-item__percentage skill-item__percentage--blue">90%</span>
+                                    </div>
+                                    <div class="skill-progress">
+                                        <div class="skill-progress__bar skill-progress__bar--blue" data-width="90">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="skill-item">
+                                    <div class="skill-item__label">
+                                        <span class="skill-item__name">React / TypeScript</span>
+                                        <span class="skill-item__percentage skill-item__percentage--blue">85%</span>
+                                    </div>
+                                    <div class="skill-progress">
+                                        <div class="skill-progress__bar skill-progress__bar--blue" data-width="85">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="skill-item">
+                                    <div class="skill-item__label">
+                                        <span class="skill-item__name">Tailwind CSS</span>
+                                        <span class="skill-item__percentage skill-item__percentage--blue">88%</span>
+                                    </div>
+                                    <div class="skill-progress">
+                                        <div class="skill-progress__bar skill-progress__bar--blue" data-width="88">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 後端技能卡片 -->
+                        <div class="skill-card" data-category="backend">
+                            <div class="skill-card__header">
+                                <div class="skill-card__icon">⚙️</div>
+                                <h3 class="skill-card__title">後端技能</h3>
+                            </div>
+                            <div class="skill-card__list">
+                                <div class="skill-item">
+                                    <div class="skill-item__label">
+                                        <span class="skill-item__name">PHP / Laravel</span>
+                                        <span class="skill-item__percentage skill-item__percentage--green">90%</span>
+                                    </div>
+                                    <div class="skill-progress">
+                                        <div class="skill-progress__bar skill-progress__bar--green" data-width="90">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="skill-item">
+                                    <div class="skill-item__label">
+                                        <span class="skill-item__name">Java / Spring Boot</span>
+                                        <span class="skill-item__percentage skill-item__percentage--green">85%</span>
+                                    </div>
+                                    <div class="skill-progress">
+                                        <div class="skill-progress__bar skill-progress__bar--green" data-width="85">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="skill-item">
+                                    <div class="skill-item__label">
+                                        <span class="skill-item__name">Database (SQL/NoSQL)</span>
+                                        <span class="skill-item__percentage skill-item__percentage--green">82%</span>
+                                    </div>
+                                    <div class="skill-progress">
+                                        <div class="skill-progress__bar skill-progress__bar--green" data-width="82">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="skill-item">
+                                    <div class="skill-item__label">
+                                        <span class="skill-item__name">RESTful API 設計</span>
+                                        <span class="skill-item__percentage skill-item__percentage--green">87%</span>
+                                    </div>
+                                    <div class="skill-progress">
+                                        <div class="skill-progress__bar skill-progress__bar--green" data-width="87">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 時間軸區塊 -->
+                <div class="timeline-section animate-on-scroll">
+                    <h3 class="section-title">
+                        <span class="section-title__icon">📅</span>
+                        職涯歷程
+                    </h3>
+                    <div class="timeline">
+                        <div class="timeline-item timeline-item--left">
+                            <div class="timeline-item__marker"></div>
+                            <div class="timeline-item__content">
+                                <div class="timeline-item__date">2023 - 現在</div>
+                                <h4 class="timeline-item__title">資深全端工程師</h4>
+                                <p class="timeline-item__company">科技創新公司 A</p>
+                                <p class="timeline-item__description">
+                                    負責核心產品開發,帶領 5 人團隊完成多個大型專案。
+                                    使用 Laravel 和 Vue.js 構建高效能的企業級應用。
+                                </p>
+                                <div class="timeline-item__tags">
+                                    <span class="timeline-tag">Laravel</span>
+                                    <span class="timeline-tag">Vue.js</span>
+                                    <span class="timeline-tag">Team Lead</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item timeline-item--right">
+                            <div class="timeline-item__marker"></div>
+                            <div class="timeline-item__content">
+                                <div class="timeline-item__date">2021 - 2023</div>
+                                <h4 class="timeline-item__title">全端工程師</h4>
+                                <p class="timeline-item__company">軟體開發公司 B</p>
+                                <p class="timeline-item__description">
+                                    參與多個客戶專案開發,從需求分析到部署上線。
+                                    主要使用 Spring Boot 和 React 技術棧。
+                                </p>
+                                <div class="timeline-item__tags">
+                                    <span class="timeline-tag">Spring Boot</span>
+                                    <span class="timeline-tag">React</span>
+                                    <span class="timeline-tag">MySQL</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item timeline-item--left">
+                            <div class="timeline-item__marker"></div>
+                            <div class="timeline-item__content">
+                                <div class="timeline-item__date">2019 - 2021</div>
+                                <h4 class="timeline-item__title">前端工程師</h4>
+                                <p class="timeline-item__company">網路新創公司 C</p>
+                                <p class="timeline-item__description">
+                                    專注於前端開發,打造流暢的使用者介面與體驗。
+                                    學習並實踐現代前端開發最佳實務。
+                                </p>
+                                <div class="timeline-item__tags">
+                                    <span class="timeline-tag">JavaScript</span>
+                                    <span class="timeline-tag">CSS3</span>
+                                    <span class="timeline-tag">Responsive Design</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item timeline-item--right">
+                            <div class="timeline-item__marker"></div>
+                            <div class="timeline-item__content">
+                                <div class="timeline-item__date">2017 - 2019</div>
+                                <h4 class="timeline-item__title">資訊工程碩士</h4>
+                                <p class="timeline-item__company">國立大學</p>
+                                <p class="timeline-item__description">
+                                    專注於軟體工程與系統設計研究,累積紮實的理論基礎。
+                                </p>
+                                <div class="timeline-item__tags">
+                                    <span class="timeline-tag">Software Engineering</span>
+                                    <span class="timeline-tag">Algorithms</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 成就徽章 -->
+                <div class="achievements-section animate-on-scroll">
+                    <h3 class="section-title">
+                        <span class="section-title__icon">🏆</span>
+                        成就與認證
+                    </h3>
+                    <div class="achievements-grid">
+                        <div class="achievement-badge">
+                            <div class="achievement-badge__icon">🥇</div>
+                            <h4 class="achievement-badge__title">AWS 認證</h4>
+                            <p class="achievement-badge__description">Solutions Architect Associate</p>
+                        </div>
+                        <div class="achievement-badge">
+                            <div class="achievement-badge__icon">🎖️</div>
+                            <h4 class="achievement-badge__title">專案獎項</h4>
+                            <p class="achievement-badge__description">2023 年度最佳創新專案</p>
+                        </div>
+                        <div class="achievement-badge">
+                            <div class="achievement-badge__icon">⭐</div>
+                            <h4 class="achievement-badge__title">開源貢獻</h4>
+                            <p class="achievement-badge__description">GitHub 500+ Stars</p>
+                        </div>
+                        <div class="achievement-badge">
+                            <div class="achievement-badge__icon">📜</div>
+                            <h4 class="achievement-badge__title">技術文章</h4>
+                            <p class="achievement-badge__description">撰寫 20+ 篇技術文章</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 個人特質卡片 -->
+                <div class="traits-card animate-on-scroll">
+                    <h3 class="traits-card__title">
+                        <span class="traits-card__icon">✨</span>
+                        個人特質
+                    </h3>
+                    <div class="traits-card__grid">
+                        <div class="trait-item trait-item--blue">
+                            <div class="trait-item__icon">🎯</div>
+                            <h4 class="trait-item__title">目標導向</h4>
+                            <p class="trait-item__description">專注於達成目標,善於規劃與執行</p>
+                        </div>
+                        <div class="trait-item trait-item--purple">
+                            <div class="trait-item__icon">🤝</div>
+                            <h4 class="trait-item__title">團隊合作</h4>
+                            <p class="trait-item__description">重視溝通協作,樂於分享知識</p>
+                        </div>
+                        <div class="trait-item trait-item--green">
+                            <div class="trait-item__icon">📚</div>
+                            <h4 class="trait-item__title">持續學習</h4>
+                            <p class="trait-item__description">保持好奇心,不斷精進技術能力</p>
+                        </div>
+                        <div class="trait-item trait-item--orange">
+                            <div class="trait-item__icon">💡</div>
+                            <h4 class="trait-item__title">創新思維</h4>
+                            <p class="trait-item__description">善於思考創新解決方案</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 興趣愛好卡片 -->
+                <div class="hobbies-card animate-on-scroll">
+                    <h3 class="hobbies-card__title">
+                        <span class="hobbies-card__icon">🎨</span>
+                        興趣愛好
+                    </h3>
+                    <div class="hobbies-card__tags">
+                        <span class="hobby-tag hobby-tag--blue">💻 程式開發</span>
+                        <span class="hobby-tag hobby-tag--green">📖 閱讀</span>
+                        <span class="hobby-tag hobby-tag--purple">🎮 遊戲</span>
+                        <span class="hobby-tag hobby-tag--yellow">🏃 運動健身</span>
+                        <span class="hobby-tag hobby-tag--red">✈️ 旅行</span>
+                        <span class="hobby-tag hobby-tag--indigo">📷 攝影</span>
+                        <span class="hobby-tag hobby-tag--pink">🎵 音樂</span>
+                        <span class="hobby-tag hobby-tag--teal">☕ 咖啡</span>
+                    </div>
+                </div>
+
+                <!-- 精選專案 -->
+                <div class="projects-section animate-on-scroll">
+                    <h3 class="projects-card__title">
+                        <span class="projects-card__icon">🚀</span>
+                        精選專案
+                    </h3>
+
+                    <!-- 專案分類 -->
+                    <div class="project-filter">
+                        <button class="project-filter__btn project-filter__btn--active" data-category="all">全部</button>
+                        <button class="project-filter__btn" data-category="web">網站開發</button>
+                        <button class="project-filter__btn" data-category="app">應用系統</button>
+                        <button class="project-filter__btn" data-category="tool">工具開發</button>
+                    </div>
+
+                    <div class="projects-card__grid">
+                        <div class="project-item" data-category="web">
+                            <div class="project-item__image">
+                                <div class="project-placeholder">🌐</div>
+                            </div>
+                            <div class="project-item__info">
+                                <h4 class="project-item__title">電商網站系統</h4>
+                                <p class="project-item__description">
+                                    完整的電商解決方案,包含購物車、金流串接、訂單管理等功能。
+                                    使用 Laravel + Vue.js 開發。
+                                </p>
+                                <div class="project-item__tech">
+                                    <span class="tech-badge">Laravel</span>
+                                    <span class="tech-badge">Vue.js</span>
+                                    <span class="tech-badge">MySQL</span>
+                                </div>
+                                <a href="#" class="project-item__link">查看詳情 →</a>
+                            </div>
+                        </div>
+
+                        <div class="project-item" data-category="app">
+                            <div class="project-item__image">
+                                <div class="project-placeholder">📱</div>
+                            </div>
+                            <div class="project-item__info">
+                                <h4 class="project-item__title">企業管理系統</h4>
+                                <p class="project-item__description">
+                                    協助企業數位化轉型的管理平台,整合 ERP、CRM 等功能。
+                                    採用微服務架構設計。
+                                </p>
+                                <div class="project-item__tech">
+                                    <span class="tech-badge">Spring Boot</span>
+                                    <span class="tech-badge">React</span>
+                                    <span class="tech-badge">Docker</span>
+                                </div>
+                                <a href="#" class="project-item__link">查看詳情 →</a>
+                            </div>
+                        </div>
+
+                        <div class="project-item" data-category="tool">
+                            <div class="project-item__image">
+                                <div class="project-placeholder">🛠️</div>
+                            </div>
+                            <div class="project-item__info">
+                                <h4 class="project-item__title">開發工具套件</h4>
+                                <p class="project-item__description">
+                                    提升開發效率的工具集,包含代碼生成器、API 測試工具等。
+                                    開源專案,獲得社群好評。
+                                </p>
+                                <div class="project-item__tech">
+                                    <span class="tech-badge">Node.js</span>
+                                    <span class="tech-badge">TypeScript</span>
+                                    <span class="tech-badge">CLI</span>
+                                </div>
+                                <a href="#" class="project-item__link">查看詳情 →</a>
+                            </div>
+                        </div>
+
+                        <div class="project-item" data-category="web">
+                            <div class="project-item__image">
+                                <div class="project-placeholder">📊</div>
+                            </div>
+                            <div class="project-item__info">
+                                <h4 class="project-item__title">數據分析平台</h4>
+                                <p class="project-item__description">
+                                    視覺化數據分析工具,支援多種圖表展示和數據導出。
+                                    即時數據處理與分析功能。
+                                </p>
+                                <div class="project-item__tech">
+                                    <span class="tech-badge">Python</span>
+                                    <span class="tech-badge">Vue.js</span>
+                                    <span class="tech-badge">PostgreSQL</span>
+                                </div>
+                                <a href="#" class="project-item__link">查看詳情 →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 推薦語區塊 -->
+                <div class="testimonials-section animate-on-scroll">
+                    <h3 class="section-title">
+                        <span class="section-title__icon">💬</span>
+                        合作評價
+                    </h3>
+                    <div class="testimonials-grid">
+                        <div class="testimonial-card">
+                            <div class="testimonial-card__quote">"</div>
+                            <p class="testimonial-card__text">
+                                張三豐是一位非常優秀的工程師,不僅技術能力強,而且溝通能力也很好。
+                                在專案中展現出色的問題解決能力。
+                            </p>
+                            <div class="testimonial-card__author">
+                                <div class="testimonial-card__avatar">👨‍💼</div>
+                                <div class="testimonial-card__info">
+                                    <div class="testimonial-card__name">李專案經理</div>
+                                    <div class="testimonial-card__title">專案經理 · A 公司</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-card">
+                            <div class="testimonial-card__quote">"</div>
+                            <p class="testimonial-card__text">
+                                合作過程非常愉快,能夠準時交付高品質的程式碼。
+                                對新技術的學習能力令人印象深刻。
+                            </p>
+                            <div class="testimonial-card__author">
+                                <div class="testimonial-card__avatar">👩‍💻</div>
+                                <div class="testimonial-card__info">
+                                    <div class="testimonial-card__name">王技術長</div>
+                                    <div class="testimonial-card__title">CTO · B 公司</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="testimonial-card">
+                            <div class="testimonial-card__quote">"</div>
+                            <p class="testimonial-card__text">
+                                團隊合作精神出色,樂於分享知識和經驗。
+                                是團隊中不可或缺的成員。
+                            </p>
+                            <div class="testimonial-card__author">
+                                <div class="testimonial-card__avatar">👨‍💻</div>
+                                <div class="testimonial-card__info">
+                                    <div class="testimonial-card__name">陳開發主管</div>
+                                    <div class="testimonial-card__title">開發主管 · C 公司</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 保持聯繫 -->
+                <div class="connect-card animate-on-scroll">
+                    <h3 class="connect-card__title">
+                        <span class="connect-card__icon">📨</span>
+                        保持聯繫
+                    </h3>
+                    <p class="connect-card__subtitle">歡迎與我聯繫討論合作機會或技術交流</p>
+                    <div class="connect-card__links">
+                        <a href="https://github.com" class="connect-link connect-link--github" target="_blank"
+                            rel="noopener">
+                            <span class="connect-link__icon">🐙</span>
+                            <span class="connect-link__text">GitHub</span>
+                        </a>
+                        <a href="https://linkedin.com" class="connect-link connect-link--linkedin" target="_blank"
+                            rel="noopener">
+                            <span class="connect-link__icon">💼</span>
+                            <span class="connect-link__text">LinkedIn</span>
+                        </a>
+                        <a href="mailto:example@email.com" class="connect-link connect-link--email">
+                            <span class="connect-link__icon">📧</span>
+                            <span class="connect-link__text">電子郵件</span>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- 返回頂部按鈕 -->
+        <button class="back-to-top" aria-label="返回頂部" title="返回頂部">
+            <span class="back-to-top__icon">↑</span>
+        </button>
+
+        <!-- Footer -->
+        <footer id="page-footer-container">
+            <div class="page-footer">
+                <p class="page-footer__text">© 2025 張三豐 (San-Feng Chang). All rights reserved.</p>
+                <div class="page-footer__links">
+                    <a href="#" class="page-footer__link">隱私政策</a>
+                    <span class="page-footer__separator">|</span>
+                    <a href="#" class="page-footer__link">使用條款</a>
+                </div>
+            </div>
+        </footer>
+
+        <!-- JavaScript -->
+        <script src="js/about-me.js"></script>
+
+    </body>
+
+</html>

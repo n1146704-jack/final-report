@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>個人履歷 - 首頁</title>
+        <link rel="stylesheet" href="css/global.css">
+        <link rel="stylesheet" href="css/resume.css">
+    </head>
+
+    <body class="body">
+
+        <!-- Header -->
+        <header id="page-header-container">
+            <nav class="page-nav">
+                <div class="page-nav__container">
+                    <div class="page-nav__wrapper">
+                        <div class="page-nav__brand">
+                            <a href="index.html" aria-label="回到首頁">
+                                <img src="image/site_logo_small.png" alt="個人履歷 Logo" class="page-nav__logo">
+                            </a>
+                        </div>
+
+                        <button class="page-nav__toggle" aria-label="切換導航選單" aria-expanded="false">
+                            <span class="hamburger-icon"></span>
+                        </button>
+
+                        <div class="page-nav__backdrop"></div>
+
+                        <div class="page-nav__links">
+                            <a href="../index.html" class="page-nav__link page-nav__link--highlight">
+                                其他主題
+                            </a>
+                            <a href="about-me.html" class="page-nav__link">
+                                自我介紹
+                            </a>
+                            <a href="experience.html" class="page-nav__link">
+                                經歷
+                            </a>
+                            <a href="#skills" class="page-nav__link scroll-link">
+                                技能
+                            </a>
+                            <a href="#contact" class="page-nav__link scroll-link">
+                                聯絡我
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main class="main-content">
+            <div class="container">
+
+                <!-- 個人頭像區塊 -->
+                <div class="profile-avatar-section animation-fade-in-up">
+                    <div class="profile-avatar">
+                        <div class="profile-avatar__image">
+                            👤
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 個人資訊區塊 -->
+                <h1 class="profile-name animation-fade-in-up animation-delay--1">
+                    張三豐
+                </h1>
+                <p class="profile-title animation-fade-in-up animation-delay--2">
+                    全端工程師 | Web 開發者
+                </p>
+
+                <p class="profile-description animation-fade-in-up animation-delay--3">
+                    熱愛程式開發與創新技術,擁有豐富的前後端開發經驗。
+                    致力於打造優質的使用者體驗與高效能的網站應用程式。
+                </p>
+
+                <!-- 資訊按鈕區塊 -->
+                <div class="profile-cta-buttons animation-fade-in-up animation-delay--4">
+                    <a href="upload/個人履歷.pdf" class="cta-button cta-button--primary" download>
+                        <span class="cta-button__icon">📄</span>
+                        下載 PDF 履歷
+                    </a>
+                    <a href="experience.html" class="cta-button cta-button--secondary">
+                        <span class="cta-button__icon">🚀</span>
+                        查看重點專案
+                    </a>
+                    <a href="#contact" class="cta-button cta-button--outline scroll-link">
+                        <span class="cta-button__icon">✉️</span>
+                        立即與我聯繫
+                    </a>
+                </div>
+
+                <!-- 數據統計區塊 -->
+                <section class="stats-section">
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-card__icon">💼</div>
+                            <div class="stat-card__number" data-target="5">0</div>
+                            <div class="stat-card__label">年工作經驗</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-card__icon">🎯</div>
+                            <div class="stat-card__number" data-target="50">0</div>
+                            <div class="stat-card__label">完成專案</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-card__icon">⭐</div>
+                            <div class="stat-card__number" data-target="30">0</div>
+                            <div class="stat-card__label">客戶好評</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-card__icon">🏆</div>
+                            <div class="stat-card__number" data-target="8">0</div>
+                            <div class="stat-card__label">獲獎紀錄</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 服務項目區塊 -->
+                <section class="services-section">
+                    <h2 class="section-title section-title--home">🛠️ 提供服務</h2>
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <div class="service-card__icon">💻</div>
+                            <h3 class="service-card__title">前端開發</h3>
+                            <p class="service-card__description">使用現代化框架打造響應式、高效能的使用者介面</p>
+                            <ul class="service-card__features">
+                                <li>Vue.js / React 開發</li>
+                                <li>響應式設計</li>
+                                <li>性能優化</li>
+                            </ul>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-card__icon">⚙️</div>
+                            <h3 class="service-card__title">後端開發</h3>
+                            <p class="service-card__description">建立可靠、可擴展的伺服器端應用程式與 API</p>
+                            <ul class="service-card__features">
+                                <li>Laravel / Spring Boot</li>
+                                <li>RESTful API 設計</li>
+                                <li>資料庫設計</li>
+                            </ul>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-card__icon">🎨</div>
+                            <h3 class="service-card__title">UI/UX 設計</h3>
+                            <p class="service-card__description">創造直覺、美觀且符合使用者需求的介面設計</p>
+                            <ul class="service-card__features">
+                                <li>介面設計</li>
+                                <li>原型製作</li>
+                                <li>使用者體驗優化</li>
+                            </ul>
+                        </div>
+                        <div class="service-card">
+                            <div class="service-card__icon">🚀</div>
+                            <h3 class="service-card__title">專案部署</h3>
+                            <p class="service-card__description">提供完整的部署方案與持續整合服務</p>
+                            <ul class="service-card__features">
+                                <li>CI/CD 建置</li>
+                                <li>雲端部署</li>
+                                <li>系統維護</li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 卡片區塊 -->
+                <div class="navigation-cards">
+                    <a href="about-me.html" class="navigation-card">
+                        <div class="navigation-card__inner">
+                            <div class="navigation-card__icon">📝</div>
+                            <h3 class="navigation-card__title">自我介紹</h3>
+                            <p class="navigation-card__text">了解我的背景、技能與專長</p>
+                            <div class="navigation-card__arrow">
+                                查看更多 →
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="experience.html" class="navigation-card">
+                        <div class="navigation-card__inner">
+                            <div class="navigation-card__icon">💼</div>
+                            <h3 class="navigation-card__title">工作經歷</h3>
+                            <p class="navigation-card__text">探索我的職涯發展與專案經驗</p>
+                            <div class="navigation-card__arrow">
+                                查看更多 →
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- 技能區塊 -->
+                <section class="skills-section" id="skills">
+                    <h2 class="section-title section-title--home">🎯 專業技能</h2>
+
+                    <!-- 技能分類篩選 -->
+                    <div class="skill-filters">
+                        <button class="skill-filter active" data-filter="all">全部</button>
+                        <button class="skill-filter" data-filter="frontend">前端</button>
+                        <button class="skill-filter" data-filter="backend">後端</button>
+                        <button class="skill-filter" data-filter="tools">工具</button>
+                    </div>
+
+                    <!-- 技能標籤雲 -->
+                    <div class="skills-cloud">
+                        <span class="skill-tag skill-tag--large" data-category="frontend">Vue.js</span>
+                        <span class="skill-tag skill-tag--medium" data-category="frontend">JavaScript</span>
+                        <span class="skill-tag skill-tag--large" data-category="backend">Laravel</span>
+                        <span class="skill-tag skill-tag--medium" data-category="backend">PHP</span>
+                        <span class="skill-tag skill-tag--large" data-category="backend">Spring Boot</span>
+                        <span class="skill-tag skill-tag--medium" data-category="backend">Java</span>
+                        <span class="skill-tag skill-tag--small" data-category="frontend">React</span>
+                        <span class="skill-tag skill-tag--medium" data-category="frontend">HTML5</span>
+                        <span class="skill-tag skill-tag--medium" data-category="frontend">CSS3</span>
+                        <span class="skill-tag skill-tag--small" data-category="backend">Node.js</span>
+                        <span class="skill-tag skill-tag--medium" data-category="backend">MySQL</span>
+                        <span class="skill-tag skill-tag--small" data-category="backend">PostgreSQL</span>
+                        <span class="skill-tag skill-tag--medium" data-category="tools">Git</span>
+                        <span class="skill-tag skill-tag--small" data-category="tools">Docker</span>
+                        <span class="skill-tag skill-tag--medium" data-category="tools">Linux</span>
+                        <span class="skill-tag skill-tag--small" data-category="tools">AWS</span>
+                        <span class="skill-tag skill-tag--small" data-category="frontend">TypeScript</span>
+                        <span class="skill-tag skill-tag--medium" data-category="backend">Redis</span>
+                    </div>
+                </section>
+
+                <!-- 精選專案區塊 -->
+                <section class="featured-projects-section">
+                    <h2 class="section-title section-title--home">🚀 精選專案</h2>
+                    <div class="projects-grid">
+                        <a href="experience.html#project-1" class="project-card">
+                            <div class="project-card__thumbnail">
+                                <img src="image/noimage.jpg" alt="電商平台系統">
+                            </div>
+                            <div class="project-card__content">
+                                <h3 class="project-card__title">電商平台系統</h3>
+                                <p class="project-card__description">建置完整的電商平台,包含商品管理、購物車、金流串接等功能。</p>
+                                <div class="tech-tags">
+                                    <span class="tech-tag tech-tag--blue">React</span>
+                                    <span class="tech-tag tech-tag--green">Node.js</span>
+                                    <span class="tech-tag tech-tag--purple">PostgreSQL</span>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="experience.html#project-2" class="project-card">
+                            <div class="project-card__thumbnail">
+                                <img src="image/noimage.jpg" alt="企業管理系統">
+                            </div>
+                            <div class="project-card__content">
+                                <h3 class="project-card__title">企業管理系統</h3>
+                                <p class="project-card__description">開發企業內部管理系統,整合人事、財務、專案管理等模組。</p>
+                                <div class="tech-tags">
+                                    <span class="tech-tag tech-tag--blue">Vue.js</span>
+                                    <span class="tech-tag tech-tag--yellow">Django</span>
+                                    <span class="tech-tag tech-tag--red">Redis</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+
+                <!-- 工作時間軸 -->
+                <section class="timeline-section">
+                    <h2 class="section-title section-title--home">📅 職涯歷程</h2>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">2023 - 現在</div>
+                                <h3 class="timeline-title">資深全端工程師</h3>
+                                <p class="timeline-company">科技創新股份有限公司</p>
+                                <p class="timeline-description">負責大型專案架構設計與團隊技術指導</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">2021 - 2023</div>
+                                <h3 class="timeline-title">前端工程師</h3>
+                                <p class="timeline-company">網路科技有限公司</p>
+                                <p class="timeline-description">開發多個企業級 Web 應用程式</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <div class="timeline-date">2019 - 2021</div>
+                                <h3 class="timeline-title">初級開發人員</h3>
+                                <p class="timeline-company">軟體開發公司</p>
+                                <p class="timeline-description">參與多項專案開發與維護</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 專業推薦區塊 -->
+                <section class="testimonials-section">
+                    <h2 class="section-title section-title--home">💬 專業推薦</h2>
+                    <div class="testimonials-grid">
+                        <div class="testimonial-card">
+                            <p class="testimonial-card__text">"張三豐在我們電商平台的效能調校上扮演了關鍵角色,他導入的 CI/CD
+                                流程也大幅提升了團隊的部署效率。他是一位樂於分享且值得信賴的夥伴。"</p>
+                            <div class="testimonial-card__author-info">
+                                <span class="testimonial-card__author">王五</span>
+                                <span class="testimonial-card__title">科技創新股份有限公司, 專案經理</span>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <p class="testimonial-card__text">"作為張三豐的導師,我見證了他從初級開發人員到稱當一面的前端工程師的轉變。他對 Vue.js
+                                的深入理解和對元件庫的貢獻,為團隊帶來了實質的幫助。"</p>
+                            <div class="testimonial-card__author-info">
+                                <span class="testimonial-card__author">李四</span>
+                                <span class="testimonial-card__title">網路科技有限公司, 資深前端工程師</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- 聯絡表單區塊 -->
+                <section class="contact-section" id="contact">
+                    <h2 class="section-title section-title--home">📧 與我聯繫</h2>
+                    <div class="contact-wrapper">
+                        <div class="contact-info">
+                            <h3 class="contact-info__title">聯絡資訊</h3>
+                            <div class="contact-info__item">
+                                <span class="contact-info__icon">📧</span>
+                                <span>example@email.com</span>
+                            </div>
+                            <div class="contact-info__item">
+                                <span class="contact-info__icon">📱</span>
+                                <span>+886 912 345 678</span>
+                            </div>
+                            <div class="contact-info__item">
+                                <span class="contact-info__icon">📍</span>
+                                <span>台北市信義區</span>
+                            </div>
+                            <div class="contact-info__availability">
+                                <p>💼 目前狀態: <strong class="status-available">可接案</strong></p>
+                            </div>
+                        </div>
+
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-group">
+                                <label for="name" class="form-label">姓名 *</label>
+                                <input type="text" id="name" name="name" class="form-input" required>
+                                <span class="form-error"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email *</label>
+                                <input type="email" id="email" name="email" class="form-input" required>
+                                <span class="form-error"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject" class="form-label">主旨 *</label>
+                                <input type="text" id="subject" name="subject" class="form-input" required>
+                                <span class="form-error"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message" class="form-label">訊息內容 *</label>
+                                <textarea id="message" name="message" rows="5" class="form-textarea"
+                                    required></textarea>
+                                <span class="form-error"></span>
+                            </div>
+
+                            <button type="submit" class="form-submit">
+                                <span class="form-submit__icon">📤</span>
+                                送出訊息
+                            </button>
+                        </form>
+                    </div>
+                </section>
+
+                <!-- 社群連結區塊 -->
+                <div class="social-links">
+                    <a href="mailto:example@email.com" class="social-link social-link--email" aria-label="Email">
+                        <svg fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                            <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link social-link--github" aria-label="GitHub">
+                        <svg fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd"
+                                d="M10 0C4.477 0 0 4.484 0 10.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0110 4.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.203 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.942.359.31.678.921.678 1.856 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0020 10.017C20 4.484 15.522 0 10 0z"
+                                clip-rule="evenodd"></path>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-link social-link--twitter" aria-label="Twitter">
+                        <svg fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M6.29 18.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0020 3.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.073 4.073 0 01.8 7.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 010 16.407a11.616 11.616 0 006.29 1.84">
+                            </path>
+                        </svg>
+                    </a>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer id="page-footer-container">
+            <div class="page-footer">
+                <p class="page-footer__text">© 2025 張三豐 (San-Feng Chang). All rights reserved.</p>
+            </div>
+        </footer>
+
+        <!-- 返回頂部按鈕 -->
+        <button class="back-to-top" id="backToTop" aria-label="返回頂部">
+            ↑
+        </button>
+
+        <!-- js -->
+        <script src="js/main.js"></script>
+    </body>
+
+</html>

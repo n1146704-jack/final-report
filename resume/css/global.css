@@ -1,0 +1,307 @@
+/* =========================================
+ * Global Styles - 全域樣式
+ * =========================================
+ */
+
+/* --- CSS 變數定義 --- */
+:root {
+  --color-primary: #003366;
+  --color-primary-secondary: #226600;
+  --color-primary-secondary-40: rgba(34, 102, 0, 0.4);
+  --color-primary-third: #664600;
+  --color-text-primary: #333;
+  --color-text-secondary: #555;
+  --color-text-third: #b2f86c;
+  --color-active-red: #990235;
+  --color-active-yellow: #b9b300;
+  --color-active-green: #006239;
+  --color-hover-green: #00802d;
+  --color-background: #f8f9fa;
+  --color-white: white;
+  --color-black: black;
+  --color-grey: grey;
+  --color-aquamarine: aquamarine;
+  --color-chartreuse: chartreuse;
+  --color-darkblue: darkblue;
+  --color-darkgreen: darkgreen;
+  --color-darkred: darkred;
+  --color-lightgreen: lightgreen;
+  --color-lightgrey: lightgrey;
+  --color-lightblue: lightblue;
+  --color-lightpink: lightpink;
+  --header-height: 70px;
+
+  /* About Me 頁面變數 */
+  --about-header-height-expanded: 70px;
+  --about-header-height-collapsed: 24px;
+  --card-bg: #ffffff;
+  --card-border: #e5e7eb;
+  --card-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+  /* 主題色 */
+  --theme-gradient-start: #667eea;
+  --theme-gradient-end: #764ba2;
+  --theme-blue: #2563eb;
+  --theme-green: #16a34a;
+
+  /* 文字顏色 */
+  --text-heading: #1f2937;
+  --text-body: #374151;
+  --text-muted: #6b7280;
+  --text-light: #9ca3af;
+
+  /* 深色模式變數 */
+  --dark-bg-primary: #1a1a1a;
+  --dark-bg-secondary: #2d2d2d;
+  --dark-text-primary: #f3f4f6;
+  --dark-text-secondary: #d1d5db;
+  --dark-border: #374151;
+
+  /* Experience 頁面變數 */
+  --exp-archer-dark: #221e1d;
+  --exp-archer-bg: #eceae0;
+  --exp-archer-bg-dk: rgba(135, 132, 132, 0.532);
+  --exp-nav-height-expanded: 236px;
+  --exp-nav-height-collapsed: 80px;
+  --exp-nav-height-mobile: 100px;
+  --exp-nav-rotate-angle: -38deg;
+  --exp-nav-logo-size-large: 61px;
+  --exp-nav-logo-size-small: 32px;
+  --exp-nav-logo-size-mobile: 28px;
+  --exp-nav-transition-duration: 300ms;
+  --exp-main-max-width: 950px;
+  --exp-main-padding: 4rem 1.5rem;
+  --exp-footer-padding: 1rem;
+  --exp-section-margin: 4rem;
+  --exp-card-radius: 0.75rem;
+  --exp-card-padding: 1.5rem;
+  --exp-card-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --exp-card-shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --exp-timeline-line-width: 2px;
+  --exp-timeline-dot-size: 1rem;
+  --exp-timeline-offset: 2rem;
+  
+  /* Sidebar 變數 */
+  --sidebar-width: 280px;
+  --sidebar-bg: #ffffff;
+  --sidebar-border: #e5e7eb;
+  --sidebar-padding: 1.5rem;
+  --sidebar-item-padding: 0.75rem 1rem;
+  --sidebar-icon-size: 1.25rem;
+  
+  /* 技能評分變數 */
+  --skill-star-size: 1.25rem;
+  --skill-star-color-active: #fbbf24;
+  --skill-star-color-inactive: #e5e7eb;
+  --skill-badge-padding: 0.5rem 1rem;
+  --skill-badge-radius: 9999px;
+  
+  /* 滾動按鈕變數 */
+  --scroll-btn-size: 50px;
+  --scroll-btn-bottom: 30px;
+  --scroll-btn-right: 30px;
+  --scroll-btn-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --scroll-btn-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  
+  /* 動畫變數 */
+  --animation-duration-fast: 0.2s;
+  --animation-duration-normal: 0.3s;
+  --animation-duration-slow: 0.6s;
+  --animation-timing: ease;
+}
+
+/* 深色模式 */
+body.dark-mode {
+  --card-bg: var(--dark-bg-primary);
+  --card-border: var(--dark-border);
+  --color-background: var(--dark-bg-secondary);
+  --text-heading: var(--dark-text-primary);
+  --text-body: var(--dark-text-secondary);
+  --text-muted: #9ca3af;
+  --sidebar-bg: var(--dark-bg-primary);
+  --sidebar-border: var(--dark-border);
+}
+
+body.dark-mode .body {
+  background-image: linear-gradient(to bottom right, #1a1a1a, #2d2d2d);
+}
+
+/* --- 基礎重置 --- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  scroll-behavior: smooth;
+}
+
+/* --- Body 樣式 --- */
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans TC", "LiHei Pro", "Microsoft JhengHei",
+    sans-serif;
+  line-height: 1.6;
+  color: var(--color-text-primary);
+  background-color: var(--color-background);
+  padding-top: var(--header-height);
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+}
+
+.body {
+  background-image: linear-gradient(to bottom right, #f9fafb, #f3f4f6);
+  min-height: 100vh;
+  color: #374151;
+}
+
+/* --- 連結樣式 --- */
+a {
+  text-decoration: none;
+  color: var(--color-primary);
+  transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+  color: #0056b3;
+}
+
+/* --- 列表樣式 --- */
+ul {
+  list-style: none;
+}
+
+/* --- 通用標題樣式 --- */
+.section-title {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.section-title--with-icon {
+  display: flex;
+  align-items: center;
+}
+
+.section-title__icon {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  margin-right: 1rem;
+}
+
+/* --- 佈局容器 --- */
+.main-content {
+  max-width: 1152px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 4rem 1.5rem;
+}
+
+/* --- 內容容器 --- */
+.container {
+  max-width: 64rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* --- 頁面標題區塊 --- */
+.page-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.page-header__title {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 700;
+  color: #1f2937;
+  margin-bottom: 1rem;
+}
+
+.page-header__divider {
+  width: 6rem;
+  height: 0.25rem;
+  background-color: #2563eb;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0.25rem;
+}
+
+/* =========================================
+ * 工具類別 (Utility Classes)
+ * ========================================= */
+
+/* --- 寬度相關 --- */
+.u-max-width-sm {
+  max-width: 42rem;
+}
+
+.u-max-width-md {
+  max-width: 56rem;
+}
+
+.u-max-width-lg {
+  max-width: 64rem;
+}
+
+.u-max-width-xl {
+  max-width: 80rem;
+}
+
+/* --- 間距相關 --- */
+.u-padding-y-sm {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.u-padding-y-md {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.u-padding-y-lg {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.u-padding-y-xl {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+}
+
+.u-margin-bottom-sm {
+  margin-bottom: 1rem;
+}
+
+.u-margin-bottom-md {
+  margin-bottom: 2rem;
+}
+
+.u-margin-bottom-lg {
+  margin-bottom: 3rem;
+}
+
+.u-margin-bottom-xl {
+  margin-bottom: 4rem;
+}
+
+/* --- 文字對齊 --- */
+.u-text-center {
+  text-align: center;
+}
+
+.u-text-left {
+  text-align: left;
+}
+
+.u-text-right {
+  text-align: right;
+}

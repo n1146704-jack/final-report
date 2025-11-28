@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tech Blog - 技術部落格</title>
+        <link rel="stylesheet" href="css/global.css">
+        <link rel="stylesheet" href="css/blog.css">
+    </head>
+
+    <body>
+
+        <!-- Header -->
+        <header id="page-header-container" class="gradient-header">
+            <nav class="page-nav">
+                <div class="page-nav__container">
+                    <div class="page-nav__wrapper">
+                        <div class="page-nav__brand">🚀 Tech Blog</div>
+                        <div class="mobile-toggle">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="page-nav__links">
+                            <a href="#home" class="page-nav__link smoothscroll">首頁</a>
+                            <a href="#latest" class="page-nav__link smoothscroll">最新文章</a>
+                            <a href="#featured" class="page-nav__link smoothscroll">精選專題</a>
+                            <a href="#categories" class="page-nav__link smoothscroll">文章分類</a>
+                            <a href="#stats" class="page-nav__link smoothscroll">數據統計</a>
+                            <a href="#timeline" class="page-nav__link smoothscroll">學習歷程</a>
+                            <a href="#about" class="page-nav__link smoothscroll">關於作者</a>
+                            <a href="../index.html" class="page-nav__link smoothscroll">其他主題</a>
+                            <a href="articles.html" class="page-nav__link smoothscroll">前往文章分類</a>
+                            <a href="article.html" class="page-nav__link smoothscroll">前往文章範例</a>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div class="header-title" id="home">
+                <div class="header-title__icon animate-bounce">💻</div>
+                <div class="header-title__separator"></div>
+                <h1 class="header-title__main animate-slide-in">歡迎來到我的技術部落格</h1>
+                <h2 class="header-title__sub animate-fade-in-delayed">分享程式開發 · 技術心得 · 學習筆記</h2>
+                <div class="header-title__cta">
+                    <a href="#latest" class="btn-gradient smoothscroll">開始探索</a>
+                    <a href="#about" class="btn-outline-gradient smoothscroll">關於我</a>
+                </div>
+            </div>
+            <a class="smoothscroll scroll-down-arrow" href="#latest"></a>
+        </header>
+
+        <!-- 快速統計 -->
+        <section class="quick-stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card animate-scale" data-delay="0">
+                        <div class="stat-card__icon">📝</div>
+                        <div class="stat-card__number" data-target="128">0</div>
+                        <div class="stat-card__label">總文章數</div>
+                    </div>
+                    <div class="stat-card animate-scale" data-delay="100">
+                        <div class="stat-card__icon">👁️</div>
+                        <div class="stat-card__number" data-target="15000">0</div>
+                        <div class="stat-card__label">總閱讀量</div>
+                    </div>
+                    <div class="stat-card animate-scale" data-delay="200">
+                        <div class="stat-card__icon">💬</div>
+                        <div class="stat-card__number" data-target="856">0</div>
+                        <div class="stat-card__label">討論留言</div>
+                    </div>
+                    <div class="stat-card animate-scale" data-delay="300">
+                        <div class="stat-card__icon">⭐</div>
+                        <div class="stat-card__number" data-target="98">0</div>
+                        <div class="stat-card__label">滿意度</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 最新文章 -->
+        <section id="latest" class="latest-articles-section">
+            <div class="container">
+                <div class="section-wrapper">
+                    <div class="section-header">
+                        <h2 class="section-title">最新文章</h2>
+                        <p class="section-subtitle">探索最新的技術分享與開發心得</p>
+                    </div>
+                    <div class="article-grid">
+                        <article class="article-card animate-fade-in" data-delay="0">
+                            <div class="article-card__badge">熱門</div>
+                            <div class="article-card__image-wrapper article-card__image-wrapper--style-1">
+                                <span class="article-card__image-emoji">💻</span>
+                            </div>
+                            <div class="article-card__content">
+                                <div class="article-card__meta">
+                                    <span>2025-11-01</span>
+                                    <span class="article-card__meta-separator">•</span>
+                                    <span>技術筆記</span>
+                                    <span class="article-card__meta-separator">•</span>
+                                    <span>⏱️ 8 分鐘</span>
+                                </div>
+                                <h3 class="article-card__title">Vue 3 Composition API 完整指南</h3>
+                                <p class="article-card__excerpt">深入探討 Vue 3 的 Composition API,包含 setup、ref、reactive
+                                    等核心概念,以及實戰應用技巧...</p>
+                                <div class="article-card__footer">
+                                    <div class="article-card__tags">
+                                        <span class="tag">Vue.js</span>
+                                        <span class="tag">JavaScript</span>
+                                    </div>
+                                    <a href="article.html" class="read-more-link">閱讀更多 →</a>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="article-card animate-fade-in" data-delay="100">
+                            <div class="article-card__badge badge-new">最新</div>
+                            <div class="article-card__image-wrapper article-card__image-wrapper--style-2">
+                                <span class="article-card__image-emoji">🚀</span>
+                            </div>
+                            <div class="article-card__content">
+                                <div class="article-card__meta">
+                                    <span>2025-10-28</span>
+                                    <span class="article-card__meta-separator">•</span>
+                                    <span>效能優化</span>
+                                    <span class="article-card__meta-separator">•</span>
+                                    <span>⏱️ 12 分鐘</span>
+                                </div>
+                                <h3 class="article-card__title">Laravel 效能優化的 10 個技巧</h3>
+                                <p class="article-card__excerpt">分享在實際專案中使用的 Laravel 效能優化方法,包含快取策略、資料庫查詢優化、N+1 問題解決等...
+                                </p>
+                                <div class="article-card__footer">
+                                    <div class="article-card__tags">
+                                        <span class="tag">Laravel</span>
+                                        <span class="tag">PHP</span>
+                                    </div>
+                                    <a href="article.html" class="read-more-link">閱讀更多 →</a>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="article-card animate-fade-in" data-delay="200">
+                            <div class="article-card__image-wrapper article-card__image-wrapper--style-3">
+                                <span class="article-card__image-emoji">🔧</span>
+                            </div>
+                            <div class="article-card__content">
+                                <div class="article-card__meta">
+                                    <span>2025-10-25</span>
+                                    <span class="article-card__meta-separator">•</span>
+                                    <span>開發工具</span>
+                                    <span class="article-card__meta-separator">•</span>
+                                    <span>⏱️ 10 分鐘</span>
+                                </div>
+                                <h3 class="article-card__title">使用 Docker 建立開發環境</h3>
+                                <p class="article-card__excerpt">如何使用 Docker 快速建立一致的開發環境,提升團隊協作效率,包含 Docker Compose
+                                    實戰應用...</p>
+                                <div class="article-card__footer">
+                                    <div class="article-card__tags">
+                                        <span class="tag">Docker</span>
+                                        <span class="tag">DevOps</span>
+                                    </div>
+                                    <a href="article.html" class="read-more-link">閱讀更多 →</a>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="article-card animate-fade-in" data-delay="300">
+                            <div class="article-card__image-wrapper article-card__image-wrapper--style-4">
+                                <span class="article-card__image-emoji">🗄️</span>
+                            </div>
+                            <div class="article-card__content">
+                                <div class="article-card__meta">
+                                    <span>2025-10-20</span>
+                                    <span class="article-card__meta-separator">•</span>
+                                    <span>資料庫</span>
+                                    <span class="article-card__meta-separator">•</span>
+                                    <span>⏱️ 15 分鐘</span>
+                                </div>
+                                <h3 class="article-card__title">MySQL 索引優化實戰指南</h3>
+                                <p class="article-card__excerpt">深入了解 MySQL 索引原理,學習如何建立高效的索引策略,避免常見的索引陷阱...</p>
+                                <div class="article-card__footer">
+                                    <div class="article-card__tags">
+                                        <span class="tag">MySQL</span>
+                                        <span class="tag">資料庫</span>
+                                    </div>
+                                    <a href="article.html" class="read-more-link">閱讀更多 →</a>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="article-card animate-fade-in" data-delay="400">
+                            <div class="article-card__image-wrapper article-card__image-wrapper--style-5">
+                                <span class="article-card__image-emoji">🎨</span>
+                            </div>
+                            <div class="article-card__content">
+                                <div class="article-card__meta">
+                                    <span>2025-10-15</span>
+                                    <span class="article-card__meta-separator">•</span>
+                                    <span>前端開發</span>
+                                    <span class="article-card__meta-separator">•</span>
+                                    <span>⏱️ 7 分鐘</span>
+                                </div>
+                                <h3 class="article-card__title">CSS Grid 完整佈局教學</h3>
+                                <p class="article-card__excerpt">從基礎到進階,完整介紹 CSS Grid 的使用方法,打造響應式網頁佈局...</p>
+                                <div class="article-card__footer">
+                                    <div class="article-card__tags">
+                                        <span class="tag">CSS</span>
+                                        <span class="tag">前端</span>
+                                    </div>
+                                    <a href="article.html" class="read-more-link">閱讀更多 →</a>
+                                </div>
+                            </div>
+                        </article>
+                        <article class="article-card animate-fade-in" data-delay="500">
+                            <div class="article-card__image-wrapper article-card__image-wrapper--style-6">
+                                <span class="article-card__image-emoji">🔐</span>
+                            </div>
+                            <div class="article-card__content">
+                                <div class="article-card__meta">
+                                    <span>2025-10-10</span>
+                                    <span class="article-card__meta-separator">•</span>
+                                    <span>資訊安全</span>
+                                    <span class="article-card__meta-separator">•</span>
+                                    <span>⏱️ 11 分鐘</span>
+                                </div>
+                                <h3 class="article-card__title">Web 應用安全防護指南</h3>
+                                <p class="article-card__excerpt">了解常見的 Web 安全漏洞,包含 XSS、CSRF、SQL Injection 等,學習如何有效防護...
+                                </p>
+                                <div class="article-card__footer">
+                                    <div class="article-card__tags">
+                                        <span class="tag">Security</span>
+                                        <span class="tag">Web</span>
+                                    </div>
+                                    <a href="article.html" class="read-more-link">閱讀更多 →</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="section-footer-action">
+                        <a href="articles.html" class="btn btn--blue">查看所有文章</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 精選專題 -->
+        <section id="featured" class="featured-section">
+            <div class="container">
+                <div class="section-wrapper">
+                    <div class="section-header">
+                        <h2 class="section-title">精選專題系列</h2>
+                        <p class="section-subtitle">深度探討熱門技術主題</p>
+                    </div>
+                    <div class="featured-grid">
+                        <div class="featured-card featured-card--large animate-fade-in" data-delay="0">
+                            <div class="featured-card__image">
+                                <span class="featured-card__emoji">🎯</span>
+                            </div>
+                            <div class="featured-card__content">
+                                <div class="featured-card__tag">系列文章</div>
+                                <h3 class="featured-card__title">從零開始學習 Spring Boot</h3>
+                                <p class="featured-card__description">完整的 Spring Boot 學習路線,從基礎概念到實戰專案,共 12 篇深度文章</p>
+                                <div class="featured-card__meta">
+                                    <span>📚 12 篇文章</span>
+                                    <span>⏱️ 約 2.5 小時</span>
+                                </div>
+                                <a href="#" class="featured-card__link">開始學習 →</a>
+                            </div>
+                        </div>
+                        <div class="featured-card animate-fade-in" data-delay="100">
+                            <div class="featured-card__image featured-card__image--small">
+                                <span class="featured-card__emoji">⚡</span>
+                            </div>
+                            <div class="featured-card__content">
+                                <div class="featured-card__tag">專題</div>
+                                <h3 class="featured-card__title">前端效能優化</h3>
+                                <p class="featured-card__description">提升網站載入速度的實用技巧</p>
+                                <div class="featured-card__meta">
+                                    <span>📚 8 篇</span>
+                                </div>
+                                <a href="#" class="featured-card__link">了解更多 →</a>
+                            </div>
+                        </div>
+                        <div class="featured-card animate-fade-in" data-delay="200">
+                            <div class="featured-card__image featured-card__image--small">
+                                <span class="featured-card__emoji">🔄</span>
+                            </div>
+                            <div class="featured-card__content">
+                                <div class="featured-card__tag">專題</div>
+                                <h3 class="featured-card__title">RESTful API 設計</h3>
+                                <p class="featured-card__description">學習設計優雅的 API 介面</p>
+                                <div class="featured-card__meta">
+                                    <span>📚 6 篇</span>
+                                </div>
+                                <a href="#" class="featured-card__link">了解更多 →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 文章分類 -->
+        <section id="categories" class="categories-section">
+            <div class="container">
+                <div class="section-wrapper">
+                    <div class="section-header">
+                        <h2 class="section-title">文章分類</h2>
+                        <p class="section-subtitle">依主題瀏覽技術文章</p>
+                    </div>
+                    <div class="categories-grid">
+                        <div class="category-card category-card--blue animate-float" data-delay="0">
+                            <div class="category-card__icon">💻</div>
+                            <h3 class="category-card__title">前端開發</h3>
+                            <p class="category-card__description">Vue, React, CSS, HTML</p>
+                            <p class="category-card__count">36 篇文章</p>
+                            <a href="articles.html" class="category-card__link">瀏覽 →</a>
+                        </div>
+                        <div class="category-card category-card--green animate-float" data-delay="100">
+                            <div class="category-card__icon">⚙️</div>
+                            <h3 class="category-card__title">後端開發</h3>
+                            <p class="category-card__description">Laravel, Spring Boot, Node.js</p>
+                            <p class="category-card__count">28 篇文章</p>
+                            <a href="articles.html" class="category-card__link">瀏覽 →</a>
+                        </div>
+                        <div class="category-card category-card--purple animate-float" data-delay="200">
+                            <div class="category-card__icon">🗄️</div>
+                            <h3 class="category-card__title">資料庫</h3>
+                            <p class="category-card__description">MySQL, PostgreSQL, MongoDB</p>
+                            <p class="category-card__count">18 篇文章</p>
+                            <a href="articles.html" class="category-card__link">瀏覽 →</a>
+                        </div>
+                        <div class="category-card category-card--yellow animate-float" data-delay="300">
+                            <div class="category-card__icon">🔧</div>
+                            <h3 class="category-card__title">開發工具</h3>
+                            <p class="category-card__description">Git, Docker, CI/CD</p>
+                            <p class="category-card__count">22 篇文章</p>
+                            <a href="articles.html" class="category-card__link">瀏覽 →</a>
+                        </div>
+                        <div class="category-card category-card--red animate-float" data-delay="400">
+                            <div class="category-card__icon">🔐</div>
+                            <h3 class="category-card__title">資訊安全</h3>
+                            <p class="category-card__description">Web Security, Auth, Encryption</p>
+                            <p class="category-card__count">12 篇文章</p>
+                            <a href="articles.html" class="category-card__link">瀏覽 →</a>
+                        </div>
+                        <div class="category-card category-card--orange animate-float" data-delay="500">
+                            <div class="category-card__icon">📱</div>
+                            <h3 class="category-card__title">行動開發</h3>
+                            <p class="category-card__description">React Native, Flutter</p>
+                            <p class="category-card__count">8 篇文章</p>
+                            <a href="articles.html" class="category-card__link">瀏覽 →</a>
+                        </div>
+                        <div class="category-card category-card--teal animate-float" data-delay="600">
+                            <div class="category-card__icon">☁️</div>
+                            <h3 class="category-card__title">雲端服務</h3>
+                            <p class="category-card__description">AWS, GCP, Azure</p>
+                            <p class="category-card__count">10 篇文章</p>
+                            <a href="articles.html" class="category-card__link">瀏覽 →</a>
+                        </div>
+                        <div class="category-card category-card--pink animate-float" data-delay="700">
+                            <div class="category-card__icon">🤖</div>
+                            <h3 class="category-card__title">AI & ML</h3>
+                            <p class="category-card__description">Machine Learning, TensorFlow</p>
+                            <p class="category-card__count">6 篇文章</p>
+                            <a href="articles.html" class="category-card__link">瀏覽 →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 數據統計 -->
+        <section id="stats" class="stats-section">
+            <div class="container">
+                <div class="section-wrapper">
+                    <div class="section-header">
+                        <h2 class="section-title section-title--white">部落格數據統計</h2>
+                        <p class="section-subtitle section-subtitle--white">持續成長中的技術社群</p>
+                    </div>
+                    <div class="stats-detailed-grid">
+                        <div class="stat-detail-card animate-slide-up" data-delay="0">
+                            <div class="stat-detail-card__icon">📈</div>
+                            <div class="stat-detail-card__content">
+                                <h3 class="stat-detail-card__number" data-target="128">0</h3>
+                                <p class="stat-detail-card__label">累積文章</p>
+                                <p class="stat-detail-card__description">涵蓋多個技術領域</p>
+                            </div>
+                        </div>
+                        <div class="stat-detail-card animate-slide-up" data-delay="100">
+                            <div class="stat-detail-card__icon">👥</div>
+                            <div class="stat-detail-card__content">
+                                <h3 class="stat-detail-card__number" data-target="3500">0</h3>
+                                <p class="stat-detail-card__label">每月訪客</p>
+                                <p class="stat-detail-card__description">來自全球各地</p>
+                            </div>
+                        </div>
+                        <div class="stat-detail-card animate-slide-up" data-delay="200">
+                            <div class="stat-detail-card__icon">⏱️</div>
+                            <div class="stat-detail-card__content">
+                                <h3 class="stat-detail-card__number" data-target="12">0</h3>
+                                <p class="stat-detail-card__label">平均停留分鐘</p>
+                                <p class="stat-detail-card__description">深度閱讀體驗</p>
+                            </div>
+                        </div>
+                        <div class="stat-detail-card animate-slide-up" data-delay="300">
+                            <div class="stat-detail-card__icon">🎯</div>
+                            <div class="stat-detail-card__content">
+                                <h3 class="stat-detail-card__number" data-target="92">0</h3>
+                                <p class="stat-detail-card__label">回訪率 %</p>
+                                <p class="stat-detail-card__description">讀者忠誠度高</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 學習歷程 -->
+        <section id="timeline" class="timeline-section">
+            <div class="container">
+                <div class="section-wrapper">
+                    <div class="section-header">
+                        <h2 class="section-title">學習歷程時間軸</h2>
+                        <p class="section-subtitle">記錄我的技術成長軌跡</p>
+                    </div>
+                    <div class="timeline">
+                        <div class="timeline-item timeline-item--left animate-timeline" data-delay="0">
+                            <div class="timeline-item__content">
+                                <div class="timeline-item__date">2025 年 11 月</div>
+                                <h3 class="timeline-item__title">掌握 Spring Boot 微服務架構</h3>
+                                <p class="timeline-item__description">深入學習微服務設計模式,實作 API Gateway、服務發現等核心功能</p>
+                                <div class="timeline-item__tags">
+                                    <span class="tag-small">Spring Boot</span>
+                                    <span class="tag-small">微服務</span>
+                                </div>
+                            </div>
+                            <div class="timeline-item__marker"></div>
+                        </div>
+                        <div class="timeline-item timeline-item--right animate-timeline" data-delay="100">
+                            <div class="timeline-item__content">
+                                <div class="timeline-item__date">2025 年 9 月</div>
+                                <h3 class="timeline-item__title">Vue 3 進階開發技巧</h3>
+                                <p class="timeline-item__description">學習 Composition API、Pinia 狀態管理、性能優化等進階技術</p>
+                                <div class="timeline-item__tags">
+                                    <span class="tag-small">Vue.js</span>
+                                    <span class="tag-small">前端</span>
+                                </div>
+                            </div>
+                            <div class="timeline-item__marker"></div>
+                        </div>
+                        <div class="timeline-item timeline-item--left animate-timeline" data-delay="200">
+                            <div class="timeline-item__content">
+                                <div class="timeline-item__date">2025 年 7 月</div>
+                                <h3 class="timeline-item__title">Docker 容器化部署實戰</h3>
+                                <p class="timeline-item__description">學習容器化技術,使用 Docker Compose 建立開發環境</p>
+                                <div class="timeline-item__tags">
+                                    <span class="tag-small">Docker</span>
+                                    <span class="tag-small">DevOps</span>
+                                </div>
+                            </div>
+                            <div class="timeline-item__marker"></div>
+                        </div>
+                        <div class="timeline-item timeline-item--right animate-timeline" data-delay="300">
+                            <div class="timeline-item__content">
+                                <div class="timeline-item__date">2025 年 5 月</div>
+                                <h3 class="timeline-item__title">Laravel 框架深度學習</h3>
+                                <p class="timeline-item__description">掌握 Laravel 核心概念,包含 Eloquent ORM、中介層、服務容器等</p>
+                                <div class="timeline-item__tags">
+                                    <span class="tag-small">Laravel</span>
+                                    <span class="tag-small">PHP</span>
+                                </div>
+                            </div>
+                            <div class="timeline-item__marker"></div>
+                        </div>
+                        <div class="timeline-item timeline-item--left animate-timeline" data-delay="400">
+                            <div class="timeline-item__content">
+                                <div class="timeline-item__date">2025 年 3 月</div>
+                                <h3 class="timeline-item__title">資料庫效能調校</h3>
+                                <p class="timeline-item__description">學習 MySQL 索引優化、查詢優化、資料庫架構設計</p>
+                                <div class="timeline-item__tags">
+                                    <span class="tag-small">MySQL</span>
+                                    <span class="tag-small">資料庫</span>
+                                </div>
+                            </div>
+                            <div class="timeline-item__marker"></div>
+                        </div>
+                        <div class="timeline-item timeline-item--right animate-timeline" data-delay="500">
+                            <div class="timeline-item__content">
+                                <div class="timeline-item__date">2025 年 1 月</div>
+                                <h3 class="timeline-item__title">開始技術部落格之旅</h3>
+                                <p class="timeline-item__description">建立個人技術部落格,開始記錄學習歷程與分享開發經驗</p>
+                                <div class="timeline-item__tags">
+                                    <span class="tag-small">部落格</span>
+                                    <span class="tag-small">寫作</span>
+                                </div>
+                            </div>
+                            <div class="timeline-item__marker"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter -->
+        <section class="newsletter-section">
+            <div class="container">
+                <div class="newsletter-card animate-fade-in" data-delay="0">
+                    <div class="newsletter-card__icon">📧</div>
+                    <h2 class="newsletter-card__title">訂閱技術週報</h2>
+                    <p class="newsletter-card__description">每週收到最新的技術文章、開發心得和學習資源</p>
+                    <form class="newsletter-form">
+                        <input type="email" class="newsletter-form__input" placeholder="輸入您的 Email" required>
+                        <button type="submit" class="newsletter-form__button">立即訂閱</button>
+                    </form>
+                    <p class="newsletter-card__privacy">我們重視您的隱私,不會發送垃圾郵件</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 關於作者 -->
+        <section id="about" class="about-author-section">
+            <div class="container">
+                <div class="about-author-card animate-scale" data-delay="0">
+                    <div class="about-author-card__layout">
+                        <div class="about-author-card__avatar-wrapper">
+                            <div class="about-author-card__avatar">👨‍💻</div>
+                            <div class="about-author-card__status">
+                                <span class="status-dot"></span>
+                                目前在線
+                            </div>
+                        </div>
+                        <div class="about-author-card__content">
+                            <h3 class="about-author-card__title">關於作者 素還真</h3>
+                            <p class="about-author-card__subtitle">全端工程師 | 技術寫作者</p>
+                            <p class="about-author-card__text">我是一名熱愛技術的全端工程師,主要使用 Laravel、Spring Boot 和 Vue.js
+                                開發應用程式。在這個部落格中,我分享程式開發的經驗、技術心得,以及學習過程中的收穫。希望透過文字記錄,不僅幫助自己成長,也能幫助到其他開發者。</p>
+                            <div class="about-author-card__skills">
+                                <span class="skill-badge">PHP / Laravel</span>
+                                <span class="skill-badge">Java / Spring Boot</span>
+                                <span class="skill-badge">JavaScript / Vue.js</span>
+                                <span class="skill-badge">MySQL</span>
+                                <span class="skill-badge">Docker</span>
+                                <span class="skill-badge">Git</span>
+                            </div>
+                            <div class="about-author-card__links">
+                                <a href="#" class="social-link">
+                                    <span class="social-link__icon">📧</span>
+                                    <span class="social-link__text">Email</span>
+                                </a>
+                                <a href="#" class="social-link">
+                                    <span class="social-link__icon">💼</span>
+                                    <span class="social-link__text">LinkedIn</span>
+                                </a>
+                                <a href="#" class="social-link">
+                                    <span class="social-link__icon">🐙</span>
+                                    <span class="social-link__text">GitHub</span>
+                                </a>
+                                <a href="#" class="social-link">
+                                    <span class="social-link__icon">✍️</span>
+                                    <span class="social-link__text">Medium</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer id="page-footer-container" class="gradient-footer">
+            <div class="container">
+                <div class="page-footer">
+                    <div class="page-footer__main">
+                        <div class="footer-column">
+                            <h4 class="footer-column__title">🚀 Tech Blog</h4>
+                            <p class="footer-column__description">分享技術知識,記錄成長軌跡</p>
+                            <div class="footer-column__social">
+                                <a href="#" class="social-icon" title="Facebook">FB</a>
+                                <a href="#" class="social-icon" title="Instagram">IG</a>
+                                <a href="#" class="social-icon" title="LinkedIn">LI</a>
+                                <a href="#" class="social-icon" title="GitHub">GH</a>
+                            </div>
+                        </div>
+                        <div class="footer-column">
+                            <h4 class="footer-column__title">快速連結</h4>
+                            <ul class="footer-links">
+                                <li><a href="#latest">最新文章</a></li>
+                                <li><a href="#featured">精選專題</a></li>
+                                <li><a href="#categories">文章分類</a></li>
+                                <li><a href="#about">關於作者</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-column">
+                            <h4 class="footer-column__title">熱門分類</h4>
+                            <ul class="footer-links">
+                                <li><a href="#">前端開發</a></li>
+                                <li><a href="#">後端開發</a></li>
+                                <li><a href="#">資料庫</a></li>
+                                <li><a href="#">開發工具</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-column">
+                            <h4 class="footer-column__title">聯絡資訊</h4>
+                            <ul class="footer-contact">
+                                <li>📧 contact@techblog.com</li>
+                                <li>📍 台灣 Taiwan</li>
+                                <li>⏰ 通常在 24 小時內回覆</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="page-footer__divider"></div>
+                    <div class="page-footer__bottom">
+                        <p class="page-footer__text">© 2025 N1146704. All rights reserved.</p>
+                        <div class="page-footer__links">
+                            <a href="#">隱私權政策</a>
+                            <span>•</span>
+                            <a href="#">使用條款</a>
+                            <span>•</span>
+                            <a href="#">RSS</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="back-to-top" id="backToTop" title="回到頂部">↑</button>
+        </footer>
+
+        <!-- js -->
+        <script src="js/blog.js"></script>
+    </body>
+
+</html>
