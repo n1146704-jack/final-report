@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-TW">
 
     <head>
         <meta charset="UTF-8">
@@ -15,6 +15,7 @@
     <body class="body-styles">
         <header id="header-container">
             <nav class="site-header">
+                <h1 class="site-header__title">期末作業展示</h1>
                 <!-- 深色模式切換按鈕 -->
                 <div class="site-header__toggle-button-wrapper">
                     <button id="theme-toggle" class="theme-toggle" aria-label="切換深色模式">
@@ -36,57 +37,76 @@
         </header>
 
         <section class="main-content">
-
             <div class="content-container">
                 <div class="card-grid">
 
-                    <a href="resume/index.html" class="card-link">
-                        <div class="card">
-                            <img src="image/resume.png" alt="風格一的圖片" class="card-image">
-                            <div class="card-body">
-                                <h3 class="card-title">履歷</h3>
-                                <p class="card-description">
-                                    這是一個有關個人履歷的頁面。
-                                </p>
+                    <!-- 履歷卡片 -->
+                    <div class="card">
+                        <div class="card-image-wrapper">
+                            <img src="image/resume.png" alt="履歷的圖片" class="card-image">
+                            <div class="card-overlay"></div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">履歷</h3>
+                            <p class="card-description">個人履歷展示頁面</p>
+                            <div class="card-links">
+                                <a href="resume/index.html" class="card-link-btn">首頁</a>
+                                <a href="resume/about-me.html" class="card-link-btn">自我介紹</a>
+                                <a href="resume/experience.html" class="card-link-btn">經歷</a>
                             </div>
                         </div>
-                    </a>
+                    </div>
 
-                    <a href="blog/index.html" class="card-link">
-                        <div class="card">
-                            <img src="image/blog.png" alt="風格二的圖片" class="card-image">
-                            <div class="card-body">
-                                <h3 class="card-title">部落格</h3>
-                                <p class="card-description">
-                                    這是部落格風格的文章頁面。
-                                </p>
+                    <!-- 部落格卡片 -->
+                    <div class="card">
+                        <div class="card-image-wrapper">
+                            <img src="image/blog.png" alt="部落格的圖片" class="card-image">
+                            <div class="card-overlay"></div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">部落格</h3>
+                            <p class="card-description">部落格風格文章頁面</p>
+                            <div class="card-links">
+                                <a href="blog/index.html" class="card-link-btn">首頁</a>
+                                <a href="blog/articles.html" class="card-link-btn">前往文章分類</a>
+                                <a href="blog/article.html" class="card-link-btn">前往文章範例</a>
                             </div>
                         </div>
-                    </a>
+                    </div>
 
-                    <a href="branded-campus/index.html" class="card-link">
-                        <div class="card">
-                            <img src="image/campus.png" alt="風格三的圖片" class="card-image">
-                            <div class="card-body">
-                                <h3 class="card-title">形象網站-校園</h3>
-                                <p class="card-description">
-                                    常用校園形象網站版型。
-                                </p>
+                    <!-- 校園形象網站卡片 -->
+                    <div class="card">
+                        <div class="card-image-wrapper">
+                            <img src="image/campus.png" alt="校園形象網站的圖片" class="card-image">
+                            <div class="card-overlay"></div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">形象網站-校園</h3>
+                            <p class="card-description">校園形象網站版型</p>
+                            <div class="card-links">
+                                <a href="branded-campus/index.html" class="card-link-btn">首頁</a>
+                                <a href="branded-campus/about.html" class="card-link-btn">前往認識校園</a>
+                                <a href="branded-campus/admissions.html" class="card-link-btn">前往招生資訊</a>
                             </div>
                         </div>
-                    </a>
+                    </div>
 
-                    <a href="branded-technology/index.html" class="card-link">
-                        <div class="card">
-                            <img src="image/technology.png" alt="風格四的圖片" class="card-image">
-                            <div class="card-body">
-                                <h3 class="card-title">形象網站-科技</h3>
-                                <p class="card-description">
-                                    常用科技形象網站版型。。
-                                </p>
+                    <!-- 科技形象網站卡片 -->
+                    <div class="card">
+                        <div class="card-image-wrapper">
+                            <img src="image/technology.png" alt="科技形象網站的圖片" class="card-image">
+                            <div class="card-overlay"></div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">形象網站-科技</h3>
+                            <p class="card-description">科技形象網站版型</p>
+                            <div class="card-links">
+                                <a href="branded-technology/index.html" class="card-link-btn">首頁</a>
+                                <a href="branded-technology/structure.html" class="card-link-btn">公司組織</a>
+                                <a href="branded-technology/history.html" class="card-link-btn">公司歷史</a>
                             </div>
                         </div>
-                    </a>
+                    </div>
 
                 </div>
             </div>
@@ -96,9 +116,7 @@
             <div class="site-footer__container">
                 <div class="site-footer__content-wrapper">
                     <div class="site-footer__copyright">
-                        <p>
-                            期末作業
-                        </p>
+                        <p>期末作業 © 2025</p>
                     </div>
                 </div>
             </div>

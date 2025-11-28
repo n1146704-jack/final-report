@@ -1,57 +1,68 @@
 /* --- Footer 樣式 --- */
 .site-footer {
-    background-color: #1f2937;
-    color: #ffffff;
-    box-shadow: 0 -10px 15px -3px rgba(0, 0, 0, 0.1), 0 -4px 6px -2px rgba(0, 0, 0, 0.05);
-    padding-left: 2rem;
-    padding-right: 2rem;
-    box-sizing: border-box;
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(10px);
+  color: #ffffff;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+  padding: 0.875rem 2rem;
+  box-sizing: border-box;
 }
 
 .site-footer__container {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 72rem;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 72rem;
 }
 
 .site-footer__content-wrapper {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .site-footer__copyright {
-    text-align: center;
+  text-align: center;
 }
 
 .site-footer__copyright p {
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-    margin: 0;
+  font-size: 0.8rem;
+  line-height: 1.25rem;
+  margin: 0;
+  color: #94a3b8;
 }
 
 .site-footer__social-links {
-    display: flex;
-    gap: 1.25rem;
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
+  display: flex;
+  gap: 1.25rem;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .site-footer__social-link {
-    color: #d1d5db;
-    transition-property: color;
-    transition-duration: 150ms;
+  color: #94a3b8;
+  transition: color 0.2s ease;
 }
 
 .site-footer__social-link:hover {
-    color: #ffffff;
+  color: #ffffff;
 }
 
 .site-footer__social-icon {
-    width: 1.5rem;
-    height: 1.5rem;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* --- 響應式 --- */
+@media (max-width: 767px) {
+  .site-footer {
+    padding: 0.75rem 1rem;
+  }
+
+  .site-footer__copyright p {
+    font-size: 0.75rem;
+  }
 }

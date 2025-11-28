@@ -7,7 +7,7 @@ function initDarkMode() {
   const themeToggleBtn = document.getElementById('theme-toggle');
   const sunIcon = document.querySelector('.toggle-icon--sun');
   const moonIcon = document.querySelector('.toggle-icon--moon');
-  
+
   // 確認按鈕存在
   if (!themeToggleBtn) {
     console.error('找不到深色模式切換按鈕');
@@ -16,7 +16,7 @@ function initDarkMode() {
 
   // 從 localStorage 讀取使用者的主題偏好，預設淺色
   const initialTheme = localStorage.getItem('theme') || 'light';
-  
+
   // 套用初始主題
   applyTheme(initialTheme);
 
@@ -24,7 +24,7 @@ function initDarkMode() {
   themeToggleBtn.addEventListener('click', () => {
     const currentTheme = document.body.classList.contains('dark-mode') ? 'dark' : 'light';
     const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-    
+
     applyTheme(newTheme);
     localStorage.setItem('theme', newTheme);
   });
@@ -52,7 +52,7 @@ function initDarkMode() {
 document.addEventListener('DOMContentLoaded', () => {
   // header 是動態載入的，需要等待它載入完成
   const headerContainer = document.getElementById('header-container');
-  
+
   if (!headerContainer) {
     console.error('找不到 header-container');
     return;
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // 建立 Observer 監聽 header 容器的變化
   const observer = new MutationObserver((mutations) => {
     const hasAddedNodes = mutations.some(mutation => mutation.addedNodes.length > 0);
-    
+
     if (hasAddedNodes) {
       const themeToggleBtn = document.getElementById('theme-toggle');
       if (themeToggleBtn) {

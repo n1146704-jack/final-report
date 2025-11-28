@@ -8,103 +8,216 @@ html {
     "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
-/* --- Body 樣式 --- */
+/* --- Body 樣式 - 固定 100vh --- */
 .body-styles {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  background-color: #f3f4f6;
+  height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
 /* --- 主要內容區域 --- */
 .main-content {
-  flex-grow: 1;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
 }
 
 /* --- 內容容器 --- */
 .content-container {
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  box-sizing: border-box; 
-  padding-left: 2rem;
-  padding-right: 2rem;
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  max-width: 90rem;
+  margin: 0 auto;
+  padding: 1.5rem;
+  box-sizing: border-box;
 }
 
-/* --- 卡片網格 --- */
+/* --- 卡片網格 - 橫向四個卡片 --- */
 .card-grid {
   display: grid;
-  grid-template-columns: repeat(1, minmax(0, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
-  max-width: 72rem;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100%; 
-}
-
-/* --- 卡片連結 --- */
-.card-link {
-  display: block;
-  text-decoration: none;
-  color: inherit;
+  width: 100%;
 }
 
 /* --- 卡片本身 --- */
 .card {
-  background-color: #ffffff;
-  border-radius: 0.5rem;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 1rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15),
+    0 0 0 1px rgba(255, 255, 255, 0.1);
   overflow: hidden;
-  transition-property: box-shadow;
-  transition-duration: 300ms;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .card:hover {
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
-    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  transform: translateY(-8px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.25),
+    0 0 0 1px rgba(255, 255, 255, 0.2);
+}
+
+/* --- 卡片圖片容器 --- */
+.card-image-wrapper {
+  position: relative;
+  overflow: hidden;
 }
 
 /* --- 卡片圖片 --- */
 .card-image {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 16 / 10;
   object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.card:hover .card-image {
+  transform: scale(1.05);
+}
+
+/* --- 圖片遮罩效果 --- */
+.card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 50%, rgba(0, 0, 0, 0.1) 100%);
+  pointer-events: none;
 }
 
 /* --- 卡片內容區域 --- */
 .card-body {
-  padding: 1.5rem;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 /* --- 卡片標題 --- */
 .card-title {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  font-weight: 600;
-  margin-bottom: 0.5rem;
-  color: #111827;
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0 0 0.5rem 0;
+  color: #1a1a2e;
+  letter-spacing: -0.02em;
 }
 
 /* --- 卡片描述 --- */
 .card-description {
-  color: #374151;
-  margin: 0;
+  color: #64748b;
+  margin: 0 0 1rem 0;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  flex: 1;
 }
 
-/* --- 響應式設計 (md: 768px) --- */
-@media (min-width: 768px) {
-  .content-container {
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
+/* --- 卡片連結區域 --- */
+.card-links {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+/* --- 卡片連結按鈕 --- */
+.card-link-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 0.875rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+  flex: 1;
+  min-width: 0;
+  text-align: center;
+}
+
+.card-link-btn:nth-child(1) {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+}
+
+.card-link-btn:nth-child(1):hover {
+  background: linear-gradient(135deg, #5a6fd6 0%, #6a4190 100%);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+}
+
+.card-link-btn:nth-child(2) {
+  background-color: #f1f5f9;
+  color: #475569;
+}
+
+.card-link-btn:nth-child(2):hover {
+  background-color: #e2e8f0;
+  color: #334155;
+}
+
+.card-link-btn:nth-child(3) {
+  background-color: #f1f5f9;
+  color: #475569;
+}
+
+.card-link-btn:nth-child(3):hover {
+  background-color: #e2e8f0;
+  color: #334155;
+}
+
+/* --- 響應式設計 --- */
+
+/* 大螢幕 (1280px+) */
+@media (min-width: 1280px) {
+  .card-grid {
+    gap: 2rem;
   }
 
+  .card-body {
+    padding: 1.5rem;
+  }
+
+  .card-title {
+    font-size: 1.25rem;
+  }
+}
+
+/* 中螢幕 (768px - 1279px) */
+@media (max-width: 1279px) {
   .card-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .body-styles {
+    height: auto;
+    min-height: 100vh;
+    overflow: auto;
+  }
+
+  .main-content {
+    padding: 1rem 0;
+  }
+}
+
+/* 小螢幕 (小於 768px) */
+@media (max-width: 767px) {
+  .card-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .content-container {
+    padding: 1rem;
+  }
+
+  .card-links {
+    flex-direction: row;
+  }
+
+  .card-link-btn {
+    padding: 0.625rem 1rem;
+    font-size: 0.85rem;
   }
 }
