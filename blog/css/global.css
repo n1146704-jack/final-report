@@ -138,6 +138,7 @@ ul {
 }
 .btn--blue:hover {
   background-color: #1d4ed8;
+  color: #ffffff;
 }
 
 .read-more-link {
