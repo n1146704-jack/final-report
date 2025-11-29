@@ -266,7 +266,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const header = document.querySelector('.gradient-header');
         
         if (header && scrolled < window.innerHeight) {
-            const parallaxElements = header.querySelectorAll('.header-title__icon, .header-title__main, .header-title__sub');
+            const parallaxElements = header.querySelectorAll('.header-title__icon');
             parallaxElements.forEach((element, index) => {
                 const speed = (index + 1) * 0.1;
                 element.style.transform = `translateY(${scrolled * speed}px)`;
