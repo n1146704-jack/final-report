@@ -808,6 +808,18 @@
     font-size: 0.95rem;
   }
 
+  .sliding-nav__item.has-dropdown .dropdown-menu {
+    display: none;
+    margin: 0;
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border: 1px solid #eee;
+  }
+
+  .sliding-nav__item.has-dropdown.open .dropdown-menu {
+    display: block;
+  }
+
   /* Layout 響應式 */
   .main-layout__grid {
     grid-template-columns: 1fr;

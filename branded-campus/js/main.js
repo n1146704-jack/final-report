@@ -81,18 +81,20 @@ document.addEventListener('DOMContentLoaded', () => {
                     dropdownItem.classList.add('open');
 
                     // 手機版：計算 fixed 位置
-                    if (window.innerWidth <= 768) {
+                    if (window.innerWidth <= 992) {
                         const rect = toggle.getBoundingClientRect();
                         const menuRect = menu.getBoundingClientRect();
 
                         // 計算選單應該顯示的位置
-                        const topPosition = rect.bottom + window.scrollY;
+                        const topPosition = rect.bottom;
                         const leftPosition = rect.left + rect.width / 2 - menuRect.width / 2;
 
                         menu.style.position = 'fixed';
                         menu.style.top = topPosition + 'px';
                         menu.style.left = leftPosition + 'px';
                         menu.style.transform = 'none';
+                        menu.style.width = '180px';
+                        menu.style.zIndex = '10000';
                     } else {
                         // 桌面版：回復 absolute 定位
                         menu.style.position = 'absolute';
@@ -216,6 +218,13 @@ document.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('scroll', () => {
             clearTimeout(scrollTimer);
             scrollTimer = setTimeout(updateActiveOnScroll, 100);
+            
+            if (document.querySelector('.sliding-nav__item.has-dropdown.open')) {
+                const dropdownItems = document.querySelectorAll('.sliding-nav__item.has-dropdown');
+                dropdownItems.forEach(item => {
+                    item.classList.remove('open');
+                });
+            }
         });
 
         // === 初始化 ===

@@ -677,6 +677,7 @@
 .accordion-header.active {
   background-color: var(--color-primary);
   color: var(--color-white);
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
 }
 
 .accordion-title {
@@ -686,6 +687,7 @@
 .accordion-icon {
   font-size: 1.25rem;
   transition: transform var(--transition-base);
+  flex-shrink: 0;
 }
 
 .accordion-header.active .accordion-icon {
@@ -693,19 +695,42 @@
 }
 
 .accordion-content {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height var(--transition-slow);
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows var(--transition-slow);
+  background-color: var(--color-white);
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
+  box-shadow: var(--shadow-sm);
 }
 
 .accordion-content.active {
-  max-height: 1000px;
+  grid-template-rows: 1fr;
+}
+
+.accordion-content > .accordion-body {
+  overflow: hidden;
+  min-height: 0;
+}
+
+.accordion-content.active > .accordion-body {
+  overflow: visible;
 }
 
 .accordion-body {
   padding: 1.5rem;
   color: var(--color-text-secondary);
   line-height: 1.8;
+}
+
+.accordion-content--fallback {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height var(--transition-slow), padding var(--transition-slow);
+}
+
+.accordion-content--fallback.active {
+  max-height: none;
+  overflow: visible;
 }
 
 /* --- 右側資訊欄 --- */
@@ -841,6 +866,8 @@
 
 .contact-item__content {
   flex: 1;
+  min-width: 0;
+  word-wrap: break-word;
 }
 
 .contact-item__label {
@@ -852,6 +879,7 @@
 
 .contact-item__value {
   color: var(--color-text-primary);
+  word-break: break-all;
 }
 
 /* --- 圖片燈箱 --- */
@@ -970,18 +998,39 @@
 @media (max-width: 1024px) {
   .about-container {
     grid-template-columns: 1fr;
+    padding: 0 1.5rem;
   }
 
   .sidebar-aside {
     position: static;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .aside-card {
+    margin-bottom: 0;
   }
 
   .vision-mission-grid,
   .features-grid {
     grid-template-columns: 1fr;
   }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .accordion-content.active {
+    grid-template-rows: 1fr;
+  }
+
+  .accordion-body {
+    padding: 1.25rem;
+  }
 }
 
+/* 手機 (768px 以下) */
 @media (max-width: 768px) {
   .sidebar__toggle {
     display: none;
@@ -989,6 +1038,7 @@
 
   .sidebar {
     transform: translateX(-100%);
+    width: 280px;
   }
 
   .sidebar.mobile-open {
@@ -1023,43 +1073,164 @@
   }
 
   .about-header__title {
-    font-size: 2rem;
+    font-size: 1.75rem;
+  }
+
+  .about-header__subtitle {
+    font-size: 1rem;
   }
 
   .about-section {
-    padding: 2rem 0;
+    padding: 1.5rem 0;
   }
 
   .about-container {
     padding: 0 1rem;
+    gap: 1.5rem;
+  }
+
+  .content-card {
+    margin-bottom: 1.5rem;
   }
 
   .content-card__header {
-    padding: 1rem 1.5rem;
+    padding: 1rem 1.25rem;
   }
 
   .content-card__title {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
   }
 
   .content-card__body {
-    padding: 1.5rem;
+    padding: 1.25rem;
   }
 
   .timeline {
     padding-left: 2rem;
   }
 
+  .timeline__item {
+    padding: 1rem;
+  }
+
+  .timeline__item::before {
+    left: -1.9rem;
+    width: 12px;
+    height: 12px;
+  }
+
   .campus-gallery {
     grid-template-columns: 1fr;
   }
 
+  .gallery-item-wrapper .gallery-item {
+    height: 200px;
+  }
+
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .accordion-header {
+    padding: 1rem 1.25rem;
+    font-size: 0.9375rem;
+  }
+
+  .accordion-body {
+    padding: 1rem 1.25rem;
+    font-size: 0.9375rem;
+  }
+
+  .accordion-content {
+    border-radius: 0 0 var(--radius-md) var(--radius-md);
+  }
+
+  .accordion-content.active {
+    grid-template-rows: 1fr;
+  }
+
+  .sidebar-aside {
+    grid-template-columns: 1fr;
+  }
+
+  .aside-card__body {
+    padding: 1rem;
   }
 
   .footer-content {
     grid-template-columns: 1fr;
+    padding: 0 1rem;
+  }
+
+  .footer-bottom {
+    padding: 1rem;
+    font-size: 0.8125rem;
+  }
+}
+
+/* 小螢幕手機 (480px 以下) */
+@media (max-width: 480px) {
+  .about-header__title {
+    font-size: 1.5rem;
+  }
+
+  .about-container {
+    padding: 0 0.75rem;
+  }
+
+  .content-card__header {
+    padding: 0.875rem 1rem;
+  }
+
+  .content-card__title {
+    font-size: 1.125rem;
+    gap: 0.5rem;
+  }
+
+  .content-card__icon {
+    font-size: 1.25rem;
+  }
+
+  .content-card__body {
+    padding: 1rem;
+    font-size: 0.9375rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+
+  .stat-item {
+    padding: 0.75rem;
+  }
+
+  .accordion-header {
+    padding: 0.875rem 1rem;
+    font-size: 0.875rem;
+  }
+
+  .accordion-body {
+    padding: 0.875rem 1rem;
+    font-size: 0.875rem;
+    line-height: 1.7;
+  }
+
+  .timeline {
+    padding-left: 1.5rem;
+  }
+
+  .feature-card {
+    padding: 1rem;
+  }
+
+  .feature-card__icon {
+    font-size: 2rem;
+  }
+
+  .feature-card__title {
+    font-size: 1.125rem;
   }
 }
 
@@ -1095,6 +1266,10 @@
 @media (max-width: 768px) {
   .mobile-menu-toggle {
     display: flex;
+    width: 56px;
+    height: 56px;
+    bottom: 1.5rem;
+    right: 1.5rem;
   }
 }
 
@@ -1133,5 +1308,9 @@
 @media (max-width: 768px) {
   .back-to-top {
     bottom: 5rem;
+    right: 1.5rem;
+    width: 44px;
+    height: 44px;
+    font-size: 1rem;
   }
 }

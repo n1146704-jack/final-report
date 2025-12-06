@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const statsObserverOptions = {
       root: null,
       rootMargin: '0px',
-      threshold: 0.5
+      threshold: 0.1
     };
 
     let hasAnimated = false;
@@ -135,7 +135,7 @@ document.addEventListener("DOMContentLoaded", function () {
           statCards.forEach(card => {
             const valueElement = card.querySelector('.stat-card__value');
             const targetValue = parseInt(valueElement.getAttribute('data-target'));
-            animateValue(valueElement, 0, targetValue, 2000);
+            animateValue(valueElement, 0, targetValue, 3000);
           });
 
           observer.disconnect();

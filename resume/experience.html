@@ -7,6 +7,8 @@
         <title>工作經歷 - 個人履歷</title>
         <link rel="stylesheet" href="css/global.css">
         <link rel="stylesheet" href="css/experience.css">
+        <!-- js -->
+        <script src="js/experience.js" defer></script>
     </head>
 
     <body class="body">
@@ -44,7 +46,7 @@
                         </div>
 
                         <!-- 技能統計區塊 -->
-                        <section class="skills-stats-section">
+                        <section id="stats" class="skills-stats-section">
                             <h2 class="section-title section-title--with-icon">
                                 <span class="section-title__icon">📊</span>
                                 職涯統計
@@ -310,7 +312,7 @@
                         </section>
 
                         <!-- 工作經歷區塊 -->
-                        <section class="experience-section">
+                        <section id="experience" class="experience-section">
                             <h2 class="section-title section-title--with-icon">
                                 <span class="section-title__icon">💼</span>
                                 工作經歷
@@ -433,7 +435,7 @@
                         </section>
 
                         <!-- 專案作品區塊 -->
-                        <section class="projects-section">
+                        <section id="projects" class="projects-section">
                             <h2 class="section-title section-title--with-icon">
                                 <span class="section-title__icon">🚀</span>
                                 專案作品
@@ -498,7 +500,7 @@
                         </section>
 
                         <!-- 學歷與證照區塊 -->
-                        <section class="education-section">
+                        <section id="education" class="education-section">
                             <h2 class="section-title section-title--with-icon">
                                 <span class="section-title__icon">🎓</span>
                                 學歷與證照
@@ -545,7 +547,7 @@
                         </section>
 
                         <!-- 推薦評價 -->
-                        <section class="testimonials-section">
+                        <section id="testimonials" class="testimonials-section">
                             <h2 class="section-title section-title--with-icon">
                                 <span class="section-title__icon">💬</span>
                                 推薦評價
@@ -577,7 +579,7 @@
                         </section>
 
                         <!-- 技術文章 -->
-                        <section class="articles-section">
+                        <section id="articles" class="articles-section">
                             <h2 class="section-title section-title--with-icon">
                                 <span class="section-title__icon">✍️</span>
                                 技術文章
@@ -632,28 +634,40 @@
                             <nav class="quick-nav">
                                 <ul class="quick-nav__list">
                                     <li class="quick-nav__item">
-                                        <span class="quick-nav__item-icon">📊</span>
-                                        <span>職涯統計</span>
+                                        <a href="#stats" class="quick-nav__link">
+                                            <span class="quick-nav__item-icon">📊</span>
+                                            <span>職涯統計</span>
+                                        </a>
                                     </li>
                                     <li class="quick-nav__item">
-                                        <span class="quick-nav__item-icon">💼</span>
-                                        <span>工作經歷</span>
+                                        <a href="#experience" class="quick-nav__link">
+                                            <span class="quick-nav__item-icon">💼</span>
+                                            <span>工作經歷</span>
+                                        </a>
                                     </li>
                                     <li class="quick-nav__item">
-                                        <span class="quick-nav__item-icon">🚀</span>
-                                        <span>專案作品</span>
+                                        <a href="#projects" class="quick-nav__link">
+                                            <span class="quick-nav__item-icon">🚀</span>
+                                            <span>專案作品</span>
+                                        </a>
                                     </li>
                                     <li class="quick-nav__item">
-                                        <span class="quick-nav__item-icon">🎓</span>
-                                        <span>學歷證照</span>
+                                        <a href="#education" class="quick-nav__link">
+                                            <span class="quick-nav__item-icon">🎓</span>
+                                            <span>學歷證照</span>
+                                        </a>
                                     </li>
                                     <li class="quick-nav__item">
-                                        <span class="quick-nav__item-icon">💬</span>
-                                        <span>推薦評價</span>
+                                        <a href="#testimonials" class="quick-nav__link">
+                                            <span class="quick-nav__item-icon">💬</span>
+                                            <span>推薦評價</span>
+                                        </a>
                                     </li>
                                     <li class="quick-nav__item">
-                                        <span class="quick-nav__item-icon">✍️</span>
-                                        <span>技術文章</span>
+                                        <a href="#articles" class="quick-nav__link">
+                                            <span class="quick-nav__item-icon">✍️</span>
+                                            <span>技術文章</span>
+                                        </a>
                                     </li>
                                 </ul>
                             </nav>
@@ -738,10 +752,6 @@
                 </p>
             </div>
         </footer>
-
-        <!-- js -->
-        <script src="js/experience.js" defer></script>
-
     </body>
 
 </html>
