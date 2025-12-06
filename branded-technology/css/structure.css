@@ -261,7 +261,10 @@ body::before {
   width: calc(95% - 200px);
   min-height: calc(100vh - 140px);
   padding: 2rem;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
+  container-type: inline-size;
+  container-name: main-content;
 }
 
 /* ==================== Section Header ==================== */
@@ -653,70 +656,6 @@ body::before {
   border-top: 1px solid var(--color-tech-border-subtle);
 }
 
-/* ==================== Team Culture Section ==================== */
-.culture-section {
-  max-width: 1400px;
-  margin: 8rem auto;
-}
-
-.culture-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-}
-
-.culture-card {
-  background: var(--color-tech-card-bg);
-  backdrop-filter: blur(10px);
-  border: 1px solid var(--color-tech-border-subtle);
-  border-radius: 20px;
-  padding: 2.5rem;
-  position: relative;
-  overflow: hidden;
-  transition: all 0.4s ease;
-}
-
-.culture-card:hover {
-  transform: translateY(-10px) scale(1.02);
-  border-color: rgba(0, 245, 195, 0.3);
-  box-shadow: 0 20px 50px rgba(0, 245, 195, 0.2);
-}
-
-/* 卡片右上角的數字 */
-.culture-card__number {
-  position: absolute;
-  top: 1.5rem;
-  right: 2rem;
-  font-size: 3rem;
-  font-weight: 900;
-  color: rgba(255, 255, 255, 0.05);
-  z-index: 1;
-  transition: color 0.4s ease;
-}
-
-.culture-card:hover .culture-card__number {
-  color: rgba(0, 245, 195, 0.1);
-}
-
-/* 卡片標題 (包含 emoji) */
-.culture-card__title {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--color-white);
-  margin-bottom: 1rem;
-  position: relative;
-  z-index: 2;
-}
-
-/* 卡片描述文字 */
-.culture-card__desc {
-  font-size: 1rem;
-  color: var(--color-tech-text-muted);
-  line-height: 1.8;
-  position: relative;
-  z-index: 2;
-}
-
 /* ==================== Tech Services Section ==================== */
 .tech-services-section {
   max-width: 1400px;
@@ -739,26 +678,6 @@ body::before {
   cursor: pointer;
   position: relative;
   overflow: hidden;
-}
-
-.service-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    135deg,
-    rgba(0, 245, 195, 0.05),
-    rgba(138, 43, 226, 0.05)
-  );
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
-
-.service-card:hover::before {
-  opacity: 1;
 }
 
 .service-card:hover {
@@ -790,80 +709,99 @@ body::before {
 .partners-section {
   max-width: 1400px;
   margin: 8rem auto;
+  text-align: center;
 }
 
 .partners-carousel {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   gap: 3rem;
-  padding: 3rem 0;
-  overflow-x: auto;
-  scroll-behavior: smooth;
+  margin-top: 3rem;
 }
 
 .partner-logo {
-  flex: 0 0 150px;
-  height: 150px;
+  width: 120px;
+  height: 60px;
   background: var(--color-tech-card-bg);
-  backdrop-filter: blur(10px);
   border: 1px solid var(--color-tech-border-subtle);
-  border-radius: 20px;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 4rem;
-  transition: all 0.4s ease;
-  cursor: pointer;
+  font-size: 0.9rem;
+  color: var(--color-tech-text-muted);
+  transition: all 0.3s ease;
 }
 
 .partner-logo:hover {
-  transform: translateY(-10px) scale(1.1);
   border-color: rgba(0, 245, 195, 0.3);
-  box-shadow: 0 20px 50px rgba(0, 245, 195, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 245, 195, 0.2);
+  transform: translateY(-5px);
 }
 
 /* ==================== Testimonials Section ==================== */
 .testimonials-section {
   max-width: 1200px;
   margin: 8rem auto;
-  position: relative;
 }
 
-.testimonials-grid {
-  display: grid;
-  gap: 2rem;
+/* 幻燈片容器 - 使用 overflow hidden 隱藏非 active 卡片 */
+.testimonial-slider {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 350px;
+  overflow: hidden;
 }
 
+/* 卡片預設隱藏，使用絕對定位實現幻燈片效果 */
 .testimonial-card {
   background: var(--color-tech-card-bg);
   backdrop-filter: blur(10px);
   border: 1px solid var(--color-tech-border-subtle);
   border-radius: 20px;
-  padding: 3rem;
-  opacity: 0;
-  transform: translateX(50px);
-  transition: all 0.6s ease;
-  position: absolute;
+  padding: 2.5rem;
+  max-width: 600px;
   width: 100%;
+  position: absolute;
+  opacity: 0;
+  transform: translateX(100px) scale(0.9);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   pointer-events: none;
+  visibility: hidden;
 }
 
+/* 只有 active 的卡片才顯示 */
 .testimonial-card.active {
-  opacity: 1;
-  transform: translateX(0);
   position: relative;
-  pointer-events: all;
+  opacity: 1;
+  transform: translateX(0) scale(1);
+  border-color: rgba(0, 245, 195, 0.3);
+  box-shadow: 0 20px 50px rgba(0, 245, 195, 0.15);
+  pointer-events: auto;
+  visibility: visible;
+}
+
+/* 添加：前一張卡片的過渡效果 */
+.testimonial-card.prev {
+  transform: translateX(-100px) scale(0.9);
+}
+
+/* 添加：下一張卡片的過渡效果 */
+.testimonial-card.next {
+  transform: translateX(100px) scale(0.9);
 }
 
 .testimonial-card__rating {
-  display: flex;
-  gap: 0.25rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .testimonial-card__content {
-  font-size: 1.2rem;
-  color: var(--color-tech-text-primary);
+  font-size: 1.1rem;
+  color: var(--color-tech-text-muted);
   line-height: 1.8;
   margin-bottom: 2rem;
   font-style: italic;
@@ -876,8 +814,8 @@ body::before {
 }
 
 .author-avatar {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   background: linear-gradient(
     135deg,
     var(--color-tech-accent-primary),
@@ -887,35 +825,34 @@ body::before {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
   font-weight: 700;
-  color: var(--color-background-dark);
+  color: var(--color-tech-bg-start);
 }
 
 .author-name {
-  font-size: 1.2rem;
-  font-weight: 700;
+  font-size: 1.1rem;
+  font-weight: 600;
   color: var(--color-white);
   margin-bottom: 0.25rem;
 }
 
 .author-title {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: var(--color-tech-text-muted);
 }
 
 .testimonial-controls {
   display: flex;
-  align-items: center;
   justify-content: center;
-  gap: 2rem;
+  align-items: center;
+  gap: 1.5rem;
   margin-top: 3rem;
 }
 
 .testimonial-btn {
   width: 50px;
   height: 50px;
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--color-tech-card-bg);
   border: 1px solid var(--color-tech-border-subtle);
   border-radius: 50%;
   display: flex;
@@ -923,12 +860,12 @@ body::before {
   justify-content: center;
   cursor: pointer;
   transition: all 0.3s ease;
-  color: var(--color-tech-text-primary);
+  color: var(--color-tech-text-muted);
 }
 
 .testimonial-btn:hover {
-  background: rgba(0, 245, 195, 0.2);
   border-color: var(--color-tech-accent-primary);
+  color: var(--color-tech-accent-primary);
   transform: scale(1.1);
 }
 
@@ -940,7 +877,7 @@ body::before {
 .testimonial-dot {
   width: 12px;
   height: 12px;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.2);
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -948,27 +885,26 @@ body::before {
 
 .testimonial-dot.active {
   background: var(--color-tech-accent-primary);
-  width: 30px;
-  border-radius: 6px;
+  transform: scale(1.2);
 }
 
 /* ==================== FAQ Section ==================== */
 .faq-section {
-  max-width: 1000px;
+  max-width: 900px;
   margin: 8rem auto;
 }
 
 .faq-container {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .faq-item {
   background: var(--color-tech-card-bg);
   backdrop-filter: blur(10px);
   border: 1px solid var(--color-tech-border-subtle);
-  border-radius: 15px;
+  border-radius: 16px;
   overflow: hidden;
   transition: all 0.3s ease;
 }
@@ -977,19 +913,24 @@ body::before {
   border-color: rgba(0, 245, 195, 0.3);
 }
 
+.faq-item.active {
+  border-color: var(--color-tech-accent-primary);
+  box-shadow: 0 10px 30px rgba(0, 245, 195, 0.15);
+}
+
 .faq-question {
   width: 100%;
   padding: 1.5rem 2rem;
   background: transparent;
   border: none;
-  color: var(--color-white);
-  font-size: 1.1rem;
-  font-weight: 600;
-  text-align: left;
-  cursor: pointer;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-white);
+  text-align: left;
   transition: all 0.3s ease;
 }
 
@@ -1001,85 +942,68 @@ body::before {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.4s ease, padding 0.4s ease;
-  padding: 0 2rem;
 }
 
 .faq-item.active .faq-answer {
-  max-height: 500px;
+  max-height: 300px;
   padding: 0 2rem 1.5rem;
 }
 
 .faq-answer p {
   color: var(--color-tech-text-muted);
   line-height: 1.8;
-  font-size: 1rem;
 }
 
 /* ==================== CTA Section ==================== */
 .cta-section {
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 8rem auto;
-  padding: 5rem 3rem;
+  text-align: center;
+  position: relative;
+}
+
+.cta-section__content {
   background: var(--color-tech-card-bg);
   backdrop-filter: blur(10px);
   border: 1px solid var(--color-tech-border-subtle);
   border-radius: 30px;
-  position: relative;
-  overflow: hidden;
-  text-align: center;
-}
-
-.cta-bg-effect {
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(
-    circle,
-    rgba(0, 245, 195, 0.1) 0%,
-    transparent 70%
-  );
-  animation: rotate 20s linear infinite;
-}
-
-.cta-section__content {
+  padding: 4rem 3rem;
   position: relative;
   z-index: 2;
 }
 
 .cta-section__title {
-  font-size: clamp(2rem, 4vw, 3rem);
+  font-size: clamp(2rem, 4vw, 2.5rem);
   font-weight: 800;
   color: var(--color-white);
   margin-bottom: 1.5rem;
 }
 
 .cta-section__text {
-  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-size: 1.2rem;
   color: var(--color-tech-text-muted);
+  max-width: 600px;
+  margin: 0 auto 2.5rem;
   line-height: 1.8;
-  max-width: 700px;
-  margin: 0 auto 3rem;
 }
 
 .cta-section__buttons {
   display: flex;
-  gap: 1.5rem;
   justify-content: center;
+  gap: 1.5rem;
   flex-wrap: wrap;
 }
 
 .cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
   padding: 1rem 2.5rem;
   font-size: 1.1rem;
   font-weight: 600;
   border-radius: 50px;
   text-decoration: none;
   transition: all 0.3s ease;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
 }
 
 .cta-button--primary {
@@ -1088,8 +1012,7 @@ body::before {
     var(--color-tech-accent-primary),
     var(--color-tech-accent-secondary)
   );
-  color: var(--color-background-dark);
-  border: none;
+  color: var(--color-tech-bg-start);
 }
 
 .cta-button--primary:hover {
@@ -1178,10 +1101,8 @@ body::before {
   border-radius: 20px;
 }
 
+/* Toggle 按鈕基礎樣式 */
 .side-nav-toggle {
-  position: absolute;
-  bottom: 15px;
-  right: 15px;
   width: 50px;
   height: 50px;
   background: linear-gradient(
@@ -1196,6 +1117,25 @@ body::before {
   justify-content: center;
   align-items: center;
   transition: all 0.3s ease;
+  z-index: 10;
+}
+
+/* 桌面版 Toggle 按鈕 - 在側邊欄內 */
+.side-nav-toggle--desktop {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+
+/* 手機版 Toggle 按鈕 - 在側邊欄外，固定在螢幕右下角 */
+.side-nav-toggle--mobile {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 56px;
+  height: 56px;
+  z-index: 2001;
+  display: none; /* 預設隱藏，手機版才顯示 */
 }
 
 .side-nav-toggle:hover {
@@ -1486,8 +1426,12 @@ body::before {
   transform: perspective(2500px) rotateY(0);
 }
 
-/* ==================== 響應式設計 ==================== */
-@media (max-width: 1200px) {
+/* ===================================================================
+ * Container Query 響應式設計 - 基於主要內容區域寬度
+ * =================================================================== */
+
+/* 大型內容區域 */
+@container main-content (max-width: 1000px) {
   #page-content-container {
     padding: 2rem 1.5rem;
   }
@@ -1497,7 +1441,8 @@ body::before {
   }
 }
 
-@media (max-width: 768px) {
+/* 中等內容區域*/
+@container main-content (max-width: 700px) {
   .tech-header__logo-container {
     flex-direction: column;
     gap: 1rem;
@@ -1562,24 +1507,10 @@ body::before {
     width: 100%;
     justify-content: center;
   }
-
-  .side-navigation {
-    inset: 10px;
-    width: 60px;
-    border-radius: 40px;
-  }
-
-  .side-navigation.active {
-    width: 240px;
-    border-radius: 20px;
-  }
 }
 
-@media (max-width: 480px) {
-  #page-content-container {
-    margin-top: 120px;
-  }
-
+/* 小內容區域 (約等於原本 480px 視窗時的內容寬度) */
+@container main-content (max-width: 450px) {
   .hero-section {
     padding: 2rem 0;
   }
@@ -1597,6 +1528,256 @@ body::before {
   .faq-section,
   .cta-section {
     margin: 4rem auto;
+  }
+
+  .stat-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .stat-card__number {
+    font-size: 2.5rem;
+  }
+
+  .value-card,
+  .department-card,
+  .service-card {
+    padding: 1.5rem;
+  }
+
+  .cta-section__content {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .faq-question {
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+  }
+
+  .faq-item.active .faq-answer {
+    padding: 0 1.5rem 1rem;
+  }
+
+  /* 手機版 testimonial 調整 */
+  .testimonial-slider {
+    min-height: 400px;
+  }
+
+  .testimonial-card {
+    padding: 1.5rem;
+  }
+
+  .testimonial-card__content {
+    font-size: 1rem;
+  }
+}
+
+/* ===================================================================
+ * 響應式設計 - 用於不支援 Container Query 的瀏覽器
+ * 透過 JS 動態添加 class 來控制樣式
+ * =================================================================== */
+
+/* 大型內容區域 */
+#page-content-container.content-lg {
+  padding: 2rem 1.5rem;
+}
+
+#page-content-container.content-lg .org-structure__grid {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+/* 中等內容區域 */
+#page-content-container.content-md .tech-header__logo-container {
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#page-content-container.content-md .tech-logo {
+  width: 60px;
+  height: 60px;
+}
+
+#page-content-container.content-md .orbit-1 {
+  width: 60px;
+  height: 60px;
+}
+
+#page-content-container.content-md .orbit-2 {
+  width: 45px;
+  height: 45px;
+}
+
+#page-content-container.content-md .orbit-3 {
+  width: 30px;
+  height: 30px;
+}
+
+#page-content-container.content-md .tech-logo__core {
+  width: 40px;
+  height: 40px;
+}
+
+#page-content-container.content-md .tech-header__title {
+  font-size: 2rem;
+}
+
+#page-content-container.content-md .stats-section {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+#page-content-container.content-md .values-grid {
+  grid-template-columns: 1fr;
+}
+
+#page-content-container.content-md .org-structure__grid {
+  grid-template-columns: 1fr;
+}
+
+#page-content-container.content-md .services-grid {
+  grid-template-columns: 1fr;
+}
+
+#page-content-container.content-md .partners-carousel {
+  gap: 2rem;
+}
+
+#page-content-container.content-md .cta-section__buttons {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+#page-content-container.content-md .cta-button {
+  width: 100%;
+  justify-content: center;
+}
+
+/* 小內容區域 */
+#page-content-container.content-sm .hero-section {
+  padding: 2rem 0;
+}
+
+#page-content-container.content-sm .section-header {
+  margin-bottom: 2rem;
+}
+
+#page-content-container.content-sm .stats-section,
+#page-content-container.content-sm .core-values-section,
+#page-content-container.content-sm .org-structure,
+#page-content-container.content-sm .tech-services-section,
+#page-content-container.content-sm .partners-section,
+#page-content-container.content-sm .testimonials-section,
+#page-content-container.content-sm .faq-section,
+#page-content-container.content-sm .cta-section {
+  margin: 4rem auto;
+}
+
+#page-content-container.content-sm .stat-card {
+  padding: 1.5rem 1rem;
+}
+
+#page-content-container.content-sm .stat-card__number {
+  font-size: 2.5rem;
+}
+
+#page-content-container.content-sm .value-card,
+#page-content-container.content-sm .department-card,
+#page-content-container.content-sm .service-card {
+  padding: 1.5rem;
+}
+
+#page-content-container.content-sm .cta-section__content {
+  padding: 2.5rem 1.5rem;
+}
+
+#page-content-container.content-sm .faq-question {
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+}
+
+#page-content-container.content-sm .faq-item.active .faq-answer {
+  padding: 0 1.5rem 1rem;
+}
+
+/* ===================================================================
+ * 視窗寬度 Media Query - 手機版 sidebar 和漢堡按鈕
+ * =================================================================== */
+
+@media (max-width: 768px) {
+  /* 手機版側邊欄預設完全隱藏 */
+  .side-navigation {
+    inset: 0;
+    width: 280px;
+    border-radius: 0;
+    transform: translateX(-100%);
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* 手機版展開時完整顯示 */
+  .side-navigation.active {
+    width: 280px;
+    border-radius: 0;
+    transform: translateX(0);
+  }
+
+  /* 隱藏桌面版按鈕 */
+  .side-nav-toggle--desktop {
+    display: none;
+  }
+
+  /* 顯示手機版按鈕 */
+  .side-nav-toggle--mobile {
+    display: flex;
+  }
+
+  /* 手機版按鈕展開時變成 X */
+  .side-nav-toggle--mobile.active::before {
+    transform: translateY(0px) rotate(-405deg);
+  }
+
+  .side-nav-toggle--mobile.active::after {
+    transform: translateY(0px) rotate(225deg);
+  }
+
+  /* 手機版時顯示所有文字（不要只顯示圖標） */
+  .side-navigation ul li a .title {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* 主內容區域不需要額外 margin */
+  #page-content-container {
+    width: 95%;
+    margin-top: 120px;
+  }
+
+  .footer-content {
+    width: 95%;
+  }
+
+  /* 手機版展開時添加遮罩背景 */
+  .side-navigation.active::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 280px;
+    width: calc(100vw - 280px);
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+    pointer-events: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  #page-content-container {
+    margin-top: 120px;
+  }
+
+  .side-nav-toggle {
+    bottom: 15px;
+    right: 15px;
+    width: 52px;
+    height: 52px;
   }
 }
 

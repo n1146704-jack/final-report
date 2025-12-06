@@ -10,6 +10,74 @@ document.addEventListener('DOMContentLoaded', () => {
     const sidebar = document.getElementById('sidebar');
     const sidebarToggle = document.getElementById('sidebarToggle');
     const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+    const mainContent = document.querySelector('.main-content');
+
+    // ============================================
+    // 內容區域寬度監聽與響應式 class 管理
+    // 作為 CSS Container Query 的 fallback
+    // ============================================
+
+    // 斷點定義 (與 CSS Container Query 保持一致)
+    const BREAKPOINTS = {
+        xs: 400,  // 最小內容區域
+        sm: 600,  // 小內容區域
+        md: 850   // 中等內容區域
+    };
+
+    /**
+     * 根據內容區域寬度更新響應式 class
+     * @param {number} width - 內容區域寬度
+     */
+    function updateResponsiveClasses(width) {
+        if (!mainContent) return;
+
+        // 移除所有響應式 class
+        mainContent.classList.remove('content-xs', 'content-sm', 'content-md', 'content-lg');
+
+        // 根據寬度添加對應的 class
+        if (width <= BREAKPOINTS.xs) {
+            mainContent.classList.add('content-xs', 'content-sm', 'content-md');
+        } else if (width <= BREAKPOINTS.sm) {
+            mainContent.classList.add('content-sm', 'content-md');
+        } else if (width <= BREAKPOINTS.md) {
+            mainContent.classList.add('content-md');
+        } else {
+            mainContent.classList.add('content-lg');
+        }
+    }
+
+    /**
+     * 檢查瀏覽器是否支援 Container Query
+     * @returns {boolean}
+     */
+    function supportsContainerQuery() {
+        return CSS.supports('container-type', 'inline-size');
+    }
+
+    // 使用 ResizeObserver 監聽內容區域寬度變化
+    if (mainContent) {
+        // 檢查是否支援 Container Query
+        const hasContainerQuerySupport = supportsContainerQuery();
+
+        if (!hasContainerQuerySupport) {
+            console.log('📦 瀏覽器不支援 Container Query，使用 JavaScript fallback');
+
+            // 初始化響應式 class
+            updateResponsiveClasses(mainContent.offsetWidth);
+
+            // 建立 ResizeObserver 監聽寬度變化
+            const resizeObserver = new ResizeObserver(entries => {
+                for (const entry of entries) {
+                    const width = entry.contentRect.width;
+                    updateResponsiveClasses(width);
+                }
+            });
+
+            resizeObserver.observe(mainContent);
+        } else {
+            console.log('✅ 瀏覽器支援 Container Query');
+        }
+    }
 
     // 側邊欄展開/收合
     if (sidebarToggle) {
@@ -17,6 +85,14 @@ document.addEventListener('DOMContentLoaded', () => {
             sidebar.classList.toggle('collapsed');
             // 儲存狀態到 localStorage
             localStorage.setItem('sidebarCollapsed', sidebar.classList.contains('collapsed'));
+
+            // 如果不支援 Container Query，手動觸發寬度檢查
+            if (!supportsContainerQuery() && mainContent) {
+                // 等待 CSS transition 完成後再更新 class
+                setTimeout(() => {
+                    updateResponsiveClasses(mainContent.offsetWidth);
+                }, 350); // 略長於 CSS transition 時間
+            }
         });
     }
 
@@ -24,6 +100,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const isCollapsed = localStorage.getItem('sidebarCollapsed') === 'true';
     if (isCollapsed && sidebar) {
         sidebar.classList.add('collapsed');
+
+        // 如果不支援 Container Query，需要在 sidebar 狀態恢復後更新 class
+        if (!supportsContainerQuery() && mainContent) {
+            setTimeout(() => {
+                updateResponsiveClasses(mainContent.offsetWidth);
+            }, 100);
+        }
     }
 
     // 行動版選單切換

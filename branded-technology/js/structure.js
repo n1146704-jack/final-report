@@ -13,7 +13,68 @@ document.addEventListener('DOMContentLoaded', function () {
     initProgressBars();
     initDepartmentCards();
     initAOSAnimation();
+    initContentResponsive();
 });
+
+// ==================== 內容區域響應式監聽 ====================
+const CONTENT_BREAKPOINTS = {
+    sm: 450,
+    md: 700,
+    lg: 1000
+};
+
+function supportsContainerQuery() {
+    return CSS.supports('container-type', 'inline-size');
+}
+
+function updateContentResponsiveClasses(width) {
+    const mainContent = document.getElementById('page-content-container');
+    if (!mainContent) return;
+
+    // 移除所有響應式 class
+    mainContent.classList.remove('content-sm', 'content-md', 'content-lg', 'content-xl');
+
+    // 根據寬度添加對應的 class
+    if (width <= CONTENT_BREAKPOINTS.sm) {
+        mainContent.classList.add('content-sm', 'content-md', 'content-lg');
+    } else if (width <= CONTENT_BREAKPOINTS.md) {
+        mainContent.classList.add('content-md', 'content-lg');
+    } else if (width <= CONTENT_BREAKPOINTS.lg) {
+        mainContent.classList.add('content-lg');
+    } else {
+        mainContent.classList.add('content-xl');
+    }
+}
+
+/**
+ * 初始化內容區域響應式監聽
+ */
+function initContentResponsive() {
+    const mainContent = document.getElementById('page-content-container');
+    if (!mainContent) return;
+
+    // 檢查是否支援 Container Query
+    const hasContainerQuerySupport = supportsContainerQuery();
+
+    if (!hasContainerQuerySupport) {
+        console.log('📦 瀏覽器不支援 Container Query，使用 JavaScript fallback');
+
+        // 初始化響應式 class
+        updateContentResponsiveClasses(mainContent.offsetWidth);
+
+        // 建立 ResizeObserver 監聽寬度變化
+        const resizeObserver = new ResizeObserver(entries => {
+            for (const entry of entries) {
+                const width = entry.contentRect.width;
+                updateContentResponsiveClasses(width);
+            }
+        });
+
+        resizeObserver.observe(mainContent);
+    } else {
+        console.log('✅ 瀏覽器支援 Container Query');
+    }
+}
 
 // ==================== Header 滾動效果 ====================
 function initScrollEffects() {
@@ -71,10 +132,8 @@ function animateNumber(element) {
 
         // 格式化數字顯示
         if (target > 90 && target < 100) {
-            // 百分比
             element.textContent = Math.floor(current) + '%';
         } else if (target >= 500) {
-            // 大數字加上 + 號
             element.textContent = Math.floor(current) + '+';
         } else {
             element.textContent = Math.floor(current);
@@ -119,7 +178,6 @@ function initAOSAnimation() {
     const observer = new IntersectionObserver(function (entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // 延遲執行動畫
                 const delay = entry.target.getAttribute('data-aos-delay') || 0;
                 setTimeout(() => {
                     entry.target.classList.add('aos-animate');
@@ -165,7 +223,6 @@ function initDepartmentCards() {
 
         // 點擊卡片時的效果
         card.addEventListener('click', function (e) {
-            // 如果點擊的不是連結
             if (!e.target.closest('a')) {
                 this.classList.toggle('expanded');
             }
@@ -189,7 +246,6 @@ function initFAQ() {
                     }
                 });
 
-                // 切換當前項目
                 item.classList.toggle('active');
             });
         }
@@ -219,10 +275,22 @@ function initTestimonialSlider() {
 
     const dots = document.querySelectorAll('.testimonial-dot');
 
+    // 切換幻燈片 - 確保只有一張卡片顯示
     function goToSlide(index) {
-        // 移除當前活動狀態
-        testimonialCards[currentIndex].classList.remove('active');
-        dots[currentIndex].classList.remove('active');
+        // 移除所有卡片的 active、prev、next class
+        testimonialCards.forEach((card, i) => {
+            card.classList.remove('active', 'prev', 'next');
+
+            // 設定位置標記（用於動畫方向）
+            if (i < index) {
+                card.classList.add('prev');
+            } else if (i > index) {
+                card.classList.add('next');
+            }
+        });
+
+        // 移除所有點的 active
+        dots.forEach(dot => dot.classList.remove('active'));
 
         // 設置新的活動狀態
         currentIndex = index;
@@ -254,7 +322,7 @@ function initTestimonialSlider() {
 
     // 自動播放
     function startAutoPlay() {
-        autoPlayInterval = setInterval(nextSlide, 5000);
+        autoPlayInterval = setInterval(nextSlide, 3000);
     }
 
     function stopAutoPlay() {
@@ -272,7 +340,7 @@ function initTestimonialSlider() {
     startAutoPlay();
 
     // 鼠標懸停時暫停自動播放
-    const testimonialSection = document.querySelector('.testimonials-slider');
+    const testimonialSection = document.querySelector('.testimonials-section');
     if (testimonialSection) {
         testimonialSection.addEventListener('mouseenter', stopAutoPlay);
         testimonialSection.addEventListener('mouseleave', startAutoPlay);
@@ -280,112 +348,175 @@ function initTestimonialSlider() {
 
     // 鍵盤導航
     document.addEventListener('keydown', function (e) {
-        if (e.key === 'ArrowLeft') {
-            prevSlide();
-        } else if (e.key === 'ArrowRight') {
-            nextSlide();
+        // 只在 testimonials section 可見時響應
+        const rect = testimonialSection?.getBoundingClientRect();
+        if (rect && rect.top < window.innerHeight && rect.bottom > 0) {
+            if (e.key === 'ArrowLeft') {
+                prevSlide();
+            } else if (e.key === 'ArrowRight') {
+                nextSlide();
+            }
         }
     });
+
+    // 觸控滑動支援
+    let touchStartX = 0;
+    let touchEndX = 0;
+    const slider = document.querySelector('.testimonial-slider');
+
+    if (slider) {
+        slider.addEventListener('touchstart', function (e) {
+            touchStartX = e.changedTouches[0].screenX;
+        }, { passive: true });
+
+        slider.addEventListener('touchend', function (e) {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        }, { passive: true });
+    }
+
+    function handleSwipe() {
+        const swipeThreshold = 50;
+        const diff = touchStartX - touchEndX;
+
+        if (Math.abs(diff) > swipeThreshold) {
+            if (diff > 0) {
+                prevSlide();
+            } else {
+                nextSlide();
+            }
+        }
+    }
+
+    // 初始化時確保只有第一張顯示
+    goToSlide(0);
 }
 
 // ==================== 側邊導航主要功能 ====================
 function initSideNavigation() {
-    const toggle = document.querySelector('.side-nav-toggle');
+    const desktopToggle = document.querySelector('.side-nav-toggle--desktop');
+    const mobileToggle = document.querySelector('.side-nav-toggle--mobile');
     const navigation = document.querySelector('.side-navigation');
     const navLinks = document.querySelectorAll('.side-navigation ul li a');
+    const mainContent = document.getElementById('page-content-container');
 
     // 檢查元素是否存在
-    if (!toggle || !navigation) {
+    if (!navigation) {
         console.warn('Side navigation elements not found');
         return;
     }
 
-    // 切換導航展開/收合
-    toggle.addEventListener('click', function (e) {
-        e.stopPropagation();
-        navigation.classList.toggle('active');
+    // 判斷是否為手機版
+    function isMobile() {
+        return window.innerWidth <= 768;
+    }
 
-        // 當導航展開時為 body 添加 class
-        document.body.classList.toggle('nav-expanded');
+    // 桌面版 Toggle 事件
+    if (desktopToggle) {
+        desktopToggle.addEventListener('click', function (e) {
+            e.stopPropagation();
+            navigation.classList.toggle('active');
+            document.body.classList.toggle('nav-expanded');
 
-        // 儲存狀態到 localStorage
-        const isActive = navigation.classList.contains('active');
-        localStorage.setItem('sideNavExpanded', isActive);
-    });
+            // 儲存狀態到 localStorage
+            const isActive = navigation.classList.contains('active');
+            localStorage.setItem('sideNavExpanded', isActive);
+
+            // 如果不支援 Container Query，手動觸發寬度檢查
+            if (!supportsContainerQuery() && mainContent) {
+                setTimeout(() => {
+                    updateContentResponsiveClasses(mainContent.offsetWidth);
+                }, 550);
+            }
+        });
+    }
+
+    // 手機版 Toggle 事件
+    if (mobileToggle) {
+        mobileToggle.addEventListener('click', function (e) {
+            e.stopPropagation();
+            navigation.classList.toggle('active');
+            mobileToggle.classList.toggle('active');
+        });
+    }
 
     // 點擊導航項目時的處理
     navLinks.forEach(function (link) {
         link.addEventListener('click', function (e) {
-            // 移除所有 active class
             const allItems = document.querySelectorAll('.side-navigation ul li');
             allItems.forEach(function (item) {
                 item.classList.remove('active');
             });
 
-            // 為當前項目添加 active class
             const parentLi = this.closest('li');
             if (parentLi && !parentLi.matches(':first-child')) {
                 parentLi.classList.add('active');
             }
 
-            // 在手機版自動收合導航
-            if (window.innerWidth <= 768) {
+            // 在手機版點擊導航項目後自動關閉側邊欄
+            if (isMobile()) {
                 setTimeout(function () {
                     navigation.classList.remove('active');
-                    document.body.classList.remove('nav-expanded');
+                    if (mobileToggle) {
+                        mobileToggle.classList.remove('active');
+                    }
                 }, 300);
             }
         });
     });
 
-    // 點擊導航外部時自動收合
+    // 點擊導航外部時自動收合（手機版）
     document.addEventListener('click', function (e) {
-        const isClickInside = navigation.contains(e.target);
+        const isClickInsideNav = navigation.contains(e.target);
+        const isClickOnMobileToggle = mobileToggle && mobileToggle.contains(e.target);
         const isExpanded = navigation.classList.contains('active');
 
-        if (!isClickInside && isExpanded && window.innerWidth <= 768) {
+        // 手機版：點擊外部關閉側邊欄
+        if (!isClickInsideNav && !isClickOnMobileToggle && isExpanded && isMobile()) {
             navigation.classList.remove('active');
-            document.body.classList.remove('nav-expanded');
+            if (mobileToggle) {
+                mobileToggle.classList.remove('active');
+            }
         }
     });
 
-    // 恢復上次的展開狀態
+    // 恢復上次的展開狀態（僅桌面版）
     restoreSideNavState();
 
     // 設定當前頁面的 active 狀態
     setCurrentPageActive();
 
     // 鍵盤支援
-    initKeyboardSupport(toggle, navigation);
+    if (desktopToggle || mobileToggle) {
+        initKeyboardSupport(desktopToggle, mobileToggle, navigation);
+    }
 }
 
 // ==================== 恢復導航狀態 ====================
 function restoreSideNavState() {
-    const savedState = localStorage.getItem('sideNavExpanded');
     const navigation = document.querySelector('.side-navigation');
+    if (!navigation) return;
 
-    if (savedState === 'true' && navigation) {
-        // 只在桌面版本恢復展開狀態
-        if (window.innerWidth > 768) {
+    // 只在桌面版恢復狀態
+    if (window.innerWidth > 768) {
+        const savedState = localStorage.getItem('sideNavExpanded');
+        if (savedState === 'true') {
             navigation.classList.add('active');
             document.body.classList.add('nav-expanded');
         }
     }
 }
 
-// ==================== 設定當前頁面的 Active 狀態 ====================
+// ==================== 設定當前頁面 Active 狀態 ====================
 function setCurrentPageActive() {
-    // 獲取當前頁面的檔名
-    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
-
-    // 找到對應的導航項目
+    const currentPath = window.location.pathname;
     const navLinks = document.querySelectorAll('.side-navigation ul li a');
 
-    navLinks.forEach(function (link) {
-        const linkHref = link.getAttribute('href');
+    navLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        const parentLi = link.closest('li');
 
-        if (linkHref && linkHref.includes(currentPage)) {
-            const parentLi = link.closest('li');
+        if (href && currentPath.includes(href.replace('.html', ''))) {
             if (parentLi && !parentLi.matches(':first-child')) {
                 parentLi.classList.add('active');
             }
@@ -394,63 +525,41 @@ function setCurrentPageActive() {
 }
 
 // ==================== 鍵盤支援 ====================
-function initKeyboardSupport(toggle, navigation) {
-    // ESC 鍵關閉導航
+function initKeyboardSupport(desktopToggle, mobileToggle, navigation) {
     document.addEventListener('keydown', function (e) {
+        // ESC 鍵關閉側邊欄
         if (e.key === 'Escape' && navigation.classList.contains('active')) {
             navigation.classList.remove('active');
-            document.body.classList.remove('nav-expanded');
-            toggle.focus();
+            if (window.innerWidth <= 768 && mobileToggle) {
+                mobileToggle.classList.remove('active');
+            } else {
+                document.body.classList.remove('nav-expanded');
+            }
         }
     });
 
-    // Tab 鍵循環焦點
-    const navLinks = navigation.querySelectorAll('a');
-    if (navLinks.length > 1) {
-        const firstLink = navLinks[1];
-        const lastLink = navLinks[navLinks.length - 1];
+    // Tab 導航支援
+    const focusableElements = navigation.querySelectorAll('a, button');
+    if (focusableElements.length > 0) {
+        const firstElement = focusableElements[0];
+        const lastElement = focusableElements[focusableElements.length - 1];
 
         navigation.addEventListener('keydown', function (e) {
             if (e.key === 'Tab') {
-                if (e.shiftKey && document.activeElement === firstLink) {
+                if (e.shiftKey && document.activeElement === firstElement) {
                     e.preventDefault();
-                    lastLink.focus();
-                } else if (!e.shiftKey && document.activeElement === lastLink) {
+                    lastElement.focus();
+                } else if (!e.shiftKey && document.activeElement === lastElement) {
                     e.preventDefault();
-                    firstLink.focus();
+                    firstElement.focus();
                 }
             }
         });
     }
 }
 
-// ==================== 平滑滾動 ====================
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        if (targetId === '#') return;
-
-        const target = document.querySelector(targetId);
-        if (target) {
-            const header = document.getElementById('page-header-container');
-            const headerHeight = header ? header.offsetHeight : 0;
-            const targetPosition = target.offsetTop - headerHeight - 20;
-
-            window.scrollTo({
-                top: targetPosition,
-                behavior: 'smooth'
-            });
-        }
-    });
-});
-
-// ==================== 載入動畫 ====================
+// ==================== 頁面載入完成後執行 ====================
 window.addEventListener('load', function () {
-    // 頁面載入完成後的動畫
-    document.body.classList.add('loaded');
-
-    // 添加視差效果
     initParallaxEffect();
 });
 
@@ -482,19 +591,27 @@ window.addEventListener('resize', function () {
 function handleSideNavResize() {
     const width = window.innerWidth;
     const navigation = document.querySelector('.side-navigation');
+    const mobileToggle = document.querySelector('.side-nav-toggle--mobile');
 
-    // 在大螢幕上切換時,保持導航狀態
+    if (!navigation) return;
+
     if (width > 768) {
+        // 桌面版：根據儲存的狀態恢復
         const savedState = localStorage.getItem('sideNavExpanded');
-        if (savedState === 'true' && navigation) {
+        if (savedState === 'true') {
             navigation.classList.add('active');
             document.body.classList.add('nav-expanded');
         }
+        // 確保手機版按鈕狀態重置
+        if (mobileToggle) {
+            mobileToggle.classList.remove('active');
+        }
     } else {
-        // 在小螢幕上,預設收合導航
-        if (navigation && navigation.classList.contains('active')) {
-            navigation.classList.remove('active');
-            document.body.classList.remove('nav-expanded');
+        // 手機版：確保側邊欄是完全隱藏的
+        navigation.classList.remove('active');
+        document.body.classList.remove('nav-expanded');
+        if (mobileToggle) {
+            mobileToggle.classList.remove('active');
         }
     }
 }
@@ -545,12 +662,26 @@ function debounce(func, wait) {
  */
 function toggleSideNavigation() {
     const navigation = document.querySelector('.side-navigation');
+    const mobileToggle = document.querySelector('.side-nav-toggle--mobile');
+    const mainContent = document.getElementById('page-content-container');
+
     if (navigation) {
         navigation.classList.toggle('active');
-        document.body.classList.toggle('nav-expanded');
 
-        const isActive = navigation.classList.contains('active');
-        localStorage.setItem('sideNavExpanded', isActive);
+        if (window.innerWidth <= 768 && mobileToggle) {
+            mobileToggle.classList.toggle('active');
+        } else {
+            document.body.classList.toggle('nav-expanded');
+            const isActive = navigation.classList.contains('active');
+            localStorage.setItem('sideNavExpanded', isActive);
+        }
+
+        // 如果不支援 Container Query，手動觸發寬度檢查
+        if (!supportsContainerQuery() && mainContent) {
+            setTimeout(() => {
+                updateContentResponsiveClasses(mainContent.offsetWidth);
+            }, 550);
+        }
     }
 }
 
@@ -559,10 +690,25 @@ function toggleSideNavigation() {
  */
 function openSideNavigation() {
     const navigation = document.querySelector('.side-navigation');
+    const mobileToggle = document.querySelector('.side-nav-toggle--mobile');
+    const mainContent = document.getElementById('page-content-container');
+
     if (navigation && !navigation.classList.contains('active')) {
         navigation.classList.add('active');
-        document.body.classList.add('nav-expanded');
-        localStorage.setItem('sideNavExpanded', 'true');
+
+        if (window.innerWidth <= 768 && mobileToggle) {
+            mobileToggle.classList.add('active');
+        } else {
+            document.body.classList.add('nav-expanded');
+            localStorage.setItem('sideNavExpanded', 'true');
+        }
+
+        // 如果不支援 Container Query，手動觸發寬度檢查
+        if (!supportsContainerQuery() && mainContent) {
+            setTimeout(() => {
+                updateContentResponsiveClasses(mainContent.offsetWidth);
+            }, 550);
+        }
     }
 }
 
@@ -571,10 +717,25 @@ function openSideNavigation() {
  */
 function closeSideNavigation() {
     const navigation = document.querySelector('.side-navigation');
+    const mobileToggle = document.querySelector('.side-nav-toggle--mobile');
+    const mainContent = document.getElementById('page-content-container');
+
     if (navigation && navigation.classList.contains('active')) {
         navigation.classList.remove('active');
-        document.body.classList.remove('nav-expanded');
-        localStorage.setItem('sideNavExpanded', 'false');
+
+        if (window.innerWidth <= 768 && mobileToggle) {
+            mobileToggle.classList.remove('active');
+        } else {
+            document.body.classList.remove('nav-expanded');
+            localStorage.setItem('sideNavExpanded', 'false');
+        }
+
+        // 如果不支援 Container Query，手動觸發寬度檢查
+        if (!supportsContainerQuery() && mainContent) {
+            setTimeout(() => {
+                updateContentResponsiveClasses(mainContent.offsetWidth);
+            }, 550);
+        }
     }
 }
 

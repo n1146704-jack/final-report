@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="css/global.css">
         <link rel="stylesheet" href="css/structure.css">
         <!-- js -->
-         <script src="js/structure.js" defer></script>
+        <script src="js/structure.js" defer></script>
     </head>
 
     <body>
@@ -65,8 +65,12 @@
                     </a>
                 </li>
             </ul>
-            <div class="side-nav-toggle"></div>
+            <!-- 桌面版的 toggle 按鈕（在側邊欄內） -->
+            <div class="side-nav-toggle side-nav-toggle--desktop"></div>
         </div>
+
+        <!-- 手機版漢堡按鈕（移到側邊欄外部） -->
+        <div class="side-nav-toggle side-nav-toggle--mobile"></div>
 
         <!-- Header -->
         <header id="page-header-container">
@@ -172,237 +176,119 @@
                         <div class="value-card__icon">💡</div>
                         <h3 class="value-card__title">創新思維</h3>
                         <p class="value-card__desc">
-                            持續探索新技術與新方法,勇於突破傳統框架,為客戶創造獨特價值
+                            我們鼓勵團隊成員勇於挑戰傳統，以創新的視角解決問題，
+                            持續探索新技術與方法，為客戶帶來更好的解決方案。
                         </p>
                     </div>
                     <div class="value-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="value-card__icon">🎯</div>
-                        <h3 class="value-card__title">客戶至上</h3>
+                        <div class="value-card__icon">🤝</div>
+                        <h3 class="value-card__title">團隊合作</h3>
                         <p class="value-card__desc">
-                            深入理解客戶需求,以客戶成功為己任,建立長期互信的合作關係
+                            我們相信團隊的力量大於個人。透過開放的溝通與協作，
+                            我們能夠整合各方專業，創造出超越期待的成果。
                         </p>
                     </div>
                     <div class="value-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="value-card__icon">🤝</div>
-                        <h3 class="value-card__title">團隊協作</h3>
-                        <p class="value-card__desc">
-                            尊重差異,發揮所長,透過緊密合作實現 1+1 大於 2 的團隊綜效
-                        </p>
-                    </div>
-                    <div class="value-card" data-aos="fade-up" data-aos-delay="300">
-                        <div class="value-card__icon">✨</div>
+                        <div class="value-card__icon">🎯</div>
                         <h3 class="value-card__title">追求卓越</h3>
                         <p class="value-card__desc">
-                            精益求精,注重細節,持續提升專業能力與服務品質
+                            我們對品質有著近乎苛刻的要求。從細節到整體，
+                            我們始終追求最高標準，確保每一個交付物都能令人滿意。
                         </p>
                     </div>
                 </div>
             </section>
 
-            <!-- Department Structure Section -->
-            <section class="department-section">
+            <!-- Organization Structure Section -->
+            <section class="org-structure">
                 <div class="section-header">
-                    <h2 class="section-title">部門架構</h2>
-                    <p class="section-subtitle">各部門緊密協作,共同推動公司持續成長</p>
+                    <h2 class="section-title">部門組織</h2>
+                    <p class="section-subtitle">認識我們的核心團隊與各部門職責</p>
                 </div>
-
-                <div class="department-grid">
-                    <!-- 技術研發部 -->
-                    <div class="department-card" data-aos="fade-up" data-aos-delay="0">
+                <div class="org-structure__grid">
+                    <div class="department-card" data-aos="flip-left" data-aos-delay="0">
                         <div class="department-card__header">
                             <div class="department-card__icon">💻</div>
                             <h3 class="department-card__title">技術研發部</h3>
-                            <span class="department-card__badge">核心部門</span>
                         </div>
                         <p class="department-card__desc">
-                            負責產品的技術架構設計、開發與創新。團隊成員涵蓋前端、後端、行動端及 AI 工程師,
-                            專注於打造穩定、高效、可擴展的技術解決方案。
+                            負責公司核心技術的研發與創新，包含前後端開發、系統架構設計、
+                            技術選型與評估等工作。團隊成員擁有豐富的技術背景與實戰經驗。
                         </p>
-                        <div class="department-card__stats">
-                            <div class="stat-item">
-                                <span class="stat-number">45</span>
-                                <span class="stat-label">成員</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number">12</span>
-                                <span class="stat-label">專案</span>
-                            </div>
-                        </div>
-                        <div class="department-card__footer">
-                            <button class="learn-more-btn">了解更多 →</button>
+                        <div class="department-card__team">
+                            <span>團隊規模：45 人</span>
+                            <span>🔬</span>
                         </div>
                     </div>
-
-                    <!-- 產品管理部 -->
-                    <div class="department-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="department-card" data-aos="flip-left" data-aos-delay="100">
                         <div class="department-card__header">
                             <div class="department-card__icon">📱</div>
                             <h3 class="department-card__title">產品管理部</h3>
-                            <span class="department-card__badge">策略核心</span>
                         </div>
                         <p class="department-card__desc">
-                            負責產品規劃、需求分析及用戶體驗設計。透過數據分析與用戶研究,
-                            確保產品方向符合市場需求,持續優化產品價值。
+                            負責產品策略規劃、需求分析、用戶研究與產品路線圖制定。
+                            確保產品能夠滿足市場需求並持續創造價值。
                         </p>
-                        <div class="department-card__stats">
-                            <div class="stat-item">
-                                <span class="stat-number">18</span>
-                                <span class="stat-label">成員</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number">8</span>
-                                <span class="stat-label">產品線</span>
-                            </div>
-                        </div>
-                        <div class="department-card__footer">
-                            <button class="learn-more-btn">了解更多 →</button>
+                        <div class="department-card__team">
+                            <span>團隊規模：20 人</span>
+                            <span>📊</span>
                         </div>
                     </div>
-
-                    <!-- 設計創意部 -->
-                    <div class="department-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="department-card" data-aos="flip-left" data-aos-delay="200">
                         <div class="department-card__header">
                             <div class="department-card__icon">🎨</div>
-                            <h3 class="department-card__title">設計創意部</h3>
-                            <span class="department-card__badge">視覺核心</span>
+                            <h3 class="department-card__title">設計部</h3>
                         </div>
                         <p class="department-card__desc">
-                            專注於打造優質的用戶體驗與視覺設計。從品牌形象到產品介面,
-                            團隊致力於創造美觀、直覺且具有獨特風格的設計作品。
+                            負責產品的視覺設計、用戶體驗設計與品牌形象維護。
+                            透過優秀的設計讓產品更具吸引力與易用性。
                         </p>
-                        <div class="department-card__stats">
-                            <div class="stat-item">
-                                <span class="stat-number">22</span>
-                                <span class="stat-label">成員</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number">150+</span>
-                                <span class="stat-label">設計專案</span>
-                            </div>
-                        </div>
-                        <div class="department-card__footer">
-                            <button class="learn-more-btn">了解更多 →</button>
+                        <div class="department-card__team">
+                            <span>團隊規模：15 人</span>
+                            <span>🖌️</span>
                         </div>
                     </div>
-
-                    <!-- 數據分析部 -->
-                    <div class="department-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="department-card" data-aos="flip-left" data-aos-delay="300">
                         <div class="department-card__header">
                             <div class="department-card__icon">📈</div>
-                            <h3 class="department-card__title">數據分析部</h3>
-                            <span class="department-card__badge">決策支援</span>
+                            <h3 class="department-card__title">營運部</h3>
                         </div>
                         <p class="department-card__desc">
-                            運用數據科學與機器學習技術,為業務決策提供數據支持。
-                            團隊專注於數據挖掘、預測分析及智能推薦系統開發。
+                            負責公司日常營運管理、流程優化與效率提升。
+                            確保各部門協作順暢，公司整體運作高效。
                         </p>
-                        <div class="department-card__stats">
-                            <div class="stat-item">
-                                <span class="stat-number">15</span>
-                                <span class="stat-label">成員</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number">10TB+</span>
-                                <span class="stat-label">數據處理</span>
-                            </div>
-                        </div>
-                        <div class="department-card__footer">
-                            <button class="learn-more-btn">了解更多 →</button>
+                        <div class="department-card__team">
+                            <span>團隊規模：25 人</span>
+                            <span>⚡</span>
                         </div>
                     </div>
-
-                    <!-- 營運管理部 -->
-                    <div class="department-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="department-card" data-aos="flip-left" data-aos-delay="400">
                         <div class="department-card__header">
-                            <div class="department-card__icon">⚡</div>
-                            <h3 class="department-card__title">營運管理部</h3>
-                            <span class="department-card__badge">穩定基石</span>
+                            <div class="department-card__icon">💼</div>
+                            <h3 class="department-card__title">業務發展部</h3>
                         </div>
                         <p class="department-card__desc">
-                            負責系統維運、資訊安全及基礎設施管理。確保服務 24/7 穩定運行,
-                            同時持續優化系統性能與安全防護。
+                            負責市場開拓、客戶關係維護與商業合作洽談。
+                            透過專業的服務為公司帶來穩定的業務成長。
                         </p>
-                        <div class="department-card__stats">
-                            <div class="stat-item">
-                                <span class="stat-number">28</span>
-                                <span class="stat-label">成員</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number">99.9%</span>
-                                <span class="stat-label">可用性</span>
-                            </div>
-                        </div>
-                        <div class="department-card__footer">
-                            <button class="learn-more-btn">了解更多 →</button>
+                        <div class="department-card__team">
+                            <span>團隊規模：30 人</span>
+                            <span>🤝</span>
                         </div>
                     </div>
-
-                    <!-- 客戶成功部 -->
-                    <div class="department-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="department-card" data-aos="flip-left" data-aos-delay="500">
                         <div class="department-card__header">
-                            <div class="department-card__icon">🤗</div>
+                            <div class="department-card__icon">🎧</div>
                             <h3 class="department-card__title">客戶成功部</h3>
-                            <span class="department-card__badge">服務核心</span>
                         </div>
                         <p class="department-card__desc">
-                            提供全方位的客戶支援服務,包括售前諮詢、實施導入、培訓及售後支援。
-                            致力於確保每位客戶都能獲得最佳的產品體驗與價值。
+                            負責客戶服務、技術支援與客戶滿意度提升。
+                            確保客戶在使用產品過程中獲得最佳體驗與價值。
                         </p>
-                        <div class="department-card__stats">
-                            <div class="stat-item">
-                                <span class="stat-number">32</span>
-                                <span class="stat-label">成員</span>
-                            </div>
-                            <div class="stat-item">
-                                <span class="stat-number">98%</span>
-                                <span class="stat-label">滿意度</span>
-                            </div>
+                        <div class="department-card__team">
+                            <span>團隊規模：15 人</span>
+                            <span>⭐</span>
                         </div>
-                        <div class="department-card__footer">
-                            <button class="learn-more-btn">了解更多 →</button>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Team Culture Section -->
-            <section class="culture-section">
-                <div class="section-header">
-                    <h2 class="section-title">團隊文化</h2>
-                    <p class="section-subtitle">我們相信優秀的文化能激發團隊最大的潛能</p>
-                </div>
-                <div class="culture-grid">
-                    <div class="culture-card" data-aos="fade-up">
-                        <div class="culture-card__number">01</div>
-                        <h3 class="culture-card__title">🎓 持續學習</h3>
-                        <p class="culture-card__desc">
-                            公司提供豐富的學習資源,包括內部分享會、外部培訓課程及技術圖書,
-                            鼓勵員工持續提升專業能力。
-                        </p>
-                    </div>
-                    <div class="culture-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="culture-card__number">02</div>
-                        <h3 class="culture-card__title">💪 彈性工作</h3>
-                        <p class="culture-card__desc">
-                            我們重視工作與生活的平衡,提供彈性工作時間與遠端工作選項,
-                            讓團隊成員能在最佳狀態下發揮創造力。
-                        </p>
-                    </div>
-                    <div class="culture-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="culture-card__number">03</div>
-                        <h3 class="culture-card__title">🎉 團隊活動</h3>
-                        <p class="culture-card__desc">
-                            定期舉辦團隊建設活動、節慶聚會及運動競賽,
-                            增進同事間的情誼,營造溫馨和諧的工作氛圍。
-                        </p>
-                    </div>
-                    <div class="culture-card" data-aos="fade-up" data-aos-delay="300">
-                        <div class="culture-card__number">04</div>
-                        <h3 class="culture-card__title">🏆 績效獎勵</h3>
-                        <p class="culture-card__desc">
-                            建立公平透明的績效評估制度,優秀表現將獲得實質獎勵,
-                            讓每位成員的付出都能得到應有的認可。
-                        </p>
                     </div>
                 </div>
             </section>
@@ -411,7 +297,7 @@
             <section class="testimonials-section">
                 <div class="section-header">
                     <h2 class="section-title">客戶評價</h2>
-                    <p class="section-subtitle">聽聽我們的合作夥伴怎麼說</p>
+                    <p class="section-subtitle">聽聽我們的客戶怎麼說</p>
                 </div>
                 <div class="testimonial-slider">
                     <div class="testimonial-card active" data-aos="fade-up">
