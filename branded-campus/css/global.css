@@ -15,6 +15,8 @@
   --color-white: #ffffff;
   --color-border: #e0e0e0;
 
+  --theme-linear-gradient: linear-gradient(135deg, #38a8d1 0%, #34bc9a 50%, #8645f7 100%);
+
   /* about 顏色 */
   --color-primary-light: #0055a5;
   --color-primary-dark: #001a33;

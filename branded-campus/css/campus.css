@@ -8,7 +8,7 @@
 
 /* Header Top 區域 */
 .header-top {
-  background: linear-gradient(135deg, #38a8d1 0%, #34bc9a 50%, #8645f7 100%);
+  background: var(--theme-linear-gradient);
   padding: 1rem 0;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
@@ -723,7 +723,7 @@
  * =================================================================== */
 
 #page-footer-container {
-  background: var(--color-primary);
+  background: var(--theme-linear-gradient);
   color: var(--color-white);
   margin-top: 3rem;
 }
