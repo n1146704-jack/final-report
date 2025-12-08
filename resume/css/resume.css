@@ -70,7 +70,7 @@
   left: 0;
   width: 100%;
   height: var(--header-height);
-  background-color: var(--color-primary);
+  background-color: var(--theme-blue);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   z-index: 1000;
   padding: 0 1.5rem;
@@ -212,13 +212,13 @@
 }
 
 .page-nav__link:hover {
-  color: var(--color-primary);
+  color: var(--theme-blue);
   background-color: var(--color-background);
 }
 
 .page-nav__link--highlight {
-  color: var(--color-primary);
-  border: 1px solid var(--color-primary);
+  color: var(--theme-blue);
+  border: 1px solid var(--theme-blue);
   border-radius: 4px;
   margin: 0.5rem 2rem;
   text-align: center;
@@ -226,7 +226,7 @@
 }
 
 .page-nav__link--highlight:hover {
-  background-color: var(--color-primary);
+  background-color: var(--theme-blue);
   color: var(--color-white);
 }
 
@@ -248,7 +248,7 @@
  * 頁尾 (Footer)
  * ========================================= */
 #page-footer-container {
-  background-color: var(--color-primary);
+  background-color: var(--theme-blue);
   color: var(--color-text-primary);
   padding: 2.5rem 1.5rem;
   margin-top: 4rem;
@@ -279,7 +279,7 @@
   margin-left: auto;
   margin-right: auto;
   border-radius: 9999px;
-  background-image: linear-gradient(to bottom right, #3b82f6, #a855f7);
+  background-image: linear-gradient(to bottom right, #8b6b73, #c4a0a8);
   padding: 0.25rem;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   animation: float 3s ease-in-out infinite;
@@ -357,12 +357,12 @@
 
 /* 主要按鈕 */
 .cta-button--primary {
-  background-color: #2563eb;
+  background-color: #8b6b73;
   color: #ffffff;
 }
 
 .cta-button--primary:hover {
-  background-color: #1d4ed8;
+  background-color: #6b5a5f;
   transform: translateY(-2px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -407,7 +407,7 @@
 }
 
 .stat-card {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #5c4a4f 0%, #8b6b73 100%);
   border-radius: 1rem;
   padding: 2rem;
   text-align: center;
@@ -462,7 +462,7 @@
 .service-card:hover {
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
   transform: translateY(-5px);
-  border-color: #3b82f6;
+  border-color: #c4a0a8;
 }
 
 .service-card__icon {
@@ -496,7 +496,7 @@
 }
 
 .service-card__features li::before {
-  content: '✓';
+  content: "✓";
   position: absolute;
   left: 0;
   color: #10b981;
@@ -555,7 +555,7 @@
 
 .navigation-card__arrow {
   margin-top: 1rem;
-  color: #2563eb;
+  color: #8b6b73;
   font-weight: 600;
   transition: transform 0.15s ease;
   display: inline-block;
@@ -592,13 +592,13 @@
 }
 
 .skill-filter:hover {
-  border-color: #3b82f6;
-  color: #3b82f6;
+  border-color: #c4a0a8;
+  color: #8b6b73;
 }
 
 .skill-filter.active {
-  background-color: #3b82f6;
-  border-color: #3b82f6;
+  background-color: #8b6b73;
+  border-color: #8b6b73;
   color: white;
 }
 
@@ -630,7 +630,7 @@
 
 .skill-tag--large {
   font-size: 1.25rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #5c4a4f 0%, #8b6b73 100%);
   color: white;
   border: none;
 }
@@ -742,8 +742,8 @@
 }
 
 .tech-tag--blue {
-  background-color: #dbeafe;
-  color: #1d4ed8;
+  background-color: #f5e6e8;
+  color: #6b5a5f;
 }
 
 .tech-tag--green {
@@ -779,13 +779,13 @@
 }
 
 .timeline::before {
-  content: '';
+  content: "";
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   width: 2px;
   height: 100%;
-  background: linear-gradient(to bottom, #3b82f6, #8b5cf6);
+  background: linear-gradient(to bottom, #8b6b73, #c4a0a8);
 }
 
 .timeline-item {
@@ -807,9 +807,9 @@
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background-color: #3b82f6;
+  background-color: #8b6b73;
   border: 4px solid white;
-  box-shadow: 0 0 0 4px #dbeafe;
+  box-shadow: 0 0 0 4px #f5e6e8;
   z-index: 1;
 }
 
@@ -832,7 +832,7 @@
 }
 
 .timeline-date {
-  color: #3b82f6;
+  color: #8b6b73;
   font-weight: 600;
   font-size: 0.875rem;
   margin-bottom: 0.5rem;
@@ -872,7 +872,8 @@
 .testimonial-card {
   background-color: #ffffff;
   border-radius: 0.75rem;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
   padding: 2rem;
   text-align: center;
   transition: all 0.3s ease;
@@ -935,7 +936,7 @@
 }
 
 .contact-info {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #5c4a4f 0%, #8b6b73 100%);
   padding: 2rem;
   border-radius: 1rem;
   color: white;
@@ -1004,8 +1005,8 @@
 .form-input:focus,
 .form-textarea:focus {
   outline: none;
-  border-color: #3b82f6;
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  border-color: #c4a0a8;
+  box-shadow: 0 0 0 3px rgba(196, 160, 168, 0.2);
 }
 
 .form-input.error,
@@ -1024,7 +1025,7 @@
 .form-submit {
   width: 100%;
   padding: 1rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #5c4a4f 0%, #8b6b73 100%);
   color: white;
   border: none;
   border-radius: 0.5rem;
@@ -1083,27 +1084,27 @@
 
 /* 社群連結顏色變體 */
 .social-link--email {
-  background-color: #2563eb;
+  background-color: #8b6b73;
 }
 
 .social-link--email:hover {
-  background-color: #1d4ed8;
+  background-color: #6b5a5f;
 }
 
 .social-link--github {
-  background-color: #1f2937;
+  background-color: #5c4a4f;
 }
 
 .social-link--github:hover {
-  background-color: #111827;
+  background-color: #4a3e42;
 }
 
 .social-link--twitter {
-  background-color: #3b82f6;
+  background-color: #9b7b83;
 }
 
 .social-link--twitter:hover {
-  background-color: #2563eb;
+  background-color: #8b6b73;
 }
 
 /* =========================================
@@ -1115,7 +1116,7 @@
   right: 2rem;
   width: 3rem;
   height: 3rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #5c4a4f 0%, #8b6b73 100%);
   color: white;
   border: none;
   border-radius: 50%;

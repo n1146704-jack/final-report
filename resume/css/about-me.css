@@ -16,8 +16,8 @@
   height: var(--about-header-height-collapsed);
   background: linear-gradient(
     135deg,
-    rgba(102, 126, 234, 0.95) 0%,
-    rgba(118, 75, 162, 0.95) 100%
+    rgba(92, 74, 79, 0.95) 0%,
+    rgba(139, 107, 115, 0.95) 100%
   );
   backdrop-filter: blur(10px);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -27,7 +27,7 @@
 
 #page-header-container.menu-expanded {
   height: var(--about-header-height-expanded);
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: var( --accent-gradient-second);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   border-bottom: none;
 }
@@ -35,13 +35,13 @@
 body.dark-mode #page-header-container {
   background: linear-gradient(
     135deg,
-    rgba(76, 95, 213, 0.95) 0%,
-    rgba(92, 58, 125, 0.95) 100%
+    var(--dark-bg-primary) 0%,
+    var(--dark-bg-secondary) 100%
   );
 }
 
 body.dark-mode #page-header-container.menu-expanded {
-  background: linear-gradient(135deg, #4c5fd5 0%, #5c3a7d 100%);
+  background: var( --accent-gradient-third);
 }
 
 /* 深色模式切換按鈕 */
@@ -78,7 +78,7 @@ body.dark-mode #page-header-container.menu-expanded {
 }
 
 body.dark-mode .theme-toggle {
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  background: var(--dark-linear-gradient);
 }
 
 body.dark-mode .theme-toggle__icon {
@@ -115,7 +115,7 @@ body.dark-mode .theme-toggle__icon {
 }
 
 body.dark-mode .page-nav__container {
-  background-color: rgba(45, 45, 45, 0.98);
+  background-color: var(--dark-bg-third);
 }
 
 #page-header-container.menu-expanded .page-nav__container {
@@ -151,14 +151,14 @@ body.dark-mode .page-nav__container {
 }
 
 .page-nav__link:hover {
-  color: var(--theme-gradient-start);
-  background-color: rgba(102, 126, 234, 0.1);
+  color: #8b6b73;
+  background-color: rgba(139, 107, 115, 0.1);
 }
 
 .page-nav__link--highlight {
-  color: var(--theme-gradient-start);
+  color: #8b6b73;
   font-weight: 700;
-  background-color: rgba(102, 126, 234, 0.15);
+  background-color: rgba(139, 107, 115, 0.15);
 }
 
 /* 下拉觸發按鈕 */
@@ -285,7 +285,7 @@ body.dark-mode .page-nav__container {
   width: 10rem;
   height: 10rem;
   border-radius: 9999px;
-  background-image: linear-gradient(to bottom right, #3b82f6, #a855f7);
+  background-image: linear-gradient(to bottom right, #8b6b73, #c4a0a8);
   padding: 0.25rem;
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
     0 4px 6px -2px rgba(0, 0, 0, 0.05);
@@ -676,11 +676,11 @@ body.dark-mode .page-nav__container {
 }
 
 .skill-progress__bar--blue {
-  background-image: linear-gradient(to right, #3b82f6, #2563eb);
+  background-image: linear-gradient(to right, #8b6b73, #c4a0a8);
 }
 
 .skill-progress__bar--green {
-  background-image: linear-gradient(to right, #22c55e, #16a34a);
+  background-image: linear-gradient(to right, #7a9b8e, #9bbaa8);
 }
 
 /* =========================================
@@ -1377,12 +1377,12 @@ body.dark-mode .page-nav__container {
  * ========================================= */
 #page-footer-container {
   border-top: 1px solid var(--card-border);
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: var( --accent-gradient-second);
   box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
 }
 
 body.dark-mode #page-footer-container {
-  background: linear-gradient(135deg, #4c5fd5 0%, #5c3a7d 100%);
+  background: var( --accent-gradient-third);
 }
 
 .page-footer {

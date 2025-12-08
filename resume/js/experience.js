@@ -171,7 +171,7 @@ document.addEventListener("DOMContentLoaded", function () {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #5C4A4F 0%, #8B6B73 100%);
     color: white;
     border: none;
     font-size: 24px;

@@ -31,6 +31,23 @@
   --color-lightpink: lightpink;
   --header-height: 70px;
 
+  /* 玫瑰配色 */
+  --theme-gradient-start: #5c4a4f;
+  --theme-gradient-end: #8b6b73;
+  --theme-blue: #9b7b83;
+  --theme-blue-light: #c4a0a8;
+  --theme-blue-dark: #6b5a5f;
+  --theme-green: #7a9b8e;
+
+  /* 強調色漸層 */
+  --accent-gradient-first: linear-gradient(135deg, #8b6b73 0%, #c4a0a8 100%);
+  --accent-gradient-second: linear-gradient(135deg, #5c4a4f 0%, #8b6b73 100%);
+  --accent-gradient-third: linear-gradient(135deg, #4a3e42 0%, #6b5a5f 100%);
+
+  /* 玫瑰金強調色 */
+  --rose-gold: #b8998c;
+  --rose-gold-light: #d4c4bc;
+
   /* About Me 頁面變數 */
   --about-header-height-expanded: 70px;
   --about-header-height-collapsed: 24px;
@@ -39,12 +56,6 @@
   --card-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
     0 10px 10px -5px rgba(0, 0, 0, 0.04);
 
-  /* 主題色 */
-  --theme-gradient-start: #667eea;
-  --theme-gradient-end: #764ba2;
-  --theme-blue: #2563eb;
-  --theme-green: #16a34a;
-
   /* 文字顏色 */
   --text-heading: #1f2937;
   --text-body: #374151;
@@ -52,8 +63,10 @@
   --text-light: #9ca3af;
 
   /* 深色模式變數 */
-  --dark-bg-primary: #1a1a1a;
-  --dark-bg-secondary: #2d2d2d;
+  --dark-bg-primary: rgba(74, 62, 66, 0.95);
+  --dark-bg-secondary:rgba(107, 90, 95, 0.95);
+  --dark-bg-third:rgba(45, 45, 45, 0.98);
+  --dark-linear-gradient:linear-gradient(135deg, #c4a0a8 0%, #e8c8cc 100%);
   --dark-text-primary: #f3f4f6;
   --dark-text-secondary: #d1d5db;
   --dark-border: #374151;
@@ -76,12 +89,14 @@
   --exp-section-margin: 4rem;
   --exp-card-radius: 0.75rem;
   --exp-card-padding: 1.5rem;
-  --exp-card-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  --exp-card-shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --exp-card-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --exp-card-shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
   --exp-timeline-line-width: 2px;
   --exp-timeline-dot-size: 1rem;
   --exp-timeline-offset: 2rem;
-  
+
   /* Sidebar 變數 */
   --sidebar-width: 280px;
   --sidebar-bg: #ffffff;
@@ -89,21 +104,21 @@
   --sidebar-padding: 1.5rem;
   --sidebar-item-padding: 0.75rem 1rem;
   --sidebar-icon-size: 1.25rem;
-  
+
   /* 技能評分變數 */
   --skill-star-size: 1.25rem;
   --skill-star-color-active: #fbbf24;
   --skill-star-color-inactive: #e5e7eb;
   --skill-badge-padding: 0.5rem 1rem;
   --skill-badge-radius: 9999px;
-  
+
   /* 滾動按鈕變數 */
   --scroll-btn-size: 50px;
   --scroll-btn-bottom: 30px;
   --scroll-btn-right: 30px;
-  --scroll-btn-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --scroll-btn-bg: linear-gradient(135deg, #5c4a4f 0%, #8b6b73 100%);
   --scroll-btn-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  
+
   /* 動畫變數 */
   --animation-duration-fast: 0.2s;
   --animation-duration-normal: 0.3s;
