@@ -989,7 +989,7 @@
 
 /* --- Footer --- */
 .admissions-footer {
-  background-color: var(--color-gray-900);
+  background-color: var(--color-primary);
   color: var(--color-white);
   padding: 3rem 0 1.5rem;
   margin-top: 4rem;
