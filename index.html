@@ -1,163 +1,163 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>期末作業</title>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>期末作業</title>
 
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/main-header.css">
-        <link rel="stylesheet" href="css/main-footer.css">
-        <link rel="stylesheet" href="css/main-dark.css" />
-        <link rel="stylesheet" href="css/background-effects.css" />
-        <!-- js -->
-        <script src="js/dark.js" defer></script>
-        <script src="js/background-effects.js" defer></script>
-        <script src="js/card-3d.js" defer></script>
-    </head>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main-header.css">
+    <link rel="stylesheet" href="css/main-footer.css">
+    <link rel="stylesheet" href="css/main-dark.css" />
+    <link rel="stylesheet" href="css/background-effects.css" />
+    <!-- js -->
+    <script src="js/dark.js" defer></script>
+    <script src="js/background-effects.js" defer></script>
+    <script src="js/card-3d.js" defer></script>
+  </head>
 
-    <body class="body-styles">
-        <!-- 動態背景容器 -->
-        <div class="animated-background">
-            <div class="gradient-blob blob-1"></div>
-            <div class="gradient-blob blob-2"></div>
-            <div class="gradient-blob blob-3"></div>
-            <div class="gradient-blob blob-4"></div>
-            <div class="gradient-blob blob-5"></div>
+  <body class="body-styles">
+    <!-- 動態背景容器 -->
+    <div class="animated-background">
+      <div class="gradient-blob blob-1"></div>
+      <div class="gradient-blob blob-2"></div>
+      <div class="gradient-blob blob-3"></div>
+      <div class="gradient-blob blob-4"></div>
+      <div class="gradient-blob blob-5"></div>
+    </div>
+
+    <!-- 裝飾動畫容器 -->
+    <div id="decorations-container" class="decorations-container"></div>
+
+    <header id="header-container">
+      <nav class="site-header">
+        <h1 class="site-header__title">期末作業展示</h1>
+        <!-- 深色模式切換按鈕 -->
+        <div class="site-header__toggle-button-wrapper">
+          <button id="theme-toggle" class="theme-toggle" aria-label="切換深色模式">
+            <!-- 淺色模式 -->
+            <svg class="toggle-icon toggle-icon--sun" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+              stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
+            </svg>
+            <!-- 深色模式 -->
+            <svg class="toggle-icon toggle-icon--moon" xmlns="http://www.w3.org/2000/svg" fill="none"
+              viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
+            </svg>
+          </button>
         </div>
+      </nav>
+    </header>
 
-        <!-- 裝飾動畫容器 -->
-        <div id="decorations-container" class="decorations-container"></div>
+    <section class="main-content">
+      <div class="content-container">
+        <div class="card-grid">
 
-        <header id="header-container">
-            <nav class="site-header">
-                <h1 class="site-header__title">期末作業展示</h1>
-                <!-- 深色模式切換按鈕 -->
-                <div class="site-header__toggle-button-wrapper">
-                    <button id="theme-toggle" class="theme-toggle" aria-label="切換深色模式">
-                        <!-- 淺色模式 -->
-                        <svg class="toggle-icon toggle-icon--sun" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-                        </svg>
-                        <!-- 深色模式 -->
-                        <svg class="toggle-icon toggle-icon--moon" xmlns="http://www.w3.org/2000/svg" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" />
-                        </svg>
-                    </button>
+          <!-- 履歷卡片 -->
+          <div class="card-wrapper">
+            <div class="card">
+              <div class="card-glow"></div>
+              <div class="card-inner">
+                <div class="card-image-wrapper">
+                  <img src="image/resume.png" alt="履歷的圖片" class="card-image">
+                  <div class="card-overlay"></div>
                 </div>
-            </nav>
-        </header>
-
-        <section class="main-content">
-            <div class="content-container">
-                <div class="card-grid">
-
-                    <!-- 履歷卡片 -->
-                    <div class="card-wrapper">
-                        <div class="card">
-                            <div class="card-glow"></div>
-                            <div class="card-inner">
-                                <div class="card-image-wrapper">
-                                    <img src="image/resume.png" alt="履歷的圖片" class="card-image">
-                                    <div class="card-overlay"></div>
-                                </div>
-                                <div class="card-body">
-                                    <h3 class="card-title">履歷</h3>
-                                    <p class="card-description">個人履歷展示頁面</p>
-                                    <div class="card-links">
-                                        <a href="resume/index.html" class="card-link-btn">首頁</a>
-                                        <a href="resume/about-me.html" class="card-link-btn">自我介紹</a>
-                                        <a href="resume/experience.html" class="card-link-btn">經歷</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 部落格卡片 -->
-                    <div class="card-wrapper">
-                        <div class="card">
-                            <div class="card-glow"></div>
-                            <div class="card-inner">
-                                <div class="card-image-wrapper">
-                                    <img src="image/blog.png" alt="部落格的圖片" class="card-image">
-                                    <div class="card-overlay"></div>
-                                </div>
-                                <div class="card-body">
-                                    <h3 class="card-title">部落格</h3>
-                                    <p class="card-description">部落格風格文章頁面</p>
-                                    <div class="card-links">
-                                        <a href="blog/index.html" class="card-link-btn">首頁</a>
-                                        <a href="blog/articles.html" class="card-link-btn">前往文章分類</a>
-                                        <a href="blog/article.html" class="card-link-btn">前往文章範例</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 校園形象網站卡片 -->
-                    <div class="card-wrapper">
-                        <div class="card">
-                            <div class="card-glow"></div>
-                            <div class="card-inner">
-                                <div class="card-image-wrapper">
-                                    <img src="image/campus.png" alt="校園形象網站的圖片" class="card-image">
-                                    <div class="card-overlay"></div>
-                                </div>
-                                <div class="card-body">
-                                    <h3 class="card-title">形象網站-校園</h3>
-                                    <p class="card-description">校園形象網站版型</p>
-                                    <div class="card-links">
-                                        <a href="branded-campus/index.html" class="card-link-btn">首頁</a>
-                                        <a href="branded-campus/about.html" class="card-link-btn">前往認識校園</a>
-                                        <a href="branded-campus/admissions.html" class="card-link-btn">前往招生資訊</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- 科技形象網站卡片 -->
-                    <div class="card-wrapper">
-                        <div class="card">
-                            <div class="card-glow"></div>
-                            <div class="card-inner">
-                                <div class="card-image-wrapper">
-                                    <img src="image/technology.png" alt="科技形象網站的圖片" class="card-image">
-                                    <div class="card-overlay"></div>
-                                </div>
-                                <div class="card-body">
-                                    <h3 class="card-title">形象網站-科技</h3>
-                                    <p class="card-description">科技形象網站版型</p>
-                                    <div class="card-links">
-                                        <a href="branded-technology/index.html" class="card-link-btn">首頁</a>
-                                        <a href="branded-technology/structure.html" class="card-link-btn">公司組織</a>
-                                        <a href="branded-technology/history.html" class="card-link-btn">公司歷史</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
+                <div class="card-body">
+                  <h3 class="card-title">履歷</h3>
+                  <p class="card-description">個人履歷展示頁面</p>
+                  <div class="card-links">
+                    <a href="resume/index.html" class="card-link-btn">首頁</a>
+                    <a href="resume/about-me.html" class="card-link-btn">自我介紹</a>
+                    <a href="resume/experience.html" class="card-link-btn">經歷</a>
+                  </div>
                 </div>
+              </div>
             </div>
-        </section>
+          </div>
 
-        <footer id="footer-container" class="site-footer">
-            <div class="site-footer__container">
-                <div class="site-footer__content-wrapper">
-                    <div class="site-footer__copyright">
-                        <p>期末作業 © 2025</p>
-                    </div>
+          <!-- 部落格卡片 -->
+          <div class="card-wrapper">
+            <div class="card">
+              <div class="card-glow"></div>
+              <div class="card-inner">
+                <div class="card-image-wrapper">
+                  <img src="image/blog.png" alt="部落格的圖片" class="card-image">
+                  <div class="card-overlay"></div>
                 </div>
+                <div class="card-body">
+                  <h3 class="card-title">部落格</h3>
+                  <p class="card-description">部落格風格文章頁面</p>
+                  <div class="card-links">
+                    <a href="blog/index.html" class="card-link-btn">首頁</a>
+                    <a href="blog/articles.html" class="card-link-btn">前往文章分類</a>
+                    <a href="blog/article.html" class="card-link-btn">前往文章範例</a>
+                  </div>
+                </div>
+              </div>
             </div>
-        </footer>
-    </body>
+          </div>
+
+          <!-- 校園形象網站卡片 -->
+          <div class="card-wrapper">
+            <div class="card">
+              <div class="card-glow"></div>
+              <div class="card-inner">
+                <div class="card-image-wrapper">
+                  <img src="image/campus.png" alt="校園形象網站的圖片" class="card-image">
+                  <div class="card-overlay"></div>
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title">形象網站-校園</h3>
+                  <p class="card-description">校園形象網站版型</p>
+                  <div class="card-links">
+                    <a href="branded-campus/index.html" class="card-link-btn">首頁</a>
+                    <a href="branded-campus/about.html" class="card-link-btn">前往認識校園</a>
+                    <a href="branded-campus/admissions.html" class="card-link-btn">前往招生資訊</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 科技形象網站卡片 -->
+          <div class="card-wrapper">
+            <div class="card">
+              <div class="card-glow"></div>
+              <div class="card-inner">
+                <div class="card-image-wrapper">
+                  <img src="image/technology.png" alt="科技形象網站的圖片" class="card-image">
+                  <div class="card-overlay"></div>
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title">形象網站-科技</h3>
+                  <p class="card-description">科技形象網站版型</p>
+                  <div class="card-links">
+                    <a href="branded-technology/index.html" class="card-link-btn">首頁</a>
+                    <a href="branded-technology/structure.html" class="card-link-btn">公司組織</a>
+                    <a href="branded-technology/history.html" class="card-link-btn">公司歷史</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <footer id="footer-container" class="site-footer">
+      <div class="site-footer__container">
+        <div class="site-footer__content-wrapper">
+          <div class="site-footer__copyright">
+            <p>期末作業 © 2025</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
 
 </html>

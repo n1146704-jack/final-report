@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // 1. 滾動固定導航欄
   // ==========================================
   const pageNav = document.querySelector(".page-nav");
-  const filterBar = document.querySelector(".filter-bar-section");
   const heroSection = document.querySelector(".hero-section");
 
   if (pageNav && heroSection) {

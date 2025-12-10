@@ -1,32 +1,168 @@
 /* --- 基本配置 --- */
 :root {
-  --color-primary: #003366;
-  --color-primary-secondary: #226600;
-  --color-primary-secondary-40: rgba(34, 102, 0, 0.4);
-  --color-primary-third: #664600;
-  --color-text-primary: #333;
-  --color-text-secondary: #555;
-  --color-text-third: #b2f86c;
+  /* 大地色主色系 */
+  --earth-primary: #7a6252;
+  --earth-primary-rgb: 122, 98, 82;
+  --earth-primary-dark: #5e4a3d;
+  --earth-primary-light: #9c7b65;
+  --earth-secondary: #8b7355;
+  --earth-dark: #4a3b31;
+  --earth-darker: #3d3028;
+
+  /* 奶黃色輔助色系 */
+  --cream-primary: #f5deb3;
+  --cream-light: #fdf8f3;
+  --cream-medium: #ede4d3;
+  --cream-dark: #d4c4a8;
+
+  /* 金褐色強調色 */
+  --gold-primary: #c4a35a;
+  --gold-primary-rgb: 196, 163, 90;
+  --gold-light: #d9bc7a;
+  --gold-dark: #a68a42;
+
+  /* 功能性顏色 */
+  --color-success: #5a6b52;
+  --color-success-light: #6b7d62;
+  --color-warning: #b8860b;
+  --color-warning-light: #d4a017;
+  --color-info: #7a6252;
+  --color-danger: #8b4513;
+
+  /* 功能性標籤色 */
+  --tag-earth: #ede4d3;
+  --tag-earth-text: #7a6252;
+  --tag-warm: #f5e6d3;
+  --tag-warm-text: #8b7355;
+  --tag-green: #e8ede4;
+  --tag-green-text: #5a6b52;
+  --tag-orange: #fef0e0;
+  --tag-orange-text: #8b6b35;
+
+  /* 漸層定義 */
+  --gradient-earth: linear-gradient(
+    135deg,
+    var(--earth-primary-light) 0%,
+    var(--earth-primary-dark) 100%
+  );
+  --gradient-earth-warm: linear-gradient(
+    135deg,
+    #a68b6e 0%,
+    var(--earth-primary) 100%
+  );
+  --gradient-earth-deep: linear-gradient(
+    135deg,
+    var(--earth-primary) 0%,
+    var(--earth-dark) 100%
+  );
+  --gradient-earth-hero: linear-gradient(
+    135deg,
+    var(--earth-primary-light) 0%,
+    var(--earth-primary) 50%,
+    var(--earth-primary-dark) 100%
+  );
+  --gradient-gold: linear-gradient(
+    135deg,
+    var(--gold-light) 0%,
+    var(--gold-primary) 100%
+  );
+  --gradient-cream: linear-gradient(
+    135deg,
+    var(--cream-light) 0%,
+    var(--cream-medium) 100%
+  );
+  --gradient-timeline: linear-gradient(
+    to bottom,
+    var(--cream-dark),
+    var(--earth-primary),
+    var(--cream-dark)
+  );
+  --gradient-progress: linear-gradient(
+    90deg,
+    var(--gold-primary),
+    var(--earth-primary)
+  );
+
+  /* === 卡片漸層 === */
+  --gradient-card-1: linear-gradient(
+    to right,
+    var(--earth-primary-light),
+    var(--earth-primary)
+  );
+  --gradient-card-2: linear-gradient(
+    to right,
+    var(--gold-primary),
+    var(--gold-dark)
+  );
+  --gradient-card-3: linear-gradient(to right, var(--earth-secondary), #6b5344);
+  --gradient-card-4: linear-gradient(to right, #a68b6e, var(--earth-secondary));
+  --gradient-card-5: linear-gradient(
+    to right,
+    var(--gold-light),
+    var(--gold-primary)
+  );
+  --gradient-card-6: linear-gradient(
+    to right,
+    var(--earth-primary),
+    var(--earth-primary-dark)
+  );
+
+  /* === 陰影定義 === */
+  --shadow-earth: 0 4px 20px rgba(var(--earth-primary-rgb), 0.15);
+  --shadow-earth-lg: 0 10px 40px rgba(var(--earth-primary-rgb), 0.2);
+  --shadow-gold: 0 4px 20px rgba(var(--gold-primary-rgb), 0.3);
+  --shadow-gold-lg: 0 10px 30px rgba(var(--gold-primary-rgb), 0.4);
+  --shadow-card: 0 10px 40px rgba(74, 59, 49, 0.08);
+  --shadow-card-hover: 0 20px 60px rgba(74, 59, 49, 0.15);
+
+  /* === 文字顏色 === */
+  --text-primary: var(--earth-darker);
+  --text-secondary: var(--earth-primary-dark);
+  --text-muted: #9c8b7a;
+  --text-light: #b8a898;
+
+  /* === 背景顏色 === */
+  --bg-primary: var(--cream-light);
+  --bg-secondary: #ffffff;
+  --bg-card: #ffffff;
+
+  /* 其他顏色變數 */
+  --color-primary: var(--earth-primary);
+  --color-primary-secondary: var(--earth-secondary);
+  --color-primary-secondary-40: rgba(139, 115, 85, 0.4);
+  --color-primary-third: var(--gold-primary);
+  --color-text-primary: var(--earth-darker);
+  --color-text-secondary: var(--earth-primary-dark);
+  --color-text-third: var(--gold-light);
   --color-active-red: #990235;
-  --color-active-yellow: #b9b300;
-  --color-active-green: #006239;
-  --color-hover-green: #00802d;
-  --color-background: #f8f9fa;
+  --color-active-yellow: var(--gold-primary);
+  --color-active-green: #5a6b52;
+  --color-hover-green: #6b7d62;
+  --color-background: var(--cream-light);
   --color-white: #ffffff;
-  --color-black: black;
-  --color-grey: grey;
-  --color-aquamarine: aquamarine;
-  --color-chartreuse: chartreuse;
-  --color-darkblue: darkblue;
-  --color-darkgreen: darkgreen;
-  --color-darkred: darkred;
-  --color-lightgreen: lightgreen;
-  --color-lightgrey: lightgrey;
-  --color-lightblue: lightblue;
-  --color-lightpink: lightpink;
+  --color-black: var(--earth-darker);
+  --color-grey: var(--earth-primary);
+  --color-aquamarine: var(--cream-medium);
+  --color-chartreuse: var(--gold-light);
+  --color-darkblue: var(--earth-dark);
+  --color-darkgreen: #5a6b52;
+  --color-darkred: #8b4513;
+  --color-lightgreen: #e8ede4;
+  --color-lightgrey: var(--cream-medium);
+  --color-lightblue: #f5e6d3;
+  --color-lightpink: #fef0e0;
+
+  /* === 佈局 === */
   --header-height: 70px;
+  --border-radius-sm: 8px;
+  --border-radius-md: 12px;
+  --border-radius-lg: 20px;
+  --border-radius-xl: 30px;
 }
 
+/* ============================================
+ * 基礎樣式
+ * ============================================ */
 *,
 *::before,
 *::after {
@@ -41,27 +177,10 @@ html {
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, "Noto Sans TC", "LiHei Pro", "Microsoft JhengHei",
-    sans-serif;
+  font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
   line-height: 1.6;
-  color: var(--color-text-primary);
-  background-color: var(--color-background);
-  padding-top: 0;
-}
-
-a {
-  text-decoration: none;
-  color: var(--color-primary);
-  transition: color 0.2s ease-in-out;
-}
-
-a:hover {
-  color: #0056b3;
-}
-
-ul {
-  list-style: none;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
 }
 
 /* --- 容器 (Container) --- */
@@ -101,23 +220,32 @@ ul {
   margin-top: 3rem;
 }
 
-/* === 按鈕 (Buttons) === */
+/* ============================================
+ * 按鈕樣式
+ * ============================================ */
 .btn {
-  display: inline-block;
-  padding: 0.75rem 1.5rem;
-  border-radius: 0.5rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 24px;
+  font-size: 14px;
   font-weight: 600;
-  transition: all 150ms ease-in-out;
+  border-radius: 8px;
   cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
   border: none;
 }
 
 .btn--primary {
-  background-color: #ffffff;
-  color: #2563eb;
+  background: var(--gold-primary);
+  color: var(--earth-darker);
 }
+
 .btn--primary:hover {
-  background-color: #f0f9ff;
+  background: var(--gold-light);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-gold);
 }
 
 .btn--outline-white {
@@ -125,84 +253,149 @@ ul {
   color: #ffffff;
   background-color: transparent;
 }
+
 .btn--outline-white:hover {
   background-color: #ffffff;
-  color: #2563eb;
+  color: var(--earth-primary);
 }
 
-.btn--blue {
-  background-color: #2563eb;
+.btn--earth {
+  background: var(--earth-primary);
   color: #ffffff;
   padding-left: 2rem;
   padding-right: 2rem;
 }
+
+.btn--earth:hover {
+  background: var(--earth-primary-dark);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-earth);
+}
+
+.btn--blue {
+  background: var(--earth-primary);
+  color: #ffffff;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
 .btn--blue:hover {
-  background-color: #1d4ed8;
+  background: var(--earth-primary-dark);
   color: #ffffff;
 }
 
-.read-more-link {
-  color: #2563eb;
+.btn-gradient {
+  padding: 15px 40px;
+  background: var(--gradient-gold);
+  color: var(--earth-darker);
+  border: none;
+  border-radius: 50px;
   font-weight: 600;
-}
-.read-more-link:hover {
-  text-decoration: underline;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-gold-lg);
+  text-decoration: none;
+  display: inline-block;
 }
 
-/* === 文章卡片 === */
-.article-card {
-  background-color: #ffffff;
-  border-radius: 0.5rem;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-    0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  overflow: hidden;
-  transition: box-shadow 150ms ease-in-out;
+.btn-gradient:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(196, 163, 90, 0.6);
 }
-.article-card:hover {
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
-    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+/* ============================================
+ * 連結樣式
+ * ============================================ */
+.read-more-link {
+  color: var(--earth-primary);
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
-.article-card__image-wrapper {
-  height: 12rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+
+.read-more-link:hover {
+  color: var(--earth-primary-dark);
 }
+
+/* ============================================
+ * 文章卡片漸層樣式
+ * ============================================ */
 .article-card__image-wrapper--style-1 {
-  background-image: linear-gradient(to right, #3b82f6, #06b6d4);
+  background-image: var(--gradient-card-1);
 }
+
 .article-card__image-wrapper--style-2 {
-  background-image: linear-gradient(to right, #a855f7, #ec4899);
+  background-image: var(--gradient-card-2);
 }
+
 .article-card__image-wrapper--style-3 {
-  background-image: linear-gradient(to right, #22c55e, #14b8a6);
+  background-image: var(--gradient-card-3);
 }
-.article-card__image-emoji {
-  font-size: 3.75rem;
+
+.article-card__image-wrapper--style-4 {
+  background: var(--gradient-card-4);
 }
-.article-card__content {
-  padding: 1.5rem;
+
+.article-card__image-wrapper--style-5 {
+  background: var(--gradient-card-5);
 }
-.article-card__meta {
-  display: flex;
-  align-items: center;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  color: #6b7280;
-  margin-bottom: 0.5rem;
+
+.article-card__image-wrapper--style-6 {
+  background: var(--gradient-card-6);
 }
-.article-card__meta-separator {
-  margin-left: 0.5rem;
-  margin-right: 0.5rem;
+
+/* ============================================
+ * 標籤樣式
+ * ============================================ */
+.tag {
+  padding: 4px 12px;
+  background: var(--gradient-cream);
+  color: var(--earth-primary);
+  border-radius: var(--border-radius-md);
+  font-size: 12px;
+  font-weight: 600;
 }
-.article-card__title {
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  font-weight: 700;
-  color: #1f2937;
-  margin-bottom: 0.5rem;
+
+.tag-small {
+  padding: 4px 12px;
+  background: var(--cream-medium);
+  color: var(--earth-primary);
+  border-radius: var(--border-radius-md);
+  font-size: 12px;
+  font-weight: 600;
 }
-.article-card__excerpt {
-  color: #4b5563;
-  margin-bottom: 1rem;
+
+/* ============================================
+ * 工具類別
+ * ============================================ */
+.text-earth {
+  color: var(--earth-primary);
+}
+.text-gold {
+  color: var(--gold-primary);
+}
+.text-success {
+  color: var(--color-success);
+}
+.text-warning {
+  color: var(--color-warning);
+}
+
+.bg-earth {
+  background-color: var(--earth-primary);
+}
+.bg-gold {
+  background-color: var(--gold-primary);
+}
+.bg-cream {
+  background-color: var(--cream-light);
+}
+
+.gradient-text {
+  background: var(--gradient-earth);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
