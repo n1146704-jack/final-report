@@ -1,387 +1,387 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>卓越科技大學</title>
-        <link rel="stylesheet" href="css/global.css">
-        <link rel="stylesheet" href="css/campus.css">
-        <link rel="stylesheet" href="css/carousel.css">
-        <!-- js -->
-        <script src="js/main.js" defer></script>
-        <script src="js/carousel.js" defer></script>
-    </head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>卓越科技大學</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/campus.css">
+    <link rel="stylesheet" href="css/carousel.css">
+    <!-- js -->
+    <script src="js/main.js" defer></script>
+    <script src="js/carousel.js" defer></script>
+  </head>
 
-    <body>
+  <body>
 
-        <!-- Header with Sliding Navbar -->
-        <header id="page-header-container">
-            <div class="header-top">
-                <div class="container">
-                    <div class="header-top__content">
-                        <div class="header-brand">
-                            <h1 class="header-brand__title">卓越科技大學</h1>
-                            <p class="header-brand__subtitle">Excellence Technology University</p>
-                        </div>
-                        <div class="header-tools">
-                            <button class="search-btn" aria-label="搜尋">🔍</button>
-                            <a href="#" class="lang-switch">EN</a>
-                        </div>
-                    </div>
-                </div>
+    <!-- Header with Sliding Navbar -->
+    <header id="page-header-container">
+      <div class="header-top">
+        <div class="container">
+          <div class="header-top__content">
+            <div class="header-brand">
+              <h1 class="header-brand__title">卓越科技大學</h1>
+              <p class="header-brand__subtitle">Excellence Technology University</p>
+            </div>
+            <div class="header-tools">
+              <button class="search-btn" aria-label="搜尋">🔍</button>
+              <a href="#" class="lang-switch">EN</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sliding Navigation -->
+      <nav class="sliding-nav">
+        <div class="container">
+          <div class="sliding-nav__wrapper">
+            <ul class="sliding-nav__list">
+              <li class="sliding-nav__item active" data-xcoord="0">
+                <a href="#home">首頁</a>
+              </li>
+              <li class="sliding-nav__item" data-xcoord="160">
+                <a href="#news">最新消息</a>
+              </li>
+              <li class="sliding-nav__item" data-xcoord="320">
+                <a href="#last-calendar">近期活動</a>
+              </li>
+              <li class="sliding-nav__item" data-xcoord="480">
+                <a href="#colleges">學院介紹</a>
+              </li>
+              <li class="sliding-nav__item has-dropdown" data-xcoord="640">
+                <a href="#" class="dropdown-toggle">更多 </a>
+                <ul class="dropdown-menu">
+                  <li><a href="../index.html">其他主題</a></li>
+                  <li><a href="about.html">前往認識校園</a></li>
+                  <li><a href="admissions.html">前往招生資訊</a></li>
+                </ul>
+              </li>
+            </ul>
+            <div class="sliding-nav__indicator"></div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Banner 校園映象區 -->
+    <section class="banner-section" id="home">
+      <div class="container">
+        <div class="banner-section__content">
+          <h2 class="banner-section__title">卓越科技大學 招生中</h2>
+          <p class="banner-section__subtitle">培育未來科技人才的搖籃</p>
+        </div>
+      </div>
+      <!-- Carousel 輪播圖 -->
+      <div class="carouse-section">
+        <div class="carousel-slides">
+          <div class="carousel-slide">
+            <img src="image/banner_01.jpg" alt="卓越科技大學校門">
+          </div>
+          <div class="carousel-slide">
+            <img src="image/banner_02.jpg" alt="卓越科技大學圖書館">
+          </div>
+          <div class="carousel-slide">
+            <img src="image/banner_03.jpg" alt="卓越科技大學教學大樓">
+          </div>
+        </div>
+
+        <button class="carousel-btn carousel-btn--prev" aria-label="上一張">&lt;</button>
+        <button class="carousel-btn carousel-btn--next" aria-label="下一張">&gt;</button>
+
+        <div class="carousel-dots"></div>
+      </div>
+    </section>
+
+    <!-- Main 主要內容區 -->
+    <main class="main-layout">
+      <div class="container">
+        <div class="main-layout__grid">
+
+          <!-- Sidebar 側邊欄 -->
+          <aside class="sidebar">
+            <!-- 快速連結 -->
+            <div class="sidebar-card">
+              <h3 class="sidebar-card__title">快速連結</h3>
+              <div class="quick-links">
+                <a href="#" class="quick-link">
+                  <span class="quick-link__icon">👤</span>
+                  <span class="quick-link__text">學生專區</span>
+                </a>
+                <a href="#" class="quick-link">
+                  <span class="quick-link__icon">👩‍🏫</span>
+                  <span class="quick-link__text">教職員專區</span>
+                </a>
+                <a href="#" class="quick-link">
+                  <span class="quick-link__icon">📚</span>
+                  <span class="quick-link__text">圖書館</span>
+                </a>
+                <a href="#" class="quick-link">
+                  <span class="quick-link__icon">📧</span>
+                  <span class="quick-link__text">校園信箱</span>
+                </a>
+                <a href="#" class="quick-link">
+                  <span class="quick-link__icon">🎓</span>
+                  <span class="quick-link__text">招生資訊</span>
+                </a>
+                <a href="#" class="quick-link">
+                  <span class="quick-link__icon">🗓️</span>
+                  <span class="quick-link__text">行事曆</span>
+                </a>
+              </div>
             </div>
 
-            <!-- Sliding Navigation -->
-            <nav class="sliding-nav">
-                <div class="container">
-                    <div class="sliding-nav__wrapper">
-                        <ul class="sliding-nav__list">
-                            <li class="sliding-nav__item active" data-xcoord="0">
-                                <a href="#home">首頁</a>
-                            </li>
-                            <li class="sliding-nav__item" data-xcoord="160">
-                                <a href="#news">最新消息</a>
-                            </li>
-                            <li class="sliding-nav__item" data-xcoord="320">
-                                <a href="#last-calendar">近期活動</a>
-                            </li>
-                            <li class="sliding-nav__item" data-xcoord="480">
-                                <a href="#colleges">學院介紹</a>
-                            </li>
-                            <li class="sliding-nav__item has-dropdown" data-xcoord="640">
-                                <a href="#" class="dropdown-toggle">更多 </a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="../index.html">其他主題</a></li>
-                                    <li><a href="about.html">前往認識校園</a></li>
-                                    <li><a href="admissions.html">前往招生資訊</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <div class="sliding-nav__indicator"></div>
-                    </div>
+            <!-- 校園統計 -->
+            <div class="sidebar-card stats-card">
+              <h3 class="sidebar-card__title">校園數據</h3>
+              <div class="stats-list">
+                <div class="stat-item">
+                  <div class="stat-item__value">15,000+</div>
+                  <div class="stat-item__label">在校學生</div>
                 </div>
-            </nav>
-        </header>
-
-        <!-- Banner 校園映象區 -->
-        <section class="banner-section" id="home">
-            <div class="container">
-                <div class="banner-section__content">
-                    <h2 class="banner-section__title">卓越科技大學 招生中</h2>
-                    <p class="banner-section__subtitle">培育未來科技人才的搖籃</p>
+                <div class="stat-item">
+                  <div class="stat-item__value">800+</div>
+                  <div class="stat-item__label">專任教師</div>
                 </div>
+                <div class="stat-item">
+                  <div class="stat-item__value">50+</div>
+                  <div class="stat-item__label">學系所</div>
+                </div>
+                <div class="stat-item">
+                  <div class="stat-item__value">95%</div>
+                  <div class="stat-item__label">就業率</div>
+                </div>
+              </div>
             </div>
-            <!-- Carousel 輪播圖 -->
-            <div class="carouse-section">
-                <div class="carousel-slides">
-                    <div class="carousel-slide">
-                        <img src="image/banner_01.jpg" alt="卓越科技大學校門">
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="image/banner_02.jpg" alt="卓越科技大學圖書館">
-                    </div>
-                    <div class="carousel-slide">
-                        <img src="image/banner_03.jpg" alt="卓越科技大學教學大樓">
-                    </div>
+
+            <!-- 社群媒體 -->
+            <div class="sidebar-card">
+              <h3 class="sidebar-card__title">關注我們</h3>
+              <div class="social-links">
+                <a href="#" class="social-link" aria-label="Facebook">📘</a>
+                <a href="#" class="social-link" aria-label="Instagram">📷</a>
+                <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+                <a href="#" class="social-link" aria-label="YouTube">📺</a>
+              </div>
+            </div>
+          </aside>
+
+          <!-- Main Content 主要內容 -->
+          <div class="main-content">
+
+            <!-- 最新消息 -->
+            <section class="content-section news-section" id="news">
+              <div class="section-header">
+                <h2 class="section-title">最新消息</h2>
+                <div class="section-tabs">
+                  <button class="tab-btn active" data-category="all">全部</button>
+                  <button class="tab-btn" data-category="announcement">公告</button>
+                  <button class="tab-btn" data-category="activity">活動</button>
+                  <button class="tab-btn" data-category="honor">榮譽</button>
+                </div>
+              </div>
+
+              <ul class="news-list">
+                <li class="news-item" data-category="announcement">
+                  <div class="news-item__date-box">
+                    <span class="news-item__date-day">15</span>
+                    <span class="news-item__date-month">11月</span>
+                  </div>
+                  <div class="news-item__content">
+                    <span class="news-item__category news-item__category--announcement">公告</span>
+                    <h3 class="news-item__title">
+                      <a href="#">113 學年度第一學期期末考試日程公告</a>
+                    </h3>
+                    <p class="news-item__excerpt">本學期期末考試將於 12/25-12/29 進行,請同學提前做好複習規劃...</p>
+                  </div>
+                </li>
+
+                <li class="news-item" data-category="activity">
+                  <div class="news-item__date-box">
+                    <span class="news-item__date-day">12</span>
+                    <span class="news-item__date-month">11月</span>
+                  </div>
+                  <div class="news-item__content">
+                    <span class="news-item__category news-item__category--activity">活動</span>
+                    <h3 class="news-item__title">
+                      <a href="#">校慶運動會盛大舉行,歡迎全校師生共襄盛舉</a>
+                    </h3>
+                    <p class="news-item__excerpt">今年校慶將舉辦各項運動競賽,包含田徑、籃球、排球等項目...</p>
+                  </div>
+                </li>
+
+                <li class="news-item" data-category="honor">
+                  <div class="news-item__date-box">
+                    <span class="news-item__date-day">10</span>
+                    <span class="news-item__date-month">11月</span>
+                  </div>
+                  <div class="news-item__content">
+                    <span class="news-item__category news-item__category--honor">榮譽</span>
+                    <h3 class="news-item__title">
+                      <a href="#">資工系學生榮獲全國程式競賽冠軍</a>
+                    </h3>
+                    <p class="news-item__excerpt">本校資工系學生團隊在全國大專院校程式設計競賽中脫穎而出...</p>
+                  </div>
+                </li>
+
+                <li class="news-item" data-category="recruitment">
+                  <div class="news-item__date-box">
+                    <span class="news-item__date-day">08</span>
+                    <span class="news-item__date-month">11月</span>
+                  </div>
+                  <div class="news-item__content">
+                    <span class="news-item__category news-item__category--recruitment">招生</span>
+                    <h3 class="news-item__title">
+                      <a href="#">2025 下半年校園徵才博覽會即將登場</a>
+                    </h3>
+                    <p class="news-item__excerpt">超過 100 家企業參展,提供多元就業機會,請同學把握機會...</p>
+                  </div>
+                </li>
+              </ul>
+
+              <div class="section-footer">
+                <a href="#" class="more-link">查看所有消息 →</a>
+              </div>
+            </section>
+
+            <!-- 活動行事曆 -->
+            <section class="content-section calendar-section" id="last-calendar">
+              <div class="section-header">
+                <h2 class="section-title">近期活動</h2>
+              </div>
+
+              <div class="calendar-events">
+                <div class="event-card">
+                  <div class="event-card__date">
+                    <span class="event-card__day">15</span>
+                    <span class="event-card__month">11月</span>
+                  </div>
+                  <div class="event-card__info">
+                    <h4 class="event-card__title">校慶運動會</h4>
+                    <p class="event-card__time">⏰ 08:00 - 17:00</p>
+                    <p class="event-card__location">📍 校本部田徑場</p>
+                  </div>
                 </div>
 
-                <button class="carousel-btn carousel-btn--prev" aria-label="上一張">&lt;</button>
-                <button class="carousel-btn carousel-btn--next" aria-label="下一張">&gt;</button>
-
-                <div class="carousel-dots"></div>
-            </div>
-        </section>
-
-        <!-- Main 主要內容區 -->
-        <main class="main-layout">
-            <div class="container">
-                <div class="main-layout__grid">
-
-                    <!-- Sidebar 側邊欄 -->
-                    <aside class="sidebar">
-                        <!-- 快速連結 -->
-                        <div class="sidebar-card">
-                            <h3 class="sidebar-card__title">快速連結</h3>
-                            <div class="quick-links">
-                                <a href="#" class="quick-link">
-                                    <span class="quick-link__icon">👤</span>
-                                    <span class="quick-link__text">學生專區</span>
-                                </a>
-                                <a href="#" class="quick-link">
-                                    <span class="quick-link__icon">👩‍🏫</span>
-                                    <span class="quick-link__text">教職員專區</span>
-                                </a>
-                                <a href="#" class="quick-link">
-                                    <span class="quick-link__icon">📚</span>
-                                    <span class="quick-link__text">圖書館</span>
-                                </a>
-                                <a href="#" class="quick-link">
-                                    <span class="quick-link__icon">📧</span>
-                                    <span class="quick-link__text">校園信箱</span>
-                                </a>
-                                <a href="#" class="quick-link">
-                                    <span class="quick-link__icon">🎓</span>
-                                    <span class="quick-link__text">招生資訊</span>
-                                </a>
-                                <a href="#" class="quick-link">
-                                    <span class="quick-link__icon">🗓️</span>
-                                    <span class="quick-link__text">行事曆</span>
-                                </a>
-                            </div>
-                        </div>
-
-                        <!-- 校園統計 -->
-                        <div class="sidebar-card stats-card">
-                            <h3 class="sidebar-card__title">校園數據</h3>
-                            <div class="stats-list">
-                                <div class="stat-item">
-                                    <div class="stat-item__value">15,000+</div>
-                                    <div class="stat-item__label">在校學生</div>
-                                </div>
-                                <div class="stat-item">
-                                    <div class="stat-item__value">800+</div>
-                                    <div class="stat-item__label">專任教師</div>
-                                </div>
-                                <div class="stat-item">
-                                    <div class="stat-item__value">50+</div>
-                                    <div class="stat-item__label">學系所</div>
-                                </div>
-                                <div class="stat-item">
-                                    <div class="stat-item__value">95%</div>
-                                    <div class="stat-item__label">就業率</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- 社群媒體 -->
-                        <div class="sidebar-card">
-                            <h3 class="sidebar-card__title">關注我們</h3>
-                            <div class="social-links">
-                                <a href="#" class="social-link" aria-label="Facebook">📘</a>
-                                <a href="#" class="social-link" aria-label="Instagram">📷</a>
-                                <a href="#" class="social-link" aria-label="Twitter">🐦</a>
-                                <a href="#" class="social-link" aria-label="YouTube">📺</a>
-                            </div>
-                        </div>
-                    </aside>
-
-                    <!-- Main Content 主要內容 -->
-                    <div class="main-content">
-
-                        <!-- 最新消息 -->
-                        <section class="content-section news-section" id="news">
-                            <div class="section-header">
-                                <h2 class="section-title">最新消息</h2>
-                                <div class="section-tabs">
-                                    <button class="tab-btn active" data-category="all">全部</button>
-                                    <button class="tab-btn" data-category="announcement">公告</button>
-                                    <button class="tab-btn" data-category="activity">活動</button>
-                                    <button class="tab-btn" data-category="honor">榮譽</button>
-                                </div>
-                            </div>
-
-                            <ul class="news-list">
-                                <li class="news-item" data-category="announcement">
-                                    <div class="news-item__date-box">
-                                        <span class="news-item__date-day">15</span>
-                                        <span class="news-item__date-month">11月</span>
-                                    </div>
-                                    <div class="news-item__content">
-                                        <span class="news-item__category news-item__category--announcement">公告</span>
-                                        <h3 class="news-item__title">
-                                            <a href="#">113 學年度第一學期期末考試日程公告</a>
-                                        </h3>
-                                        <p class="news-item__excerpt">本學期期末考試將於 12/25-12/29 進行,請同學提前做好複習規劃...</p>
-                                    </div>
-                                </li>
-
-                                <li class="news-item" data-category="activity">
-                                    <div class="news-item__date-box">
-                                        <span class="news-item__date-day">12</span>
-                                        <span class="news-item__date-month">11月</span>
-                                    </div>
-                                    <div class="news-item__content">
-                                        <span class="news-item__category news-item__category--activity">活動</span>
-                                        <h3 class="news-item__title">
-                                            <a href="#">校慶運動會盛大舉行,歡迎全校師生共襄盛舉</a>
-                                        </h3>
-                                        <p class="news-item__excerpt">今年校慶將舉辦各項運動競賽,包含田徑、籃球、排球等項目...</p>
-                                    </div>
-                                </li>
-
-                                <li class="news-item" data-category="honor">
-                                    <div class="news-item__date-box">
-                                        <span class="news-item__date-day">10</span>
-                                        <span class="news-item__date-month">11月</span>
-                                    </div>
-                                    <div class="news-item__content">
-                                        <span class="news-item__category news-item__category--honor">榮譽</span>
-                                        <h3 class="news-item__title">
-                                            <a href="#">資工系學生榮獲全國程式競賽冠軍</a>
-                                        </h3>
-                                        <p class="news-item__excerpt">本校資工系學生團隊在全國大專院校程式設計競賽中脫穎而出...</p>
-                                    </div>
-                                </li>
-
-                                <li class="news-item" data-category="recruitment">
-                                    <div class="news-item__date-box">
-                                        <span class="news-item__date-day">08</span>
-                                        <span class="news-item__date-month">11月</span>
-                                    </div>
-                                    <div class="news-item__content">
-                                        <span class="news-item__category news-item__category--recruitment">招生</span>
-                                        <h3 class="news-item__title">
-                                            <a href="#">2025 下半年校園徵才博覽會即將登場</a>
-                                        </h3>
-                                        <p class="news-item__excerpt">超過 100 家企業參展,提供多元就業機會,請同學把握機會...</p>
-                                    </div>
-                                </li>
-                            </ul>
-
-                            <div class="section-footer">
-                                <a href="#" class="more-link">查看所有消息 →</a>
-                            </div>
-                        </section>
-
-                        <!-- 活動行事曆 -->
-                        <section class="content-section calendar-section" id="last-calendar">
-                            <div class="section-header">
-                                <h2 class="section-title">近期活動</h2>
-                            </div>
-
-                            <div class="calendar-events">
-                                <div class="event-card">
-                                    <div class="event-card__date">
-                                        <span class="event-card__day">15</span>
-                                        <span class="event-card__month">11月</span>
-                                    </div>
-                                    <div class="event-card__info">
-                                        <h4 class="event-card__title">校慶運動會</h4>
-                                        <p class="event-card__time">⏰ 08:00 - 17:00</p>
-                                        <p class="event-card__location">📍 校本部田徑場</p>
-                                    </div>
-                                </div>
-
-                                <div class="event-card">
-                                    <div class="event-card__date">
-                                        <span class="event-card__day">20</span>
-                                        <span class="event-card__month">11月</span>
-                                    </div>
-                                    <div class="event-card__info">
-                                        <h4 class="event-card__title">企業實習說明會</h4>
-                                        <p class="event-card__time">⏰ 14:00 - 16:00</p>
-                                        <p class="event-card__location">📍 國際會議廳</p>
-                                    </div>
-                                </div>
-
-                                <div class="event-card">
-                                    <div class="event-card__date">
-                                        <span class="event-card__day">25</span>
-                                        <span class="event-card__month">11月</span>
-                                    </div>
-                                    <div class="event-card__info">
-                                        <h4 class="event-card__title">期中教學評量週</h4>
-                                        <p class="event-card__time">⏰ 全天</p>
-                                        <p class="event-card__location">📍 線上填寫</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-
-                        <!-- 學院介紹 -->
-                        <section class="content-section colleges-section" id="colleges">
-                            <div class="section-header">
-                                <h2 class="section-title">學院介紹</h2>
-                            </div>
-
-                            <div class="colleges-grid">
-                                <div class="college-card">
-                                    <div class="college-card__icon">🔬</div>
-                                    <h3 class="college-card__title">理學院</h3>
-                                    <p class="college-card__desc">數學、物理、化學等基礎科學系所</p>
-                                    <a href="#" class="college-card__link">了解更多 →</a>
-                                </div>
-
-                                <div class="college-card">
-                                    <div class="college-card__icon">⚙️</div>
-                                    <h3 class="college-card__title">工學院</h3>
-                                    <p class="college-card__desc">機械、電機、資訊等工程系所</p>
-                                    <a href="#" class="college-card__link">了解更多 →</a>
-                                </div>
-
-                                <div class="college-card">
-                                    <div class="college-card__icon">💼</div>
-                                    <h3 class="college-card__title">管理學院</h3>
-                                    <p class="college-card__desc">企管、財金、會計等商學系所</p>
-                                    <a href="#" class="college-card__link">了解更多 →</a>
-                                </div>
-
-                                <div class="college-card">
-                                    <div class="college-card__icon">🎨</div>
-                                    <h3 class="college-card__title">設計學院</h3>
-                                    <p class="college-card__desc">工業設計、視傳、多媒體系所</p>
-                                    <a href="#" class="college-card__link">了解更多 →</a>
-                                </div>
-                            </div>
-                        </section>
-
-                    </div>
-
+                <div class="event-card">
+                  <div class="event-card__date">
+                    <span class="event-card__day">20</span>
+                    <span class="event-card__month">11月</span>
+                  </div>
+                  <div class="event-card__info">
+                    <h4 class="event-card__title">企業實習說明會</h4>
+                    <p class="event-card__time">⏰ 14:00 - 16:00</p>
+                    <p class="event-card__location">📍 國際會議廳</p>
+                  </div>
                 </div>
-            </div>
-        </main>
 
-        <!-- Footer -->
-        <footer id="page-footer-container">
-            <div class="footer-main">
-                <div class="container">
-                    <div class="footer-grid">
-                        <div class="footer-col">
-                            <h4 class="footer-col__title">關於我們</h4>
-                            <ul class="footer-links">
-                                <li><a href="#">學校簡介</a></li>
-                                <li><a href="#">校史沿革</a></li>
-                                <li><a href="#">校長的話</a></li>
-                                <li><a href="#">組織架構</a></li>
-                            </ul>
-                        </div>
-                        <div class="footer-col">
-                            <h4 class="footer-col__title">學術單位</h4>
-                            <ul class="footer-links">
-                                <li><a href="#">理學院</a></li>
-                                <li><a href="#">工學院</a></li>
-                                <li><a href="#">管理學院</a></li>
-                                <li><a href="#">設計學院</a></li>
-                            </ul>
-                        </div>
-                        <div class="footer-col">
-                            <h4 class="footer-col__title">招生資訊</h4>
-                            <ul class="footer-links">
-                                <li><a href="#">大學部招生</a></li>
-                                <li><a href="#">碩博士班招生</a></li>
-                                <li><a href="#">國際學生</a></li>
-                                <li><a href="#">在職專班</a></li>
-                            </ul>
-                        </div>
-                        <div class="footer-col">
-                            <h4 class="footer-col__title">聯絡資訊</h4>
-                            <ul class="footer-contact">
-                                <li>📍 台灣台北市中正區卓越路 100 號</li>
-                                <li>📞 (02) 1234-5678</li>
-                                <li>📧 <a href="/cdn-cgi/l/email-protection" class="__cf_email__"
-                                        data-cfemail="731a1d151c33120301">[email&#160;protected]</a></li>
-                            </ul>
-                        </div>
-                    </div>
+                <div class="event-card">
+                  <div class="event-card__date">
+                    <span class="event-card__day">25</span>
+                    <span class="event-card__month">11月</span>
+                  </div>
+                  <div class="event-card__info">
+                    <h4 class="event-card__title">期中教學評量週</h4>
+                    <p class="event-card__time">⏰ 全天</p>
+                    <p class="event-card__location">📍 線上填寫</p>
+                  </div>
                 </div>
-            </div>
-            <div class="footer-bottom">
-                <div class="container">
-                    <p>© 2025 N1146726. All rights reserved.</p>
+              </div>
+            </section>
+
+            <!-- 學院介紹 -->
+            <section class="content-section colleges-section" id="colleges">
+              <div class="section-header">
+                <h2 class="section-title">學院介紹</h2>
+              </div>
+
+              <div class="colleges-grid">
+                <div class="college-card">
+                  <div class="college-card__icon">🔬</div>
+                  <h3 class="college-card__title">理學院</h3>
+                  <p class="college-card__desc">數學、物理、化學等基礎科學系所</p>
+                  <a href="#" class="college-card__link">了解更多 →</a>
                 </div>
+
+                <div class="college-card">
+                  <div class="college-card__icon">⚙️</div>
+                  <h3 class="college-card__title">工學院</h3>
+                  <p class="college-card__desc">機械、電機、資訊等工程系所</p>
+                  <a href="#" class="college-card__link">了解更多 →</a>
+                </div>
+
+                <div class="college-card">
+                  <div class="college-card__icon">💼</div>
+                  <h3 class="college-card__title">管理學院</h3>
+                  <p class="college-card__desc">企管、財金、會計等商學系所</p>
+                  <a href="#" class="college-card__link">了解更多 →</a>
+                </div>
+
+                <div class="college-card">
+                  <div class="college-card__icon">🎨</div>
+                  <h3 class="college-card__title">設計學院</h3>
+                  <p class="college-card__desc">工業設計、視傳、多媒體系所</p>
+                  <a href="#" class="college-card__link">了解更多 →</a>
+                </div>
+              </div>
+            </section>
+
+          </div>
+
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="page-footer-container">
+      <div class="footer-main">
+        <div class="container">
+          <div class="footer-grid">
+            <div class="footer-col">
+              <h4 class="footer-col__title">關於我們</h4>
+              <ul class="footer-links">
+                <li><a href="#">學校簡介</a></li>
+                <li><a href="#">校史沿革</a></li>
+                <li><a href="#">校長的話</a></li>
+                <li><a href="#">組織架構</a></li>
+              </ul>
             </div>
-        </footer>
-    </body>
+            <div class="footer-col">
+              <h4 class="footer-col__title">學術單位</h4>
+              <ul class="footer-links">
+                <li><a href="#">理學院</a></li>
+                <li><a href="#">工學院</a></li>
+                <li><a href="#">管理學院</a></li>
+                <li><a href="#">設計學院</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4 class="footer-col__title">招生資訊</h4>
+              <ul class="footer-links">
+                <li><a href="#">大學部招生</a></li>
+                <li><a href="#">碩博士班招生</a></li>
+                <li><a href="#">國際學生</a></li>
+                <li><a href="#">在職專班</a></li>
+              </ul>
+            </div>
+            <div class="footer-col">
+              <h4 class="footer-col__title">聯絡資訊</h4>
+              <ul class="footer-contact">
+                <li>📍 台灣台北市中正區卓越路 100 號</li>
+                <li>📞 (02) 1234-5678</li>
+                <li>📧 <a href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                    data-cfemail="731a1d151c33120301">[email&#160;protected]</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <p>© 2025 N1146726. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
 
 </html>

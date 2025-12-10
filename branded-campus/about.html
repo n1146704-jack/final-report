@@ -1,773 +1,772 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>認識 卓越科技大學 - 完整介紹</title>
-        <link rel="stylesheet" href="css/global.css">
-        <link rel="stylesheet" href="css/about.css">
-        <!-- js -->
-        <script src="js/about.js" defer></script>
-    </head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>認識 卓越科技大學 - 完整介紹</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/about.css">
+    <!-- js -->
+    <script src="js/about.js" defer></script>
+  </head>
 
-    <body>
-        <div class="page-layout">
+  <body>
+    <div class="page-layout">
 
-            <!-- 固定側邊欄 -->
-            <aside class="sidebar" id="sidebar">
-                <!-- Logo 品牌區 -->
-                <div class="sidebar__brand">
-                    <div class="sidebar__logo">
-                        <div class="sidebar__logo-icon">🎓</div>
-                        <div class="sidebar__logo-text">卓越科技大學</div>
-                    </div>
-                </div>
+      <!-- 固定側邊欄 -->
+      <aside class="sidebar" id="sidebar">
+        <!-- Logo 品牌區 -->
+        <div class="sidebar__brand">
+          <div class="sidebar__logo">
+            <div class="sidebar__logo-icon">🎓</div>
+            <div class="sidebar__logo-text">卓越科技大學</div>
+          </div>
+        </div>
 
-                <!-- 切換按鈕 -->
-                <button class="sidebar__toggle" id="sidebarToggle" aria-label="切換選單">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M15 18l-6-6 6-6" />
-                    </svg>
-                </button>
+        <!-- 切換按鈕 -->
+        <button class="sidebar__toggle" id="sidebarToggle" aria-label="切換選單">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M15 18l-6-6 6-6" />
+          </svg>
+        </button>
 
-                <!-- 導航選單 -->
-                <nav class="sidebar__nav">
-                    <div class="nav-section">
-                        <h4 class="nav-section__title">主要資訊</h4>
-                        <ul class="nav-list">
-                            <li class="nav-item">
-                                <a href="#overview" class="nav-link active" data-section="overview">
-                                    <span class="nav-link__icon">📋</span>
-                                    <span class="nav-link__text">學校概覽</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#vision" class="nav-link" data-section="vision">
-                                    <span class="nav-link__icon">🎯</span>
-                                    <span class="nav-link__text">理念願景</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#history" class="nav-link" data-section="history">
-                                    <span class="nav-link__icon">📅</span>
-                                    <span class="nav-link__text">歷史沿革</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#features" class="nav-link" data-section="features">
-                                    <span class="nav-link__icon">⭐</span>
-                                    <span class="nav-link__text">辦學特色</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+        <!-- 導航選單 -->
+        <nav class="sidebar__nav">
+          <div class="nav-section">
+            <h4 class="nav-section__title">主要資訊</h4>
+            <ul class="nav-list">
+              <li class="nav-item">
+                <a href="#overview" class="nav-link active" data-section="overview">
+                  <span class="nav-link__icon">📋</span>
+                  <span class="nav-link__text">學校概覽</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#vision" class="nav-link" data-section="vision">
+                  <span class="nav-link__icon">🎯</span>
+                  <span class="nav-link__text">理念願景</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#history" class="nav-link" data-section="history">
+                  <span class="nav-link__icon">📅</span>
+                  <span class="nav-link__text">歷史沿革</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#features" class="nav-link" data-section="features">
+                  <span class="nav-link__icon">⭐</span>
+                  <span class="nav-link__text">辦學特色</span>
+                </a>
+              </li>
+            </ul>
+          </div>
 
-                    <div class="nav-section">
-                        <h4 class="nav-section__title">校園資訊</h4>
-                        <ul class="nav-list">
-                            <li class="nav-item">
-                                <a href="#campus" class="nav-link" data-section="campus">
-                                    <span class="nav-link__icon">🏫</span>
-                                    <span class="nav-link__text">校園景觀</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#facilities" class="nav-link" data-section="facilities">
-                                    <span class="nav-link__icon">🏗️</span>
-                                    <span class="nav-link__text">教學設施</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#departments" class="nav-link" data-section="departments">
-                                    <span class="nav-link__icon">🎓</span>
-                                    <span class="nav-link__text">學院系所</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="#research" class="nav-link" data-section="research">
-                                    <span class="nav-link__icon">🔬</span>
-                                    <span class="nav-link__text">研究發展</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+          <div class="nav-section">
+            <h4 class="nav-section__title">校園資訊</h4>
+            <ul class="nav-list">
+              <li class="nav-item">
+                <a href="#campus" class="nav-link" data-section="campus">
+                  <span class="nav-link__icon">🏫</span>
+                  <span class="nav-link__text">校園景觀</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#facilities" class="nav-link" data-section="facilities">
+                  <span class="nav-link__icon">🏗️</span>
+                  <span class="nav-link__text">教學設施</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#departments" class="nav-link" data-section="departments">
+                  <span class="nav-link__icon">🎓</span>
+                  <span class="nav-link__text">學院系所</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="#research" class="nav-link" data-section="research">
+                  <span class="nav-link__icon">🔬</span>
+                  <span class="nav-link__text">研究發展</span>
+                </a>
+              </li>
+            </ul>
+          </div>
 
-                    <div class="nav-section">
-                        <h4 class="nav-section__title">其他連結</h4>
-                        <ul class="nav-list">
-                            <li class="nav-item">
-                                <a href="../index.html" class="nav-link">
-                                    <span class="nav-link__icon">🔗</span>
-                                    <span class="nav-link__text">其他主題</span>
-                                    <span class="nav-link__badge">New</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="index.html" class="nav-link">
-                                    <span class="nav-link__icon">🏠</span>
-                                    <span class="nav-link__text">校園首頁</span>
-                                    <span class="nav-link__badge">New</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="admissions.html" class="nav-link">
-                                    <span class="nav-link__icon">📝</span>
-                                    <span class="nav-link__text">招生資訊</span>
-                                    <span class="nav-link__badge">New</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
+          <div class="nav-section">
+            <h4 class="nav-section__title">其他連結</h4>
+            <ul class="nav-list">
+              <li class="nav-item">
+                <a href="../index.html" class="nav-link">
+                  <span class="nav-link__icon">🔗</span>
+                  <span class="nav-link__text">其他主題</span>
+                  <span class="nav-link__badge">New</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="index.html" class="nav-link">
+                  <span class="nav-link__icon">🏠</span>
+                  <span class="nav-link__text">校園首頁</span>
+                  <span class="nav-link__badge">New</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="admissions.html" class="nav-link">
+                  <span class="nav-link__icon">📝</span>
+                  <span class="nav-link__text">招生資訊</span>
+                  <span class="nav-link__badge">New</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <!-- 側邊欄底部 -->
+        <div class="sidebar__footer">
+          <a href="#contact" class="sidebar__footer-link">
+            <span class="sidebar__footer-icon">📧</span>
+            <span class="sidebar__footer-text">聯絡我們</span>
+          </a>
+          <a href="#" class="sidebar__footer-link">
+            <span class="sidebar__footer-icon">❓</span>
+            <span class="sidebar__footer-text">常見問題</span>
+          </a>
+        </div>
+      </aside>
+
+      <!-- 主要內容區域 -->
+      <main class="main-content">
+
+        <!-- 頁面標題橫幅 -->
+        <header class="about-header">
+          <div class="container">
+            <div class="about-header__content">
+              <h1 class="about-header__title">認識 卓越科技大學</h1>
+              <p class="about-header__subtitle">培育創新人才 · 引領產業發展 · 邁向國際舞台</p>
+              <div class="about-header__breadcrumb">
+                <nav class="breadcrumb">
+                  <a href="index.html">首頁</a>
+                  <span class="breadcrumb-separator">›</span>
+                  <span>認識卓越</span>
                 </nav>
+              </div>
+            </div>
+          </div>
+        </header>
 
-                <!-- 側邊欄底部 -->
-                <div class="sidebar__footer">
-                    <a href="#contact" class="sidebar__footer-link">
-                        <span class="sidebar__footer-icon">📧</span>
-                        <span class="sidebar__footer-text">聯絡我們</span>
-                    </a>
-                    <a href="#" class="sidebar__footer-link">
-                        <span class="sidebar__footer-icon">❓</span>
-                        <span class="sidebar__footer-text">常見問題</span>
-                    </a>
+        <!-- 內容區塊 -->
+        <section class="about-section">
+          <div class="about-container">
+
+            <!-- 主要內容 -->
+            <div class="about-main">
+
+              <!-- 學校概覽 -->
+              <article class="content-card fade-in" id="overview">
+                <div class="content-card__header">
+                  <h2 class="content-card__title">
+                    <span class="content-card__icon">📋</span>
+                    學校概覽
+                  </h2>
                 </div>
+                <div class="content-card__body">
+                  <p>卓越科技大學創立於 1998
+                    年,是一所以「應用導向、產學合作」為核心的綜合型科技大學。學校位於台灣北部科技走廊的核心地帶,佔地廣闊、環境優美,擁有先進的教學與研究設施。</p>
+                  <p>經過二十餘年的發展,卓越科技大學已成為培育科技人才的重要搖籃,畢業生廣泛活躍於產業界、學術界及政府部門,為社會與產業發展做出卓越貢獻。</p>
+
+                  <!-- 統計數據 -->
+                  <div class="stats-grid">
+                    <div class="stat-item">
+                      <div class="stat-item__icon">👥</div>
+                      <div class="stat-item__value">12,500+</div>
+                      <div class="stat-item__label">在校學生</div>
+                    </div>
+                    <div class="stat-item">
+                      <div class="stat-item__icon">👨‍🏫</div>
+                      <div class="stat-item__value">850+</div>
+                      <div class="stat-item__label">專任教師</div>
+                    </div>
+                    <div class="stat-item">
+                      <div class="stat-item__icon">🏢</div>
+                      <div class="stat-item__value">28</div>
+                      <div class="stat-item__label">系所學程</div>
+                    </div>
+                    <div class="stat-item">
+                      <div class="stat-item__icon">🏆</div>
+                      <div class="stat-item__value">95%</div>
+                      <div class="stat-item__label">就業率</div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- 理念與願景 -->
+              <article class="content-card fade-in" id="vision">
+                <div class="content-card__header">
+                  <h2 class="content-card__title">
+                    <span class="content-card__icon">🎯</span>
+                    理念與願景
+                  </h2>
+                </div>
+                <div class="content-card__body">
+                  <div class="vision-mission-grid">
+                    <div class="vision-mission-item">
+                      <h3>
+                        <span class="vision-mission-item__icon">💡</span>
+                        我們的理念
+                      </h3>
+                      <p>卓越科技大學秉持「創新、務實、宏觀」之校訓,致力於培育兼具專業技術與人文素養的跨領域人才。我們相信,科技的價值在於解決人類面臨的挑戰,而人文的深度則賦予科技正確的方向。
+                      </p>
+                      <p>我們強調理論與實務的結合,鼓勵學生勇於創新、敢於嘗試,培養具備國際視野與社會責任感的新世代領袖。</p>
+                    </div>
+                    <div class="vision-mission-item">
+                      <h3>
+                        <span class="vision-mission-item__icon">🌟</span>
+                        我們的願景
+                      </h3>
+                      <p>我們的願景是成為亞太地區頂尖的應用型科技大學,以卓越的研究動能引領產業升級,並以開放的學習環境啟發學生的無限潛能,使其成為推動社會進步的世界公民。
+                      </p>
+                      <p>透過持續精進教學品質、深化產學合作、拓展國際交流,我們致力於打造一個充滿活力與創意的學習社群。</p>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- 歷史沿革 -->
+              <article class="content-card fade-in" id="history">
+                <div class="content-card__header">
+                  <h2 class="content-card__title">
+                    <span class="content-card__icon">📅</span>
+                    歷史沿革
+                  </h2>
+                </div>
+                <div class="content-card__body">
+                  <div class="timeline">
+                    <div class="timeline__item">
+                      <span class="timeline__year">1998</span>
+                      <div class="timeline__content">
+                        <h4>創校奠基</h4>
+                        <p>創校,原名「卓越技術學院」,設立工學院與管理學院,開始招收第一屆學生。首任校長由知名學者李明哲博士擔任,奠定學校發展的堅實基礎。</p>
+                      </div>
+                    </div>
+                    <div class="timeline__item">
+                      <span class="timeline__year">2005</span>
+                      <div class="timeline__content">
+                        <h4>擴大規模</h4>
+                        <p>增設設計學院,並獲教育部評鑑為優等。同年啟用嶄新的圖書資訊大樓,提供師生更優質的學習與研究環境。學生人數突破 8,000 人。</p>
+                      </div>
+                    </div>
+                    <div class="timeline__item">
+                      <span class="timeline__year">2012</span>
+                      <div class="timeline__content">
+                        <h4>升格改制</h4>
+                        <p>通過教育部審核,正式改制為「卓越科技大學」。同年成立國際學院,開設多項英語授課學程,積極推動國際化發展。</p>
+                      </div>
+                    </div>
+                    <div class="timeline__item">
+                      <span class="timeline__year">2020</span>
+                      <div class="timeline__content">
+                        <h4>創新發展</h4>
+                        <p>成立「人工智慧與數據科學研究所」,邁向新世代科技領域。啟用智慧校園系統,整合各項服務,提升行政效率與學習體驗。</p>
+                      </div>
+                    </div>
+                    <div class="timeline__item">
+                      <span class="timeline__year">2024</span>
+                      <div class="timeline__content">
+                        <h4>邁向卓越</h4>
+                        <p>榮獲教育部「教學卓越計畫」特優獎,並與多家國際知名企業簽訂產學合作協議,建立聯合研發中心,推動前瞻技術發展。</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- 辦學特色 -->
+              <article class="content-card fade-in" id="features">
+                <div class="content-card__header">
+                  <h2 class="content-card__title">
+                    <span class="content-card__icon">⭐</span>
+                    辦學特色
+                  </h2>
+                </div>
+                <div class="content-card__body">
+                  <div class="features-grid">
+                    <div class="feature-card">
+                      <div class="feature-card__icon">🤝</div>
+                      <h3 class="feature-card__title">產學合作</h3>
+                      <p class="feature-card__content">與超過 300 家企業建立深度合作關係,提供學生實習與就業機會,實現學用合一。
+                      </p>
+                    </div>
+                    <div class="feature-card">
+                      <div class="feature-card__icon">🌏</div>
+                      <h3 class="feature-card__title">國際交流</h3>
+                      <p class="feature-card__content">與全球 50 所姊妹校建立交流合作,提供豐富的交換學生與雙聯學位計畫。</p>
+                    </div>
+                    <div class="feature-card">
+                      <div class="feature-card__icon">💻</div>
+                      <h3 class="feature-card__title">創新教學</h3>
+                      <p class="feature-card__content">採用翻轉教室、問題導向學習等創新教學方法,培養學生自主學習與解決問題的能力。
+                      </p>
+                    </div>
+                    <div class="feature-card">
+                      <div class="feature-card__icon">🔬</div>
+                      <h3 class="feature-card__title">研究卓越</h3>
+                      <p class="feature-card__content">設有 15 個研究中心,聚焦前瞻技術研發,每年產出超過 500 篇國際論文。
+                      </p>
+                    </div>
+                    <div class="feature-card">
+                      <div class="feature-card__icon">🎨</div>
+                      <h3 class="feature-card__title">全人教育</h3>
+                      <p class="feature-card__content">重視品格教育與人文素養,開設多元通識課程與社團活動,培育身心健全的優秀人才。
+                      </p>
+                    </div>
+                    <div class="feature-card">
+                      <div class="feature-card__icon">🚀</div>
+                      <h3 class="feature-card__title">創業育成</h3>
+                      <p class="feature-card__content">設有創業育成中心,提供創業輔導、資金媒合與空間設備,協助學生實現創業夢想。
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- 校園景觀 -->
+              <article class="content-card fade-in" id="campus">
+                <div class="content-card__header">
+                  <h2 class="content-card__title">
+                    <span class="content-card__icon">🏫</span>
+                    校園景觀
+                  </h2>
+                </div>
+                <div class="content-card__body">
+                  <p>卓越科技大學擁有優美的校園環境,結合現代建築與自然景觀,打造宜人的學習空間。校園內綠樹成蔭、四季花開,並設有生態湖、休憩廣場等休閒設施,讓師生在繁忙的學習之餘,也能享受大自然的美好。
+                  </p>
+
+                  <div class="campus-gallery">
+                    <div class="gallery-item-wrapper" data-lightbox="image/library.jpg">
+                      <img src="image/library.jpg" alt="校園景觀：圖書館" class="gallery-item">
+                      <div class="gallery-item-overlay">
+                        <div class="gallery-item-title">現代化圖書館</div>
+                        <div class="gallery-item-description">藏書豐富、設施完善</div>
+                      </div>
+                    </div>
+                    <div class="gallery-item-wrapper" data-lightbox="image/classroom.jpg">
+                      <img src="image/classroom.jpg" alt="校園景觀：教室" class="gallery-item">
+                      <div class="gallery-item-overlay">
+                        <div class="gallery-item-title">智慧教室</div>
+                        <div class="gallery-item-description">採用最新教學設備</div>
+                      </div>
+                    </div>
+                    <div class="gallery-item-wrapper" data-lightbox="image/ecological_pond.jpg">
+                      <img src="image/ecological_pond.jpg" alt="校園景觀：生態湖" class="gallery-item">
+                      <div class="gallery-item-overlay">
+                        <div class="gallery-item-title">生態湖</div>
+                        <div class="gallery-item-description">校園中的自然綠洲</div>
+                      </div>
+                    </div>
+                    <div class="gallery-item-wrapper" data-lightbox="image/basketball_court.jpg">
+                      <img src="image/basketball_court.jpg" alt="校園景觀：籃球場" class="gallery-item">
+                      <div class="gallery-item-overlay">
+                        <div class="gallery-item-title">戶外運動場</div>
+                        <div class="gallery-item-description">完善的體育設施</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- 教學設施 -->
+              <article class="content-card fade-in" id="facilities">
+                <div class="content-card__header">
+                  <h2 class="content-card__title">
+                    <span class="content-card__icon">🏗️</span>
+                    教學設施
+                  </h2>
+                </div>
+                <div class="content-card__body">
+                  <div class="accordion">
+                    <div class="accordion-item">
+                      <div class="accordion-header">
+                        <div class="accordion-title">
+                          <span>📚</span>
+                          圖書資訊中心
+                        </div>
+                        <span class="accordion-icon">▼</span>
+                      </div>
+                      <div class="accordion-content">
+                        <div class="accordion-body">
+                          <p>圖書館藏書超過 50 萬冊,訂閱國內外期刊資料庫百餘種。設有自習室、討論室、多媒體視聽區等多元學習空間,提供 24
+                            小時電子資源查詢服務,滿足師生各種學習需求。</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="accordion-item">
+                      <div class="accordion-header">
+                        <span class="accordion-title">
+                          <span>🔬</span>
+                          實驗室與研究中心
+                        </span>
+                        <span class="accordion-icon">▼</span>
+                      </div>
+                      <div class="accordion-content">
+                        <div class="accordion-body">
+                          <p>建置有先進的專業實驗室與研究中心,包括奈米科技實驗室、生物醫學工程中心、人工智慧研究所等,配備最新儀器設備,提供學生與研究人員優質的實驗與研究環境。
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="accordion-item">
+                      <div class="accordion-header">
+                        <span class="accordion-title">
+                          <span>💻</span>
+                          電腦教室
+                        </span>
+                        <span class="accordion-icon">▼</span>
+                      </div>
+                      <div class="accordion-content">
+                        <div class="accordion-body">
+                          <p>設有多間電腦教室,配置高效能電腦設備,並安裝各類專業軟體,包括程式開發工具、繪圖軟體、工程模擬軟體等,滿足不同科系的教學需求。
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="accordion-item">
+                      <div class="accordion-header">
+                        <span class="accordion-title">
+                          <span>🏋️</span>
+                          運動設施
+                        </span>
+                        <span class="accordion-icon">▼</span>
+                      </div>
+                      <div class="accordion-content">
+                        <div class="accordion-body">
+                          <p>體育館設有室內籃球場、羽球場、桌球室、健身房等設施。戶外運動場包括田徑場、網球場、游泳池等,提供師生完善的運動休閒環境,促進身心健康發展。
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="accordion-item">
+                      <div class="accordion-header">
+                        <span class="accordion-title">
+                          <span>🎭</span>
+                          藝文空間
+                        </span>
+                        <span class="accordion-icon">▼</span>
+                      </div>
+                      <div class="accordion-content">
+                        <div class="accordion-body">
+                          <p>設有多功能演藝廳、藝術展覽廳、音樂練習室等藝文設施,定期舉辦各類藝文活動與展演,豐富校園文化生活,培養學生的藝術涵養與美學素養。
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- 學院系所 -->
+              <article class="content-card fade-in" id="departments">
+                <div class="content-card__header">
+                  <h2 class="content-card__title">
+                    <span class="content-card__icon">🎓</span>
+                    學院系所
+                  </h2>
+                </div>
+                <div class="content-card__body">
+                  <div class="accordion">
+                    <div class="accordion-item">
+                      <div class="accordion-header">
+                        <span class="accordion-title">
+                          <span>⚙️</span>
+                          工學院
+                        </span>
+                        <span class="accordion-icon">▼</span>
+                      </div>
+                      <div class="accordion-content">
+                        <div class="accordion-body">
+                          <p><strong>系所包含:</strong> 機械工程系、電機工程系、電子工程系、資訊工程系、化學工程系、土木工程系、環境工程系
+                          </p>
+                          <p>工學院培育具備紮實理論基礎與實務能力的工程人才,強調跨領域整合與創新應用,畢業生深受業界肯定。</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="accordion-item">
+                      <div class="accordion-header">
+                        <span class="accordion-title">
+                          <span>💼</span>
+                          管理學院
+                        </span>
+                        <span class="accordion-icon">▼</span>
+                      </div>
+                      <div class="accordion-content">
+                        <div class="accordion-body">
+                          <p><strong>系所包含:</strong> 企業管理系、財務金融系、國際貿易系、會計資訊系、資訊管理系、行銷與流通管理系</p>
+                          <p>管理學院致力於培養具備國際視野與管理實務能力的商業領袖,課程結合理論與實務,提供多元的實習與海外交流機會。</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="accordion-item">
+                      <div class="accordion-header">
+                        <span class="accordion-title">
+                          <span>🎨</span>
+                          設計學院
+                        </span>
+                        <span class="accordion-icon">▼</span>
+                      </div>
+                      <div class="accordion-content">
+                        <div class="accordion-body">
+                          <p><strong>系所包含:</strong> 工業設計系、視覺傳達設計系、數位媒體設計系、室內設計系、時尚設計系</p>
+                          <p>設計學院以創意與美學為核心,培育具備設計思維與實踐能力的創意人才,學生作品屢獲國內外設計大獎肯定。</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="accordion-item">
+                      <div class="accordion-header">
+                        <span class="accordion-title">
+                          <span>🌐</span>
+                          國際學院
+                        </span>
+                        <span class="accordion-icon">▼</span>
+                      </div>
+                      <div class="accordion-content">
+                        <div class="accordion-body">
+                          <p><strong>系所包含:</strong> 國際企業學位學程、應用外語系、觀光與餐旅管理系</p>
+                          <p>國際學院提供全英語授課環境,招收國際學生,促進文化交流,培養具備國際競爭力的全球化人才。</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- 研究發展 -->
+              <article class="content-card fade-in" id="research">
+                <div class="content-card__header">
+                  <h2 class="content-card__title">
+                    <span class="content-card__icon">🔬</span>
+                    研究發展
+                  </h2>
+                </div>
+                <div class="content-card__body">
+                  <p>卓越科技大學積極推動研究發展,鼓勵教師投入前瞻性研究,並與產業界建立緊密的合作關係。學校設有多個研究中心,聚焦於人工智慧、物聯網、生物科技、綠色能源等重點領域。
+                  </p>
+
+                  <h3 class="mt-3 mb-2" style="color: var(--color-primary); font-weight: 600;">重點研究中心
+                  </h3>
+                  <ul style="list-style: disc; padding-left: 2rem; color: var(--color-text-secondary);">
+                    <li style="margin-bottom: 0.5rem;"><strong>人工智慧與數據科學研究所:</strong>
+                      專注於機器學習、深度學習、大數據分析等前沿技術研發。</li>
+                    <li style="margin-bottom: 0.5rem;"><strong>物聯網創新應用中心:</strong>
+                      研發智慧城市、智慧製造、智慧醫療等物聯網應用解決方案。</li>
+                    <li style="margin-bottom: 0.5rem;"><strong>生物科技研發中心:</strong>
+                      從事生物製藥、基因工程、生物材料等領域研究。</li>
+                    <li style="margin-bottom: 0.5rem;"><strong>綠色能源技術中心:</strong> 開發再生能源技術,推動永續發展。
+                    </li>
+                    <li style="margin-bottom: 0.5rem;"><strong>智慧製造研究中心:</strong> 結合工業 4.0
+                      概念,提升製造業智慧化水準。</li>
+                  </ul>
+
+                  <h3 class="mt-3 mb-2" style="color: var(--color-primary); font-weight: 600;">研究成果亮點
+                  </h3>
+                  <p>近五年來,本校教師共發表國際期刊論文超過 2,500 篇,獲得專利超過 300 件,技術移轉金額累計達新台幣 5 億元,展現卓越的研發能量與產學合作成效。</p>
+                </div>
+              </article>
+
+            </div>
+
+            <!-- 右側資訊欄 -->
+            <aside class="sidebar-aside">
+
+              <!-- 快速連結 -->
+              <div class="aside-card">
+                <div class="aside-card__header">
+                  ⚡ 快速連結
+                </div>
+                <div class="aside-card__body">
+                  <ul class="quick-links">
+                    <li class="quick-link-item">
+                      <a href="#" class="quick-link">
+                        <span class="quick-link__icon">📧</span>
+                        <span>校長信箱</span>
+                      </a>
+                    </li>
+                    <li class="quick-link-item">
+                      <a href="#" class="quick-link">
+                        <span class="quick-link__icon">📅</span>
+                        <span>行事曆</span>
+                      </a>
+                    </li>
+                    <li class="quick-link-item">
+                      <a href="#" class="quick-link">
+                        <span class="quick-link__icon">🏫</span>
+                        <span>校園導覽</span>
+                      </a>
+                    </li>
+                    <li class="quick-link-item">
+                      <a href="#" class="quick-link">
+                        <span class="quick-link__icon">📖</span>
+                        <span>招生簡章</span>
+                      </a>
+                    </li>
+                    <li class="quick-link-item">
+                      <a href="#" class="quick-link">
+                        <span class="quick-link__icon">💼</span>
+                        <span>就業資訊</span>
+                      </a>
+                    </li>
+                    <li class="quick-link-item">
+                      <a href="#" class="quick-link">
+                        <span class="quick-link__icon">🌐</span>
+                        <span>國際交流</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- 最新消息 -->
+              <div class="aside-card">
+                <div class="aside-card__header">
+                  📰 最新消息
+                </div>
+                <div class="aside-card__body">
+                  <article class="news-item">
+                    <div class="news-item__date">2024.11.15</div>
+                    <h4 class="news-item__title">本校榮獲教學卓越計畫特優獎</h4>
+                    <p class="news-item__excerpt">教育部公布 2024 年教學卓越計畫評選結果,本校以創新教學模式與優異成果...</p>
+                  </article>
+
+                  <article class="news-item">
+                    <div class="news-item__date">2024.11.10</div>
+                    <h4 class="news-item__title">國際學術研討會圓滿落幕</h4>
+                    <p class="news-item__excerpt">2024 年國際科技創新研討會於本校舉行,吸引來自全球 20 個國家...</p>
+                  </article>
+
+                  <article class="news-item">
+                    <div class="news-item__date">2024.11.05</div>
+                    <h4 class="news-item__title">學生團隊榮獲創業競賽首獎</h4>
+                    <p class="news-item__excerpt">本校資訊工程系學生團隊參加全國大學創業競賽,以智慧農業解決方案...</p>
+                  </article>
+                </div>
+              </div>
+
+              <!-- 聯絡資訊 -->
+              <div class="aside-card" id="contact">
+                <div class="aside-card__header">
+                  📞 聯絡我們
+                </div>
+                <div class="aside-card__body">
+                  <ul class="contact-info">
+                    <li class="contact-item">
+                      <span class="contact-item__icon">📍</span>
+                      <div class="contact-item__content">
+                        <div class="contact-item__label">地址</div>
+                        <div class="contact-item__value">台北市中正區大學路 100 號</div>
+                      </div>
+                    </li>
+                    <li class="contact-item">
+                      <span class="contact-item__icon">📞</span>
+                      <div class="contact-item__content">
+                        <div class="contact-item__label">電話</div>
+                        <div class="contact-item__value">(02) 2345-6789</div>
+                      </div>
+                    </li>
+                    <li class="contact-item">
+                      <span class="contact-item__icon">📠</span>
+                      <div class="contact-item__content">
+                        <div class="contact-item__label">傳真</div>
+                        <div class="contact-item__value">(02) 2345-6790</div>
+                      </div>
+                    </li>
+                    <li class="contact-item">
+                      <span class="contact-item__icon">📧</span>
+                      <div class="contact-item__content">
+                        <div class="contact-item__label">信箱</div>
+                        <div class="contact-item__value">info@ctu.edu.tw</div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
             </aside>
 
-            <!-- 主要內容區域 -->
-            <main class="main-content">
+          </div>
+        </section>
 
-                <!-- 頁面標題橫幅 -->
-                <header class="about-header">
-                    <div class="container">
-                        <div class="about-header__content">
-                            <h1 class="about-header__title">認識 卓越科技大學</h1>
-                            <p class="about-header__subtitle">培育創新人才 · 引領產業發展 · 邁向國際舞台</p>
-                            <div class="about-header__breadcrumb">
-                                <nav class="breadcrumb">
-                                    <a href="index.html">首頁</a>
-                                    <span class="breadcrumb-separator">›</span>
-                                    <span>認識卓越</span>
-                                </nav>
-                            </div>
-                        </div>
-                    </div>
-                </header>
-
-                <!-- 內容區塊 -->
-                <section class="about-section">
-                    <div class="about-container">
-
-                        <!-- 主要內容 -->
-                        <div class="about-main">
-
-                            <!-- 學校概覽 -->
-                            <article class="content-card fade-in" id="overview">
-                                <div class="content-card__header">
-                                    <h2 class="content-card__title">
-                                        <span class="content-card__icon">📋</span>
-                                        學校概覽
-                                    </h2>
-                                </div>
-                                <div class="content-card__body">
-                                    <p>卓越科技大學創立於 1998
-                                        年,是一所以「應用導向、產學合作」為核心的綜合型科技大學。學校位於台灣北部科技走廊的核心地帶,佔地廣闊、環境優美,擁有先進的教學與研究設施。</p>
-                                    <p>經過二十餘年的發展,卓越科技大學已成為培育科技人才的重要搖籃,畢業生廣泛活躍於產業界、學術界及政府部門,為社會與產業發展做出卓越貢獻。</p>
-
-                                    <!-- 統計數據 -->
-                                    <div class="stats-grid">
-                                        <div class="stat-item">
-                                            <div class="stat-item__icon">👥</div>
-                                            <div class="stat-item__value">12,500+</div>
-                                            <div class="stat-item__label">在校學生</div>
-                                        </div>
-                                        <div class="stat-item">
-                                            <div class="stat-item__icon">👨‍🏫</div>
-                                            <div class="stat-item__value">850+</div>
-                                            <div class="stat-item__label">專任教師</div>
-                                        </div>
-                                        <div class="stat-item">
-                                            <div class="stat-item__icon">🏢</div>
-                                            <div class="stat-item__value">28</div>
-                                            <div class="stat-item__label">系所學程</div>
-                                        </div>
-                                        <div class="stat-item">
-                                            <div class="stat-item__icon">🏆</div>
-                                            <div class="stat-item__value">95%</div>
-                                            <div class="stat-item__label">就業率</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </article>
-
-                            <!-- 理念與願景 -->
-                            <article class="content-card fade-in" id="vision">
-                                <div class="content-card__header">
-                                    <h2 class="content-card__title">
-                                        <span class="content-card__icon">🎯</span>
-                                        理念與願景
-                                    </h2>
-                                </div>
-                                <div class="content-card__body">
-                                    <div class="vision-mission-grid">
-                                        <div class="vision-mission-item">
-                                            <h3>
-                                                <span class="vision-mission-item__icon">💡</span>
-                                                我們的理念
-                                            </h3>
-                                            <p>卓越科技大學秉持「創新、務實、宏觀」之校訓,致力於培育兼具專業技術與人文素養的跨領域人才。我們相信,科技的價值在於解決人類面臨的挑戰,而人文的深度則賦予科技正確的方向。
-                                            </p>
-                                            <p>我們強調理論與實務的結合,鼓勵學生勇於創新、敢於嘗試,培養具備國際視野與社會責任感的新世代領袖。</p>
-                                        </div>
-                                        <div class="vision-mission-item">
-                                            <h3>
-                                                <span class="vision-mission-item__icon">🌟</span>
-                                                我們的願景
-                                            </h3>
-                                            <p>我們的願景是成為亞太地區頂尖的應用型科技大學,以卓越的研究動能引領產業升級,並以開放的學習環境啟發學生的無限潛能,使其成為推動社會進步的世界公民。
-                                            </p>
-                                            <p>透過持續精進教學品質、深化產學合作、拓展國際交流,我們致力於打造一個充滿活力與創意的學習社群。</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </article>
-
-                            <!-- 歷史沿革 -->
-                            <article class="content-card fade-in" id="history">
-                                <div class="content-card__header">
-                                    <h2 class="content-card__title">
-                                        <span class="content-card__icon">📅</span>
-                                        歷史沿革
-                                    </h2>
-                                </div>
-                                <div class="content-card__body">
-                                    <div class="timeline">
-                                        <div class="timeline__item">
-                                            <span class="timeline__year">1998</span>
-                                            <div class="timeline__content">
-                                                <h4>創校奠基</h4>
-                                                <p>創校,原名「卓越技術學院」,設立工學院與管理學院,開始招收第一屆學生。首任校長由知名學者李明哲博士擔任,奠定學校發展的堅實基礎。</p>
-                                            </div>
-                                        </div>
-                                        <div class="timeline__item">
-                                            <span class="timeline__year">2005</span>
-                                            <div class="timeline__content">
-                                                <h4>擴大規模</h4>
-                                                <p>增設設計學院,並獲教育部評鑑為優等。同年啟用嶄新的圖書資訊大樓,提供師生更優質的學習與研究環境。學生人數突破 8,000 人。</p>
-                                            </div>
-                                        </div>
-                                        <div class="timeline__item">
-                                            <span class="timeline__year">2012</span>
-                                            <div class="timeline__content">
-                                                <h4>升格改制</h4>
-                                                <p>通過教育部審核,正式改制為「卓越科技大學」。同年成立國際學院,開設多項英語授課學程,積極推動國際化發展。</p>
-                                            </div>
-                                        </div>
-                                        <div class="timeline__item">
-                                            <span class="timeline__year">2020</span>
-                                            <div class="timeline__content">
-                                                <h4>創新發展</h4>
-                                                <p>成立「人工智慧與數據科學研究所」,邁向新世代科技領域。啟用智慧校園系統,整合各項服務,提升行政效率與學習體驗。</p>
-                                            </div>
-                                        </div>
-                                        <div class="timeline__item">
-                                            <span class="timeline__year">2024</span>
-                                            <div class="timeline__content">
-                                                <h4>邁向卓越</h4>
-                                                <p>榮獲教育部「教學卓越計畫」特優獎,並與多家國際知名企業簽訂產學合作協議,建立聯合研發中心,推動前瞻技術發展。</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </article>
-
-                            <!-- 辦學特色 -->
-                            <article class="content-card fade-in" id="features">
-                                <div class="content-card__header">
-                                    <h2 class="content-card__title">
-                                        <span class="content-card__icon">⭐</span>
-                                        辦學特色
-                                    </h2>
-                                </div>
-                                <div class="content-card__body">
-                                    <div class="features-grid">
-                                        <div class="feature-card">
-                                            <div class="feature-card__icon">🤝</div>
-                                            <h3 class="feature-card__title">產學合作</h3>
-                                            <p class="feature-card__content">與超過 300 家企業建立深度合作關係,提供學生實習與就業機會,實現學用合一。
-                                            </p>
-                                        </div>
-                                        <div class="feature-card">
-                                            <div class="feature-card__icon">🌏</div>
-                                            <h3 class="feature-card__title">國際交流</h3>
-                                            <p class="feature-card__content">與全球 50 所姊妹校建立交流合作,提供豐富的交換學生與雙聯學位計畫。</p>
-                                        </div>
-                                        <div class="feature-card">
-                                            <div class="feature-card__icon">💻</div>
-                                            <h3 class="feature-card__title">創新教學</h3>
-                                            <p class="feature-card__content">採用翻轉教室、問題導向學習等創新教學方法,培養學生自主學習與解決問題的能力。
-                                            </p>
-                                        </div>
-                                        <div class="feature-card">
-                                            <div class="feature-card__icon">🔬</div>
-                                            <h3 class="feature-card__title">研究卓越</h3>
-                                            <p class="feature-card__content">設有 15 個研究中心,聚焦前瞻技術研發,每年產出超過 500 篇國際論文。
-                                            </p>
-                                        </div>
-                                        <div class="feature-card">
-                                            <div class="feature-card__icon">🎨</div>
-                                            <h3 class="feature-card__title">全人教育</h3>
-                                            <p class="feature-card__content">重視品格教育與人文素養,開設多元通識課程與社團活動,培育身心健全的優秀人才。
-                                            </p>
-                                        </div>
-                                        <div class="feature-card">
-                                            <div class="feature-card__icon">🚀</div>
-                                            <h3 class="feature-card__title">創業育成</h3>
-                                            <p class="feature-card__content">設有創業育成中心,提供創業輔導、資金媒合與空間設備,協助學生實現創業夢想。
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </article>
-
-                            <!-- 校園景觀 -->
-                            <article class="content-card fade-in" id="campus">
-                                <div class="content-card__header">
-                                    <h2 class="content-card__title">
-                                        <span class="content-card__icon">🏫</span>
-                                        校園景觀
-                                    </h2>
-                                </div>
-                                <div class="content-card__body">
-                                    <p>卓越科技大學擁有優美的校園環境,結合現代建築與自然景觀,打造宜人的學習空間。校園內綠樹成蔭、四季花開,並設有生態湖、休憩廣場等休閒設施,讓師生在繁忙的學習之餘,也能享受大自然的美好。
-                                    </p>
-
-                                    <div class="campus-gallery">
-                                        <div class="gallery-item-wrapper" data-lightbox="image/library.jpg">
-                                            <img src="image/library.jpg" alt="校園景觀：圖書館" class="gallery-item">
-                                            <div class="gallery-item-overlay">
-                                                <div class="gallery-item-title">現代化圖書館</div>
-                                                <div class="gallery-item-description">藏書豐富、設施完善</div>
-                                            </div>
-                                        </div>
-                                        <div class="gallery-item-wrapper" data-lightbox="image/classroom.jpg">
-                                            <img src="image/classroom.jpg" alt="校園景觀：教室" class="gallery-item">
-                                            <div class="gallery-item-overlay">
-                                                <div class="gallery-item-title">智慧教室</div>
-                                                <div class="gallery-item-description">採用最新教學設備</div>
-                                            </div>
-                                        </div>
-                                        <div class="gallery-item-wrapper" data-lightbox="image/ecological_pond.jpg">
-                                            <img src="image/ecological_pond.jpg" alt="校園景觀：生態湖" class="gallery-item">
-                                            <div class="gallery-item-overlay">
-                                                <div class="gallery-item-title">生態湖</div>
-                                                <div class="gallery-item-description">校園中的自然綠洲</div>
-                                            </div>
-                                        </div>
-                                        <div class="gallery-item-wrapper" data-lightbox="image/basketball_court.jpg">
-                                            <img src="image/basketball_court.jpg" alt="校園景觀：籃球場" class="gallery-item">
-                                            <div class="gallery-item-overlay">
-                                                <div class="gallery-item-title">戶外運動場</div>
-                                                <div class="gallery-item-description">完善的體育設施</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </article>
-
-                            <!-- 教學設施 -->
-                            <article class="content-card fade-in" id="facilities">
-                                <div class="content-card__header">
-                                    <h2 class="content-card__title">
-                                        <span class="content-card__icon">🏗️</span>
-                                        教學設施
-                                    </h2>
-                                </div>
-                                <div class="content-card__body">
-                                    <div class="accordion">
-                                        <div class="accordion-item">
-                                            <div class="accordion-header">
-                                                <div class="accordion-title">
-                                                    <span>📚</span>
-                                                    圖書資訊中心
-                                                </div>
-                                                <span class="accordion-icon">▼</span>
-                                            </div>
-                                            <div class="accordion-content">
-                                                <div class="accordion-body">
-                                                    <p>圖書館藏書超過 50 萬冊,訂閱國內外期刊資料庫百餘種。設有自習室、討論室、多媒體視聽區等多元學習空間,提供 24
-                                                        小時電子資源查詢服務,滿足師生各種學習需求。</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="accordion-item">
-                                            <div class="accordion-header">
-                                                <span class="accordion-title">
-                                                    <span>🔬</span>
-                                                    實驗室與研究中心
-                                                </span>
-                                                <span class="accordion-icon">▼</span>
-                                            </div>
-                                            <div class="accordion-content">
-                                                <div class="accordion-body">
-                                                    <p>建置有先進的專業實驗室與研究中心,包括奈米科技實驗室、生物醫學工程中心、人工智慧研究所等,配備最新儀器設備,提供學生與研究人員優質的實驗與研究環境。
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="accordion-item">
-                                            <div class="accordion-header">
-                                                <span class="accordion-title">
-                                                    <span>💻</span>
-                                                    電腦教室
-                                                </span>
-                                                <span class="accordion-icon">▼</span>
-                                            </div>
-                                            <div class="accordion-content">
-                                                <div class="accordion-body">
-                                                    <p>設有多間電腦教室,配置高效能電腦設備,並安裝各類專業軟體,包括程式開發工具、繪圖軟體、工程模擬軟體等,滿足不同科系的教學需求。
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="accordion-item">
-                                            <div class="accordion-header">
-                                                <span class="accordion-title">
-                                                    <span>🏋️</span>
-                                                    運動設施
-                                                </span>
-                                                <span class="accordion-icon">▼</span>
-                                            </div>
-                                            <div class="accordion-content">
-                                                <div class="accordion-body">
-                                                    <p>體育館設有室內籃球場、羽球場、桌球室、健身房等設施。戶外運動場包括田徑場、網球場、游泳池等,提供師生完善的運動休閒環境,促進身心健康發展。
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="accordion-item">
-                                            <div class="accordion-header">
-                                                <span class="accordion-title">
-                                                    <span>🎭</span>
-                                                    藝文空間
-                                                </span>
-                                                <span class="accordion-icon">▼</span>
-                                            </div>
-                                            <div class="accordion-content">
-                                                <div class="accordion-body">
-                                                    <p>設有多功能演藝廳、藝術展覽廳、音樂練習室等藝文設施,定期舉辦各類藝文活動與展演,豐富校園文化生活,培養學生的藝術涵養與美學素養。
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </article>
-
-                            <!-- 學院系所 -->
-                            <article class="content-card fade-in" id="departments">
-                                <div class="content-card__header">
-                                    <h2 class="content-card__title">
-                                        <span class="content-card__icon">🎓</span>
-                                        學院系所
-                                    </h2>
-                                </div>
-                                <div class="content-card__body">
-                                    <div class="accordion">
-                                        <div class="accordion-item">
-                                            <div class="accordion-header">
-                                                <span class="accordion-title">
-                                                    <span>⚙️</span>
-                                                    工學院
-                                                </span>
-                                                <span class="accordion-icon">▼</span>
-                                            </div>
-                                            <div class="accordion-content">
-                                                <div class="accordion-body">
-                                                    <p><strong>系所包含:</strong> 機械工程系、電機工程系、電子工程系、資訊工程系、化學工程系、土木工程系、環境工程系
-                                                    </p>
-                                                    <p>工學院培育具備紮實理論基礎與實務能力的工程人才,強調跨領域整合與創新應用,畢業生深受業界肯定。</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="accordion-item">
-                                            <div class="accordion-header">
-                                                <span class="accordion-title">
-                                                    <span>💼</span>
-                                                    管理學院
-                                                </span>
-                                                <span class="accordion-icon">▼</span>
-                                            </div>
-                                            <div class="accordion-content">
-                                                <div class="accordion-body">
-                                                    <p><strong>系所包含:</strong> 企業管理系、財務金融系、國際貿易系、會計資訊系、資訊管理系、行銷與流通管理系</p>
-                                                    <p>管理學院致力於培養具備國際視野與管理實務能力的商業領袖,課程結合理論與實務,提供多元的實習與海外交流機會。</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="accordion-item">
-                                            <div class="accordion-header">
-                                                <span class="accordion-title">
-                                                    <span>🎨</span>
-                                                    設計學院
-                                                </span>
-                                                <span class="accordion-icon">▼</span>
-                                            </div>
-                                            <div class="accordion-content">
-                                                <div class="accordion-body">
-                                                    <p><strong>系所包含:</strong> 工業設計系、視覺傳達設計系、數位媒體設計系、室內設計系、時尚設計系</p>
-                                                    <p>設計學院以創意與美學為核心,培育具備設計思維與實踐能力的創意人才,學生作品屢獲國內外設計大獎肯定。</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="accordion-item">
-                                            <div class="accordion-header">
-                                                <span class="accordion-title">
-                                                    <span>🌐</span>
-                                                    國際學院
-                                                </span>
-                                                <span class="accordion-icon">▼</span>
-                                            </div>
-                                            <div class="accordion-content">
-                                                <div class="accordion-body">
-                                                    <p><strong>系所包含:</strong> 國際企業學位學程、應用外語系、觀光與餐旅管理系</p>
-                                                    <p>國際學院提供全英語授課環境,招收國際學生,促進文化交流,培養具備國際競爭力的全球化人才。</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </article>
-
-                            <!-- 研究發展 -->
-                            <article class="content-card fade-in" id="research">
-                                <div class="content-card__header">
-                                    <h2 class="content-card__title">
-                                        <span class="content-card__icon">🔬</span>
-                                        研究發展
-                                    </h2>
-                                </div>
-                                <div class="content-card__body">
-                                    <p>卓越科技大學積極推動研究發展,鼓勵教師投入前瞻性研究,並與產業界建立緊密的合作關係。學校設有多個研究中心,聚焦於人工智慧、物聯網、生物科技、綠色能源等重點領域。
-                                    </p>
-
-                                    <h3 class="mt-3 mb-2" style="color: var(--color-primary); font-weight: 600;">重點研究中心
-                                    </h3>
-                                    <ul
-                                        style="list-style: disc; padding-left: 2rem; color: var(--color-text-secondary);">
-                                        <li style="margin-bottom: 0.5rem;"><strong>人工智慧與數據科學研究所:</strong>
-                                            專注於機器學習、深度學習、大數據分析等前沿技術研發。</li>
-                                        <li style="margin-bottom: 0.5rem;"><strong>物聯網創新應用中心:</strong>
-                                            研發智慧城市、智慧製造、智慧醫療等物聯網應用解決方案。</li>
-                                        <li style="margin-bottom: 0.5rem;"><strong>生物科技研發中心:</strong>
-                                            從事生物製藥、基因工程、生物材料等領域研究。</li>
-                                        <li style="margin-bottom: 0.5rem;"><strong>綠色能源技術中心:</strong> 開發再生能源技術,推動永續發展。
-                                        </li>
-                                        <li style="margin-bottom: 0.5rem;"><strong>智慧製造研究中心:</strong> 結合工業 4.0
-                                            概念,提升製造業智慧化水準。</li>
-                                    </ul>
-
-                                    <h3 class="mt-3 mb-2" style="color: var(--color-primary); font-weight: 600;">研究成果亮點
-                                    </h3>
-                                    <p>近五年來,本校教師共發表國際期刊論文超過 2,500 篇,獲得專利超過 300 件,技術移轉金額累計達新台幣 5 億元,展現卓越的研發能量與產學合作成效。</p>
-                                </div>
-                            </article>
-
-                        </div>
-
-                        <!-- 右側資訊欄 -->
-                        <aside class="sidebar-aside">
-
-                            <!-- 快速連結 -->
-                            <div class="aside-card">
-                                <div class="aside-card__header">
-                                    ⚡ 快速連結
-                                </div>
-                                <div class="aside-card__body">
-                                    <ul class="quick-links">
-                                        <li class="quick-link-item">
-                                            <a href="#" class="quick-link">
-                                                <span class="quick-link__icon">📧</span>
-                                                <span>校長信箱</span>
-                                            </a>
-                                        </li>
-                                        <li class="quick-link-item">
-                                            <a href="#" class="quick-link">
-                                                <span class="quick-link__icon">📅</span>
-                                                <span>行事曆</span>
-                                            </a>
-                                        </li>
-                                        <li class="quick-link-item">
-                                            <a href="#" class="quick-link">
-                                                <span class="quick-link__icon">🏫</span>
-                                                <span>校園導覽</span>
-                                            </a>
-                                        </li>
-                                        <li class="quick-link-item">
-                                            <a href="#" class="quick-link">
-                                                <span class="quick-link__icon">📖</span>
-                                                <span>招生簡章</span>
-                                            </a>
-                                        </li>
-                                        <li class="quick-link-item">
-                                            <a href="#" class="quick-link">
-                                                <span class="quick-link__icon">💼</span>
-                                                <span>就業資訊</span>
-                                            </a>
-                                        </li>
-                                        <li class="quick-link-item">
-                                            <a href="#" class="quick-link">
-                                                <span class="quick-link__icon">🌐</span>
-                                                <span>國際交流</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <!-- 最新消息 -->
-                            <div class="aside-card">
-                                <div class="aside-card__header">
-                                    📰 最新消息
-                                </div>
-                                <div class="aside-card__body">
-                                    <article class="news-item">
-                                        <div class="news-item__date">2024.11.15</div>
-                                        <h4 class="news-item__title">本校榮獲教學卓越計畫特優獎</h4>
-                                        <p class="news-item__excerpt">教育部公布 2024 年教學卓越計畫評選結果,本校以創新教學模式與優異成果...</p>
-                                    </article>
-
-                                    <article class="news-item">
-                                        <div class="news-item__date">2024.11.10</div>
-                                        <h4 class="news-item__title">國際學術研討會圓滿落幕</h4>
-                                        <p class="news-item__excerpt">2024 年國際科技創新研討會於本校舉行,吸引來自全球 20 個國家...</p>
-                                    </article>
-
-                                    <article class="news-item">
-                                        <div class="news-item__date">2024.11.05</div>
-                                        <h4 class="news-item__title">學生團隊榮獲創業競賽首獎</h4>
-                                        <p class="news-item__excerpt">本校資訊工程系學生團隊參加全國大學創業競賽,以智慧農業解決方案...</p>
-                                    </article>
-                                </div>
-                            </div>
-
-                            <!-- 聯絡資訊 -->
-                            <div class="aside-card" id="contact">
-                                <div class="aside-card__header">
-                                    📞 聯絡我們
-                                </div>
-                                <div class="aside-card__body">
-                                    <ul class="contact-info">
-                                        <li class="contact-item">
-                                            <span class="contact-item__icon">📍</span>
-                                            <div class="contact-item__content">
-                                                <div class="contact-item__label">地址</div>
-                                                <div class="contact-item__value">台北市中正區大學路 100 號</div>
-                                            </div>
-                                        </li>
-                                        <li class="contact-item">
-                                            <span class="contact-item__icon">📞</span>
-                                            <div class="contact-item__content">
-                                                <div class="contact-item__label">電話</div>
-                                                <div class="contact-item__value">(02) 2345-6789</div>
-                                            </div>
-                                        </li>
-                                        <li class="contact-item">
-                                            <span class="contact-item__icon">📠</span>
-                                            <div class="contact-item__content">
-                                                <div class="contact-item__label">傳真</div>
-                                                <div class="contact-item__value">(02) 2345-6790</div>
-                                            </div>
-                                        </li>
-                                        <li class="contact-item">
-                                            <span class="contact-item__icon">📧</span>
-                                            <div class="contact-item__content">
-                                                <div class="contact-item__label">信箱</div>
-                                                <div class="contact-item__value">info@ctu.edu.tw</div>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                        </aside>
-
-                    </div>
-                </section>
-
-                <!-- Footer -->
-                <footer class="page-footer">
-                    <div class="footer-content">
-                        <div class="footer-section">
-                            <h3 class="footer-section__title">關於卓越</h3>
-                            <ul class="footer-links">
-                                <li><a href="#" class="footer-link">學校簡介</a></li>
-                                <li><a href="#" class="footer-link">組織架構</a></li>
-                                <li><a href="#" class="footer-link">校長的話</a></li>
-                                <li><a href="#" class="footer-link">校園地圖</a></li>
-                            </ul>
-                        </div>
-                        <div class="footer-section">
-                            <h3 class="footer-section__title">學生資源</h3>
-                            <ul class="footer-links">
-                                <li><a href="#" class="footer-link">學生入口網</a></li>
-                                <li><a href="#" class="footer-link">圖書館</a></li>
-                                <li><a href="#" class="footer-link">選課系統</a></li>
-                                <li><a href="#" class="footer-link">獎助學金</a></li>
-                            </ul>
-                        </div>
-                        <div class="footer-section">
-                            <h3 class="footer-section__title">招生資訊</h3>
-                            <ul class="footer-links">
-                                <li><a href="#" class="footer-link">大學部招生</a></li>
-                                <li><a href="#" class="footer-link">研究所招生</a></li>
-                                <li><a href="#" class="footer-link">國際學生</a></li>
-                                <li><a href="#" class="footer-link">推廣教育</a></li>
-                            </ul>
-                        </div>
-                        <div class="footer-section">
-                            <h3 class="footer-section__title">聯絡我們</h3>
-                            <ul class="footer-links">
-                                <li><a href="#" class="footer-link">聯絡方式</a></li>
-                                <li><a href="#" class="footer-link">交通資訊</a></li>
-                                <li><a href="#" class="footer-link">意見信箱</a></li>
-                                <li><a href="#" class="footer-link">常見問題</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="footer-bottom">
-                        <p>© 2025 N1146726. All rights reserved.</p>
-                    </div>
-                </footer>
-
-            </main>
-        </div>
-
-        <!-- 圖片燈箱 -->
-        <div class="lightbox" id="lightbox">
-            <div class="lightbox__content">
-                <button class="lightbox__close" id="lightboxClose">✕</button>
-                <img src="" alt="" class="lightbox__image" id="lightboxImage">
-                <div class="lightbox__caption" id="lightboxCaption"></div>
+        <!-- Footer -->
+        <footer class="page-footer">
+          <div class="footer-content">
+            <div class="footer-section">
+              <h3 class="footer-section__title">關於卓越</h3>
+              <ul class="footer-links">
+                <li><a href="#" class="footer-link">學校簡介</a></li>
+                <li><a href="#" class="footer-link">組織架構</a></li>
+                <li><a href="#" class="footer-link">校長的話</a></li>
+                <li><a href="#" class="footer-link">校園地圖</a></li>
+              </ul>
             </div>
-        </div>
+            <div class="footer-section">
+              <h3 class="footer-section__title">學生資源</h3>
+              <ul class="footer-links">
+                <li><a href="#" class="footer-link">學生入口網</a></li>
+                <li><a href="#" class="footer-link">圖書館</a></li>
+                <li><a href="#" class="footer-link">選課系統</a></li>
+                <li><a href="#" class="footer-link">獎助學金</a></li>
+              </ul>
+            </div>
+            <div class="footer-section">
+              <h3 class="footer-section__title">招生資訊</h3>
+              <ul class="footer-links">
+                <li><a href="#" class="footer-link">大學部招生</a></li>
+                <li><a href="#" class="footer-link">研究所招生</a></li>
+                <li><a href="#" class="footer-link">國際學生</a></li>
+                <li><a href="#" class="footer-link">推廣教育</a></li>
+              </ul>
+            </div>
+            <div class="footer-section">
+              <h3 class="footer-section__title">聯絡我們</h3>
+              <ul class="footer-links">
+                <li><a href="#" class="footer-link">聯絡方式</a></li>
+                <li><a href="#" class="footer-link">交通資訊</a></li>
+                <li><a href="#" class="footer-link">意見信箱</a></li>
+                <li><a href="#" class="footer-link">常見問題</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer-bottom">
+            <p>© 2025 N1146726. All rights reserved.</p>
+          </div>
+        </footer>
 
-        <!-- 行動版選單按鈕 -->
-        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="開啟選單">
-            ☰
-        </button>
+      </main>
+    </div>
 
-        <!-- 回到頂部按鈕 -->
-        <button class="back-to-top" id="backToTop" aria-label="回到頂部">
-            ↑
-        </button>
-    </body>
+    <!-- 圖片燈箱 -->
+    <div class="lightbox" id="lightbox">
+      <div class="lightbox__content">
+        <button class="lightbox__close" id="lightboxClose">✕</button>
+        <img src="" alt="" class="lightbox__image" id="lightboxImage">
+        <div class="lightbox__caption" id="lightboxCaption"></div>
+      </div>
+    </div>
+
+    <!-- 行動版選單按鈕 -->
+    <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="開啟選單">
+      ☰
+    </button>
+
+    <!-- 回到頂部按鈕 -->
+    <button class="back-to-top" id="backToTop" aria-label="回到頂部">
+      ↑
+    </button>
+  </body>
 
 </html>

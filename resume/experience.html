@@ -1,757 +1,747 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>工作經歷 - 個人履歷</title>
-        <link rel="stylesheet" href="css/global.css">
-        <link rel="stylesheet" href="css/experience.css">
-        <!-- js -->
-        <script src="js/experience.js" defer></script>
-    </head>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>工作經歷 - 個人履歷</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/experience.css">
+    <!-- js -->
+    <script src="js/experience.js" defer></script>
+  </head>
 
-    <body class="body">
+  <body class="body">
 
-        <!-- Header -->
-        <nav class="archer-nav" id="page-header-container">
-            <a class="archer-nav__logo" href="index.html">工作經歷</a>
-            <ul class="archer-nav__links">
-                <li>
-                    <a href="../index.html" class="page-nav__link page-nav__link--highlight">
-                        其他主題
-                    </a>
-                </li>
-                <li>
-                    <a href="index.html" class="page-nav__link">
-                        首頁
-                    </a>
-                </li>
-                <li>
-                    <a href="about-me.html">自我介紹</a>
-                </li>
-            </ul>
-        </nav>
+    <!-- Header -->
+    <nav class="archer-nav" id="page-header-container">
+      <a class="archer-nav__logo" href="index.html">工作經歷</a>
+      <ul class="archer-nav__links">
+        <li>
+          <a href="../index.html" class="page-nav__link page-nav__link--highlight">
+            其他主題
+          </a>
+        </li>
+        <li>
+          <a href="index.html" class="page-nav__link">
+            首頁
+          </a>
+        </li>
+        <li>
+          <a href="about-me.html">自我介紹</a>
+        </li>
+      </ul>
+    </nav>
 
-        <main class="main-content">
-            <div class="content-wrapper">
-                <!-- 主要內容區 -->
-                <div class="main-column">
-                    <div class="container container--wide">
+    <main class="main-content">
+      <div class="content-wrapper">
+        <!-- 主要內容區 -->
+        <div class="main-column">
+          <div class="container container--wide">
 
-                        <!-- 頁面標題 -->
-                        <div class="page-header">
-                            <h1 class="page-header__title">工作經歷與專案</h1>
-                            <div class="page-header__divider"></div>
-                        </div>
+            <!-- 頁面標題 -->
+            <div class="page-header">
+              <h1 class="page-header__title">工作經歷與專案</h1>
+              <div class="page-header__divider"></div>
+            </div>
 
-                        <!-- 技能統計區塊 -->
-                        <section id="stats" class="skills-stats-section">
-                            <h2 class="section-title section-title--with-icon">
-                                <span class="section-title__icon">📊</span>
-                                職涯統計
-                            </h2>
+            <!-- 技能統計區塊 -->
+            <section id="stats" class="skills-stats-section">
+              <h2 class="section-title section-title--with-icon">
+                <span class="section-title__icon">📊</span>
+                職涯統計
+              </h2>
 
-                            <div class="stats-grid">
-                                <div class="stat-card" data-value="5">
-                                    <span class="stat-card__value" data-target="5">0</span>
-                                    <span class="stat-card__label">年工作經驗</span>
-                                </div>
-                                <div class="stat-card" data-value="15">
-                                    <span class="stat-card__value" data-target="15">0</span>
-                                    <span class="stat-card__label">完成專案</span>
-                                </div>
-                                <div class="stat-card" data-value="20">
-                                    <span class="stat-card__value" data-target="20">0</span>
-                                    <span class="stat-card__label">技術技能</span>
-                                </div>
-                                <div class="stat-card" data-value="3">
-                                    <span class="stat-card__value" data-target="3">0</span>
-                                    <span class="stat-card__label">專業證照</span>
-                                </div>
-                            </div>
+              <div class="stats-grid">
+                <div class="stat-card" data-value="5">
+                  <span class="stat-card__value" data-target="5">0</span>
+                  <span class="stat-card__label">年工作經驗</span>
+                </div>
+                <div class="stat-card" data-value="15">
+                  <span class="stat-card__value" data-target="15">0</span>
+                  <span class="stat-card__label">完成專案</span>
+                </div>
+                <div class="stat-card" data-value="20">
+                  <span class="stat-card__value" data-target="20">0</span>
+                  <span class="stat-card__label">技術技能</span>
+                </div>
+                <div class="stat-card" data-value="3">
+                  <span class="stat-card__value" data-target="3">0</span>
+                  <span class="stat-card__label">專業證照</span>
+                </div>
+              </div>
 
-                            <!-- 技能展示 - 星級評分 -->
-                            <div class="skills-display">
-                                <div class="skill-category">
-                                    <h3 class="skill-category__title">
-                                        <span class="skill-category__icon">💻</span>
-                                        前端技術
-                                    </h3>
-                                    <div class="skill-items">
-                                        <div class="skill-item">
-                                            <div class="skill-item__info">
-                                                <span class="skill-item__name">Vue.js / React</span>
-                                                <span class="skill-item__level">
-                                                    <span class="skill-item__badge skill-item__badge--expert">專家級</span>
-                                                    5年以上經驗
-                                                </span>
-                                            </div>
-                                            <div class="skill-item__rating">
-                                                <span class="skill-star skill-star--active">★</span>
-                                                <span class="skill-star skill-star--active">★</span>
-                                                <span class="skill-star skill-star--active">★</span>
-                                                <span class="skill-star skill-star--active">★</span>
-                                                <span class="skill-star skill-star--active">★</span>
-                                            </div>
-                                        </div>
-
-                                        <div class="skill-item">
-                                            <div class="skill-item__info">
-                                                <span class="skill-item__name">JavaScript / TypeScript</span>
-                                                <span class="skill-item__level">
-                                                    <span class="skill-item__badge skill-item__badge--expert">專家級</span>
-                                                    5年以上經驗
-                                                </span>
-                                            </div>
-                                            <div class="skill-item__rating">
-                                                <span class="skill-star skill-star--active">★</span>
-                                                <span class="skill-star skill-star--active">★</span>
-                                                <span class="skill-star skill-star--active">★</span>
-                                                <span class="skill-star skill-star--active">★</span>
-                                                <span class="skill-star skill-star--active">★</span>
-                                            </div>
-                                        </div>
-
-                                        <div class="skill-item">
-                                            <div class="skill-item__info">
-                                                <span class="skill-item__name">HTML5 / CSS3 / SCSS</span>
-                                                <span class="skill-item__level">
-                                                    <span class="skill-item__badge skill-item__badge--expert">專家級</span>
-                                                    5年以上經驗
-                                                </span>
-                                            </div>
-                                            <div class="skill-item__rating">
-                                                <span class="skill-star skill-star--active">★</span>
-                                                <span class="skill-star skill-star--active">★</span>
-                                                <span class="skill-star skill-star--active">★</span>
-                                                <span class="skill-star skill-star--active">★</span>
-                                                <span class="skill-star skill-star--active">★</span>
-                                            </div>
-                                        </div>
-
-                                        <div class="skill-item">
-                                            <div class="skill-item__info">
-                                                <span class="skill-item__name">Webpack / Vite</span>
-                                                <span class="skill-item__level">
-                                                    <span
-                                                        class="skill-item__badge skill-item__badge--advanced">熟練</span>
-                                                    3年以上經驗
-                                                </span>
-                                            </div>
-                                            <div class="skill-item__rating">
-                                                <span class="skill-star skill-star--active">★</span>
-                                                <span class="skill-star skill-star--active">★</span>
-                                                <span class="skill-star skill-star--active">★</span>
-                                                <span class="skill-star skill-star--active">★</span>
-                                                <span class="skill-star">★</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="skill-category">
-                                    <h3 class="skill-category__title">
-                                        <span class="skill-category__icon">⚙️</span>
-                                        後端技術
-                                    </h3>
-                                    <div class="skill-items">
-                                        <div class="skill-item">
-                                            <div class="skill-item__info">
-                                                <span class="skill-item__name">Laravel (PHP)</span>
-                                                <span class="skill-item__level">
-                                                    <span
-                                                        class="skill-item__badge skill-item__badge--advanced">熟練</span>
-                                                    4年以上經驗
-                                                </span>
-                                            </div>
-                                            <div class="skill-item__rating">
-                                                <span class="skill-star skill-star--active">★</span>
-                                                <span class="skill-star skill-star--active">★</span>
-                                                <span class="skill-star skill-star--active">★</span>
-                                                <span class="skill-star skill-star--active">★</span>
-                                                <span class="skill-star skill-star--active">★</span>
-                                            </div>
-                                        </div>
-
-                                        <div class="skill-item">
-                                            <div class="skill-item__info">
-                                                <span class="skill-item__name">Spring Boot (Java)</span>
-                                                <span class="skill-item__level">
-                                                    <span
-                                                        class="skill-item__badge skill-item__badge--advanced">熟練</span>
-                                                    3年以上經驗
-                                                </span>
-                                            </div>
-                                            <div class="skill-item__rating">
-                                                <span class="skill-star skill-star--active">★</span>
-                                                <span class="skill-star skill-star--active">★</span>
-                                                <span class="skill-star skill-star--active">★</span>
-                                                <span class="skill-star skill-star--active">★</span>
-                                                <span class="skill-star">★</span>
-                                            </div>
-                                        </div>
-
-                                        <div class="skill-item">
-                                            <div class="skill-item__info">
-                                                <span class="skill-item__name">MySQL / PostgreSQL</span>
-                                                <span class="skill-item__level">
-                                                    <span
-                                                        class="skill-item__badge skill-item__badge--advanced">熟練</span>
-                                                    4年以上經驗
-                                                </span>
-                                            </div>
-                                            <div class="skill-item__rating">
-                                                <span class="skill-star skill-star--active">★</span>
-                                                <span class="skill-star skill-star--active">★</span>
-                                                <span class="skill-star skill-star--active">★</span>
-                                                <span class="skill-star skill-star--active">★</span>
-                                                <span class="skill-star">★</span>
-                                            </div>
-                                        </div>
-
-                                        <div class="skill-item">
-                                            <div class="skill-item__info">
-                                                <span class="skill-item__name">RESTful API 設計</span>
-                                                <span class="skill-item__level">
-                                                    <span class="skill-item__badge skill-item__badge--expert">專家級</span>
-                                                    5年以上經驗
-                                                </span>
-                                            </div>
-                                            <div class="skill-item__rating">
-                                                <span class="skill-star skill-star--active">★</span>
-                                                <span class="skill-star skill-star--active">★</span>
-                                                <span class="skill-star skill-star--active">★</span>
-                                                <span class="skill-star skill-star--active">★</span>
-                                                <span class="skill-star skill-star--active">★</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="skill-category">
-                                    <h3 class="skill-category__title">
-                                        <span class="skill-category__icon">☁️</span>
-                                        DevOps & 雲端服務
-                                    </h3>
-                                    <div class="skill-items">
-                                        <div class="skill-item">
-                                            <div class="skill-item__info">
-                                                <span class="skill-item__name">Docker / Kubernetes</span>
-                                                <span class="skill-item__level">
-                                                    <span
-                                                        class="skill-item__badge skill-item__badge--advanced">熟練</span>
-                                                    3年以上經驗
-                                                </span>
-                                            </div>
-                                            <div class="skill-item__rating">
-                                                <span class="skill-star skill-star--active">★</span>
-                                                <span class="skill-star skill-star--active">★</span>
-                                                <span class="skill-star skill-star--active">★</span>
-                                                <span class="skill-star skill-star--active">★</span>
-                                                <span class="skill-star">★</span>
-                                            </div>
-                                        </div>
-
-                                        <div class="skill-item">
-                                            <div class="skill-item__info">
-                                                <span class="skill-item__name">AWS (EC2, S3, RDS)</span>
-                                                <span class="skill-item__level">
-                                                    <span
-                                                        class="skill-item__badge skill-item__badge--advanced">熟練</span>
-                                                    3年以上經驗
-                                                </span>
-                                            </div>
-                                            <div class="skill-item__rating">
-                                                <span class="skill-star skill-star--active">★</span>
-                                                <span class="skill-star skill-star--active">★</span>
-                                                <span class="skill-star skill-star--active">★</span>
-                                                <span class="skill-star skill-star--active">★</span>
-                                                <span class="skill-star">★</span>
-                                            </div>
-                                        </div>
-
-                                        <div class="skill-item">
-                                            <div class="skill-item__info">
-                                                <span class="skill-item__name">CI/CD (GitLab, Jenkins)</span>
-                                                <span class="skill-item__level">
-                                                    <span
-                                                        class="skill-item__badge skill-item__badge--advanced">熟練</span>
-                                                    3年以上經驗
-                                                </span>
-                                            </div>
-                                            <div class="skill-item__rating">
-                                                <span class="skill-star skill-star--active">★</span>
-                                                <span class="skill-star skill-star--active">★</span>
-                                                <span class="skill-star skill-star--active">★</span>
-                                                <span class="skill-star skill-star--active">★</span>
-                                                <span class="skill-star">★</span>
-                                            </div>
-                                        </div>
-
-                                        <div class="skill-item">
-                                            <div class="skill-item__info">
-                                                <span class="skill-item__name">Linux 系統管理</span>
-                                                <span class="skill-item__level">
-                                                    <span
-                                                        class="skill-item__badge skill-item__badge--intermediate">中等</span>
-                                                    2年以上經驗
-                                                </span>
-                                            </div>
-                                            <div class="skill-item__rating">
-                                                <span class="skill-star skill-star--active">★</span>
-                                                <span class="skill-star skill-star--active">★</span>
-                                                <span class="skill-star skill-star--active">★</span>
-                                                <span class="skill-star">★</span>
-                                                <span class="skill-star">★</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </section>
-
-                        <!-- 工作經歷區塊 -->
-                        <section id="experience" class="experience-section">
-                            <h2 class="section-title section-title--with-icon">
-                                <span class="section-title__icon">💼</span>
-                                工作經歷
-                            </h2>
-
-                            <div class="timeline">
-                                <div class="timeline__line"></div>
-
-                                <!-- 時間軸項目 1 -->
-                                <div class="timeline__item">
-                                    <div class="timeline__dot"></div>
-                                    <div class="timeline-card">
-                                        <div class="timeline-card__header">
-                                            <div class="timeline-card__info">
-                                                <h3 class="timeline-card__position">資深全端工程師</h3>
-                                                <p class="timeline-card__company">科技創新股份有限公司</p>
-                                            </div>
-                                            <span class="timeline-card__period">2022 - 至今</span>
-                                        </div>
-                                        <p class="timeline-card__summary">
-                                            負責公司核心產品的前後端開發與維護,帶領團隊完成多個重要專案。
-                                        </p>
-                                        <ul class="achievement-list">
-                                            <li class="achievement-list__item">
-                                                <span class="achievement-list__icon">✓</span>
-                                                <span>設計並實作電商平台,提升系統效能 40%</span>
-                                            </li>
-                                            <li class="achievement-list__item">
-                                                <span class="achievement-list__icon">✓</span>
-                                                <span>導入 CI/CD 流程,縮短部署時間 60%</span>
-                                            </li>
-                                            <li class="achievement-list__item">
-                                                <span class="achievement-list__icon">✓</span>
-                                                <span>指導並培訓 3 位初級工程師</span>
-                                            </li>
-                                        </ul>
-                                        <div class="tech-tags">
-                                            <span class="tech-tag tech-tag--blue">Vue.js</span>
-                                            <span class="tech-tag tech-tag--green">Laravel</span>
-                                            <span class="tech-tag tech-tag--purple">PostgreSQL</span>
-                                            <span class="tech-tag tech-tag--yellow">AWS</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- 時間軸項目 2 -->
-                                <div class="timeline__item">
-                                    <div class="timeline__dot"></div>
-                                    <div class="timeline-card">
-                                        <div class="timeline-card__header">
-                                            <div class="timeline-card__info">
-                                                <h3 class="timeline-card__position">全端工程師</h3>
-                                                <p class="timeline-card__company">網路科技有限公司</p>
-                                            </div>
-                                            <span class="timeline-card__period">2020 - 2022</span>
-                                        </div>
-                                        <p class="timeline-card__summary">
-                                            參與多個客戶專案的開發,從需求分析到產品上線,累積豐富的實戰經驗。
-                                        </p>
-                                        <ul class="achievement-list">
-                                            <li class="achievement-list__item">
-                                                <span class="achievement-list__icon">✓</span>
-                                                <span>開發後台管理系統,支援 10 萬+用戶資料管理</span>
-                                            </li>
-                                            <li class="achievement-list__item">
-                                                <span class="achievement-list__icon">✓</span>
-                                                <span>優化前端效能,首屏載入速度提升 50%</span>
-                                            </li>
-                                            <li class="achievement-list__item">
-                                                <span class="achievement-list__icon">✓</span>
-                                                <span>建立元件庫,提升團隊開發效率</span>
-                                            </li>
-                                        </ul>
-                                        <div class="tech-tags">
-                                            <span class="tech-tag tech-tag--blue">React</span>
-                                            <span class="tech-tag tech-tag--green">Spring Boot</span>
-                                            <span class="tech-tag tech-tag--purple">MySQL</span>
-                                            <span class="tech-tag tech-tag--yellow">Docker</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- 時間軸項目 3 -->
-                                <div class="timeline__item">
-                                    <div class="timeline__dot"></div>
-                                    <div class="timeline-card">
-                                        <div class="timeline-card__header">
-                                            <div class="timeline-card__info">
-                                                <h3 class="timeline-card__position">前端工程師</h3>
-                                                <p class="timeline-card__company">軟體開發公司</p>
-                                            </div>
-                                            <span class="timeline-card__period">2019 - 2020</span>
-                                        </div>
-                                        <p class="timeline-card__summary">
-                                            負責公司產品的前端介面開發與維護,與 UI/UX 設計師密切合作。
-                                        </p>
-                                        <ul class="achievement-list">
-                                            <li class="achievement-list__item">
-                                                <span class="achievement-list__icon">✓</span>
-                                                <span>重構老舊系統,採用現代化前端框架</span>
-                                            </li>
-                                            <li class="achievement-list__item">
-                                                <span class="achievement-list__icon">✓</span>
-                                                <span>實作響應式設計,支援多種裝置</span>
-                                            </li>
-                                            <li class="achievement-list__item">
-                                                <span class="achievement-list__icon">✓</span>
-                                                <span>整合第三方 API 服務</span>
-                                            </li>
-                                        </ul>
-                                        <div class="tech-tags">
-                                            <span class="tech-tag tech-tag--blue">Vue.js</span>
-                                            <span class="tech-tag tech-tag--indigo">TypeScript</span>
-                                            <span class="tech-tag tech-tag--pink">SCSS</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </section>
-
-                        <!-- 專案作品區塊 -->
-                        <section id="projects" class="projects-section">
-                            <h2 class="section-title section-title--with-icon">
-                                <span class="section-title__icon">🚀</span>
-                                專案作品
-                            </h2>
-
-                            <div class="projects-grid">
-
-                                <div class="project-card">
-                                    <div class="project-card__icon">🛒</div>
-                                    <h3 class="project-card__title">電商平台系統</h3>
-                                    <p class="project-card__description">
-                                        完整的電商解決方案,包含商品管理、訂單處理、金流串接等功能,支援高併發交易。
-                                    </p>
-                                    <div class="tech-tags">
-                                        <span class="tech-tag tech-tag--blue">Vue.js</span>
-                                        <span class="tech-tag tech-tag--green">Laravel</span>
-                                        <span class="tech-tag tech-tag--purple">Redis</span>
-                                        <span class="tech-tag tech-tag--yellow">AWS</span>
-                                    </div>
-                                </div>
-
-                                <div class="project-card">
-                                    <div class="project-card__icon">📊</div>
-                                    <h3 class="project-card__title">數據分析儀表板</h3>
-                                    <p class="project-card__description">
-                                        即時數據視覺化平台,提供多維度數據分析與報表生成功能。
-                                    </p>
-                                    <div class="tech-tags">
-                                        <span class="tech-tag tech-tag--orange">D3.js</span>
-                                        <span class="tech-tag tech-tag--blue">Vue.js</span>
-                                        <span class="tech-tag tech-tag--yellow">Python</span>
-                                    </div>
-                                </div>
-
-                                <div class="project-card">
-                                    <div class="project-card__icon">🎨</div>
-                                    <h3 class="project-card__title">設計系統建立</h3>
-                                    <p class="project-card__description">
-                                        建立統一的設計系統與元件庫,提升團隊開發效率與產品一致性。
-                                    </p>
-                                    <div class="tech-tags">
-                                        <span class="tech-tag tech-tag--pink">Storybook</span>
-                                        <span class="tech-tag tech-tag--blue">React</span>
-                                        <span class="tech-tag tech-tag--indigo">Tailwind</span>
-                                    </div>
-                                </div>
-
-                                <div class="project-card">
-                                    <div class="project-card__icon">🔐</div>
-                                    <h3 class="project-card__title">企業級權限管理系統</h3>
-                                    <p class="project-card__description">
-                                        提供細緻的角色權限控制,支援多租戶架構與 SSO 單一登入功能。
-                                    </p>
-                                    <div class="tech-tags">
-                                        <span class="tech-tag tech-tag--green">Spring Boot</span>
-                                        <span class="tech-tag tech-tag--blue">React</span>
-                                        <span class="tech-tag tech-tag--red">Redis</span>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </section>
-
-                        <!-- 學歷與證照區塊 -->
-                        <section id="education" class="education-section">
-                            <h2 class="section-title section-title--with-icon">
-                                <span class="section-title__icon">🎓</span>
-                                學歷與證照
-                            </h2>
-
-                            <div class="education-content">
-
-                                <!-- 學歷卡片 -->
-                                <div class="education-card">
-                                    <div class="education-card__header">
-                                        <div class="education-card__info">
-                                            <h3 class="education-card__school">國立科技大學</h3>
-                                            <p class="education-card__degree">資訊工程系 學士</p>
-                                            <p class="education-card__period">2015 - 2019</p>
-                                        </div>
-                                        <div class="education-card__icon">🏫</div>
-                                    </div>
-                                </div>
-
-                                <!-- 證照卡片 -->
-                                <div class="certifications-card">
-                                    <h3 class="certifications-card__title">
-                                        <span class="certifications-card__icon">📜</span>
-                                        專業證照
-                                    </h3>
-                                    <div class="certifications-list">
-                                        <div class="certification-item certification-item--blue">
-                                            <span class="certification-item__check">✓</span>
-                                            <span class="certification-item__name">AWS Certified Developer</span>
-                                        </div>
-                                        <div class="certification-item certification-item--green">
-                                            <span class="certification-item__check">✓</span>
-                                            <span class="certification-item__name">Google Analytics Certificate</span>
-                                        </div>
-                                        <div class="certification-item certification-item--blue">
-                                            <span class="certification-item__check">✓</span>
-                                            <span class="certification-item__name">Oracle Certified Java
-                                                Programmer</span>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </section>
-
-                        <!-- 推薦評價 -->
-                        <section id="testimonials" class="testimonials-section">
-                            <h2 class="section-title section-title--with-icon">
-                                <span class="section-title__icon">💬</span>
-                                推薦評價
-                            </h2>
-
-                            <div class="testimonials-grid">
-
-                                <div class="testimonial-card">
-                                    <p class="testimonial-card__text">
-                                        他對程式碼品質的堅持與解決複雜問題的能力,對我們團隊的貢獻卓著。尤其在導入 CI/CD 流程時,他的規劃讓部署效率大幅提升。
-                                    </p>
-                                    <div class="testimonial-card__author">
-                                        <span class="testimonial-card__name">王曉明</span>
-                                        <span class="testimonial-card__role">前技術主管 / 科技創新股份有限公司</span>
-                                    </div>
-                                </div>
-
-                                <div class="testimonial-card">
-                                    <p class="testimonial-card__text">
-                                        在電商平台專案中,他展現了出色的前端架構能力。他所建立的元件庫不僅易於維護,也讓團隊的開發速度加快許多。
-                                    </p>
-                                    <div class="testimonial-card__author">
-                                        <span class="testimonial-card__name">陳怡君</span>
-                                        <span class="testimonial-card__role">資深產品經理 / 網路科技有限公司</span>
-                                    </div>
-                                </div>
-
-                            </div>
-                        </section>
-
-                        <!-- 技術文章 -->
-                        <section id="articles" class="articles-section">
-                            <h2 class="section-title section-title--with-icon">
-                                <span class="section-title__icon">✍️</span>
-                                技術文章
-                            </h2>
-                            <div class="articles-list">
-                                <div class="article-card">
-                                    <div class="article-card__content">
-                                        <span class="article-card__meta">2025-10-20 / Medium</span>
-                                        <h3 class="article-card__title">
-                                            <a href="#" target="_blank" rel="noopener noreferrer">
-                                                深入探討 Vue 3 Composition API 與 React Hooks 的差異
-                                            </a>
-                                        </h3>
-                                        <p class="article-card__excerpt">
-                                            一篇深入分析兩種現代前端框架狀態管理與邏輯複用機制的文章...
-                                        </p>
-                                    </div>
-                                    <a href="#" class="article-card__link" target="_blank" rel="noopener noreferrer">
-                                        閱讀全文 &rarr;
-                                    </a>
-                                </div>
-                                <div class="article-card">
-                                    <div class="article-card__content">
-                                        <span class="article-card__meta">2025-07-15 / 個人部落格</span>
-                                        <h3 class="article-card__title">
-                                            <a href="#" target="_blank" rel="noopener noreferrer">
-                                                使用 Laravel 與 AWS S3 實作高效率檔案上傳
-                                            </a>
-                                        </h3>
-                                        <p class="article-card__excerpt">
-                                            一篇關於如何整合後端框架 Laravel 與 AWS S3 雲端儲存服務的實作教學...
-                                        </p>
-                                    </div>
-                                    <a href="#" class="article-card__link" target="_blank" rel="noopener noreferrer">
-                                        閱讀全文 &rarr;
-                                    </a>
-                                </div>
-                            </div>
-                        </section>
+              <!-- 技能展示 - 星級評分 -->
+              <div class="skills-display">
+                <div class="skill-category">
+                  <h3 class="skill-category__title">
+                    <span class="skill-category__icon">💻</span>
+                    前端技術
+                  </h3>
+                  <div class="skill-items">
+                    <div class="skill-item">
+                      <div class="skill-item__info">
+                        <span class="skill-item__name">Vue.js / React</span>
+                        <span class="skill-item__level">
+                          <span class="skill-item__badge skill-item__badge--expert">專家級</span>
+                          5年以上經驗
+                        </span>
+                      </div>
+                      <div class="skill-item__rating">
+                        <span class="skill-star skill-star--active">★</span>
+                        <span class="skill-star skill-star--active">★</span>
+                        <span class="skill-star skill-star--active">★</span>
+                        <span class="skill-star skill-star--active">★</span>
+                        <span class="skill-star skill-star--active">★</span>
+                      </div>
                     </div>
+
+                    <div class="skill-item">
+                      <div class="skill-item__info">
+                        <span class="skill-item__name">JavaScript / TypeScript</span>
+                        <span class="skill-item__level">
+                          <span class="skill-item__badge skill-item__badge--expert">專家級</span>
+                          5年以上經驗
+                        </span>
+                      </div>
+                      <div class="skill-item__rating">
+                        <span class="skill-star skill-star--active">★</span>
+                        <span class="skill-star skill-star--active">★</span>
+                        <span class="skill-star skill-star--active">★</span>
+                        <span class="skill-star skill-star--active">★</span>
+                        <span class="skill-star skill-star--active">★</span>
+                      </div>
+                    </div>
+
+                    <div class="skill-item">
+                      <div class="skill-item__info">
+                        <span class="skill-item__name">HTML5 / CSS3 / SCSS</span>
+                        <span class="skill-item__level">
+                          <span class="skill-item__badge skill-item__badge--expert">專家級</span>
+                          5年以上經驗
+                        </span>
+                      </div>
+                      <div class="skill-item__rating">
+                        <span class="skill-star skill-star--active">★</span>
+                        <span class="skill-star skill-star--active">★</span>
+                        <span class="skill-star skill-star--active">★</span>
+                        <span class="skill-star skill-star--active">★</span>
+                        <span class="skill-star skill-star--active">★</span>
+                      </div>
+                    </div>
+
+                    <div class="skill-item">
+                      <div class="skill-item__info">
+                        <span class="skill-item__name">Webpack / Vite</span>
+                        <span class="skill-item__level">
+                          <span class="skill-item__badge skill-item__badge--advanced">熟練</span>
+                          3年以上經驗
+                        </span>
+                      </div>
+                      <div class="skill-item__rating">
+                        <span class="skill-star skill-star--active">★</span>
+                        <span class="skill-star skill-star--active">★</span>
+                        <span class="skill-star skill-star--active">★</span>
+                        <span class="skill-star skill-star--active">★</span>
+                        <span class="skill-star">★</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
-                <!-- 側邊欄 -->
-                <aside class="sidebar-column">
-                    <div class="sidebar">
-                        <!-- 快速導航 -->
-                        <div class="sidebar-widget">
-                            <h3 class="sidebar-widget__title">
-                                <span class="sidebar-widget__icon">🧭</span>
-                                快速導航
-                            </h3>
-                            <nav class="quick-nav">
-                                <ul class="quick-nav__list">
-                                    <li class="quick-nav__item">
-                                        <a href="#stats" class="quick-nav__link">
-                                            <span class="quick-nav__item-icon">📊</span>
-                                            <span>職涯統計</span>
-                                        </a>
-                                    </li>
-                                    <li class="quick-nav__item">
-                                        <a href="#experience" class="quick-nav__link">
-                                            <span class="quick-nav__item-icon">💼</span>
-                                            <span>工作經歷</span>
-                                        </a>
-                                    </li>
-                                    <li class="quick-nav__item">
-                                        <a href="#projects" class="quick-nav__link">
-                                            <span class="quick-nav__item-icon">🚀</span>
-                                            <span>專案作品</span>
-                                        </a>
-                                    </li>
-                                    <li class="quick-nav__item">
-                                        <a href="#education" class="quick-nav__link">
-                                            <span class="quick-nav__item-icon">🎓</span>
-                                            <span>學歷證照</span>
-                                        </a>
-                                    </li>
-                                    <li class="quick-nav__item">
-                                        <a href="#testimonials" class="quick-nav__link">
-                                            <span class="quick-nav__item-icon">💬</span>
-                                            <span>推薦評價</span>
-                                        </a>
-                                    </li>
-                                    <li class="quick-nav__item">
-                                        <a href="#articles" class="quick-nav__link">
-                                            <span class="quick-nav__item-icon">✍️</span>
-                                            <span>技術文章</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
-
-                        <!-- 聯絡資訊 -->
-                        <div class="sidebar-widget">
-                            <h3 class="sidebar-widget__title">
-                                <span class="sidebar-widget__icon">📧</span>
-                                聯絡資訊
-                            </h3>
-                            <div class="contact-info">
-                                <ul class="contact-info__list">
-                                    <li class="contact-info__item">
-                                        <span class="contact-info__icon">📱</span>
-                                        <span>0912-345-678</span>
-                                    </li>
-                                    <li class="contact-info__item">
-                                        <span class="contact-info__icon">✉️</span>
-                                        <a href="mailto:example@email.com" class="contact-info__link">
-                                            example@email.com
-                                        </a>
-                                    </li>
-                                    <li class="contact-info__item">
-                                        <span class="contact-info__icon">💼</span>
-                                        <a href="#" class="contact-info__link" target="_blank"
-                                            rel="noopener noreferrer">
-                                            LinkedIn
-                                        </a>
-                                    </li>
-                                    <li class="contact-info__item">
-                                        <span class="contact-info__icon">💻</span>
-                                        <a href="#" class="contact-info__link" target="_blank"
-                                            rel="noopener noreferrer">
-                                            GitHub
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <!-- 技能標籤雲 -->
-                        <div class="sidebar-widget">
-                            <h3 class="sidebar-widget__title">
-                                <span class="sidebar-widget__icon">🏷️</span>
-                                技能標籤
-                            </h3>
-                            <div class="skill-tags">
-                                <span class="skill-tag">Vue.js</span>
-                                <span class="skill-tag">React</span>
-                                <span class="skill-tag">Laravel</span>
-                                <span class="skill-tag">Spring Boot</span>
-                                <span class="skill-tag">TypeScript</span>
-                                <span class="skill-tag">Docker</span>
-                                <span class="skill-tag">AWS</span>
-                                <span class="skill-tag">MySQL</span>
-                                <span class="skill-tag">Redis</span>
-                                <span class="skill-tag">Git</span>
-                                <span class="skill-tag">CI/CD</span>
-                                <span class="skill-tag">RESTful API</span>
-                            </div>
-                        </div>
-
-                        <!-- 下載履歷 -->
-                        <div class="sidebar-widget">
-                            <a href="upload/個人履歷.pdf" class="download-resume" download>
-                                <span>📄</span>
-                                <span>下載完整履歷</span>
-                            </a>
-                        </div>
+                <div class="skill-category">
+                  <h3 class="skill-category__title">
+                    <span class="skill-category__icon">⚙️</span>
+                    後端技術
+                  </h3>
+                  <div class="skill-items">
+                    <div class="skill-item">
+                      <div class="skill-item__info">
+                        <span class="skill-item__name">Laravel (PHP)</span>
+                        <span class="skill-item__level">
+                          <span class="skill-item__badge skill-item__badge--advanced">熟練</span>
+                          4年以上經驗
+                        </span>
+                      </div>
+                      <div class="skill-item__rating">
+                        <span class="skill-star skill-star--active">★</span>
+                        <span class="skill-star skill-star--active">★</span>
+                        <span class="skill-star skill-star--active">★</span>
+                        <span class="skill-star skill-star--active">★</span>
+                        <span class="skill-star skill-star--active">★</span>
+                      </div>
                     </div>
-                </aside>
-            </div>
-        </main>
 
-        <!-- Footer -->
-        <footer id="page-footer-container">
-            <div class="page-footer">
-                <p class="page-footer__text">
-                    © 2025 N1146721. All rights reserved.
-                    Design inspired by <a href="#" target="_blank" rel="noopener noreferrer">Archer</a>.
-                </p>
+                    <div class="skill-item">
+                      <div class="skill-item__info">
+                        <span class="skill-item__name">Spring Boot (Java)</span>
+                        <span class="skill-item__level">
+                          <span class="skill-item__badge skill-item__badge--advanced">熟練</span>
+                          3年以上經驗
+                        </span>
+                      </div>
+                      <div class="skill-item__rating">
+                        <span class="skill-star skill-star--active">★</span>
+                        <span class="skill-star skill-star--active">★</span>
+                        <span class="skill-star skill-star--active">★</span>
+                        <span class="skill-star skill-star--active">★</span>
+                        <span class="skill-star">★</span>
+                      </div>
+                    </div>
+
+                    <div class="skill-item">
+                      <div class="skill-item__info">
+                        <span class="skill-item__name">MySQL / PostgreSQL</span>
+                        <span class="skill-item__level">
+                          <span class="skill-item__badge skill-item__badge--advanced">熟練</span>
+                          4年以上經驗
+                        </span>
+                      </div>
+                      <div class="skill-item__rating">
+                        <span class="skill-star skill-star--active">★</span>
+                        <span class="skill-star skill-star--active">★</span>
+                        <span class="skill-star skill-star--active">★</span>
+                        <span class="skill-star skill-star--active">★</span>
+                        <span class="skill-star">★</span>
+                      </div>
+                    </div>
+
+                    <div class="skill-item">
+                      <div class="skill-item__info">
+                        <span class="skill-item__name">RESTful API 設計</span>
+                        <span class="skill-item__level">
+                          <span class="skill-item__badge skill-item__badge--expert">專家級</span>
+                          5年以上經驗
+                        </span>
+                      </div>
+                      <div class="skill-item__rating">
+                        <span class="skill-star skill-star--active">★</span>
+                        <span class="skill-star skill-star--active">★</span>
+                        <span class="skill-star skill-star--active">★</span>
+                        <span class="skill-star skill-star--active">★</span>
+                        <span class="skill-star skill-star--active">★</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="skill-category">
+                  <h3 class="skill-category__title">
+                    <span class="skill-category__icon">☁️</span>
+                    DevOps & 雲端服務
+                  </h3>
+                  <div class="skill-items">
+                    <div class="skill-item">
+                      <div class="skill-item__info">
+                        <span class="skill-item__name">Docker / Kubernetes</span>
+                        <span class="skill-item__level">
+                          <span class="skill-item__badge skill-item__badge--advanced">熟練</span>
+                          3年以上經驗
+                        </span>
+                      </div>
+                      <div class="skill-item__rating">
+                        <span class="skill-star skill-star--active">★</span>
+                        <span class="skill-star skill-star--active">★</span>
+                        <span class="skill-star skill-star--active">★</span>
+                        <span class="skill-star skill-star--active">★</span>
+                        <span class="skill-star">★</span>
+                      </div>
+                    </div>
+
+                    <div class="skill-item">
+                      <div class="skill-item__info">
+                        <span class="skill-item__name">AWS (EC2, S3, RDS)</span>
+                        <span class="skill-item__level">
+                          <span class="skill-item__badge skill-item__badge--advanced">熟練</span>
+                          3年以上經驗
+                        </span>
+                      </div>
+                      <div class="skill-item__rating">
+                        <span class="skill-star skill-star--active">★</span>
+                        <span class="skill-star skill-star--active">★</span>
+                        <span class="skill-star skill-star--active">★</span>
+                        <span class="skill-star skill-star--active">★</span>
+                        <span class="skill-star">★</span>
+                      </div>
+                    </div>
+
+                    <div class="skill-item">
+                      <div class="skill-item__info">
+                        <span class="skill-item__name">CI/CD (GitLab, Jenkins)</span>
+                        <span class="skill-item__level">
+                          <span class="skill-item__badge skill-item__badge--advanced">熟練</span>
+                          3年以上經驗
+                        </span>
+                      </div>
+                      <div class="skill-item__rating">
+                        <span class="skill-star skill-star--active">★</span>
+                        <span class="skill-star skill-star--active">★</span>
+                        <span class="skill-star skill-star--active">★</span>
+                        <span class="skill-star skill-star--active">★</span>
+                        <span class="skill-star">★</span>
+                      </div>
+                    </div>
+
+                    <div class="skill-item">
+                      <div class="skill-item__info">
+                        <span class="skill-item__name">Linux 系統管理</span>
+                        <span class="skill-item__level">
+                          <span class="skill-item__badge skill-item__badge--intermediate">中等</span>
+                          2年以上經驗
+                        </span>
+                      </div>
+                      <div class="skill-item__rating">
+                        <span class="skill-star skill-star--active">★</span>
+                        <span class="skill-star skill-star--active">★</span>
+                        <span class="skill-star skill-star--active">★</span>
+                        <span class="skill-star">★</span>
+                        <span class="skill-star">★</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <!-- 工作經歷區塊 -->
+            <section id="experience" class="experience-section">
+              <h2 class="section-title section-title--with-icon">
+                <span class="section-title__icon">💼</span>
+                工作經歷
+              </h2>
+
+              <div class="timeline">
+                <div class="timeline__line"></div>
+
+                <!-- 時間軸項目 1 -->
+                <div class="timeline__item">
+                  <div class="timeline__dot"></div>
+                  <div class="timeline-card">
+                    <div class="timeline-card__header">
+                      <div class="timeline-card__info">
+                        <h3 class="timeline-card__position">資深全端工程師</h3>
+                        <p class="timeline-card__company">科技創新股份有限公司</p>
+                      </div>
+                      <span class="timeline-card__period">2022 - 至今</span>
+                    </div>
+                    <p class="timeline-card__summary">
+                      負責公司核心產品的前後端開發與維護,帶領團隊完成多個重要專案。
+                    </p>
+                    <ul class="achievement-list">
+                      <li class="achievement-list__item">
+                        <span class="achievement-list__icon">✓</span>
+                        <span>設計並實作電商平台,提升系統效能 40%</span>
+                      </li>
+                      <li class="achievement-list__item">
+                        <span class="achievement-list__icon">✓</span>
+                        <span>導入 CI/CD 流程,縮短部署時間 60%</span>
+                      </li>
+                      <li class="achievement-list__item">
+                        <span class="achievement-list__icon">✓</span>
+                        <span>指導並培訓 3 位初級工程師</span>
+                      </li>
+                    </ul>
+                    <div class="tech-tags">
+                      <span class="tech-tag tech-tag--blue">Vue.js</span>
+                      <span class="tech-tag tech-tag--green">Laravel</span>
+                      <span class="tech-tag tech-tag--purple">PostgreSQL</span>
+                      <span class="tech-tag tech-tag--yellow">AWS</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 時間軸項目 2 -->
+                <div class="timeline__item">
+                  <div class="timeline__dot"></div>
+                  <div class="timeline-card">
+                    <div class="timeline-card__header">
+                      <div class="timeline-card__info">
+                        <h3 class="timeline-card__position">全端工程師</h3>
+                        <p class="timeline-card__company">網路科技有限公司</p>
+                      </div>
+                      <span class="timeline-card__period">2020 - 2022</span>
+                    </div>
+                    <p class="timeline-card__summary">
+                      參與多個客戶專案的開發,從需求分析到產品上線,累積豐富的實戰經驗。
+                    </p>
+                    <ul class="achievement-list">
+                      <li class="achievement-list__item">
+                        <span class="achievement-list__icon">✓</span>
+                        <span>開發後台管理系統,支援 10 萬+用戶資料管理</span>
+                      </li>
+                      <li class="achievement-list__item">
+                        <span class="achievement-list__icon">✓</span>
+                        <span>優化前端效能,首屏載入速度提升 50%</span>
+                      </li>
+                      <li class="achievement-list__item">
+                        <span class="achievement-list__icon">✓</span>
+                        <span>建立元件庫,提升團隊開發效率</span>
+                      </li>
+                    </ul>
+                    <div class="tech-tags">
+                      <span class="tech-tag tech-tag--blue">React</span>
+                      <span class="tech-tag tech-tag--green">Spring Boot</span>
+                      <span class="tech-tag tech-tag--purple">MySQL</span>
+                      <span class="tech-tag tech-tag--yellow">Docker</span>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- 時間軸項目 3 -->
+                <div class="timeline__item">
+                  <div class="timeline__dot"></div>
+                  <div class="timeline-card">
+                    <div class="timeline-card__header">
+                      <div class="timeline-card__info">
+                        <h3 class="timeline-card__position">前端工程師</h3>
+                        <p class="timeline-card__company">軟體開發公司</p>
+                      </div>
+                      <span class="timeline-card__period">2019 - 2020</span>
+                    </div>
+                    <p class="timeline-card__summary">
+                      負責公司產品的前端介面開發與維護,與 UI/UX 設計師密切合作。
+                    </p>
+                    <ul class="achievement-list">
+                      <li class="achievement-list__item">
+                        <span class="achievement-list__icon">✓</span>
+                        <span>重構老舊系統,採用現代化前端框架</span>
+                      </li>
+                      <li class="achievement-list__item">
+                        <span class="achievement-list__icon">✓</span>
+                        <span>實作響應式設計,支援多種裝置</span>
+                      </li>
+                      <li class="achievement-list__item">
+                        <span class="achievement-list__icon">✓</span>
+                        <span>整合第三方 API 服務</span>
+                      </li>
+                    </ul>
+                    <div class="tech-tags">
+                      <span class="tech-tag tech-tag--blue">Vue.js</span>
+                      <span class="tech-tag tech-tag--indigo">TypeScript</span>
+                      <span class="tech-tag tech-tag--pink">SCSS</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </section>
+
+            <!-- 專案作品區塊 -->
+            <section id="projects" class="projects-section">
+              <h2 class="section-title section-title--with-icon">
+                <span class="section-title__icon">🚀</span>
+                專案作品
+              </h2>
+
+              <div class="projects-grid">
+
+                <div class="project-card">
+                  <div class="project-card__icon">🛒</div>
+                  <h3 class="project-card__title">電商平台系統</h3>
+                  <p class="project-card__description">
+                    完整的電商解決方案,包含商品管理、訂單處理、金流串接等功能,支援高併發交易。
+                  </p>
+                  <div class="tech-tags">
+                    <span class="tech-tag tech-tag--blue">Vue.js</span>
+                    <span class="tech-tag tech-tag--green">Laravel</span>
+                    <span class="tech-tag tech-tag--purple">Redis</span>
+                    <span class="tech-tag tech-tag--yellow">AWS</span>
+                  </div>
+                </div>
+
+                <div class="project-card">
+                  <div class="project-card__icon">📊</div>
+                  <h3 class="project-card__title">數據分析儀表板</h3>
+                  <p class="project-card__description">
+                    即時數據視覺化平台,提供多維度數據分析與報表生成功能。
+                  </p>
+                  <div class="tech-tags">
+                    <span class="tech-tag tech-tag--orange">D3.js</span>
+                    <span class="tech-tag tech-tag--blue">Vue.js</span>
+                    <span class="tech-tag tech-tag--yellow">Python</span>
+                  </div>
+                </div>
+
+                <div class="project-card">
+                  <div class="project-card__icon">🎨</div>
+                  <h3 class="project-card__title">設計系統建立</h3>
+                  <p class="project-card__description">
+                    建立統一的設計系統與元件庫,提升團隊開發效率與產品一致性。
+                  </p>
+                  <div class="tech-tags">
+                    <span class="tech-tag tech-tag--pink">Storybook</span>
+                    <span class="tech-tag tech-tag--blue">React</span>
+                    <span class="tech-tag tech-tag--indigo">Tailwind</span>
+                  </div>
+                </div>
+
+                <div class="project-card">
+                  <div class="project-card__icon">🔐</div>
+                  <h3 class="project-card__title">企業級權限管理系統</h3>
+                  <p class="project-card__description">
+                    提供細緻的角色權限控制,支援多租戶架構與 SSO 單一登入功能。
+                  </p>
+                  <div class="tech-tags">
+                    <span class="tech-tag tech-tag--green">Spring Boot</span>
+                    <span class="tech-tag tech-tag--blue">React</span>
+                    <span class="tech-tag tech-tag--red">Redis</span>
+                  </div>
+                </div>
+
+              </div>
+            </section>
+
+            <!-- 學歷與證照區塊 -->
+            <section id="education" class="education-section">
+              <h2 class="section-title section-title--with-icon">
+                <span class="section-title__icon">🎓</span>
+                學歷與證照
+              </h2>
+
+              <div class="education-content">
+
+                <!-- 學歷卡片 -->
+                <div class="education-card">
+                  <div class="education-card__header">
+                    <div class="education-card__info">
+                      <h3 class="education-card__school">國立科技大學</h3>
+                      <p class="education-card__degree">資訊工程系 學士</p>
+                      <p class="education-card__period">2015 - 2019</p>
+                    </div>
+                    <div class="education-card__icon">🏫</div>
+                  </div>
+                </div>
+
+                <!-- 證照卡片 -->
+                <div class="certifications-card">
+                  <h3 class="certifications-card__title">
+                    <span class="certifications-card__icon">📜</span>
+                    專業證照
+                  </h3>
+                  <div class="certifications-list">
+                    <div class="certification-item certification-item--blue">
+                      <span class="certification-item__check">✓</span>
+                      <span class="certification-item__name">AWS Certified Developer</span>
+                    </div>
+                    <div class="certification-item certification-item--green">
+                      <span class="certification-item__check">✓</span>
+                      <span class="certification-item__name">Google Analytics Certificate</span>
+                    </div>
+                    <div class="certification-item certification-item--blue">
+                      <span class="certification-item__check">✓</span>
+                      <span class="certification-item__name">Oracle Certified Java
+                        Programmer</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </section>
+
+            <!-- 推薦評價 -->
+            <section id="testimonials" class="testimonials-section">
+              <h2 class="section-title section-title--with-icon">
+                <span class="section-title__icon">💬</span>
+                推薦評價
+              </h2>
+
+              <div class="testimonials-grid">
+
+                <div class="testimonial-card">
+                  <p class="testimonial-card__text">
+                    他對程式碼品質的堅持與解決複雜問題的能力,對我們團隊的貢獻卓著。尤其在導入 CI/CD 流程時,他的規劃讓部署效率大幅提升。
+                  </p>
+                  <div class="testimonial-card__author">
+                    <span class="testimonial-card__name">王曉明</span>
+                    <span class="testimonial-card__role">前技術主管 / 科技創新股份有限公司</span>
+                  </div>
+                </div>
+
+                <div class="testimonial-card">
+                  <p class="testimonial-card__text">
+                    在電商平台專案中,他展現了出色的前端架構能力。他所建立的元件庫不僅易於維護,也讓團隊的開發速度加快許多。
+                  </p>
+                  <div class="testimonial-card__author">
+                    <span class="testimonial-card__name">陳怡君</span>
+                    <span class="testimonial-card__role">資深產品經理 / 網路科技有限公司</span>
+                  </div>
+                </div>
+
+              </div>
+            </section>
+
+            <!-- 技術文章 -->
+            <section id="articles" class="articles-section">
+              <h2 class="section-title section-title--with-icon">
+                <span class="section-title__icon">✍️</span>
+                技術文章
+              </h2>
+              <div class="articles-list">
+                <div class="article-card">
+                  <div class="article-card__content">
+                    <span class="article-card__meta">2025-10-20 / Medium</span>
+                    <h3 class="article-card__title">
+                      <a href="#" target="_blank" rel="noopener noreferrer">
+                        深入探討 Vue 3 Composition API 與 React Hooks 的差異
+                      </a>
+                    </h3>
+                    <p class="article-card__excerpt">
+                      一篇深入分析兩種現代前端框架狀態管理與邏輯複用機制的文章...
+                    </p>
+                  </div>
+                  <a href="#" class="article-card__link" target="_blank" rel="noopener noreferrer">
+                    閱讀全文 &rarr;
+                  </a>
+                </div>
+                <div class="article-card">
+                  <div class="article-card__content">
+                    <span class="article-card__meta">2025-07-15 / 個人部落格</span>
+                    <h3 class="article-card__title">
+                      <a href="#" target="_blank" rel="noopener noreferrer">
+                        使用 Laravel 與 AWS S3 實作高效率檔案上傳
+                      </a>
+                    </h3>
+                    <p class="article-card__excerpt">
+                      一篇關於如何整合後端框架 Laravel 與 AWS S3 雲端儲存服務的實作教學...
+                    </p>
+                  </div>
+                  <a href="#" class="article-card__link" target="_blank" rel="noopener noreferrer">
+                    閱讀全文 &rarr;
+                  </a>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+
+        <!-- 側邊欄 -->
+        <aside class="sidebar-column">
+          <div class="sidebar">
+            <!-- 快速導航 -->
+            <div class="sidebar-widget">
+              <h3 class="sidebar-widget__title">
+                <span class="sidebar-widget__icon">🧭</span>
+                快速導航
+              </h3>
+              <nav class="quick-nav">
+                <ul class="quick-nav__list">
+                  <li class="quick-nav__item">
+                    <a href="#stats" class="quick-nav__link">
+                      <span class="quick-nav__item-icon">📊</span>
+                      <span>職涯統計</span>
+                    </a>
+                  </li>
+                  <li class="quick-nav__item">
+                    <a href="#experience" class="quick-nav__link">
+                      <span class="quick-nav__item-icon">💼</span>
+                      <span>工作經歷</span>
+                    </a>
+                  </li>
+                  <li class="quick-nav__item">
+                    <a href="#projects" class="quick-nav__link">
+                      <span class="quick-nav__item-icon">🚀</span>
+                      <span>專案作品</span>
+                    </a>
+                  </li>
+                  <li class="quick-nav__item">
+                    <a href="#education" class="quick-nav__link">
+                      <span class="quick-nav__item-icon">🎓</span>
+                      <span>學歷證照</span>
+                    </a>
+                  </li>
+                  <li class="quick-nav__item">
+                    <a href="#testimonials" class="quick-nav__link">
+                      <span class="quick-nav__item-icon">💬</span>
+                      <span>推薦評價</span>
+                    </a>
+                  </li>
+                  <li class="quick-nav__item">
+                    <a href="#articles" class="quick-nav__link">
+                      <span class="quick-nav__item-icon">✍️</span>
+                      <span>技術文章</span>
+                    </a>
+                  </li>
+                </ul>
+              </nav>
             </div>
-        </footer>
-    </body>
+
+            <!-- 聯絡資訊 -->
+            <div class="sidebar-widget">
+              <h3 class="sidebar-widget__title">
+                <span class="sidebar-widget__icon">📧</span>
+                聯絡資訊
+              </h3>
+              <div class="contact-info">
+                <ul class="contact-info__list">
+                  <li class="contact-info__item">
+                    <span class="contact-info__icon">📱</span>
+                    <span>0912-345-678</span>
+                  </li>
+                  <li class="contact-info__item">
+                    <span class="contact-info__icon">✉️</span>
+                    <a href="mailto:example@email.com" class="contact-info__link">
+                      example@email.com
+                    </a>
+                  </li>
+                  <li class="contact-info__item">
+                    <span class="contact-info__icon">💼</span>
+                    <a href="#" class="contact-info__link" target="_blank" rel="noopener noreferrer">
+                      LinkedIn
+                    </a>
+                  </li>
+                  <li class="contact-info__item">
+                    <span class="contact-info__icon">💻</span>
+                    <a href="#" class="contact-info__link" target="_blank" rel="noopener noreferrer">
+                      GitHub
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- 技能標籤雲 -->
+            <div class="sidebar-widget">
+              <h3 class="sidebar-widget__title">
+                <span class="sidebar-widget__icon">🏷️</span>
+                技能標籤
+              </h3>
+              <div class="skill-tags">
+                <span class="skill-tag">Vue.js</span>
+                <span class="skill-tag">React</span>
+                <span class="skill-tag">Laravel</span>
+                <span class="skill-tag">Spring Boot</span>
+                <span class="skill-tag">TypeScript</span>
+                <span class="skill-tag">Docker</span>
+                <span class="skill-tag">AWS</span>
+                <span class="skill-tag">MySQL</span>
+                <span class="skill-tag">Redis</span>
+                <span class="skill-tag">Git</span>
+                <span class="skill-tag">CI/CD</span>
+                <span class="skill-tag">RESTful API</span>
+              </div>
+            </div>
+
+            <!-- 下載履歷 -->
+            <div class="sidebar-widget">
+              <a href="upload/個人履歷.pdf" class="download-resume" download>
+                <span>📄</span>
+                <span>下載完整履歷</span>
+              </a>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="page-footer-container">
+      <div class="page-footer">
+        <p class="page-footer__text">
+          © 2025 N1146721. All rights reserved.
+          Design inspired by <a href="#" target="_blank" rel="noopener noreferrer">Archer</a>.
+        </p>
+      </div>
+    </footer>
+  </body>
 
 </html>

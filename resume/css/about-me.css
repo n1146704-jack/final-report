@@ -27,7 +27,7 @@
 
 #page-header-container.menu-expanded {
   height: var(--about-header-height-expanded);
-  background: var( --accent-gradient-second);
+  background: var(--accent-gradient-second);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   border-bottom: none;
 }
@@ -41,7 +41,7 @@ body.dark-mode #page-header-container {
 }
 
 body.dark-mode #page-header-container.menu-expanded {
-  background: var( --accent-gradient-third);
+  background: var(--accent-gradient-third);
 }
 
 /* 深色模式切換按鈕 */
@@ -1377,12 +1377,12 @@ body.dark-mode .page-nav__container {
  * ========================================= */
 #page-footer-container {
   border-top: 1px solid var(--card-border);
-  background: var( --accent-gradient-second);
+  background: var(--accent-gradient-second);
   box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
 }
 
 body.dark-mode #page-footer-container {
-  background: var( --accent-gradient-third);
+  background: var(--accent-gradient-third);
 }
 
 .page-footer {

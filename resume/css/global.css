@@ -64,9 +64,9 @@
 
   /* 深色模式變數 */
   --dark-bg-primary: rgba(74, 62, 66, 0.95);
-  --dark-bg-secondary:rgba(107, 90, 95, 0.95);
-  --dark-bg-third:rgba(45, 45, 45, 0.98);
-  --dark-linear-gradient:linear-gradient(135deg, #c4a0a8 0%, #e8c8cc 100%);
+  --dark-bg-secondary: rgba(107, 90, 95, 0.95);
+  --dark-bg-third: rgba(45, 45, 45, 0.98);
+  --dark-linear-gradient: linear-gradient(135deg, #c4a0a8 0%, #e8c8cc 100%);
   --dark-text-primary: #f3f4f6;
   --dark-text-secondary: #d1d5db;
   --dark-border: #374151;
