@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  // --- 統計數字動畫 (新增) ---
+  // --- 統計數字動畫 ---
   const statCards = document.querySelectorAll('.stat-card');
 
   function animateValue(element, start, end, duration) {
@@ -151,7 +151,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 
-  // --- 卡片懸浮效果增強 (新增) ---
+  // --- 卡片懸浮效果增強 ---
   const interactiveCards = document.querySelectorAll('.project-card, .education-card, .certifications-card, .testimonial-card, .article-card');
 
   interactiveCards.forEach(card => {
@@ -160,7 +160,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // --- 平滑滾動到頂部按鈕 (新增) ---
+  // --- 平滑滾動到頂部按鈕 ---
   const scrollToTopBtn = document.createElement('button');
   scrollToTopBtn.innerHTML = '↑';
   scrollToTopBtn.className = 'scroll-to-top';
@@ -210,12 +210,12 @@ document.addEventListener("DOMContentLoaded", function () {
     this.style.transform = 'scale(1)';
   });
 
-  // --- 頁面載入動畫 (新增) ---
+  // --- 頁面載入動畫 ---
   setTimeout(() => {
     document.body.style.opacity = '1';
   }, 100);
 
-  // --- 技術標籤點擊效果 (新增) ---
+  // --- 技術標籤點擊效果 ---
   const techTags = document.querySelectorAll('.tech-tag');
 
   techTags.forEach(tag => {

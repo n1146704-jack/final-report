@@ -897,7 +897,7 @@
   padding-top: 2rem;
 }
 
-/* 新增引號樣式 */
+/* 引號樣式 */
 .testimonial-card__text::before {
   content: '"';
   font-family: Georgia, serif;
