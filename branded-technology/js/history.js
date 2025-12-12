@@ -24,7 +24,7 @@ function initHeroCanvas() {
       this.vy = vy;
       this.life = 1;
       this.decay = 0.01;
-      this.size = Math.random() * 2 + 1;
+      this.size = Math.random() * 4 + 2;
     }
 
     update() {
@@ -35,10 +35,13 @@ function initHeroCanvas() {
     }
 
     draw(ctx) {
-      ctx.fillStyle = `rgba(0, 245, 195, ${this.life * 0.3})`;
+      ctx.shadowColor = 'rgba(0, 245, 195, 0.8)';
+      ctx.shadowBlur = 10;
+      ctx.fillStyle = `rgba(0, 245, 195, ${this.life * 0.8})`;
       ctx.beginPath();
       ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
       ctx.fill();
+      ctx.shadowBlur = 0;
     }
   }
 
@@ -48,8 +51,8 @@ function initHeroCanvas() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
 
     // 背景網格
-    ctx.strokeStyle = 'rgba(0, 245, 195, 0.05)';
-    ctx.lineWidth = 1;
+    ctx.strokeStyle = 'rgba(0, 245, 195, 0.15)';
+    ctx.lineWidth = 1.5;
     const gridSize = 50;
 
     for (let i = 0; i < canvas.width; i += gridSize) {
